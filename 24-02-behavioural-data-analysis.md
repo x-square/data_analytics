@@ -1,7 +1,7 @@
 ---
 title: "Notes on behavioural data analysis"
 author: "Chiawei Wang"
-date: "January 2024"
+date: "February 2024"
 ---
 
 `This document compiles information from Behavioral Data Analysis with R and Python for academic purposes`[^1]
