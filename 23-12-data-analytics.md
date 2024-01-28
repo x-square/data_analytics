@@ -10,9 +10,9 @@ date: "December 2023"
 
 Data analytics is the collection, transformation and organization of data in order to draw conclusions, make predictions and drive informed decision making.
 
-## Foundations of data analytics
+# Foundations of data analytics
 
-### Thinking about analytical thinking
+## Thinking about analytical thinking
 
 - **Curiosity**: a desire to know more about something, asking the right questions
 - **Understanding context**: understanding where information fits into the **big picture**
@@ -20,7 +20,7 @@ Data analytics is the collection, transformation and organization of data in ord
 - **Data design**: thinking about how to organize data and information
 - **Data strategy**: thinking about the people, processes, and tools used in data analysis
 
-### Variations of the data life cycle
+## Variations of the data life cycle
 
 The data life cycle provides a generic or common framework for how data is managed.
 
@@ -31,7 +31,7 @@ The data life cycle provides a generic or common framework for how data is manag
 5. **Archive**: Keep relevant data stored for long-term and future reference.
 6. **Destroy**: Remove data from storage and delete any shared copies of the data.
 
-### Six phases of data analysis
+## Six phases of data analysis
 
 Analysts use data-driven decision-making and follow a step-by-step process:
 
@@ -44,7 +44,7 @@ Analysts use data-driven decision-making and follow a step-by-step process:
 
 ![Data analysis process](https://github.com/x-square/visual-resources/blob/main/data-analysis-process.png?raw=true "Data analysis process")
 
-### Structured query language
+## Structured query language
 
 SQL (structured query language) is designed for managing and manipulating relational databases. It is used for tasks such as querying data, updating records, inserting new data and deleting information from databases.
 
@@ -61,7 +61,7 @@ BigQuery is Google's fully managed, serverless data warehouse that works across 
 > - \<\> means does not equal
 
 
-### The power of data in business
+## The power of data in business
 
 Issue
 
@@ -83,13 +83,13 @@ Data-driven decision-making
 
 : Using facts to guide bushiness strategy
 
-### Exploring your next job
+## Exploring your next job
 
 ![Decoding job description for data professionals](https://github.com/x-square/visual-resources/blob/main/data-job-description.png?raw=true "Decoding job description for data professionals")
 
-## Ask questions to make data-driven decisions
+# Ask questions to make data-driven decisions
 
-### Solve problems with data
+## Solve problems with data
 
 Data analytics is so much more than just plugging information into a platform to find insights. It is about solving problems. To get to the root of these problems and find practical solutions, there are lots of opportunities for creative thinking. No matter the problem, the first and most important step is understanding it.
 
@@ -97,31 +97,31 @@ Data analytics is so much more than just plugging information into a platform to
 
 Examples are summarized below for review:
 
-#### Making predictions
+### Making predictions
 
 A company that wants to know the best advertising method to bring in new customers is an example of a problem requiring analysts to make predictions. Analysts with data on location, type of media, and number of new customers acquired as a result of past ads can't guarantee future results, but they can help predict the best placement of advertising to reach the target audience.
 
-#### Categorising things
+### Categorising things
 
 An example of a problem requiring analysts to categorize things is a company's goal to improve customer satisfaction. Analysts might classify customer service calls based on certain keywords or scores. This could help identify top-performing customer service representatives or help correlate certain actions taken with higher customer satisfaction scores.
 
-#### Spotting something unusual
+### Spotting something unusual
 
 A company that sells smart watches that help people monitor their health would be interested in designing their software to spot something unusual. Analysts who have analyzed aggregated health data can help product developers determine the right algorithms to spot and set off alarms when certain data doesn't trend normally.
 
-#### Identifying themes
+### Identifying themes
 
 Designers often collaborate with analysts to analyze user interaction data. Analysts play a crucial role in categorising and identifying themes within the data, particularly in usability improvement projects. Themes, such as user beliefs, practices and needs, help researchers delve into specific aspects of the data, offering valuable insights for prioritising product features. While categorising involves assigning items to categories, identifying themes goes a step further, grouping categories into broader themes.
 
-#### Discovering connections
+### Discovering connections
 
 A third-party logistics company working with another company to get shipments delivered to customers on time is a problem requiring analysts to discover connections. By analyzing the wait times at shipping hubs, analysts can determine the appropriate schedule changes to increase the number of on-time deliveries.
 
-#### Finding patterns
+### Finding patterns
 
 Minimising downtime caused by machine failure is an example of a problem requiring analysts to find patterns in data. For example, by analyzing maintenance data, they might discover that most failures happen if regular maintenance is delayed by more than a 15-day window.
 
-### SMART questions
+## SMART questions
 
 Companies in lots of industries today are dealing with rapid change and rising uncertainty. Even well-established businesses are under pressure to keep up with what is new and figure out what is next. To do that, they need to ask questions. Asking the right questions can help spark the innovative ideas that so many businesses are hungry for these days.
 
@@ -129,15 +129,15 @@ No matter how much information you have or how advanced your tools are, your dat
 
 ![Examples of SMART questions](https://github.com/x-square/visual-resources/blob/main/smart-questions.png?raw=true "Examples of SMART questions")
 
-### Data trials and triumphs
+## Data trials and triumphs
 
-#### Coke launch failure
+### Coke launch failure
 
 In 1985, New Coke was launched, replacing the classic Coke formula. The company had done taste tests with 200,000 people and found that test subjects preferred the taste of New Coke over Pepsi, which had become a tough competitor. Based on this data alone, classic Coke was taken off the market and replaced with New Coke. This was seen as the solution to take back the market share that had been lost to Pepsi.
 
 But as it turns out, New Coke was a massive flop and the company ended up losing tens of millions of dollars. How could this have happened with data that seemed correct? It is because the data wasn't complete, which made it inaccurate. The data didn't consider how customers would feel about New Coke replacing classic Coke. The company's decision to retire classic Coke was a data-driven decision based on incomplete data.
 
-#### Mars orbiter loss
+### Mars orbiter loss
 
 In 1999, NASA lost the \$125 million Mars Climate Orbiter, even though it had good data. The spacecraft burned to pieces because of poor collaboration and communication. The Orbiter's navigation team was using the SI or metric system (newtons) for their force calculations, but the engineers who built the spacecraft used the English Engineering Units system (pounds) for force calculations.
 
@@ -148,7 +148,7 @@ No one realized a problem even existed until the Orbiter burst into flames in th
 > - **Data-informed** approach (inter-subjective) plays a more significant role in decision-making. Decisions are influenced by data, which is used to guide and support the decision-making process. However, other factors, such as experience or intuition, may still be taken into account.
 > - **Data-driven** approach (objective) places data at the forefront of decision-making. Decisions are primarily based on the analysis and interpretation of data. This approach emphasizes using data to measure outcomes, predict trends, and guide strategic choices. It often involves relying heavily on quantitative evidence to inform decisions.
 
-### Qualitative and quantitative data in business
+## Qualitative and quantitative data in business
 
 Qualitative data
 
@@ -175,7 +175,7 @@ Your final online survey might include these questions for qualitative data:
 
 Data analysts will generally use both types of data in their work. Usually, qualitative data can help analysts better understand their quantitative data by providing a reason or more thorough explanation. In other words, quantitative data generally gives you the what, and qualitative data generally gives you the why. By using both quantitative and qualitative data, you can learn when people like to go to the movies and why they chose the theater. Maybe they really like the reclining chairs, so your manager can purchase more recliners. Maybe the theater is the only one that serves root beer. Maybe a later show time gives them more time to drive to the theater from where popular restaurants are located. Maybe they go to matinees because they have kids and want to save money. You wouldn't have discovered this information by analyzing only the quantitative data for attendance, profit, and showtimes.
 
-### Connecting the data dots
+## Connecting the data dots
 
 When thinking about the benefits and challenges of big data, it helps to think about the four Vs:
 
@@ -185,7 +185,7 @@ When thinking about the benefits and challenges of big data, it helps to think a
 
 : Four Vs for big data
 
-### Structured thinking and scope of work
+## Structured thinking and scope of work
 
 Structured thinking is the process of recognizing the currect problem or situation, organizing available information, revealing gaps and opportunities, and identifying the options.
 
@@ -200,7 +200,7 @@ Scope of work is an agreed-upon outline of the work you're going to perform on a
 
 ![Example of scope of work in the spreadsheet](https://github.com/x-square/visual-resources/blob/main/scope-of-work-spreadsheet.png?raw=true "Example of scope of work in the spreadsheet")
 
-### Importance of context
+## Importance of context
 
 Context is the condition in which something exists or happens. Context is important in data analytics because it helps us sift through huge amounts of disorganized data and turn it into something meaningful. The fact is, data has little value if it is not paired with context.
 
@@ -224,7 +224,7 @@ Here are some questions to help you get started:
 - Is there any other information you think is relevant to the project?
 - Is there any information you need or questions you need answered before you can begin?
 
-### Working with stakeholders
+## Working with stakeholders
 
 Your data analysis project should answer the business task and create opportunities for data-driven decision-making. That's why it is so important to focus on project stakeholders. As a data analyst, it is your responsibility to understand and manage your stakeholders' expectations while keeping the project goals front and center.
 
@@ -232,7 +232,7 @@ You might remember that stakeholders are people who have invested time, interest
 
 Let's get to know more about the different stakeholders and their goals. Then we'll learn some tips for communicating with them effectively.
 
-#### Executive team
+### Executive team
 
 The executive team provides strategic and operational leadership to the company. They set goals, develop strategy, and make sure that strategy is executed effectively. The executive team might include vice presidents, the chief marketing officer, and senior-level professionals who help plan and direct the company's work. These stakeholders think about decisions at a very high level and they are looking for the headline news about your project first. They are less interested in the details. Time is very limited with them, so make the most of it by leading your presentations with the answers to their questions. You can keep the more detailed information handy in your presentation appendix or your project documentation for them to dig into when they have more time.
 
@@ -240,13 +240,13 @@ For example, you might find yourself working with the vice president of human re
 
 But you don't have to tackle that by yourself. Your project manager will be overseeing the progress of the entire team, and you will be giving them more regular updates than someone like the vice president of HR. They are able to give you what you need to move forward on a project, including getting approvals from the busy executive team. Working closely with your project manager can help you pinpoint the needs of the executive stakeholders for your project, so don't be afraid to ask them for guidance.
 
-#### Customer-facing team
+### Customer-facing team
 
 The customer-facing team includes anyone in an organization who has some level of interaction with customers and potential customers. Typically they compile information, set expectations, and communicate customer feedback to other parts of the internal organization. These stakeholders have their own objectives and may come to you with specific asks. It is important to let the data tell the story and not be swayed by asks from your stakeholders to find certain patterns that might not exist.
 
 Let's say a customer-facing team is working with you to build a new version of a company's most popular product. Part of your work might involve collecting and sharing data about consumers' buying behavior to help inform product features. Here, you want to be sure that your analysis and presentation focuses on what is actually in the data, not on what your stakeholders hope to find.
 
-#### Data science team
+### Data science team
 
 Organizing data within a company takes teamwork. There's a good chance you'll find yourself working with other data analysts, data scientists, and data engineers. For example, maybe you team up with a company's data science team to work on boosting company engagement to lower rates of employee turnover. In that case, you might look into the data on employee productivity, while another analyst looks at hiring data. Then you share those findings with the data scientist on your team, who uses them to predict how new processes could boost employee productivity and engagement. When you share what you found in your individual analyses, you uncover the bigger story. A big part of your job will be collaborating with other data team members to find new angles of the data to explore.
 
@@ -254,37 +254,37 @@ Here's a view of how different roles on a typical data science team support diff
 
 ![Data science team supports different functions](https://github.com/x-square/visual-resources/blob/main/data-science-cross-functions.png?raw=true "Data science team supports different functions")
 
-#### Working effectively with stakeholders
+### Working effectively with stakeholders
 
 When you're working with each group of stakeholders from the executive team, to the customer-facing team, to the data science team, you'll often have to go beyond the data. Use the following tips to communicate clearly, establish trust, and deliver your findings across groups.
 
-##### Discuss goals
+#### Discuss goals
 
 Stakeholder requests are often tied to a bigger project or goal. When they ask you for something, take the opportunity to learn more. Start a discussion. Ask about the kind of results the stakeholder wants. Sometimes, a quick chat about goals can help set expectations and plan the next steps.
 
-##### Feel empowered to say no
+#### Feel empowered to say no
 
 When faced with urgent data analysis requests from a marketing director for a **high-priority project**, assess feasibility and push back if necessary. Stakeholders may not fully understand the time and effort involved, so clarify expectations by asking about their goals. Be confident in saying no if you can't meet the timeline, and guide them towards more realistic options. Prioritize effectively, communicate limitations, and empower stakeholders to reset expectations based on achievable timelines. Feel empowered to say **no**, but provide context for better understanding.
 
-##### Plan for the unexpected
+#### Plan for the unexpected
 
 Before you start a project, make a list of potential roadblocks. Then, when you discuss project expectations and timelines with your stakeholders, give yourself some extra time for problem-solving at each stage of the process.
 
-##### Know your project
+#### Know your project
 
 Keep track of your discussions about the project over email or reports, and be ready to answer questions about how certain aspects are important for your organization. Get to know how your project connects to the rest of the company and get involved in providing the most insight possible. If you have a good understanding about why you are doing an analysis, it can help you connect your work with other goals and be more effective at solving larger problems.
 
-##### Start with words and visuals
+#### Start with words and visuals
 
 It is common for data analysts and stakeholders to interpret things in different ways while assuming the other is on the same page. This **illusion of agreement** shown as follows has been historically identified as a cause of projects going back-and-forth a number of times before a direction is finally nailed down. To help avoid this, start with a description and a quick visual of what you are trying to convey. Stakeholders have many points of view and may prefer to absorb information in words or pictures. Work with them to make changes and improvements from there. The faster everyone agrees, the faster you can perform the first analysis to test the usefulness of the project, measure the feedback, learn from the data, and implement changes.
 
-##### Communicate often
+#### Communicate often
 
 Your stakeholders will want regular updates on your projects. Share notes about project milestones, setbacks, and changes. Then use your notes to create a shareable report. Another great resource to use is a change-log, which is a tool that will be explored further throughout the program. For now, just know that a is a file containing a chronologically ordered list of modifications made to a project. Depending on the way you set it up, stakeholders can even pop in and view updates whenever they want.
 
 ![Example of illusion of agreement via Typical Project Life](https://github.com/x-square/visual-resources/blob/main/typical-project-life.png?raw=true "Example of illusion of agreement via Typical Project Life")
 
-### Data scenarios and responses
+## Data scenarios and responses
 
 When you communicate your analysis and recommendations as a data analyst, it's vital to keep your audience in mind. :
 
@@ -301,7 +301,7 @@ When you communicate your analysis and recommendations as a data analyst, it's v
 
 ![Sample of project follow-up email](https://github.com/x-square/visual-resources/blob/main/email-follow-up.png?raw=true "Sample of project follow-up email")
 
-### Limitations of data
+## Limitations of data
 
 Data is powerful, but it has its limitations. Has someone's personal opinion found its way into the numbers? Is your data telling the whole story? Part of being a great data analyst is knowing the limits of data and planning for them.
 
@@ -320,17 +320,17 @@ Data is powerful, but it has its limitations. Has someone's personal opinion fou
 - Be the judge
     - In organizations, data analysts play a key role in making informed judgments. Understanding data limitations enables making decisions based on accurate information. Incomplete or uncleaned data can be misleading. Ensure data completeness and consistency by cleaning it before analysis, saving time and effort.
 
-### Leading great meetings
+## Leading great meetings
 
 ![Example of meeting agenda](https://github.com/x-square/visual-resources/blob/main/meeting-agenda.png?raw=true "Example of meeting agenda")
 
-## Prepare data for exploration
+# Prepare data for exploration
 
-### Selecting the right data
+## Selecting the right data
 
 ![How to collect the right data?](https://github.com/x-square/visual-resources/blob/main/data-collection-considerations.png?raw=true "How to collect the right data?")
 
-### Data formats in practice
+## Data formats in practice
 
 | **Data Format Classification** | **Definition** | **Examples** |
 | ------------------------------ | -------------- | ------------ |
@@ -351,7 +351,7 @@ Data is powerful, but it has its limitations. Has someone's personal opinion fou
 
 ![Example of data formats](https://github.com/x-square/visual-resources/blob/main/data-formats.png?raw=true "Example of data formats")
 
-### Structure of data
+## Structure of data
 
 Data is everywhere and it can be stored in lots of ways. Two general categories of data are:
 
@@ -373,17 +373,17 @@ Data type definitions:
 
 The lack of structure makes unstructured data difficult to search, manage, and analyze. But recent advancements in artificial intelligence and machine learning algorithms are beginning to change that.
 
-#### Fairness issue
+### Fairness issue
 
 Now, the new challenge facing data scientists is making sure these tools are inclusive and unbiased. Otherwise, certain elements of a dataset will be more heavily weighted and or represented than others. And as you're learning, an unfair dataset does not accurately represent the population, causing skewed outcomes, low accuracy levels, and unreliable analysis.
 
-### Data modelling levels and techniques
+## Data modelling levels and techniques
 
 Data models help keep data consistent and enable people to map out how data is organized. A basic understanding makes it easier for analysts and other stakeholders to make sense of their data and use it in the right ways.
 
 **Data modelling** is the process of creating diagrams that visually represent how data is organized and structured. These visual representations are called **data models**. You can think of data modelling as a blueprint of a house. At any point, there might be electricians, carpenters, and plumbers using that blueprint. Each one of these builders has a different relationship to the blueprint, but they all need it to understand the overall structure of the house. Data models are similar. Different users might have different data needs, but the data model gives them an understanding of the structure as a whole.
 
-#### Levels of data modeling
+### Levels of data modeling
 
 - Conceptual data modeling gives a high-level view of the data structure, such as how data interacts across an organization. For example, a conceptual data model may be used to define the business requirements for a new database. A conceptual data model doesn't contain technical details.
 - Logical data modeling focuses on the technical details of a database such as relationships, attributes, and entities. For example, a logical data model defines how individual records are uniquely identified in a database. But it doesn't spell out actual names of database tables. That's the job of a physical data model.
@@ -393,7 +393,7 @@ Data models help keep data consistent and enable people to map out how data is o
 
 More information can be found in this [comparison of data models](https://www.1keydata.com/datawarehousing/data-modeling-levels.html).
 
-#### Data-modeling techniques
+### Data-modeling techniques
 
 There are a lot of approaches when it comes to developing data models, but two common methods are the **Entity Relationship Diagram** (ERD) and the **Unified Modelling Language** (UML) diagram. ERDs are a visual way to understand the relationship between entities in the data model. UML diagrams are very detailed diagrams that describe the structure of a system by showing the system's entities, attributes, operations, and their relationships. As a junior data analyst, you will need to understand that there are different data modelling techniques, but in practice, you will probably be using your organization's existing technique.
 
@@ -401,7 +401,7 @@ There are a lot of approaches when it comes to developing data models, but two c
 
 ![Example of UML](https://github.com/x-square/visual-resources/blob/main/diagram-uml.png?raw=true "Example of UML")
 
-### Understanding Boolean logic
+## Understanding Boolean logic
 
 Boolean logic is a type of algebra in which results are calculated as either **TRUE** or **FALSE**.
 
@@ -413,13 +413,13 @@ Imagine you are shopping for shoes, and are considering certain preferences:
 - You will buy the shoes if they are entirely pink **or** entirely grey, **or** if they are pink and grey
 - You will buy the shoes if they are grey, but **not** if they have any pink
 
-#### The power of multiple conditions
+### The power of multiple conditions
 
 For data analysts, the real power of Boolean logic comes from being able to combine multiple conditions in a single statement. For example, if you wanted to filter for shoes that were grey or pink, and waterproof, you could construct a Boolean statement such as `IF ((Color = "Grey") OR (Color = "Pink")) AND (Waterproof = "True")`. Notice that you can use parentheses to group your conditions together.
 
 Whether you are doing a search for new shoes or applying this logic to your database queries, Boolean logic lets you create multiple conditions to filter your results.
 
-### Transforming data
+## Transforming data
 
 Data transformation is the process of changing the data's format, structure, or values. As a data analyst, there is a good chance you will need to transform data at some point to make it easier for you to analyze it.
 
@@ -461,7 +461,7 @@ The following table summarizes when each format is preferred:
     - Storing a lot of variables about each subject. For example, 60 years worth of interest rates for each bank
     - Performing advanced statistical analysis or graphing
 
-### Data anonymization
+## Data anonymization
 
 **Personally identifiable information** (PII), is information that can be used by itself or with other data to track down a person's identity. Imagine a world where we all had access to each other's addresses, account numbers, and other identifiable information. That would invade a lot of people's privacy and make the world less safe. Data anonymization is one of the ways we can keep data private and secure!
 
@@ -479,7 +479,7 @@ Data anonymization is used in just about every industry. That is why it is so im
 - Photographs
 - Account numbers
 
-### The open data debate
+## The open data debate
 
 In data analytics, open data is part of data ethics, which has to do with using data ethically. Openness refers to free access, usage, and sharing of data. But for data to be considered open, it has to:
 
@@ -489,7 +489,7 @@ In data analytics, open data is part of data ethics, which has to do with using 
 
 Data can only be considered open when it meets all three of these standards.
 
-#### What data should be publicly available?
+### What data should be publicly available?
 
 Open data's major advantage lies in its widespread usability. Credible databases become more accessible, fostering scientific collaboration, research progress, analytical capabilities, and informed decision-making. However, it's crucial to consider the impact on individuals represented in public, open data.
 
@@ -499,7 +499,7 @@ Open data's major advantage lies in its widespread usability. Credible databases
 
 Everyone wants to keep personal information about themselves private. Because third-party data is readily available, it is important to balance the openness of data with the privacy of individuals.
 
-#### Sites and resources for open data
+### Sites and resources for open data
 
 Luckily for data analysts, there are lots of trustworthy sites and resources available for open data. It is important to remember that even reputable data needs to be constantly evaluated, but these websites are a useful starting point:
 
@@ -517,17 +517,17 @@ Luckily for data analysts, there are lots of trustworthy sites and resources ava
 - [CPS Labor Force Statistics](https://www.bls.gov/cps/tables.htm): This page contains links to several available datasets that you can explore.
 - [The Stanford Open Policing Project](https://openpolicing.stanford.edu/): This dataset can be downloaded as a .CSV file for your own use.
 
-### Databases in data analytics
+## Databases in data analytics
 
 Databases enable analysts to manipulate, store, and process data. This helps them search through data a lot more efficiently to get the best insights.
 
-#### Relational databases
+### Relational databases
 
 A **relational** database is a database that contains a series of tables that can be connected to show relationships. Basically, they allow data analysts to organize and link data based on what the data has in common.
 
 In a **non-relational** table, you will find all of the possible variables you might be interested in analyzing all grouped together. This can make it really hard to sort through. This is one reason why relational databases are so common in data analysis. They simplify a lot of analysis processes and make data easier to find and use across an entire database.
 
-#### Key to relational databases
+### Key to relational databases
 
 Tables in a relational database are connected by the fields they have in common. You might remember learning about primary and foreign keys before. As a quick refresher, a **primary key** is an identifier that references a column in which each value is unique. In other words, it's a column of a table that is used to uniquely identify each record within that table. The value assigned to the primary key in a particular row must be unique within the entire table. For example, if customer_id is the primary key for the customer table, no two customers will ever have the same customer_id.
 
@@ -537,7 +537,7 @@ Some tables don't require a primary key. For example, a revenue table can have m
 
 ![Example of database keys](https://github.com/x-square/visual-resources/blob/main/database-keys.png?raw=true "Example of database keys")
 
-### Inspecting a dataset: A guided, hands-on tour
+## Inspecting a dataset: A guided, hands-on tour
 
 As a data analyst, you'll use data to answer questions and solve problems. When you analyze data and draw conclusions, you are generating insights that can influence business decisions, drive positive change, and help your stakeholders meet their goals.
 
@@ -549,7 +549,7 @@ Before you begin an analysis, it's important to inspect your data to determine i
 
 Inspecting your dataset will help you pinpoint what questions are answerable and what data is still missing. You may be able to recover this data from an external source or at least recommend to your stakeholders that another data source be used.
 
-#### Scenario
+### Scenario
 
 You are a data analyst working for an ice cream company. Management is interested in improving the company's ice cream sales.
 
@@ -560,9 +560,9 @@ The company has been collecting data about its sales but not a lot. The availabl
 - How do weekends and holidays affect sales?
 - How does profitability differ for new versus returning customers?
 
-#### Inspect the data
+### Inspect the data
 
-##### Question 1: What is the most popular flavor of ice cream?
+#### Question 1: What is the most popular flavor of ice cream?
 
 To discover the most popular flavor, you first need to define what is meant by **popular**. Is the most popular flavor the one that generated the most revenue in 2019? Or is it the flavor that had the largest number of units sold in 2019? Sometimes your measurement choices are limited by what data you have. You can review your spreadsheet to find out if either of these definitions of **popular** make sense based on the available data.
 
@@ -570,7 +570,7 @@ In this case, you can discover what the most popular flavor is by using units so
 
 ![Example of sales data by ice cream flavour](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-flavour.png?raw=true "Example of sales data by ice cream flavour")
 
-##### Question 2: How does temperature affect sales?
+#### Question 2: How does temperature affect sales?
 
 The column headers are temperature and sales. The data may show total 2019 sales per temperature (for instance, the first entry might sum up \$36.69 in sales for three separate days that each had a high of 60 degrees). Or, the data may show a snapshot of sales and temperature for each day in 2019 (for instance, the first entry might refer to a single day with a high of 60 degrees and \$39.69 in sales).
 
@@ -580,31 +580,31 @@ If it turns out that temperature does affect sales, you'll be able to offer your
 
 ![Example of sales data by temperature](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-temperature.png?raw=true "Example of sales data by temperature")
 
-##### Question 3: How do weekends and holidays affect sales?
+#### Question 3: How do weekends and holidays affect sales?
 
 You can use this data to determine whether a specific date falls on a weekend or holiday and add a column to your sheet that reflects this information. Then, you can find out whether sales on the weekends and holidays are greater than sales on other days. This will be useful to know for inventory planning and marketing purposes.
 
 ![Example of sales data by weekend and holiday](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-weekend.png?raw=true "Example of sales data by weekend and holida")
 
-##### Question 4: How does profitability differ for new customers versus returning customers?
+#### Question 4: How does profitability differ for new customers versus returning customers?
 
 Your dataset does not contain sales data related to new customers. Without this data, you won't be able to answer your final question. However, it may be the case that the company collects customer data and stores it in a different data table.
 
 If so, your next step would be to find out how to access the company's customer data. You can then join the revenue sales data to the customer data table to categorize each sale as from a new or returning customer and analyze the difference in profitability between the two sets of customers. This information will help your stakeholders develop marketing campaigns for specific types of customers to increase brand loyalty and overall profitability.
 
-#### Conclusion
+### Conclusion
 
 When working on analytics projects, you won't always have all the necessary or relevant data at your disposal. In many of these cases, you can turn to other data sources to fill in the gaps.
 
 Despite the limitations of your dataset, it's still possible to offer your stakeholders some valuable insights. For next steps, your best plan of action will be to take the initiative to ask questions, identify other relevant datasets, or do some research on your own. No matter what data you're working with, carefully inspecting your data makes a big impact on the overall quality of your analysis.
 
-### Metadata is as important as the data itself
+## Metadata is as important as the data itself
 
 To put it simply, metadata is data about data. In database management, it provides information about other data and helps data analysts interpret the contents of the data within a database.
 
 Regardless of whether you are working with a large or small quantity of data, metadata is the mark of a knowledgeable analytics team, helping to communicate about data across the business and making it easier to reuse data. In essence, metadata tells the who, what, when, where, which, how, and why of data.
 
-#### Elements of data
+### Elements of data
 
 - Title and description
     - What is the name of the file or website you are examining? What type of content does it contain?
@@ -617,7 +617,7 @@ Regardless of whether you are working with a large or small quantity of data, me
 - Who can access or update it
     - Is this dataset public? Are special permissions needed to customize or modify the dataset?
 
-#### Examples of metadata
+### Examples of metadata
 
 In today's digital world, metadata is everywhere, and it is becoming a more common practice to provide metadata on a lot of media and information you interact with. Here are some real-world examples of where to find metadata:
 
@@ -634,11 +634,11 @@ In today's digital world, metadata is everywhere, and it is becoming a more comm
 - Books
     - Metadata is not only digital. Every book has a number of standard metadata on the covers and inside that will inform you of its title, author's name, a table of contents, publisher information, copyright description, index, and a brief description of the book's contents.
 
-#### Data as you know it
+### Data as you know it
 
 Knowing the content and context of your data, as well as how it is structured, is very valuable in your career as a data analyst. When analyzing data, it is important to always understand the full picture. It is not just about the data you are viewing, but how that data comes together. Metadata ensures that you are able to find, use, preserve, and reuse data in the future. Remember, it will be your responsibility to manage and make use of data in its entirety; metadata is as important as the data itself.
 
-### File structure and naming convention
+## File structure and naming convention
 
 | **Formatting convention** | **Example** |
 |---------------------------|-------------|
@@ -648,7 +648,7 @@ Knowing the content and context of your data, as well as how it is structured, i
 
 : Best practices for filename conventions to follow
 
-#### Best practices for file naming conventions
+### Best practices for file naming conventions
 
 Review the following file naming recommendations:
 
@@ -659,7 +659,7 @@ Review the following file naming recommendations:
 - Create a text file as a sample file with content that describes (breaks down) the file naming convention and a file name that applies it.
 - Avoid spaces and special characters in file names. Instead, use dashes, underscores, or capital letters. Spaces and special characters can cause errors in some applications.
 
-#### Best practices for keeping files organized
+### Best practices for keeping files organized
 
 Remember these tips for staying organized as you work with files:
 
@@ -667,7 +667,7 @@ Remember these tips for staying organized as you work with files:
 - Separate ongoing from completed work so your current project files are easier to find. Archive older files in a separate folder, or in an external storage location.
 - If your files aren't automatically backed up, manually back them up often to avoid losing important work.
 
-### The battle between security and data analytics
+## The battle between security and data analytics
 
 Data security means protecting data from unauthorized access or corruption by putting safety measures in place. Usually the purpose of data security is to keep unauthorized users from accessing or viewing sensitive data. Data analysts have to find a way to balance data security with their actual analysis needs. This can be tricky. We want to keep our data safe and secure, but we also want to use it as soon as possible so that we can make meaningful and timely observations.
 
@@ -676,9 +676,9 @@ Examples of security measures:
 - **Encryption** uses a unique algorithm to alter data and make it unusable by users and applications that don't know the algorithm. This algorithm is saved as a **key** which can be used to reverse the encryption; so if you have the key, you can still use the data in its original form.
 - **Tokenization** replaces the data elements you want to protect with randomly generated data referred to as a **token**. The original data is stored in a separate location and mapped to the tokens. To access the complete original data, the user or application needs to have permission to use the tokenized data and the token mapping. This means that even if the tokenized data is hacked, the original data is still safe and secure in a separate location.
 
-## Process data from dirty to clean
+# Process data from dirty to clean
 
-### Data integrity and compliance
+## Data integrity and compliance
 
 Think about what would happen if you were working as a data analyst for a global company and didn't check date formats. Well, your data integrity would probably be questionable. Any analysis of the data e.g. 12/10/20 would be inaccurate. Imagine ordering extra inventory for December when it was actually needed in October!
 
@@ -712,13 +712,13 @@ As you progress in your data journey, you'll come across many types of data cons
 
 : Data constraints and examples
 
-### Well-aligned objectives and data
+## Well-aligned objectives and data
 
 You can gain powerful insights and make accurate conclusions when data is well-aligned to business objectives. As a data analyst, alignment is something you will need to judge. Good alignment means that the data is relevant and can help you solve a business problem or determine a course of action to achieve a given business objective.
 
-#### Business case A
+### Business case A
 
-##### Clean data + alignment to business objective = accurate conclusions
+#### Clean data + alignment to business objective = accurate conclusions
 
 Account managers at Impress Me, an online content subscription service, want to know how soon users view content after their subscriptions are activated. 
 
@@ -726,9 +726,9 @@ To start off, the data analyst verifies that the data exported to spreadsheets i
 
 ![Example of relevant data in spreadsheet](https://github.com/x-square/visual-resources/blob/main/data-spreadsheet.png?raw=true "Example of relevant data in spreadsheet")
 
-#### Business case B
+### Business case B
 
-##### Alignment to business objective + additional data cleaning = accurate conclusions 
+#### Alignment to business objective + additional data cleaning = accurate conclusions 
 
 Cloud Gate, a software company, recently hosted a series of public webinars as free product introductions. The data analyst and webinar program manager want to identify companies that had five or more people attend these sessions. They want to give this list of companies to sales managers who can follow up for potential sales.
 
@@ -744,9 +744,9 @@ The webinar attendance data seems to align with the business objective. But the 
 - The company name wasn't a mandatory field. If the company name is blank, it might be found from the email address. For example, if the email address is `username@google.com`, the company field could be filled in with Google for the data analysis. This data cleaning step assumes that people with company-assigned email addresses attended a webinar for business purposes.
 - Attendees could enter any name. Since attendance across a series of webinars is being looked at, they need to validate names against unique email addresses. For example, if Joe Cox attended two webinars but signed in as Joe Cox for one and Joseph Cox for the other, he would be counted as two different people. To prevent this, they need to check his unique email address to determine that he was the same person. After the validation, Joseph Cox could be changed to Joe Cox to match the other instance.
 
-#### Business case C
+### Business case C
 
-##### Alignment to business objective + newly discovered variables + constraints = accurate conclusions
+#### Alignment to business objective + newly discovered variables + constraints = accurate conclusions
 
 An after-school tutoring company, A+ Education, wants to know if there is a minimum number of tutoring hours needed before students have at least a 10% improvement in their assessment scores.
 
@@ -757,13 +757,13 @@ The data analyst thinks there is good alignment between the data available and t
 
 After looking at the data, the data analyst discovers that there are **other variables** to consider. Some students had consistent weekly sessions while other students had scheduled sessions more randomly even though their total number of tutoring hours was the same. The data doesn't align as well with the original business objective as first thought, so the analyst adds a **data constraint** to focus only on the students with consistent weekly sessions. This modification helps to get a more accurate picture about the enrolment time needed to achieve a 10% improvement in assessment scores.
 
-### What to do when you find an issue with your data
+## What to do when you find an issue with your data
 
 When you are getting ready for data analysis, you might realize you don't have the data you need or you don't have enough of it. In some cases, you can use what is known as proxy data in place of the real data. Think of it like substituting oil for butter in a recipe when you don't have butter. In other cases, there is no reasonable substitute and your only option is to collect more data.
 
 Consider the following data issues and suggestions on how to work around them:
 
-#### No data
+### No data
 
 | **Possible Solutions** | **Examples of solutions in real life**|
 |------------------------|---------------------------------------|
@@ -772,7 +772,7 @@ Consider the following data issues and suggestions on how to work around them:
 
 : Data issue of no data
 
-#### Too little data
+### Too little data
 
 | **Possible Solutions** | **Examples of solutions in real life**|
 |------------------------|---------------------------------------|
@@ -781,7 +781,7 @@ Consider the following data issues and suggestions on how to work around them:
 
 : Data issue of too little data
 
-#### Wrong data, including data with errors
+### Wrong data, including data with errors
 
 | **Possible Solutions** | **Examples of solutions in real life**|
 |------------------------|---------------------------------------|    
@@ -795,7 +795,7 @@ Use the following decision tree as a reminder of how to deal with data errors or
 
 ![Decision tree of how to deal with data errors or not enough data](https://github.com/x-square/visual-resources/blob/main/data-errors-not-enough.png?raw=true "Decision tree of how to deal with data errors or not enough data")
 
-### Calculating sample size
+## Calculating sample size
 
 | **Terminology** | **Definitions** |
 |-----------------|-----------------|
@@ -820,11 +820,11 @@ When figuring out a sample size, here are things to keep in mind:
     - To decrease the margin of error, use a larger sample size
     - For greater statistical significance, use a larger sample size
 
-#### Why a minimum sample of 30?
+### Why a minimum sample of 30?
 
 This recommendation is based on the **Central Limit Theorem** in the field of probability and statistics. As sample size increases, the results more closely resemble the normal (bell-shaped) distribution from a large number of samples. A sample of 30 is the smallest sample size for which the CLT is still valid. Researchers who rely on **regression analysis** – statistical methods to determine the relationships between controlled and dependent variables – also prefer a minimum sample of 30.
 
-#### Sample sizes vary by business problem
+### Sample sizes vary by business problem
 
 If you live in a city with a population of 200,000 and get 180,000 people to respond to a survey, that is a large sample size. But without actually doing that, what would an acceptable, smaller sample size look like? 
 
@@ -835,35 +835,35 @@ Would 200 be alright if the people surveyed represented every district in the ci
 
 You could probably accept a larger margin of error surveying how residents feel about the new library versus surveying residents about how they would vote to fund it. For that reason, you would most likely use a larger sample size for the voter survey.
 
-### Sample size calculator
+## Sample size calculator
 
 In order to use a sample size calculator, you need to have the **population size**, **confidence level**, and the acceptable **margin of error** already decided so you can input them into the tool. If this information is ready to go, check out these sample size calculators below:
 
 - [SurveyMonkey](https://www.surveymonkey.com/mp/sample-size-calculator "Sample size calculator")
 - [Raosoft](http://www.raosoft.com/samplesize.html "Sample size calculator")
 
-### All about margin of error
+## All about margin of error
 
 Margin of error is the maximum amount that the sample results are expected to differ from those of the actual population. More technically, the margin of error defines a range of values below and above the average result for the sample. The average result for the entire population is expected to be within that range. We can better understand margin of error by using some examples below.
 
-#### Margin of error in baseball
+### Margin of error in baseball
 
 Imagine you are playing baseball and that you are up at bat. The crowd is roaring, and you are getting ready to try to hit the ball. The pitcher delivers a fast ball travelling about 90-95mph, which takes about 400 milliseconds (ms) to reach the catcher's glove. You swing and miss the first pitch because your timing was a little off. You wonder if you should have swung slightly earlier or slightly later to hit a home run. That time difference can be considered the margin of error, and it tells us how close or far your timing was from the average home run swing.
 
-#### Margin of error in marketing
+### Margin of error in marketing
 
 For example, suppose you are conducting an A/B test to compare the effectiveness of two different email subject lines to entice people to open the email. You find that subject line A: `Special offer just for you` resulted in a 5% open rate compared to subject line B: `Don't miss this opportunity` at 3%.
 
 Does that mean subject line A is better than subject line B? It depends on your margin of error. If the margin of error was 2%, then subject line A's actual open rate or confidence interval is somewhere between 3% and 7%. Since the lower end of the interval overlaps with subject line B's results at 3%, you can't conclude that there is a statistically significant difference between subject line A and B. Examining the margin of error is important when making conclusions based on your test results.
 
-#### Calculate your margin of error
+### Calculate your margin of error
 
 All you need is **population size**, **confidence level**, and **sample size**.
 
 - [SurveyMonkey](https://uk.surveymonkey.com/mp/margin-of-error-calculator "Margin of error calculator")
 - [CheckMarket](https://www.checkmarket.com/sample-size-calculator/#sample-size-margin-of-error-calculator "Margin of error calculator")
 
-### What is dirty data?
+## What is dirty data?
 
 ![Types of dirty data](https://github.com/x-square/visual-resources/blob/main/data-dirty.png?raw=true "Types of dirty data")
 
@@ -877,7 +877,7 @@ All you need is **population size**, **confidence level**, and **sample size**.
 
 : Types of dirty data
  
-#### Business impact of dirty data
+### Business impact of dirty data
 
 Here are a few impacts cited for certain industries from a previous search:
 
@@ -886,7 +886,7 @@ Here are a few impacts cited for certain industries from a previous search:
 - [Marketing and sales](https://www.dqglobal.com/blog/why-bad-data-is-wasting-your-marketing-efforts "Why bad data is a waste of your marketing efforts"): 99% of companies are actively tackling data quality in some way
 - [Healthcare](https://www.techtarget.com/searchdatamanagement/tip/How-data-duplication-in-healthcare-is-diagnosed "How data duplication in healthcare is diagnosed"): Duplicate records can be 10% and even up to 20% of a hospital's electronic health records
 
-### Common data-cleaning pitfalls
+## Common data-cleaning pitfalls
 
 ![Errors you might come across while cleaning your data](https://github.com/x-square/images/blob/main/data-cleaning-errors.png?raw=true "Errors you might come across while cleaning your data")
 
@@ -895,7 +895,7 @@ Top ten lists for data cleaning:
 - [Microsoft Excel](https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19 "Top ten ways to clean your data")
 - [Google Sheets](https://support.google.com/a/users/answer/9604139?hl=en#zippy= "Tips to format and clean up data")
 
-### Data-cleaning verification checklist
+## Data-cleaning verification checklist
 
 ### Correct the most common problems
 
@@ -918,7 +918,7 @@ Top ten lists for data cleaning:
 - Confirm the goal of the project
 - Verify that data can solve the problem and is aligned to the goal 
 
-### Workflow automation
+## Workflow automation
 
 | **Task** | **Can it be automated?** | **Why?** |
 |----------|--------------------------|----------|
@@ -930,7 +930,7 @@ Top ten lists for data cleaning:
 
 : What can be automated?
 
-### Embrace changelogs
+## Embrace changelogs
 
 Engineers use **engineering change orders** to keep track of new product design details and proposed changes to existing products. Writers use document revision histories to keep track of changes to document flow and edits. And data analysts use changelogs to keep track of data transformation and cleaning.
 
@@ -957,7 +957,7 @@ Here is how a version control system affects a change to a query:
 - If the query has a problem or business needs change, the analyst can **undo** the change to the query using the version control system. The analyst can look at a chronological list of all changes made to the query and who made each change. Then, after finding their own change, the analyst can **revert** to the previous version.
 - The query is back to what it was before the analyst made the change. And everyone at the company sees this reverted, original query, too.
 
-### PAR method versus STAR method
+## PAR method versus STAR method
 
 **By using PAR, we can showcase our skills and impact in a brief and measurable manner.**    
 
@@ -988,7 +988,7 @@ STAR method can be confusing as it may ask for repetitive information in both si
 > - Action you took and why was it but not the alternatives
 > - Result of your action and what did you learn from the experience
 
-### Advanced functions for speedy data cleaning
+## Advanced functions for speedy data cleaning
 
 ![Speed up the data cleaning process](https://github.com/x-square/visual-resources/blob/main/data-cleaning-speed.png?raw=true "Speed up the data cleaning process")
 
@@ -1011,9 +1011,9 @@ Common professional skills for entry-level data analysts:
 
 ![Common soft skills you will find in an entry-level data analyst resume](https://github.com/x-square/visual-resources/blob/main/data-analyst-soft-skills.png?raw=true "Common soft skills you will find in an entry-level data analyst resume")
 
-## Analyze data to answer questions
+# Analyze data to answer questions
 
-### Keeping data organized with sorting and filters
+## Keeping data organized with sorting and filters
 
 You have learned about four phases of analysis: 
 
@@ -1030,7 +1030,7 @@ Sorting is when you arrange data into a meaningful order to make it easier to un
 
 Filtering is used when you are only interested in seeing data that meets a specific criteria, and hiding the rest. Filtering is really useful when you have lots of data. You can save time by zeroing in on the data that is really important or the data that has bugs or errors. Most spreadsheets and SQL databases allow you to filter your data in a variety of ways. Filtering gives you the ability to find what you are looking for without too much effort.
 
-### Converting data in spreadsheets
+## Converting data in spreadsheets
 
 As a data analyst, there are lots of scenarios when you might need to convert data in a spreadsheet:
 
@@ -1041,7 +1041,7 @@ As a data analyst, there are lots of scenarios when you might need to convert da
 
 Keep in mind that you may have lots of columns of data that require different formats. Consistency is key, and best practice is to make sure an entire column has the same format.
 
-### Advanced spreadsheet tips and tricks
+## Advanced spreadsheet tips and tricks
 
 Google Sheets
 
@@ -1064,7 +1064,7 @@ Two common reasons to use VLOOKUP are:
 - Populating data in a spreadsheet
 - Merging data from one spreadsheet with data in another
 
-### Types of data validation
+## Types of data validation
 
 As a junior data analyst, you might not perform all of these validations. But you could ask if and how the data was validated before you begin working with a dataset. Data validation helps to ensure the integrity of data. It also gives you confidence that the data you are using is clean.
 
@@ -1093,22 +1093,22 @@ As a junior data analyst, you might not perform all of these validations. But yo
     - **Example:** Common problems discovered during code validation include more than one data type allowed, data range checking not done, or ending of text strings not well defined.
     - **Limitations:** Code validation might not validate all possible variations with data input.
 
-## Share data through the art of visualization
+# Share data through the art of visualization
 
-### Effective data visualizations
+## Effective data visualizations
 
 A data visualization, sometimes referred to as a data viz, allows analysts to properly interpret data. A good way to think of data visualization is that it can be the difference between utter confusion and really grasping an issue. Creating effective data visualizations is a complex task; there is a lot of advice out there, and it can be difficult to grasp it all.
 
 In this reading, you are going to learn some tips and tricks for creating effective data visualizations. First, you'll review two frameworks that are useful for thinking about how you can organize the information in your. Second, you'll explore pre-attentive attributes and how they can be used to affect the way people think about your visualizations. From there, you'll do a quick review of the design principles that you should keep in mind when creating your visualization. You will end the reading by reviewing some practices that you can use to avoid creating misleading or inaccurate visualizations.
 
-#### McCandless method
+### McCandless method
 
 - **Information**: the data you are working with
 - **Story**: a clear and compelling narrative or concept
 - **Goal**: a specific objective or function for the visual
 - **Visual** form: an effective use of metaphor or visual expression
 
-### Correlation and causation
+## Correlation and causation
 
 Correlation in statistics is the measure of the degree to which two variables move in relationship to each other. An example of correlation is the idea that `as the temperature goes up, ice cream sales also go up`. It is important to remember that correlation doesn't mean that one event causes another. But, it does indicate that they have a pattern with or a relationship to each other. If one variable goes up and the other variable also goes up, it is a positive correlation. If one variable goes up and the other variable goes down, it is a negative or inverse correlation. If one variable goes up and the other variable stays about the same, there is no correlation.
 
@@ -1120,7 +1120,7 @@ When you make conclusions from data analysis, you need to make sure that you don
 
 For example, pellagra is a disease with symptoms of dizziness, sores, vomiting, and diarrhea. In the early 1900s, people thought that the disease was caused by unsanitary living conditions. Most people who got pellagra also lived in unsanitary environments. But, a closer examination of the data showed that pellagra was the result of a lack of niacin (Vitamin B3). Unsanitary conditions were related to pellagra because most people who couldn't afford to purchase niacin-rich foods also couldn't afford to live in more sanitary conditions. But, dirty living conditions turned out to be a correlation only.
 
-### The wonderful world of visualizations
+## The wonderful world of visualizations
 
 - **Line chart** is used to track changes over short and long periods of time. When smaller changes exist, line charts are better to use than bar graphs. Line charts can also be used to compare changes over the same period of time for more than one group.
 - **Column charts** e.g. bar chart use size to contrast and compare two or more values, using height or lengths to represent the specific values.
@@ -1137,7 +1137,7 @@ Meaningful patterns can take many forms, such as:
 - **Ranking** is a position in a scale of achievement or status. Data that requires ranking is best represented by a column chart.
 - **Correlation** shows a mutual relationship or connection between two or more things. A scatter plot is an excellent way to represent this type of data pattern.
 
-### Data grows on decision trees
+## Data grows on decision trees
 
 A decision tree is a decision-making tool that allows you, the data analyst, to make decisions based on key questions that you can ask yourself. Each question in the visualization decision tree will help you make a decision about critical features for your visualization. Below is an example of a basic decision tree to guide you towards making a data-driven decision about which visualization is the best way to tell your story. Please note that there are many different types of decision trees that vary in complexity, and can provide more in-depth decisions.
 
@@ -1150,7 +1150,7 @@ Start off by evaluating the type of data you have and go through a series of que
 - Are you measuring changes over time?
 - Do relationships between the data need to be shown?
 
-### Principles of design
+## Principles of design
 
 There are nine basic principles of design that data analysts should think about when building their visualizations.
 
