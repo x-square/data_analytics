@@ -8,23 +8,23 @@ date: "February 2024"
 
 [^1]: Buisson, Florent. 2021. *Behavioral Data Analysis with R and Python: Customer-Driven Data for Real Business Results*. O'Reilly: Sebastopol, California.
 
-## The causal-behavioral framework for data analysis
+# The causal-behavioral framework for data analysis
 
 Understanding what drives behaviors in order to change them is one of the key goals of applied analytics, whether in a business, a nonprofit, or a public organization. We want to figure out why someone bought something and why someone else didn’t buy it. We want to understand why someone renewed their subscription, contacted a call center instead of paying online, registered to be an organ donor, or gave to a nonprofit. Having this knowledge allows us to predict what people will do under different scenarios and helps us to determine what our organization can do to encourage them to do it again or not.
 
 ![Causal-behavioural framework for data analysis](https://github.com/x-square/visual-resources/blob/main/cause-behaviour-data.png?raw=true "Causal-behavioural framework for data analysis")
 
-### Why we need causal analytics to explain human behavior?
+## Why we need causal analytics to explain human behavior?
 
 Understanding where causal analytics fits into the analytics landscape will help us better identify why it is needed in business settings. As we’ll see, that need stems from the complexity of human behavior.
 
-#### The different types of analytics
+### The different types of analytics
 
 - **Descriptive analytics** provides a description of data. In simple terms, I think of it as **what is** or **what we've measured** analytics. Business reporting falls under that umbrella. How many customers canceled their subscriptions last month? How much profit did we make last year? Whenever we're calculating an average or other simple metrics, we’re implicitly using descriptive analytics.
 - **Predictive analytics** provides a prediction. I think of it as **what will be, assuming current conditions persist** or **what we haven't yet measured** analytics. Most machine learning methods belong to this type of analytics and help us answer questions like **How many customers will cancel their subscription next month?** and **Is that order fraudulent?**
 - **Causal analytics** provides the causes of data. I think of it as **what if?** or **what will be, under different conditions** analytics. It answers questions such as **How many customers will cancel their subscription next month unless we send them a coupon?** The most well-known tool of causal analytics is the A/B test, a.k.a. a randomized experiment or randomized controlled trial. That's because the simplest and most effective way to answer the preceding question is to send a coupon to a randomly selected group of customers and see how many of them cancel their subscription compared to a control group.
 
-#### Human beings are complicated
+### Human beings are complicated
 
 If predictive analytics has been so successful and causal analytics uses the same data analysis tools like regression, why not stick with predictive analytics? In short, because human beings are more complicated than wind turbines. Human behavior:
 
@@ -34,33 +34,33 @@ If predictive analytics has been so successful and causal analytics uses the sam
 - Is innovative
 - Is strategic
 
-### Confound It! The hidden dangers of letting regression sort it out
+## Confound It! The hidden dangers of letting regression sort it out
 
 A regression for predictive analytics is used to estimate an unknown value (often, but not always, in the future). It does this by taking known information and using a variety of factors to triangulate the best guess value for a given variable. What is important is the predicted value and its accuracy, not why or how it was predicted.
 
 Causal analytics also uses regression, but the focus is not on estimating a value of the target variable. Instead, the focus is on the cause of that value. In regression terms, our interest is no longer in the dependent variable itself but in its relationship with a given independent variable. With a correctly structured regression, the coefficient of correlation can be a portable measure of the causal effect of an independent variable on a dependent variable.
 
-#### Berkson's paradox
+### Berkson's paradox
 
 If one of your customers has a strong taste for vanilla, this completely explains why they are shopping at your stand, and they don’t need to have a strong taste for chocolate. On the other hand, if one of your customers has a weak taste for vanilla, this can't explain why they are shopping at your stand, and they must have a stronger than average taste for chocolate.
 
 The Berkson's paradox is counterintuitive and hard to understand at first. It can cause biases in your data, depending on how it was collected, even before you start any analysis.
 
-## Understanding behavioral data
+# Understanding behavioral data
 
-### Types of customer data
+## Types of customer data
 
 - **Demographic data** is information about your customers, like their age, gender, income, and education. It helps you know who your customers are and what they need. You can use this data to group your customers for marketing. For instance, if you sell anti-wrinkle cream, you might concentrate on age groups that are more likely to buy it. Gathering this data makes your marketing more focused and improves the outcomes.
 - **Psychographic data** includes a customer's values, personality traits, opinions, attitudes, beliefs, and lifestyle. It goes beyond just demographic information. While demographics appeal to the logical side, psychographic data helps tap into the emotional aspect of buying decisions. Businesses and products don't have emotions, but humans do. Understanding what motivates your customer emotionally, what messaging resonates with them, and what brand attitude connects with them, becomes clearer with psychographic data. It's about making customers feel something to drive their buying decisions.
 - **Behavioural data** includes customer actions, like purchases, website visits, or signing up for newsletters. It helps you grasp what your customers want and how they engage with your business. For instance, in the wrinkle cream case, if users of a certain age visit your website, click on product pages, and later sign up for your newsletter, it shows brand awareness and buyer intent. Analysing such data helps optimize touch points in your customer journey. Understanding when and why customers act the way they do enhances your marketing efforts, especially in re-engaging returning customers.
 - **Transactional data** is details about a customer's financial activities, like how much they spend, how often they make purchases, the time it takes for them to buy, and how many items they return. This data helps marketers grasp spending habits and trends among customers, which becomes crucial when market conditions change, new technology emerges, or new factors affect buying decisions.
 
-### How information acquired?
+## How information acquired?
 
 - **Theoretical approach** refers to information or predictions that are derived from theoretical principles, models, or hypotheses. This type of data is based on conceptual frameworks, ideas, or assumptions rather than direct observation or experimentation. Theoretical data often involves predictions or expectations about how a system or phenomenon should behave according to a given theoretical perspective. It serves as a foundation for designing experiments or conducting research.
 - **Empirical approach**, on the other hand, is information that is obtained through direct observation, experimentation, or experience. This data is collected from real-world observations and measurements. It is tangible, verifiable, and based on evidence gathered through sensory experience or documented facts. Empirical data is crucial in scientific research as it provides the foundation for testing hypotheses, validating theories, and drawing conclusions based on observable phenomena.
 
-### A basic model of human behavior
+## A basic model of human behavior
 
 ![Model of human behaviour for a midlife crisis](https://github.com/x-square/visual-resources/blob/main/human-behaviour-midlife-crisis.png?raw=true "Model of human behaviour for a midlife crisis")
 
@@ -85,11 +85,11 @@ The Berkson's paradox is counterintuitive and hard to understand at first. It ca
 
 [^2]: Note that the terms action and behaviour are often used interchangeably.
 
-#### Personal characteristics
+### Personal characteristics
 
 As a behavioral science mantra puts it, **behavior is a function of the person and the environment**, and social factors often have arguably more weight than demographic variables.
 
-#### Cognition and emotions
+### Cognition and emotions
 
 One of the biggest differences between user experience or human-centered design and behavioral science is that **user experience begins with the presumption that human beings know what they want, how they feel about something and why**, whereas **behavioral science begins with the presumption that we are unaware of a lot of things going on in our own heads**.
 
@@ -97,26 +97,26 @@ To use a legal metaphor, a behavioral scientist will often treat what someone sa
 
 However, the distinction often gets blurred in practice, depending on the situation at hand. If a behavioral scientist is told by a customer that a website is confusing and frustrating to use, they will take a page from the user experience book and trust that the customer did indeed experience negative emotions. Conversely, when doing foundational product research, a skilled user experience researcher will often go beyond stated intentions and attempt to identify a customer's deeper needs.
 
-#### Intentions
+### Intentions
 
 People often fail to follow through on things they want to do, a concept known in behavioral science as the **intention-action gap**. As an example, think of New Year's resolutions and how often they are broken.
 
 Therefore, a key to driving customer behavior is determining whether a potential response doesn't occur because the customers don't want to take that action or because something happens between intention and action.
 
-#### Actions
+### Actions
 
 An action or behavior is something you should be able to observe if you were in the room at that moment without having to ask the person. **Buying something on Amazon** is an action. So is **reading a review of a product on Amazon**.
 
 But **knowing something** or **deciding to buy something on Amazon** is not. You can't know that someone has made a decision unless you either ask them or see them acting on that decision which is a consequence but not the same thing.
 
-#### Business behaviors
+### Business behaviors
 
 Business behaviors can be an analyst’s worst nightmare: like water to fish, they can be invisible to an organization, and their effects on individual behaviors then become intractable noise:
 
 - First, many organizations, if they track business behaviors at all, simply don’t track them at the same level of detail as customer behaviors.
 - Second, business behaviors can affect the interpretation of variables for customer behaviors. The clearest example of that would be sludges, intentional frictions and misleading communication introduced to confuse customers.
 
-### How to connect behaviors and data?
+## How to connect behaviors and data?
 
 Connecting behaviors and data is not simply a matter of assigning the variables at hand to one of these buckets. Being about behaviors is not enough for a variable to qualify as behavioral data as we saw in the previous section, for instance, a variable supposedly about customer behavior may really only reflect a business rule.
 
@@ -141,9 +141,9 @@ In this section, I'll give you a list of tips to behavioralize your data and ens
 
 Often the best way to understand the context in which people behave is through qualitative research such as interviews and surveys, whose insights can be used to generate new variables.
 
-## Introduction to causal diagrams
+# Introduction to causal diagrams
 
-### Causal diagrams and the causal-behavioral framework
+## Causal diagrams and the causal-behavioral framework
 
 A causal diagram is a visual representation of variables, shown as boxes, and their relationships to each other shown as arrows going from one box to another.
 
@@ -153,7 +153,7 @@ Sometimes, however, there will be an additional variable that we aren’t able t
 
 ![Example of causal diagram with unobserved variable](https://github.com/x-square/visual-resources/blob/main/causal-diagram.png?raw=true "Example of causal diagram with unobserved variable")
 
-#### Causal diagrams represent behaviors
+### Causal diagrams represent behaviors
 
 We intuitively understand that human beings have habits, preferences, and emotions, and we treat these as causes even though we often don't have any numeric data about them. When we say, **Joe bought peanuts because he was hungry**, we are relying on our knowledge, experience, and beliefs about humans in general and Joe in particular. We treat hunger as a real thing, even if we're not measuring Joe's blood sugar or brain activation.
 
@@ -161,7 +161,7 @@ Here, we're making a causal statement about reality: we're saying that **had Joe
 
 This subjectivity might look like a possibly fatal flaw of causal diagrams, but it’s actually a feature, not a bug. Causal diagrams don't create uncertainty; they simply reflect the uncertainty that is already in our world. If there are several possible interpretations of the situation at hand that appear equally valid, you should explicitly say so. The alternative would be to allow people who have different mental models in their heads to each believe that they know the truth and others agree with them, when in reality that’s not the case. At least putting the uncertainty in the open will allow a principled discussion and guide your analysis.
 
-#### Causal diagrams represent data
+### Causal diagrams represent data
 
 When relationships between variables in our data are entirely linear, or approximately so, causal diagrams have clear equivalents in linear algebra. This means we can use the rules and tools of linear algebra to validate the **legality** of how we manipulate and transform causal diagrams, thus ensuring that we draw correct conclusions
 
@@ -169,7 +169,7 @@ The linearity requirement may seem very restrictive. However, some of the rules 
 
 ![Example of causal diagram of binary variables](https://github.com/x-square/visual-resources/blob/main/causal-diagram-binary-variables.png?raw=true "Example of causal diagram of binary variables")
 
-### Fundamental structures of causal diagrams
+## Fundamental structures of causal diagrams
 
 - Chains
 - Forks
@@ -189,7 +189,7 @@ Forks are also typical of situations where we look at demographic variables: age
 
 ![Example of causal diagram of three variables](https://github.com/x-square/visual-resources/blob/main/causal-diagram-three-variables.png?raw=true "Example of causal diagram of three variables")
 
-### Common transformations of causal diagrams
+## Common transformations of causal diagrams
 
 Causal diagrams can be **collapsed** or **expanded** to focus on specific relations, direct or indirect.
 
@@ -198,7 +198,7 @@ Variables can themselves be sliced or aggregated to zoom in and out of specific 
 - **Slicing variables** means splitting a variable into sub variables e.g. from iced coffee sales to iced American sales and iced latte sales.
 - **Aggregating variables** means merging more two or more relevant variables into a theme as a bigger variable e.g. from age and gender to demographics characteristics.
 
-#### Cycles and paths
+### Cycles and paths
 
 In real life, we often see variables that influence each other causally. This type of causal diagram is called a cycle. Cycles can arise for a variety of reasons. Two of the most common in behavioral data analysis are substitution effects and feedback loops. Fortunately, there are some workarounds that will allow you to deal with cycles when you encounter them.
 
@@ -215,19 +215,19 @@ In almost all cases, it takes some **time** for one variable to influence anothe
 
 Having seen the various ways variables can interact, we can now introduce one last concept, **paths**, which encompasses all of them. We say that there is a path between two variables **if there are arrows between them, regardless of the direction of the arrows, and if no variable appears twice along the way**.
 
-## Building causal diagrams from scratch
+# Building causal diagrams from scratch
 
 Our goal in this book is always to measure the impact of one variable on another, which we can represent as a **starter** causal diagram as follows.
 
 ![The simplest possible causal diagram](https://github.com/x-square/visual-resources/blob/main/causal-diagram-simplest.png?raw=true "The simplest possible causal diagram")
 
-### Business problem and data setup
+## Business problem and data setup
 
 - Understanding the relationship of interest
 
 ![Example of causal diagram of causal relationship of interest](https://github.com/x-square/visual-resources/blob/main/causal-diagram-relationship-interest.png?raw=true "Example of causal diagram of causal relationship of interest")
 
-### Identify candidate variables to include
+## Identify candidate variables to include
 
 - Personal characteristics
 - Cognition and emotions
@@ -238,7 +238,7 @@ Our goal in this book is always to measure the impact of one variable on another
 
 ![Example of updated causal diagram at the final step](https://github.com/x-square/visual-resources/blob/main/causal-diagram-final-step.png?raw=true "Example of updated causal diagram at the final step")
 
-### Validate observable variables to include based on data
+## Validate observable variables to include based on data
 
 - Relationships between numeric variables
 - Relationships between categorical variables
@@ -258,7 +258,7 @@ Measuring correlations between numeric and categorical variables is a more cumbe
 
 ![Latest version of causal diagram of observable variables](https://github.com/x-square/visual-resources/blob/main/causal-diagram-observable-latest.png?raw=true "Latest version of causal diagram of observable variables")
 
-### Expand Causal Diagram Iteratively
+## Expand Causal Diagram Iteratively
 
 ![Tentative causal diagram with unobservable variables](https://github.com/x-square/visual-resources/blob/main/causal-diagram-unobservable.png?raw=true "Tentative causal diagram with unobservable variables")
 
@@ -290,7 +290,7 @@ If this process seems long and somewhat tedious, that's because it is. Fortunate
 
 Similarly, once someone has gone through the process, a new team member or employee can very easily and quickly acquire the corresponding knowledge and pick up where they left off by looking at the resulting causal diagram or even just the list of relevant variables to keep in mind.
 
-## Using causal diagrams to deconfound data analyses
+# Using causal diagrams to deconfound data analyses
 
 ![Causal diagram for a business problem](https://github.com/x-square/visual-resources/blob/main/causal-diagram-business.png?raw=true "Causal diagram for a business problem")
 
@@ -300,7 +300,7 @@ In the upper left corner of the causal diagram, store staff has been instructed 
 
 In the bottom right corner of the causal diagram, the average age of customers (younger customers, and customers with children, are more likely to purchase sugary products) and the health mindset of customers (health-minded customers are more likely to buy water and less likely to buy sodas, everything else being equal).
 
-### Disjunctive cause criterion
+## Disjunctive cause criterion
 
 - First block
     - Include all variables that are a direct cause of both or either of our variables of interest e,g, number of customers that lead to ice cream sales and French fries sales that lead to bottled water sales
@@ -313,11 +313,11 @@ In the bottom right corner of the causal diagram, the average age of customers (
     - Include average age of store customers and health mindset of store customers
     - Exclude soda sales as it is not a cause of either ice cream sales or bottled water sales, but the problem is we don't have data for them yet
 
-### Backdoor criterion
+## Backdoor criterion
 
 Definition
 
-:   The causal relationship between two variables is confounded if there is at least one unblocked noncausal path between them starting with an arrow to our cause of interest. Conversely, to remove all confounding, we need to block all noncausal paths between them starting with an arrow to our cause of interest.
+: The causal relationship between two variables is confounded if there is at least one unblocked noncausal path between them starting with an arrow to our cause of interest. Conversely, to remove all confounding, we need to block all noncausal paths between them starting with an arrow to our cause of interest.
 
 ![A confounder is a joint cause and can be hidden](https://github.com/x-square/visual-resources/blob/main/confounder.png?raw=true "A confounder is a joint cause and can be hidden")
 
