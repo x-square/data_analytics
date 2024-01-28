@@ -79,7 +79,9 @@ More data analytics tasks will be automated in edge environments. Remember, Arti
 
 Employers in a variety of industries are eager to hire data professionals who possess more than just technical expertise. You can highlight your non-technical abilities for potential employers in several ways. Discover ways to successfully and effectively communicate your passions. By demonstrating a commitment to professional growth and sharing examples of your ability to solve problems, you can set yourself apart from other candidates.
 
-> [!TIP] Being coachable
+> [!TIP]
+> **Being coachable**
+> 
 > Coachable individuals are capable of receiving feedback and using that information to make improvements. At the center of being coachable is a positive attitude, and the ability to self-reflect and take steps to grow. People who are coachable usually have a growth mindset, which is a belief that hard work and determination can make them better. As a result, they view feedback from colleagues and supervisors as an opportunity to improve their skill set.
 
 - A passion for data analysis
@@ -407,7 +409,8 @@ As a general rule, data professionals rely on workflow structures to guide them 
 
 Data professionals at Google developed PACE as a flexible model. Through PACE, you will identify areas of action and contexts for when they will need to be considered. All in all, PACE offers professionals a customizable scaffold that can support their efforts while working through every stage of a data project.
 
-> [!TIP] Data science projects typically take anywhere from 1 to 6 months
+> [!TIP]
+> Data science projects typically take anywhere from 1 to 6 months:
 >
 > **Plan A**
 > 
