@@ -63,25 +63,16 @@ BigQuery is Google's fully managed, serverless data warehouse that works across 
 
 ## The power of data in business
 
-Issue
-
-: A topic or subject to investigate
-
-Question
-
-: Designer to discover information
-
-Problem
-
-: An obstacle or complication that needs to be worked out
-
-Business task
-
-: The question or problem data analysis answers for a business e.g. analyse weather data from the last decade to identify predictable patterns
-
-Data-driven decision-making
-
-: Using facts to guide bushiness strategy
+- **Issue**
+    - A topic or subject to investigate
+- **Question**
+    - Designer to discover information
+- **Problem**
+    - An obstacle or complication that needs to be worked out
+- **Business task**
+    - The question or problem data analysis answers for a business e.g. analyse weather data from the last decade to identify predictable patterns
+- **Data-driven decision-making**
+    - Using facts to guide bushiness strategy
 
 ## Exploring your next job
 
@@ -150,13 +141,10 @@ No one realized a problem even existed until the Orbiter burst into flames in th
 
 ## Qualitative and quantitative data in business
 
-Qualitative data
-
-: Subjective or explanatory measures of qualities and characteristics
-
-Quantitative data
-
-: Specific and objective measures of numerical facts
+- **Qualitative data**
+    - Subjective or explanatory measures of qualities and characteristics
+- **Quantitative data**
+    - Specific and objective measures of numerical facts
 
 We can take a closer look at the data types and data collection tools. Imagine that you are a data analyst for a chain of movie theaters. Your manager wants you to track trends in:
 
