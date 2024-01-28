@@ -8,40 +8,40 @@ date: "December 2023"
 
 [^1]: This part of notes is compiled from [Google Advanced Data Analytics](https://www.coursera.org/professional-certificates/google-advanced-data-analytics "Google professional certificate"). This program includes over 200 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world advanced data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in advanced data analytics and data science. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to advanced data analytics tools and platforms and key technical skills required for an advanced role.
 
-## Foundations of data science
+# Foundations of data science
 
-### Profiles of data professionals
+## Profiles of data professionals
 
 Data analysts in **technical** roles transform raw data into something useful for decision-making. **Strategic** data analytics professionals focus on maximizing information to guide the businesses they are working for.
 
-#### Data scientist and data analyst
+### Data scientist and data analyst
 
 Data scientist and data analyst are roles that work directly with data. These professionals gather, clean, analyze, and share insights from data with stakeholders. An increasing number of industries turn to data analysis to create insights that inform various tasks like guide decision-making, identify user preferences, or determine how to use resources more effectively. With more industries looking for data professionals, there is a great chance that you will find one that matches your interests.
 
-##### Key attributes
+#### Key attributes
 
 - What they do: Uncover trends, patterns, and insights from data
 - How they do it: Employ advanced modeling and statistical analytics techniques
 
-#### Data management and infrastructure 
+### Data management and infrastructure 
 
 Data professionals that work in data management and infrastructural roles are primarily responsible for the systems that distribute data and maintain its integrity. They work alongside data analytics professionals and help support their work. Their main responsibility is to ensure the functionality of data systems and the compliance with local, state, and federal regulations involving data security and ethics. 
 
-##### Key attributes
+#### Key attributes
 
 - What they do: Manage data sources and the overall data infrastructure
 - How they do it: Work with the tools and databases used to manage data within a business
 
-#### Business intelligence
+### Business intelligence
 
 Data analytics and business intelligence share a lot of commonalities. Both fields have professionals that use data to create insights that inform decision-making. A major difference is that business intelligence is more focused on creating processes and information channels that transform relevant data. Business intelligence professionals create tables, reports, and dashboards that empower stakeholders, giving them access to the data they need to inform the entire decision-making process on a continual basis. These roles often serve as a complement to core data analytics/data science professionals.
 
-##### Key attributes
+#### Key attributes
 
 - What they do: Perform predictive analysis that enables organizations to determine likely future trends
 - How they do it: Create tables, reports and dashboards that empower their organization
 
-### Where data makes a difference for the future
+## Where data makes a difference for the future
 
 There are so many different industries taking advantage of data analytics in so many different ways. Here is just a sample of some of these industries and how they use data:
 
@@ -59,11 +59,11 @@ There are so many different industries taking advantage of data analytics in so 
 
 : How data is used in different industries
 
-#### Data trends for the future
+### Data trends for the future
 
 The future of data is booming! Big data's getting bigger, fueling data-driven decisions through both simple trend analysis and complex forecasting. Companies are also hoarding raw data in accessible repositories, creating massive opportunities for data analysts to organize and extract valuable insights. Buckle up, data enthusiasts, the future's full of exciting potential!
 
-#### Innovative technologies
+### Innovative technologies
 
 Data access innovations are bringing industries new ways to connect data. This means exciting data solutions and tools are always on the horizon!
 
@@ -75,7 +75,7 @@ As the number of internet-connected devices grows, edge computing will bring app
 
 More data analytics tasks will be automated in edge environments. Remember, Artificial intelligence and machine learning systems are only as equitable as their creators. You'll learn more about ensuring equity in data analytics in the future.
 
-### Ideal qualities for data analytics professionals
+## Ideal qualities for data analytics professionals
 
 Employers in a variety of industries are eager to hire data professionals who possess more than just technical expertise. You can highlight your non-technical abilities for potential employers in several ways. Discover ways to successfully and effectively communicate your passions. By demonstrating a commitment to professional growth and sharing examples of your ability to solve problems, you can set yourself apart from other candidates.
 
@@ -95,7 +95,7 @@ Employers in a variety of industries are eager to hire data professionals who po
 - Problem solver
     - Adjust your past working responsibilities into tasks that you were able to achieve. This can be accomplished by stressing the end results of your actions. Detail how your action or task had a direct impact on the organization. If there is a measured or empirical amount of change associated with your actions, be sure to include that. Example: `Analyzed data from over 3,000 users to optimize systems, which led to a 32% increase in customer satisfaction.`
 
-### Volunteer data skills to make a positive impact
+## Volunteer data skills to make a positive impact
 
 > *To allow all kids, despite physical limitations, the ability to experience the same hallmark childhood memories as their peers. Helping kids, be kids.*
 > 
@@ -116,11 +116,11 @@ Data analytics professionals can help nonprofit organizations in a variety of wa
     - A hackathon is an event where programmers and other data professionals come together and collaborate on a particular project. The goal is to create a solution to an existing problem.
     - Hackathon events are commonly built around a central theme or question, such as tracking industrial emissions, promoting healthy food options, or how we can improve mental health for cancer patients.
 
-### Critical data security and privacy principles
+## Critical data security and privacy principles
 
 As a data analytics professional, you have a responsibility to handle data ethically. Data ethics refers to well-founded standards of right and wrong that dictate how data is collected, shared, and used. Throughout your career you will work with a lot of data. This sometimes includes PII, or personally identifiable information, which can be used by itself or with other data to track down a person's identity. One element of treating data ethically is ensuring that the privacy and security of that data is maintained throughout its lifetime.
 
-#### Privacy matters
+### Privacy matters
 
 Data privacy means preserving a data subject's information and activity any time a data transaction occurs. This is also called information privacy or data protection. Data privacy is concerned with the access, use, and collection of personal data. For the people whose data is being collected, this means they have the right to:
 
@@ -132,7 +132,7 @@ Data privacy means preserving a data subject's information and activity any time
 
 In order to maintain these rights, businesses and organizations have to put privacy measures in place to protect individuals' data. This is also a matter of trust. The public's ability to trust companies with personal data is important. It's what makes people want to use a company's product, share their information, and more. 
 
-#### Protecting privacy with data anonymization
+### Protecting privacy with data anonymization
 
 Organizations use a lot of different measures to protect the privacy of their data subjects, like incorporating access permissions to ensure that only the people who are supposed to access that information can do so. Another key strategy to maintaining privacy is data anonymization. 
 
@@ -152,7 +152,7 @@ Data anonymization is used in just about every industry. As a data analytics pro
 
 Imagine a world where we all had access to each other's addresses, account numbers, and other identifiable information. That would invade a lot of people's privacy and make the world less safe. Data anonymization is one of the ways we can help keep data private and secure!
 
-#### The practices and principles of good data stewardship
+### The practices and principles of good data stewardship
 
 As you have been learning, all data professionals are responsible for ensuring the quality, integrity, accessibility, and security of data. Data stewardship is the practice of ensuring that data is accessible, usable, and safe. Making data stewardship a normal part of your work habits will benefit everyone who relies on your analysis, both inside and outside of your organization. In the following, you will learn some tips about data stewardship and receive some best practices that can assist in guiding your career in data analytics.
 
@@ -162,9 +162,9 @@ As you have been learning, all data professionals are responsible for ensuring t
 - Consider inclusivity
 - Uphold high standards of scientific excellence
 
-### Build the perfect data team
+## Build the perfect data team
 
-#### Data professional profiles within large organizations
+### Data professional profiles within large organizations
 
 - Data Scientist
 - Data Analyst
@@ -172,7 +172,7 @@ As you have been learning, all data professionals are responsible for ensuring t
 - Analytic Team Manager
 - Business Intelligence Engineer
 
-#### Five principles for data team building
+### Five principles for data team building
 
 1. Adaptability
    - Data platforms, networks and storage options need to allow flexibility. Each data professional will have their preferences as to the tools and their approaches to analysis. Remote and on-site employees need to have access and the ability to work with all data and use the tools of communication they feel are the most productive.
@@ -190,7 +190,7 @@ As you have been learning, all data professionals are responsible for ensuring t
    - Often, the inability to estimate the impact on the business can block data analysis projects. Organizations are not considering all available data analytical solutions during the planning stage.
    - Focus on communicating clearly with stakeholders. Maintain a commitment to consistency between what you have promised and what you will deliver.
 
-### RACI matrix
+## RACI matrix
 
 RACI matrix is a tool that many organizations use to structure their projects. It also helps to outline, communicate, and understand the responsibilities of data analytics professionals and other cross-functional team members.
 
@@ -212,11 +212,11 @@ RACI matrix is a tool that many organizations use to structure their projects. I
 - Informed
     - Those who need to be kept in the loop on project progress, rather than roped into details of every deliverable
 
-### Current and future tools
+## Current and future tools
 
 As a data professional, you will continue learning new skills and applying your current skills in new ways throughout your career. Recognizing how skills can be transferable allows you to adapt to different organizations' needs and evolving technologies. And as you progress through this, you add tools to your data science toolbox that will help you now and in the future!
 
-#### Tools today
+### Tools today
 
 | **Tool** | **Definition** | **Examples** | **Transferable skills** |
 |----------|----------------|--------------|-------------------------|
@@ -235,23 +235,23 @@ More specifically used tools for data analytics and machine learning with Python
 - Statsmodels for statistical tests and regression modeling
 - Scikit-learn for building machine learning models
 
-#### Tools tomorrow and beyond
+### Tools tomorrow and beyond
 
 The world of data science is always growing and evolving—tools you might not have even known about a few years ago can quickly become necessary for professionals working in the field. As you consider the skills you are developing now, it can be useful to consider all the ways you might also use them in the future. 
 
-##### Artificial intelligence
+#### Artificial intelligence
 
 Artificial intelligence, or AI, refers to computer systems that are able to perform tasks that normally require human intelligence. One of the great benefits of using AI for data science is that it can help provide real-time insights to stakeholders. For example, a business with an e-commerce website might use AI to monitor and deliver insights about how customers use their website in real-time, allowing the team to make quick improvements. 
 
-##### Machine learning
+#### Machine learning
 
 Machine learning is the use and development of algorithms and statistical models to teach computer systems to analyze and discover patterns in data. Data analysts can train algorithms to analyze large amounts of data that would otherwise take a long time to process. For example, a financial analyst might use machine learning to find patterns in the data that help identify fraud. 
 
 One of the most exciting developments in these future technologies is the way they can be used together to automate tasks and provide insights faster than ever.
 
-### How data professionals use AI
+## How data professionals use AI
 
-#### The uses of AI for data work
+### The uses of AI for data work
 
 Data professionals can use AI to improve their data analysis, perform essential tasks, and streamline their workflow. For example, data professionals can use AI to:
 
@@ -265,7 +265,7 @@ Data professionals can use AI to improve their data analysis, perform essential 
 
 Data professionals can leverage AI to enhance the quality and efficiency of their data projects, generate valuable insights, and help stakeholders make better business decisions. 
 
-#### Conversational AI tools: Bard and ChatGPT
+### Conversational AI tools: Bard and ChatGPT
 
 Many data professionals now use conversational AI tools to help them analyze their data and boost their productivity. Two of the most frequently used tools are Bard and ChatGPT.  Bard was created by Google AI. ChatGPT, also known as Chat Generative Pre-trained Transformer, was developed by OpenAI. 
 
@@ -278,29 +278,29 @@ Tools like Bard and ChatGPT can help data professionals in a variety of ways. A 
 - Recommend a specific algorithm for a particular task based on the data professional's input.
 - Create a shared document to facilitate a brainstorming session among a team of data professionals.
 
-#### Use cases for AI
+### Use cases for AI
 
 Data professionals can use AI to help automate tasks, make predictions, generate insights, and communicate findings. They can leverage AI to be more productive in their work and more impactful in their organizations. Overall, AI is a powerful tool for data professionals but it is not without limitations. For this reason, human oversight and intervention is critical when working with AI and related tools.
 
-##### Finance
+#### Finance
 
 - Analyze financial transactions to help prevent fraud and protect customers' money.
 - Analyze large datasets of financial data to help identify potential risks and make more informed decisions about investments.
 - Analyze historical market data and current market conditions to help generate sound investment recommendations. 
 
-##### Retail
+#### Retail
 
 - Recommend products to customers based on their past purchase history and browsing behavior. 
 - Track customers' interactions with the retail website to help personalize the shopping experience. 
 - Analyze sales data and forecast future demand to help optimize the amount of product inventory and reduce costs. 
 
-##### Manufacturing  
+#### Manufacturing  
 
 - Automate tasks such as welding, painting, and assembly to help improve efficiency.
 - Analyze data from sensors and cameras to help identify defects in products before they are shipped to customers. 
 - Analyze data from production lines to help identify ways to produce more products at a lower cost.
 
-##### AI and human data professionals
+#### AI and human data professionals
 
 Data professionals use AI as a tool to help them understand data, make better decisions, and improve efficiency. Like all tools, AI has limitations. Human data professionals possess skills, abilities, and qualities that AI currently lacks.
 
@@ -319,7 +319,7 @@ Data professionals use AI as a tool to help them understand data, make better de
 - **Factuality**
     - Generative AI models are trained to output text based on patterns in language. Sometimes the model output may be very well-composed and as a result, seem reliable, but may not be factual. As noted above, it's important to always verify model output.
 
-### Make the most out of mentorships
+## Make the most out of mentorships
 
 Mentors are professionals who share knowledge, skills, and experiences to help you grow and develop. They can offer guidance at different points in your career. Mentors can be advisors, sounding boards, honest critics, resources, and more. You can even have multiple mentors to gain more diverse perspectives! 
 
@@ -329,33 +329,33 @@ There are a few things to consider along the way:
 - Consider common interests
 - Respect their time
 
-### Showcase your skills: How to prepare for the interview
+## Showcase your skills: How to prepare for the interview
 
 The interview is an opportunity to share how you can add value to an organization. Recognizing your growing skillset and how you might communicate those skills to potential employers is a great way to showcase not just your technical know-how, but your ability to communicate effectively too. This reading is a great resource to keep in mind as you build your skills and your professional narrative in preparation for your job search. 
 
-#### Interview question types
+### Interview question types
 
-##### Behavioral questions
+#### Behavioral questions
 
 These questions ask you to describe how you have handled specific situations in the past, and your personal characteristics. They are designed to assess your skills, experience, and problem-solving abilities, as well as your fit for the company culture.
 
-##### Technical questions
+#### Technical questions
 
 These questions ask you to demonstrate the knowledge and skills presented in your resume or portfolio. In job interviews for technical positions, an employer may ask for a demonstration of specific tasks, prior projects, or even a take-home assessment. Often these technical demonstrations are presented as a separate assignment that you will complete outside of the interview itself. These questions are designed to assess your technical skills and expertise.
 
-##### Situational questions
+#### Situational questions
 
 These questions ask you how you would handle hypothetical situations. Similar to behavioral questions, employers typically use situational questions to develop a preliminary understanding of how your skills fit the role. Situational questions are designed to assess your judgment, critical thinking skills, and ability to apply knowledge to new situations.
 
-##### Subject questions
+#### Subject questions
 
 These questions ask you about your knowledge of a specific subject or area, usually pertaining to the field or industry that you're applying for. These questions are designed to determine how well you understand the relationship between the role you're applying for and the broader context of the company. Employers may also use these questions to assess your understanding of how the company works in contrast to direct competitors in the marketplace. 
 
-#### Applying course skills
+### Applying course skills
 
 As you progress through this certificate program, you will learn industry skills that interviewers will be interested in asking about. Throughout your learning journey, it will be useful to identify and keep in mind key skills you will need to be able to discuss. The following is a list of questions that you might be asked in an interview for data professional positions. You will find questions in this list that are representative of the four interview question type categories explained in the previous section. Finishing your certificate will mean you're prepared to answer all of these questions!
 
-##### Course 1 Foundations of data Science
+#### Course 1 Foundations of data Science
 
 - As a new member of a data analytics team, what steps could you take to be fully informed about a current project? Who would you like to meet with?
 - How would you plan an analytics project?
@@ -363,13 +363,13 @@ As you progress through this certificate program, you will learn industry skills
 - Why is actively managing data an important part of a data analytics team's responsibilities? 
 - What are some considerations you might need to be mindful of when reporting results?
 
-##### Course 2 Get Started with Python
+#### Course 2 Get Started with Python
 
 - Describe the steps you would take to clean and transform an unstructured data set. 
 - What specific things might you review for as part of your cleaning process?
 - What are some of the outliers, anomalies, or unusual things you might consider in the data cleaning process that might impact analyses or the ability to create insights?
 
-##### Course 3 Go Beyond the Numbers: Translate Data into Insights
+#### Course 3 Go Beyond the Numbers: Translate Data into Insights
 
 - How would you explain the difference between qualitative and quantitative data sources?
 - Describe the difference between structured and unstructured data. 
@@ -379,7 +379,7 @@ As you progress through this certificate program, you will learn industry skills
 - How do you avoid bias and ensure accessibility in a data visualization?
 - How does data visualization inform your EDA?
 
-##### Course 4 The Power of Statistics
+#### Course 4 The Power of Statistics
 
 - How would you explain an A/B test to stakeholders who may not be familiar with analytics?
 - If you had access to company performance data, what statistical tests might be useful to help understand performance?
@@ -387,7 +387,7 @@ As you progress through this certificate program, you will learn industry skills
 - What are some effective ways to communicate statistical concepts/methods to a non-technical audience?
 - In your own words, explain the factors that go into an experimental design for designs such as A/B tests.
 
-##### Course 5 Regression Analysis: Simplify Complex Data Relationships
+#### Course 5 Regression Analysis: Simplify Complex Data Relationships
 
 - Describe the steps you would take to run a regression-based analysis.
 - List and describe the critical assumptions of linear regression.
@@ -395,7 +395,7 @@ As you progress through this certificate program, you will learn industry skills
 - How do you interpret a Q-Q plot in a linear regression model?
 - What is the bias-variance tradeoff? How does it relate to building a multiple linear regression model? Consider variable selection and adjusted R2.
 
-##### Course 6 The Nuts and Bolts of Machine Learning
+#### Course 6 The Nuts and Bolts of Machine Learning
 
 - What kinds of business problems would be best addressed by supervised learning models?
 - What requirements are needed to create effective supervised learning models?
@@ -403,23 +403,23 @@ As you progress through this certificate program, you will learn industry skills
 - How would you explain what machine learning algorithms do to a teammate who is new to the concept?
 - How does gradient boosting work?
 
-### PACE stages
+## PACE stages
 
 As a general rule, data professionals rely on workflow structures to guide them through the duration of data projects. Within a large-scale project, there can be a number of tasks that require a certain order of operations. Identifying complexities and finding consistent ways to work together can make projects more efficient and enable more productive communication. Identifying these and other types of potential blockers early can help you plan and prepare resources in advance before they can negatively affect a project.
 
 Data professionals at Google developed PACE as a flexible model. Through PACE, you will identify areas of action and contexts for when they will need to be considered. All in all, PACE offers professionals a customizable scaffold that can support their efforts while working through every stage of a data project.
 
 > [!TIP]
-> Data science projects typically take anywhere from 1 to 6 months:
+> **Data science projects typically take anywhere from 1 to 6 months**
 >
-> **Plan A**
+> Plan A
 > 
 > - Data planning takes 20% of the project schedule or 2 weeks
 > - Data analysing takes 60% or 6 weeks
 > - Data constructing takes 10% or 1 week
 > - Data executing takes 10% or 1 week
 >
-> **Plan B**
+> Plan B
 > 
 > - Data planning takes 20% of the project schedule or 2 weeks
 > - Data analysing takes 20% or 2 weeks
@@ -430,7 +430,7 @@ Data professionals at Google developed PACE as a flexible model. Through PACE, y
 
 Let's take a closer look at each stage of the PACE model.
 
-#### Plan
+### Plan
 
 At the beginning of a project, it is important to establish a solid foundation for success. Here you will define the scope of your project. This is when you will begin by identifying the informational needs of the organization. During the planning stage, you will have the widest viewpoint of a project. By assessing all of the factors and processes involved, you are mapping a path to completion, using your creativity to conceptualize a course of action. Here you will also take special note of tasks that may require an innovative approach within your workflow.
 
@@ -441,7 +441,7 @@ The planning stage is where you conceptualize the scope of the project and devel
 - Develop a workflow
 - Assess project and or stakeholder needs
 
-#### Analyze
+### Analyze
 
 In the analyzing stage, you will interact with the data for the first time. Here you will acquire all of the data you will need for the project. Some datasets could come from primary sources within your organization. Others may need to be collected from secondary sources outside your company. You may even find that you need governmental or open source data. The analyzing stage is also where you will engage in exploratory data analysis or EDA. This involves cleaning, reorganizing and analyzing all of the necessary data for the project.
 
@@ -451,7 +451,7 @@ The analyzing stage is where you will collect, prepare, and analyze all of the d
 - Scrub data
 - Convert data into usable formats
 
-#### Construct
+### Construct
 
 Just as the name suggests, the construction stage is all about building. In this stage of PACE, you will be building, interpreting, and revising models. Some projects will require machine learning algorithms to uncover correlations within your data. You will use these correlations to uncover information from the data that would otherwise go unused. These relationships can help your organization make informed decisions about the future.
 
@@ -461,7 +461,7 @@ In the construction stage, you will build models that will allow you access to h
 - Build models
 - Build machine learning algorithms
 
-#### Execute
+### Execute
 
 In the execution stage, you will put your analysis and construction into action. Here you will deliver your findings to the internal (inside of your organization) and external (outside of your organization) stakeholders. Quite often, this will involve stakeholders from the business-side of the companies you are working with. Presenting your findings is only a part of the execution stage. Stakeholders will provide feedback, ask questions, and make recommendations that you will collect and incorporate.
 
@@ -471,11 +471,11 @@ In the execution stage you will present the finding of your analysis, receive fe
 - Present findings to other stakeholders
 - Address feedback
 
-### Best communication practices for data professionals
+## Best communication practices for data professionals
 
 Effective communication is important for data professionals. Regardless of where you are in the framework of a project, communication can inform and empower your stakeholders. Identify the needs of your audience and invite feedback. Remember that your role is to connect the data, technology, and the stakeholders. When sharing the results of your data analysis, make your presentations clear, focused, accessible, and take into account any assumptions or limitations presented by the data. Demonstrate your value by being available and ready to share insights in a simple way that promotes general understanding.
 
-#### Seven tips for effective communication
+### Seven tips for effective communication
 
 1. Speak the language of your audience
    - Identify the needs of your audience. It's important to know the objectives of the person you are communicating with. Focusing on their needs allows you to gain insight and assess how technical the conversation should be.
@@ -535,7 +535,7 @@ Effective communication is important for data professionals. Regardless of where
        - Does this data contain personally identifiable information? What steps will I take to protect this information?
    - In addition to identifying and communicating about data limitations before analysis, you will also need to     
 
-#### Share Findings
+### Share Findings
 
 One of the most important communications you will have with stakeholders will be sharing your findings, often through presentations. This will mean translating the results, concepts, and terms of your analysis for wider audiences. When sharing the results of your analysis with stakeholders, there are some best practices that you should apply:
 
@@ -548,7 +548,7 @@ One of the most important communications you will have with stakeholders will be
     - What is the most efficient way to share with the tools available and the time I'm allotted?
     - What can I do to make the key points effectively?
 
-#### Presentations
+### Presentations
 
 Presenting information clearly and effectively is key to a data scientist's workflow. Communication skills that pertain to presentations include but are not limited to: the structure of your presentation, slide design, the tone of your voice and the body language you convey, and more. It's also important to consider accessibility as you are creating any assets. Check with your organization about accessibility guidelines.
 
@@ -561,9 +561,9 @@ Presenting information clearly and effectively is key to a data scientist's work
 - Visually highlight **Aha!** zones.
 - Write a slide title that reinforces the data's point.
 
-### Communicate with stakeholders in different roles
+## Communicate with stakeholders in different roles
 
-#### Exemplar email #1 to the new data professional
+### Exemplar email #1 to the new data professional
 
 - An overview of the data team's workflow. This information gives the new data professional insight into how the data team shares their results and invites feedback from internal stakeholders.
 - The accuracy goal for the visitation prediction model. Knowing the project objective is important for a data professional working to develop an effective ML model.
@@ -589,7 +589,7 @@ Cynthia Delgado\
 Data Scientist\
 National Parks Service Data Team
 
-#### Exemplar email #2 to the new public relations writer
+### Exemplar email #2 to the new public relations writer
 
 - Relevant information for creating non-technical articles that promote the NPS' mission and work. This information includes the purpose and benefits of the visitation prediction project, and the problem the project is addressing. 
 - Direct, non-technical language that does not include unnecessary detail.
@@ -620,11 +620,11 @@ Cynthia Delgado\
 Data Scientist\
 National Parks Service Data Team
 
-### Elements of successful communication
+## Elements of successful communication
 
 As you have been learning, communication is the driving force behind PACE because data professionals need to be able to communicate effectively with stakeholders while working through different stages of a project. You have already learned some important tips for effective communication. But, there are a few more elements for successful communication you should consider.
 
-#### Understanding why
+### Understanding why
 
 Having a clear vision of why you are communicating is the first thing you need to consider. Your **why** depends on the context set by the business or organization you work for as well as the goals orienting the project. When crafting any form of communication, use your why to guide main ideas so that your audience can identify how to act or respond with purpose.
 
@@ -635,7 +635,7 @@ Having a clear vision of why you are communicating is the first thing you need t
 
 Understanding the why behind your communication will help you organize your thoughts and develop clearer, more direct communication. 
 
-#### Set the stage
+### Set the stage
 
 When you are developing effective communication, you have to consider more than just the why. You also need to think about where the communication is taking place. Setting will have a direct impact on how your message is delivered and how you shape it. As you prepare to communicate, consider the most appropriate way to communicate for the setting you plan to be in.
 
@@ -646,7 +646,7 @@ When you are developing effective communication, you have to consider more than 
 
 Each of these settings will require you to consider how you're communicating, what each of those audiences need, and what you need from them in return. As you develop your communication skills, don't forget that the setting can be just as important as the actual communication.  
 
-#### All about time
+### All about time
 
 Time is a currency in the professional world. It's very important to be efficient. This includes making sure your communication is understandable so that stakeholders can quickly comprehend your message. To ensure your message is clear and concise, remember to always:
 
@@ -660,7 +660,7 @@ Time is a currency in the professional world. It's very important to be efficien
 
 Not only will these suggestions help make your communication efficient and easier to understand, they will also save you time having to re-explain important concepts. And more than that, your colleagues will be grateful that you respected their time. 
 
-#### Active Listening
+### Active Listening
 
 As you begin your career as a data professional, you will spend a lot of time in meetings and in conversation. Many stakeholders are from different departments both inside and outside of your organization. The information shared during these interactions is valuable. Often, it's where you gather insight into how the business operates, its goals, key milestones, and parameters within projects. 
 
@@ -671,7 +671,7 @@ As you begin your career as a data professional, you will spend a lot of time in
 
 When you are practicing active listening, you make the effort to understand the speaker's point of view. This helps you understand what other people are trying to communicate and sets you up to ask better, more insightful questions.
 
-#### Asking Questions
+### Asking Questions
 
 Data professionals aren't automatically developing solutions. For data analysis to be effective, data professionals need to ask the right questions. In fact, the entire data analytical process depends on it. 
 
@@ -684,7 +684,7 @@ Asking questions is a powerful communication tool. Asking the right questions ca
 
 Effective questions are more likely to get you the answers you need to do your best work– which is good for the whole team.
 
-### Communicate objectives with a project proposal
+## Communicate objectives with a project proposal
 
 A project proposal can provide the structure and communication needed for tracking tasks. In addition, project proposals are beneficial for teams when facing challenges that require a high degree of flexibility. As projects progress, the expectations, resources, or even team members can change. This will require adjustments within a project that can impact the overall workflow and delivery date.
 
@@ -699,7 +699,7 @@ Each project proposal contains important information that a team will need to co
 - **Stakeholders** either individuals or groups are directly involved and have a vested interest in the success of a project. Input from stakeholders can serve as a basis for making decisions throughout a project.
 - **Estimated time** is provided at the beginning of a project to indicate the time needed to complete milestones. As a project develops, these estimates will often need to be updated to account for adjustments to timelines or changes in team members.
 
-#### Sample project proposal
+### Sample project proposal
 
 The sample project proposal, linked below, deals with a fictional visitation prediction project undertaken by the U.S. National Park Service (NPS). Use this document as a reference as you review each of the following sections.
 
@@ -707,7 +707,7 @@ This project proposal's audience is the NPS data team. The purpose is to gather 
 
 ![Visitation prediction project proposal](https://github.com/x-square/visual-resources/blob/main/project-proposal-visitation.png?raw=true "Visitation prediction project proposal")
 
-### Connect PACE with executive summaries
+## Connect PACE with executive summaries
 
 Executive summaries are documents that summarize the most important points about a project, giving decision makers a brief overview of the most relevant information. They can also be used to help new team members quickly become acquainted with a project. The format is designed to respect the responsibilities of decision makers and or executives who may not have time to read and understand an entire report.
 
@@ -721,17 +721,17 @@ Executive summaries are used across a wide variety of businesses and typically i
 - **Details or key insights** are to provide any additional background information that may assist the target audience in understanding the project's objectives. Determining what details to include depends on the intended audience.
 - **Next steps or recommendations** are information that supports the actions the team plans to take. This can also include recommendations for decision makers based on the insights gained over the course of the project. In this section, a data professional may also include general project reflections. When you are adding to this section, include at least one point for recommendations and one for the suggested next steps.
 
-#### Sample executive summary
+### Sample executive summary
 
 The following linked sample executive summary deals with a fictional visitation prediction project undertaken by the U.S. National Park Service (NPS). The intended audience of this summary is a group of decision makers from NPS leadership. The purpose of this summary is to share the insights gained through data analysis of recreational park visits. Each section delivers a short statement without embellishment. This allows decision makers to quickly grasp the most relevant points about a project. Reference this document as you review each of the following sections.
 
 ![Visitation prediction executive summary](https://github.com/x-square/visual-resources/blob/main/executive-summary-visitation.png?raw=true "Visitation prediction executive summary")
 
-### End-of-course portfolio project introduction
+## End-of-course portfolio project introduction
 
 ![Choose the workplace scenario](https://github.com/x-square/visual-resources/blob/main/project-portfolio.png?raw=true "Choose the workplace scenario")
 
-#### Importance of communication in the data career space
+### Importance of communication in the data career space
 
 End-of-course projects emphasize technical and professional workplace skills, as well as the importance of communication in data analytics. The success of your workflow management, data analysis, data visualizations, statistics, regression analysis, and building machine learning models relies on your ability to communicate with cross-functional team members. So, each project is designed to help you develop critical communication skills that you'll need to use on the job in order to effectively: 
 
@@ -741,7 +741,7 @@ End-of-course projects emphasize technical and professional workplace skills, as
 - Give and receive feedback
 - Stay in contact with team members on the project
 
-### Explore your Course 1 workplace scenarios
+## Explore your Course 1 workplace scenarios
 
 1. Automatidata, featuring a fictional data consulting firm 
 2. TikTok, created in partnership with the short-form video hosting company
@@ -749,63 +749,63 @@ End-of-course projects emphasize technical and professional workplace skills, as
 
 ![Stage 1 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-1.png?raw=true "Stage 1 of end-of-course project")
 
-#### Automatidata
+### Automatidata
 
-##### Project goal
+#### Project goal
 
 In this fictional scenario, the New York City Taxi and Limousine Commission (TLC) has approached the data consulting firm Automatidata to develop an app that enables TLC riders to estimate the taxi fares in advance of their ride.
 
-##### Background
+#### Background
 
 Since 1971, TLC has been regulating and overseeing the licensing of New York City's taxi cabs, for-hire vehicles, commuter vans, and paratransit vehicles.
 
-##### Scenario
+#### Scenario
 
 You are a newly-hired data professional at Automatidata, a fictional data consulting firm. Automatidata's focus is to help clients transform their unused and stored data into useful solutions. In this scenario, you will consult with The New York City Taxi & Limousine Commission to develop an app that will help users (TLC riders) estimate their taxi fares before their ride. Your first responsibility as a data analytics consultant will be to structure the necessary tasks into a project proposal that establishes milestones for the ride fare data project. 
 
-##### Course 1 tasks
+#### Course 1 tasks
 
 - Gather information from the notes from the last executive meeting of Automatidata
 - Assign PACE stages to the requested tasks
 - Organize tasks into milestones
 - Create a project proposal for the executive team's approval
 
-#### TikTok
+### TikTok
 
-##### Project goal
+#### Project goal
 
 The TikTok data team is developing a machine learning model for classifying claims made in videos submitted to the platform.
 
-##### Background
+#### Background
 
 TikTok is the leading destination for short-form mobile video. The platform is built to help imaginations thrive. TikTok's mission is to create a place for inclusive, joyful, and authentic content–where people can safely discover, create, and connect.
 
-##### Scenario
+#### Scenario
 
 As a data analyst on TikTok's data team, with new considerations from the leadership team, you will create a project proposal by assigning the required data analytical tasks into realistic milestones that will advise future steps in the claims classification project.
 
-##### Course 1 tasks
+#### Course 1 tasks
 
 - Gather information from stakeholder notes from within TikTok
 - Assign PACE stages to the requested tasks for the classification project
 - Organize tasks into milestones
 - Create a project proposal for the TikTok data team
 
-#### Waze
+### Waze
 
-##### Project goal
+#### Project goal
 
 Waze leadership has asked your data team to develop a machine learning model to predict user churn. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. An accurate model will help prevent churn, improve user retention, and grow Waze's business.
 
-##### Background
+#### Background
 
 Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. 
 
-##### Scenario
+#### Scenario
 
 You are the newest member of Waze's data team. Your team is about to begin their user churn project. The first step is to create a project proposal. The proposal will clearly define the overall goal of the project, and identify key tasks, milestones, and stakeholders. 
 
-##### Course 1 tasks
+#### Course 1 tasks
 
 - Assign PACE stages to the requested tasks for the user churn project
 - Organize tasks into milestones
@@ -814,7 +814,7 @@ You are the newest member of Waze's data team. Your team is about to begin their
 > [!NOTE]
 > The story, all names, characters, and incidents portrayed in these projects are fictitious. No identification with actual persons (living or deceased) is intended or should be inferred. And, the data shared in this project has been created for pedagogical purposes. 
 
-#### Key takeaways
+### Key takeaways
 
 In Course 1, Foundations of Data Science, you explored the world of data professionals and learned how data analysis contributes to an organization's goals.
 
@@ -823,7 +823,7 @@ In Course 1, Foundations of Data Science, you explored the world of data profess
 - Project management
 - Share insights and ideas with stakeholders
 
-### Automatidata scenario
+## Automatidata scenario
 
 Congrats on your new job as a data analyst at a data consulting firm called Automatidata. Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client’s business needs and utilizing their data to meet those business needs. 
 
@@ -833,7 +833,7 @@ The TLC data comes from over 200,000 taxi and limousine licensees, making approx
 
 Note that this project's dataset was created for pedagogical purposes and may not be indicative of New York City taxi cab riders' behavior.
 
-#### Project background
+### Project background
 
 Automatidata is in the earliest stages of the TLC project. The following tasks are needed before the team can begin the data analysis process:
 
@@ -841,13 +841,13 @@ Automatidata is in the earliest stages of the TLC project. The following tasks a
 - Classify tasks using the PACE workflow
 - Identify relevant stakeholders
 
-#### Your assignment
+### Your assignment
 
 For your first assignment, Automatidata will need a project proposal that will create milestones for the tasks within the TLC project. Remember to take into account your audience, team, project goal, and PACE stages of each task in planning your project deliverable.
 
-#### Team members at Automatidata and the New York City TLC
+### Team members at Automatidata and the New York City TLC
 
-##### Automatidata Team Members
+#### Automatidata Team Members
 
 - Udo Bankole, Director of Data Analysis
 - Deshawn Washington, Data Analysis Manager
@@ -856,7 +856,7 @@ For your first assignment, Automatidata will need a project proposal that will c
 
 Your teammates at Automatidata have technical experience with data analysis and data science. However, you should always be sure to keep summaries and messages to these team members concise and to the point. 
 
-##### New York City TLC Team Members
+#### New York City TLC Team Members
 
 - Juliana Soto, Finance and Administration Department Head
 - Titus Nelson, Operations Manager
@@ -865,7 +865,7 @@ Note that the story, all names, characters, and incidents portrayed in this proj
 
 The TLC team members are program managers who oversee operations at the organization. Their roles are not highly technical, so be sure to adjust your language and explanation accordingly.
 
-#### Meeting notes
+### Meeting notes
 
 Now that you are working as Automatidata’s latest data analytics professional, you are given access to the company network and set up with a company email account (your first initial and last name, followed by @automatidata.org).
 
@@ -901,20 +901,21 @@ Review the meeting notes above to become familiar with the project’s context. 
 
 There will be more details sent to you very soon.
 
-Welcome to the team,\
+Welcome to the team,
+
 Deshawn Washington\
 Data Analysis Manager\
 Automatidata
 
 (P.S. There will be muffins in the break room every Tuesday morning. Be early…unless you like bran muffins. LOL)
 
-#### Specific project deliverables
+### Specific project deliverables
 With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following:
 
 - Course 1 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal.
 - Create a project proposal for the data team.
 
-### TikTok scenario
+## TikTok scenario
 
 Welcome to your new role at TikTok! We’re thrilled to have you on the data team! 
 
@@ -924,7 +925,7 @@ TikTok users have the ability to report videos and comments that contain user cl
 
 TikTok is working on the development of a predictive model that can determine whether a video contains a claim or offers an opinion. With a successful prediction model, TikTok can reduce the backlog of user reports and prioritize them more efficiently.
 
-#### Project background
+### Project background
 
 TikTok’s data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
 
@@ -932,21 +933,21 @@ TikTok’s data team is in the earliest stages of the claims classification proj
 - Classify tasks using the PACE workflow
 - Identify relevant stakeholders
 
-#### Your assignment
+### Your assignment
 
 For your first assignment, TikTok is asking for a project proposal that will create milestones for the tasks within the comment classification project. Remember to take into account your audience, team, project goal, and PACE stages of each task in planning your project deliverable.
 
-#### Team members at TikTok
+### Team members at TikTok
 
 As a new data analyst, you’ll work closely with a talented team of experienced data professionals. You’ll also collaborate with TikTok co-workers outside the data team as your project requires. 
 
-##### Data team roles
+#### Data team roles
 
 - Willow Jaffey - Data Science Lead
 - Rosie Mae Bradshaw - Data Science Manager
 - Orion Rainier - Data Scientist
 
-##### Cross-functional team members
+#### Cross-functional team members
 
 - Mary Joanna Rodgers- Project Management Officer
 - Margery Adebowale- Finance Lead, Americas
@@ -956,7 +957,7 @@ Note that the story, all names, characters, and incidents portrayed in this proj
 
 Your TikTok team includes several managers overseeing operations. It is important to adapt your communication to their roles since their responsibilities are less technical. The members of the data team at TikTok are well versed in data analysis and data science. Messages to these more technical co-workers should be concise and specific.
 
-#### Meeting notes
+### Meeting notes
 
 Now that you are onboard, you have access to the company network and are set up with a company email account.
 
@@ -994,21 +995,22 @@ My thoughts and concerns
 
 There will be more details sent to you very soon.
 
-Welcome to the team,\
+Welcome to the team,
+
 Rosie Mae Bradshaw\
 Data Science Manager\
 TikTok
 
 (P.S. Don’t forget about the company-sponsored lunch on Friday. The food is always fantastic. It’s a great opportunity to meet more of our wonderful co-workers. Our team meets in the lobby around noon. Please join us!)
 
-#### Specific project deliverables
+### Specific project deliverables
 
 With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following deliverables:
 
 - Course 1 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal.
 - Create a project proposal for the data team.
 
-### Waze scenario
+## Waze scenario
 
 Welcome to your new role at Waze! We’re thrilled to have you on the data team! 
 
@@ -1026,31 +1028,31 @@ For example, if Waze can identify a segment of users who are at high risk of chu
 
 Your insights will help Waze leadership optimize the company’s retention strategy, enhance user experience, and make data-driven decisions about product development.  
 
-#### Project background
+### Project background
 Waze’s data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
 
 - Organize project tasks into milestones
 - Classify tasks using the PACE workflow
 - Identify relevant stakeholders
 
-#### Your assignment
+### Your assignment
 
 For your first assignment, Waze is asking for a project proposal that will create milestones for the tasks within this project. Remember to take into account your audience, team, project goal, and PACE stages of each task in planning your project deliverable.
 
 Note that this project's dataset was created for pedagogical purposes and does not represent Waze’s actual data.
 
-#### Team members at Waze
+### Team members at Waze
 
 As a new data analyst, you’ll work closely with a talented team of experienced data professionals. You’ll also collaborate with Waze co-workers outside the data team as your project requires. 
 
-##### Data team roles
+#### Data team roles
 
 - Harriet Hadzic - Director of Data Analysis 
 - May Santner - Data Analysis Manager 
 - Chidi Ga - Senior Data Analyst 
 - Sylvester Esperanza - Senior Project Manager 
 
-##### Other roles in the scenario
+#### Other roles in the scenario
 
 - Emrick Larson - Finance and Administration Department Head 
 - Ursula Sayo - Operations Manager 
@@ -1061,7 +1063,7 @@ The members of the data team have technical expertise in data analysis, and are 
 
 Waze co-workers outside the data team may not have a background in data analysis, or be familiar with technical terms and concepts. When communicating with these co-workers, make sure to adjust your language to fit your audience, and clearly explain technical terms if necessary.
 
-#### Meeting notes
+### Meeting notes
 
 After onboarding, you are given access to the company network and set up with a company email account (your first initial and last name, followed by @Waze).
 
@@ -1097,14 +1099,15 @@ Review the meeting notes and proposed tasks from each team member to become fami
 
 There will be more details sent to you soon.
 
-Welcome to the team,\
+Welcome to the team,
+
 May Santner\
 Data Analysis Manager\
 Waze
 
 (P.S. Don’t forget about our Data Superstars discussion group. Our next session is this Friday at 3pm. Each month, the team gets together to discuss the work of an innovative and inspiring historical figure. This month, it’s Ada Lovelace, often considered the world’s first computer programmer. This event is also a great opportunity to get to know your new teammates - and, if you want, try the outstanding coffee in the Waze cafe! Please join us!)
 
-#### Specific project deliverables
+### Specific project deliverables
 
 With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following deliverables:
 
