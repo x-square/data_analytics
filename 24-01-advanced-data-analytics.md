@@ -19,13 +19,13 @@ date: "December 2023"
 > 
 > The application of data science extends beyond a single industry or academic discipline, finding value in healthcare, economy and criminal justice to name a few.
 
-[^2] Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
+[^2]: Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
 
 ![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true "What is Data Science?")
 
 Turing Award winner Jim Gray imagines Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
 
-[^3] Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research.
+[^3]: Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research.
 
 ## Profiles of data professionals
 
