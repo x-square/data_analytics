@@ -15,7 +15,7 @@ date: "December 2023"
 > 
 > Data science combines **statistics**, **computer science** and **domain knowledge** like business. Each of these disciplines presents its own complexity, and when fused, they pose even greater challenges.
 > 
-> Data scientists use computer science techniques to develop algorithms that perform statistical analysis of extensive unstructured datasets to create insights for business objectives.
+> Data scientists forge **insights** from **extensive unstructured data** by harnessing the power of **statistical learning** through crafting **algorithms**, ultimately driving **business objectives**.
 > 
 > The application of data science extends beyond a single industry or academic discipline, finding value in healthcare, economy and criminal justice to name a few.
 
@@ -23,9 +23,9 @@ date: "December 2023"
 
 ![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true "What is Data Science?")
 
-Turing Award winner Jim Gray imagines Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
+Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
 
-[^3]: Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research.
+[^3]: Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
 
 ## Profiles of data professionals
 
