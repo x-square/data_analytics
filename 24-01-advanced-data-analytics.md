@@ -10,6 +10,23 @@ date: "December 2023"
 
 # Foundations of data science
 
+> [!TIP]
+> **What is Data Science?**[^2]
+> 
+> Data science combines **statistics**, **computer science** and **domain knowledge** like business. Each of these disciplines presents its own complexity, and when fused, they pose even greater challenges.
+> 
+> Data scientists use computer science techniques to develop algorithms that perform statistical analysis of extensive unstructured datasets to create insights for business objectives.
+> 
+> The application of data science extends beyond a single industry or academic discipline, finding value in healthcare, economy and criminal justice to name a few.
+
+[^2] Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
+
+![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true "What is Data Science?")
+
+Turing Award winner Jim Gray imagines Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
+
+[^3] Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research.
+
 ## Profiles of data professionals
 
 Data analysts in **technical** roles transform raw data into something useful for decision-making. **Strategic** data analytics professionals focus on maximizing information to guide the businesses they are working for.
@@ -196,10 +213,10 @@ RACI matrix is a tool that many organizations use to structure their projects. I
 
 | **Task** | **Business Intelligence Engineer** | **Data Scientist** | **Analytic Team Manager** | **Data Engineer** |**Chief Data Officer** |
 |----------------|---|---|---|---|---|
-| Access to data | R | C | R | R | A |
-| Create models to analyze data | C | R | C | I | A |
-| Drive insights and recommendations based on data | C | R | C | I | A |
-| Ensure data compliance | C | I | C | R | A |
+| **Access to data** | R | C | R | R | A |
+| **Create models to analyze data** | C | R | C | I | A |
+| **Drive insights and recommendations based on data** | C | R | C | I | A |
+| **Ensure data compliance** | C | I | C | R | A |
 
 : Assign responsibility
 
@@ -811,8 +828,7 @@ You are the newest member of Waze's data team. Your team is about to begin their
 - Organize tasks into milestones
 - Create a project proposal for the Waze data team
 
-> [!NOTE]
-> The story, all names, characters, and incidents portrayed in these projects are fictitious. No identification with actual persons (living or deceased) is intended or should be inferred. And, the data shared in this project has been created for pedagogical purposes. 
+Note that the story, all names, characters, and incidents portrayed in these projects are fictitious. No identification with actual persons (living or deceased) is intended or should be inferred. And, the data shared in this project has been created for pedagogical purposes. 
 
 ### Key takeaways
 
@@ -1113,6 +1129,135 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 - Course 1 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal. 
 - Create a project proposal for the data team.
+
+# Get started with Python
+
+## Python versus other programming languages
+
+| **Features by software** | **Python** | **R** | **Java** | **C++** |
+|--------------------------|------------|-------|----------|---------|
+| **Speed** | Slower | Depends on configuration and add-ons | Faster | Very fast |
+|**Approachability** | Easy to learn | Complex | Easy to learn | Complex |
+| **Variable** | Dynamic | Dynamic | Static | Declarative |
+| **Data science focus** | Machine learning and automated analysis | Exploratory data analysis and building extensive statistical libraries | Used across projects with open-source assets | Not as widely used but very powerful implementations |
+| **Programming paradigm** | Object-oriented | Functional language | Object-oriented | Multi-paradigm (imperative & object-oriented) |
+
+: Programming language comparisons
+
+## More about object-oriented programming
+
+Previously, we identified object-oriented programming as a programming paradigm that is based around objects, which can contain both data and code that manipulates that data. You may recall that a class is an object’s data type that bundles data and functionality together, and you’ve encountered some examples of this class-specific functionality in the form of methods and attributes.
+
+Classes comprise the core objects of Python, which is why Python is known as an object-oriented language. Class objects are powerful because they contain unique tools designed specifically for that class packaged within them. Methods are functions that belong to a class; they perform actions or operations, and they use parentheses. Attributes are values or characteristics associated with a class or class instance; they do not use parentheses. And, while there are many classes, attributes, and methods pre-built into Python, there is a high level of customization offered in the object-oriented programming paradigm.
+
+### Attributes and methods
+
+Python classes are powerful and convenient because they come with built-in features that simplify common data analysis tasks. These features are known as attributes and methods:
+
+- **Attribute**: A value associated with an object or class which is referenced by name using dot notation.
+- **Method**: A function that belongs to a class and typically performs an action or operation. 
+
+A simpler way of thinking about the distinction between attributes and methods is to remember that attributes are **characteristics** of the object, while methods are **actions** or **operations**.
+
+### If the class were Spaceship
+
+Then attributes might be:
+
+`name`, `kind`, `speed`, `tractor_beam`
+
+These attributes could be accessed by typing:
+
+`Spaceship.name`, `Spaceship.kind`, `Spaceship.speed`, `Spaceship.tractor_beam`
+
+Notice that these characteristics are accessed using only a dot. 
+
+Methods of the Spaceship class might be:
+
+`warp()`, `tractor()` 
+
+These methods could be used by typing:
+
+`Spaceship.warp()`, `Spaceship.tractor()`
+
+Notice that methods are followed by parentheses, and it’s possible for them to take arguments. For example, `Spaceship.warp(7)` could change the speed of the ship to warp seven.
+
+### Defining classes with unique attributes and methods
+
+Python lets you define your own classes, each with their own special attributes and methods. This helps all different kinds of programmers to build reusable code that makes their work more efficient. You can even build the Spaceship class mentioned previously. The example, here, demonstrates how to do this.
+
+```python
+class Spaceship:
+   # Class attribute
+   tractor_beam = 'off'
+
+   # Instance attributes
+   def __init__(self, name, kind):
+       self.name = name
+       self.kind = kind
+       self.speed = None
+
+  # Instance methods
+   def warp(self, warp):
+       self.speed = warp
+       print(f'Warp {warp}, engage!')
+
+   def tractor(self):
+       if self.tractor_beam == 'off':
+           self.tractor_beam = 'on'
+           print('Tractor beam on.')
+       else:
+           self.tractor_beam = 'off'
+           print('Tractor beam off')
+```
+
+A class is like a blueprint for all things that share characteristics and behaviors. In this case, the class is Spaceship. There can be all different kinds of spaceships. They can have different names and different purposes. Whenever you create an object of a given class, you’re creating an instance of that class. This is also known as instantiating the class. In the code above, every time you instantiate an object of the Spaceship class it will start with its tractor beam set to off. The tractor beam is a class attribute. All instances of the Spaceship class have one. There are also instance attributes. These are attributes that you can assign when you instantiate the object. 
+
+```python
+# Create an instance of the Spaceship class (i.e. "instantiate")
+ship = Spaceship('Mockingbird','rescue frigate')
+
+# Check ship's name
+print(ship.name)
+
+# Check what kind of ship it is
+print(ship.kind)
+
+# Check tractor beam status
+print(ship.tractor_beam)
+
+# Output
+Mockingbird
+rescue frigate
+off
+```
+
+The next block of code uses the warp() method to set the warp speed to seven. Then it checks the current speed of the ship using the speed attribute.
+
+```python
+# Set warp speed
+ship.warp(7)
+
+# Check speed
+ship.speed
+
+# Output
+Warp 7, engage!
+7
+```
+
+This final block of code uses the tractor() method to toggle the tractor beam. Then it checks the current status of the tractor beam using the tractor_beam attribute.
+
+```python
+# Toggle tractor beam
+ship.tractor()
+
+# Check tractor beam status
+print(ship.tractor_beam)
+
+# Output
+Tractor beam on.
+on
+```
 
 `Any questions, please reach out`
 
