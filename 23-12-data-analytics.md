@@ -1,12 +1,12 @@
 ---
-title: "Notes on data analytics"
-author: "Chiawei Wang"
-date: "December 2023"
+title: 'Notes on data analytics'
+author: 'Chiawei Wang'
+date: 'December 2023'
 ---
 
 `This document compiles information from Google Data Analytics for academic purposes`[^1]
 
-[^1]: [Google Data Analytics](https://www.coursera.org/professional-certificates/google-data-analytics "Google professional certificate") includes over 180 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in data analytics. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to analysis tools and platforms and key analytical skills required for an entry-level job.
+[^1]: [Google Data Analytics](https://www.coursera.org/professional-certificates/google-data-analytics 'Google professional certificate') includes over 180 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in data analytics. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to analysis tools and platforms and key analytical skills required for an entry-level job.
 
 Data analytics is the collection, transformation and organization of data in order to draw conclusions, make predictions and drive informed decision making.
 
@@ -42,7 +42,7 @@ Analysts use data-driven decision-making and follow a step-by-step process:
 5. **Share** data with your audience
 6. **Act** on the data and use the analysis results
 
-![Data analysis process](https://github.com/x-square/visual-resources/blob/main/data-analysis-process.png?raw=true "Data analysis process")
+![Data analysis process](https://github.com/x-square/visual-resources/blob/main/data-analysis-process.png?raw=true 'Data analysis process')
 
 ## Structured query language
 
@@ -52,7 +52,7 @@ SQL (structured query language) is designed for managing and manipulating relati
 - **FROM** to choose the tables where the columns you want are located
 - **WHERE** to filter for certain information
 
-![Example of SQL syntax](https://github.com/x-square/visual-resources/blob/main/sql-syntax.png?raw=true "Example of SQL syntax")
+![Example of SQL syntax](https://github.com/x-square/visual-resources/blob/main/sql-syntax.png?raw=true 'Example of SQL syntax')
 
 BigQuery is Google's fully managed, serverless data warehouse that works across clouds and enables scalable analysis. It supports querying using a dialect of SQL.
 
@@ -76,7 +76,7 @@ BigQuery is Google's fully managed, serverless data warehouse that works across 
 
 ## Exploring your next job
 
-![Decoding job description for data professionals](https://github.com/x-square/visual-resources/blob/main/data-job-description.png?raw=true "Decoding job description for data professionals")
+![Decoding job description for data professionals](https://github.com/x-square/visual-resources/blob/main/data-job-description.png?raw=true 'Decoding job description for data professionals')
 
 # Ask questions to make data-driven decisions
 
@@ -84,7 +84,7 @@ BigQuery is Google's fully managed, serverless data warehouse that works across 
 
 Data analytics is so much more than just plugging information into a platform to find insights. It is about solving problems. To get to the root of these problems and find practical solutions, there are lots of opportunities for creative thinking. No matter the problem, the first and most important step is understanding it.
 
-![Analysts typically work with six problem types](https://github.com/x-square/visual-resources/blob/main/problem-types-six.png?raw=true "Analysts typically work with six problem types")
+![Analysts typically work with six problem types](https://github.com/x-square/visual-resources/blob/main/problem-types-six.png?raw=true 'Analysts typically work with six problem types')
 
 Examples are summarized below for review:
 
@@ -118,7 +118,7 @@ Companies in lots of industries today are dealing with rapid change and rising u
 
 No matter how much information you have or how advanced your tools are, your data won't tell you much if you don't start with the right questions. Think of it like a detective with tons of evidence who doesn't ask a key suspect about it.
 
-![Examples of SMART questions](https://github.com/x-square/visual-resources/blob/main/smart-questions.png?raw=true "Examples of SMART questions")
+![Examples of SMART questions](https://github.com/x-square/visual-resources/blob/main/smart-questions.png?raw=true 'Examples of SMART questions')
 
 ## Data trials and triumphs
 
@@ -184,9 +184,9 @@ Scope of work is an agreed-upon outline of the work you're going to perform on a
 - **Milestones** are significant tasks you will confirm along your timeline to help everyone know the project is on track.
 - **Reports** notify everyone as you finalize deliverables and meet milestones.
 
-![Example of scope of work](https://github.com/x-square/visual-resources/blob/main/scope-of-work.png?raw=true "Example of scope of work")
+![Example of scope of work](https://github.com/x-square/visual-resources/blob/main/scope-of-work.png?raw=true 'Example of scope of work')
 
-![Example of scope of work in the spreadsheet](https://github.com/x-square/visual-resources/blob/main/scope-of-work-spreadsheet.png?raw=true "Example of scope of work in the spreadsheet")
+![Example of scope of work in the spreadsheet](https://github.com/x-square/visual-resources/blob/main/scope-of-work-spreadsheet.png?raw=true 'Example of scope of work in the spreadsheet')
 
 ## Importance of context
 
@@ -240,7 +240,7 @@ Organizing data within a company takes teamwork. There's a good chance you'll fi
 
 Here's a view of how different roles on a typical data science team support different functions:
 
-![Data science team supports different functions](https://github.com/x-square/visual-resources/blob/main/data-science-cross-functions.png?raw=true "Data science team supports different functions")
+![Data science team supports different functions](https://github.com/x-square/visual-resources/blob/main/data-science-cross-functions.png?raw=true 'Data science team supports different functions')
 
 ### Working effectively with stakeholders
 
@@ -270,7 +270,7 @@ It is common for data analysts and stakeholders to interpret things in different
 
 Your stakeholders will want regular updates on your projects. Share notes about project milestones, setbacks, and changes. Then use your notes to create a shareable report. Another great resource to use is a change-log, which is a tool that will be explored further throughout the program. For now, just know that a is a file containing a chronologically ordered list of modifications made to a project. Depending on the way you set it up, stakeholders can even pop in and view updates whenever they want.
 
-![Example of illusion of agreement via Typical Project Life](https://github.com/x-square/visual-resources/blob/main/typical-project-life.png?raw=true "Example of illusion of agreement via Typical Project Life")
+![Example of illusion of agreement via Typical Project Life](https://github.com/x-square/visual-resources/blob/main/typical-project-life.png?raw=true 'Example of illusion of agreement via Typical Project Life')
 
 ## Data scenarios and responses
 
@@ -285,9 +285,9 @@ When you communicate your analysis and recommendations as a data analyst, it's v
 - How can we best communicate what they need to know?
     - You can start by sending an email update to Kiri with the latest timeline for the project, but a meeting might be necessary if she wants to talk through her concerns about missing a deadline.
 
-![Sample of updated timeline email](https://github.com/x-square/visual-resources/blob/main/email-timelime.png?raw=true "Sample of updated timeline email")
+![Sample of updated timeline email](https://github.com/x-square/visual-resources/blob/main/email-timelime.png?raw=true 'Sample of updated timeline email')
 
-![Sample of project follow-up email](https://github.com/x-square/visual-resources/blob/main/email-follow-up.png?raw=true "Sample of project follow-up email")
+![Sample of project follow-up email](https://github.com/x-square/visual-resources/blob/main/email-follow-up.png?raw=true 'Sample of project follow-up email')
 
 ## Limitations of data
 
@@ -310,13 +310,13 @@ Data is powerful, but it has its limitations. Has someone's personal opinion fou
 
 ## Leading great meetings
 
-![Example of meeting agenda](https://github.com/x-square/visual-resources/blob/main/meeting-agenda.png?raw=true "Example of meeting agenda")
+![Example of meeting agenda](https://github.com/x-square/visual-resources/blob/main/meeting-agenda.png?raw=true 'Example of meeting agenda')
 
 # Prepare data for exploration
 
 ## Selecting the right data
 
-![How to collect the right data?](https://github.com/x-square/visual-resources/blob/main/data-collection-considerations.png?raw=true "How to collect the right data?")
+![How to collect the right data?](https://github.com/x-square/visual-resources/blob/main/data-collection-considerations.png?raw=true 'How to collect the right data?')
 
 ## Data formats in practice
 
@@ -337,7 +337,7 @@ Data is powerful, but it has its limitations. Has someone's personal opinion fou
 
 : Data format examples
 
-![Example of data formats](https://github.com/x-square/visual-resources/blob/main/data-formats.png?raw=true "Example of data formats")
+![Example of data formats](https://github.com/x-square/visual-resources/blob/main/data-formats.png?raw=true 'Example of data formats')
 
 ## Structure of data
 
@@ -351,7 +351,7 @@ Data is everywhere and it can be stored in lots of ways. Two general categories 
     - There is much more unstructured than structured data in the world. Video and audio files, text files, social media content, satellite imagery, presentations, PDF files, open-ended survey responses, and websites all qualify as types of unstructured data.
 
 
-![Structured and unstructured data](https://github.com/x-square/visual-resources/blob/main/data-structured-unstructured.png?raw=true "Structured and unstructured data")
+![Structured and unstructured data](https://github.com/x-square/visual-resources/blob/main/data-structured-unstructured.png?raw=true 'Structured and unstructured data')
 
 Data type definitions:
 
@@ -377,7 +377,7 @@ Data models help keep data consistent and enable people to map out how data is o
 - Logical data modeling focuses on the technical details of a database such as relationships, attributes, and entities. For example, a logical data model defines how individual records are uniquely identified in a database. But it doesn't spell out actual names of database tables. That's the job of a physical data model.
 - Physical data modeling depicts how a database operates. A physical data model defines all entities and attributes used; for example, it includes table names, column names, and data types for the database.
 
-![Common types of data modeling](https://github.com/x-square/visual-resources/blob/main/data-modeling.png?raw=true "Common types of data modeling")
+![Common types of data modeling](https://github.com/x-square/visual-resources/blob/main/data-modeling.png?raw=true 'Common types of data modeling')
 
 More information can be found in this [comparison of data models](https://www.1keydata.com/datawarehousing/data-modeling-levels.html).
 
@@ -385,9 +385,9 @@ More information can be found in this [comparison of data models](https://www.1k
 
 There are a lot of approaches when it comes to developing data models, but two common methods are the **Entity Relationship Diagram** (ERD) and the **Unified Modelling Language** (UML) diagram. ERDs are a visual way to understand the relationship between entities in the data model. UML diagrams are very detailed diagrams that describe the structure of a system by showing the system's entities, attributes, operations, and their relationships. As a junior data analyst, you will need to understand that there are different data modelling techniques, but in practice, you will probably be using your organization's existing technique.
 
-![Example of ERD](https://github.com/x-square/visual-resources/blob/main/diagram-erd.png?raw=true "Example of ERD")
+![Example of ERD](https://github.com/x-square/visual-resources/blob/main/diagram-erd.png?raw=true 'Example of ERD')
 
-![Example of UML](https://github.com/x-square/visual-resources/blob/main/diagram-uml.png?raw=true "Example of UML")
+![Example of UML](https://github.com/x-square/visual-resources/blob/main/diagram-uml.png?raw=true 'Example of UML')
 
 ## Understanding Boolean logic
 
@@ -403,7 +403,7 @@ Imagine you are shopping for shoes, and are considering certain preferences:
 
 ### The power of multiple conditions
 
-For data analysts, the real power of Boolean logic comes from being able to combine multiple conditions in a single statement. For example, if you wanted to filter for shoes that were grey or pink, and waterproof, you could construct a Boolean statement such as `IF ((Color = "Grey") OR (Color = "Pink")) AND (Waterproof = "True")`. Notice that you can use parentheses to group your conditions together.
+For data analysts, the real power of Boolean logic comes from being able to combine multiple conditions in a single statement. For example, if you wanted to filter for shoes that were grey or pink, and waterproof, you could construct a Boolean statement such as `IF ((Color = 'Grey') OR (Color = 'Pink')) AND (Waterproof = 'True')`. Notice that you can use parentheses to group your conditions together.
 
 Whether you are doing a search for new shoes or applying this logic to your database queries, Boolean logic lets you create multiple conditions to filter your results.
 
@@ -434,9 +434,9 @@ Shape of data:
 - **Long data** is data where **each row contains a single data point** for a particular item.
 - **Wide data** is data where **each row contains multiple data points** for the particular items identified in the columns.
 
-![Example of long data](https://github.com/x-square/visual-resources/blob/main/data-long.png?raw=true "Example of long data")
+![Example of long data](https://github.com/x-square/visual-resources/blob/main/data-long.png?raw=true 'Example of long data')
 
-![Example of wide data](https://github.com/x-square/visual-resources/blob/main/data-wide.png?raw=true "Example of wide data")
+![Example of wide data](https://github.com/x-square/visual-resources/blob/main/data-wide.png?raw=true 'Example of wide data')
 
 You might notice that all the data included in the long format is also in the wide format. But wide data is easier to read and understand. That is why data analysts typically transform long data to wide data more often than they transform wide data to long data.
 
@@ -501,9 +501,9 @@ Luckily for data analysts, there are lots of trustworthy sites and resources ava
 - [The Cancer Imaging Archive dataset](https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc): Just like the earlier dataset, this data is hosted by the Google Cloud Public Datasets and can be uploaded to BigQuery.
 - [Naitonal Climatic Data Center](https://www.ncei.noaa.gov/weather-climate-links): The NCDC Quick Links page has a selection of datasets you can explore. 
 - [NOAA Public Dataset Gallery](https://www.climate.gov/maps-data/all?listingMain=datasetgallery): The NOAA Public Dataset Gallery contains a searchable collection of public datasets.
-- [UNICEF State of the World's Children](https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables/): This dataset from UNICEF includes a collection of tables that can be downloaded.
+- [UNICEF State of the World's Children](https://data.unicef.org/resources/dataset/sowc-2019-statistical-tables): This dataset from UNICEF includes a collection of tables that can be downloaded.
 - [CPS Labor Force Statistics](https://www.bls.gov/cps/tables.htm): This page contains links to several available datasets that you can explore.
-- [The Stanford Open Policing Project](https://openpolicing.stanford.edu/): This dataset can be downloaded as a .CSV file for your own use.
+- [The Stanford Open Policing Project](https://openpolicing.stanford.edu): This dataset can be downloaded as a .CSV file for your own use.
 
 ## Databases in data analytics
 
@@ -523,7 +523,7 @@ By contrast, a **foreign key** is a field within a table that is a primary key i
 
 Some tables don't require a primary key. For example, a revenue table can have multiple foreign keys and not have a primary key. A primary key may also be constructed using multiple columns of a table. This type of primary key is called a composite key. For example, if customer_id and location_id are two columns of a **composite key** for a customer table, the values assigned to those fields in any given row must be unique within the entire table.
 
-![Example of database keys](https://github.com/x-square/visual-resources/blob/main/database-keys.png?raw=true "Example of database keys")
+![Example of database keys](https://github.com/x-square/visual-resources/blob/main/database-keys.png?raw=true 'Example of database keys')
 
 ## Inspecting a dataset: A guided, hands-on tour
 
@@ -556,7 +556,7 @@ To discover the most popular flavor, you first need to define what is meant by *
 
 In this case, you can discover what the most popular flavor is by using units sold as your measure. In particular, you can use the units sold column to calculate the total number of units sold during the year for each flavor. Unfortunately, the dataset does not provide the annual sales amount by flavor. In this case, your next step would be to ask your stakeholders if the annual sales per flavor data is available from another source. If not, you can add a statement about the current data's limitations to your analysis.
 
-![Example of sales data by ice cream flavour](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-flavour.png?raw=true "Example of sales data by ice cream flavour")
+![Example of sales data by ice cream flavour](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-flavour.png?raw=true 'Example of sales data by ice cream flavour')
 
 #### Question 2: How does temperature affect sales?
 
@@ -566,13 +566,13 @@ So, which is it? It's probably a daily snapshot because there are 365 entries fo
 
 If it turns out that temperature does affect sales, you'll be able to offer your stakeholders an insight such as the following: **When daily highs are above X degrees, average ice cream sales increase by Y amount. So the business should plan on increasing inventory during these times to maximize sales**.
 
-![Example of sales data by temperature](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-temperature.png?raw=true "Example of sales data by temperature")
+![Example of sales data by temperature](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-temperature.png?raw=true 'Example of sales data by temperature')
 
 #### Question 3: How do weekends and holidays affect sales?
 
 You can use this data to determine whether a specific date falls on a weekend or holiday and add a column to your sheet that reflects this information. Then, you can find out whether sales on the weekends and holidays are greater than sales on other days. This will be useful to know for inventory planning and marketing purposes.
 
-![Example of sales data by weekend and holiday](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-weekend.png?raw=true "Example of sales data by weekend and holida")
+![Example of sales data by weekend and holiday](https://github.com/x-square/visual-resources/blob/main/data-ice-cream-weekend.png?raw=true 'Example of sales data by weekend and holida')
 
 #### Question 4: How does profitability differ for new customers versus returning customers?
 
@@ -712,7 +712,7 @@ Account managers at Impress Me, an online content subscription service, want to 
 
 To start off, the data analyst verifies that the data exported to spreadsheets is clean and confirms that the data needed (when users access content) is available. Knowing this, the analyst decides there is good alignment of the data to the business objective. All that is missing is figuring out exactly how long it takes each user to view content after their subscription has been activated.
 
-![Example of relevant data in spreadsheet](https://github.com/x-square/visual-resources/blob/main/data-spreadsheet.png?raw=true "Example of relevant data in spreadsheet")
+![Example of relevant data in spreadsheet](https://github.com/x-square/visual-resources/blob/main/data-spreadsheet.png?raw=true 'Example of relevant data in spreadsheet')
 
 ### Business case B
 
@@ -781,7 +781,7 @@ Consider the following data issues and suggestions on how to work around them:
 
 Use the following decision tree as a reminder of how to deal with data errors or not enough data:
 
-![Decision tree of how to deal with data errors or not enough data](https://github.com/x-square/visual-resources/blob/main/data-errors-not-enough.png?raw=true "Decision tree of how to deal with data errors or not enough data")
+![Decision tree of how to deal with data errors or not enough data](https://github.com/x-square/visual-resources/blob/main/data-errors-not-enough.png?raw=true 'Decision tree of how to deal with data errors or not enough data')
 
 ## Calculating sample size
 
@@ -827,8 +827,8 @@ You could probably accept a larger margin of error surveying how residents feel 
 
 In order to use a sample size calculator, you need to have the **population size**, **confidence level**, and the acceptable **margin of error** already decided so you can input them into the tool. If this information is ready to go, check out these sample size calculators below:
 
-- [SurveyMonkey](https://www.surveymonkey.com/mp/sample-size-calculator "Sample size calculator")
-- [Raosoft](http://www.raosoft.com/samplesize.html "Sample size calculator")
+- [SurveyMonkey](https://www.surveymonkey.com/mp/sample-size-calculator 'Sample size calculator')
+- [Raosoft](http://www.raosoft.com/samplesize.html 'Sample size calculator')
 
 ## All about margin of error
 
@@ -848,12 +848,12 @@ Does that mean subject line A is better than subject line B? It depends on your 
 
 All you need is **population size**, **confidence level**, and **sample size**.
 
-- [SurveyMonkey](https://uk.surveymonkey.com/mp/margin-of-error-calculator "Margin of error calculator")
-- [CheckMarket](https://www.checkmarket.com/sample-size-calculator/#sample-size-margin-of-error-calculator "Margin of error calculator")
+- [SurveyMonkey](https://uk.surveymonkey.com/mp/margin-of-error-calculator 'Margin of error calculator')
+- [CheckMarket](https://www.checkmarket.com/sample-size-calculator/#sample-size-margin-of-error-calculator 'Margin of error calculator')
 
 ## What is dirty data?
 
-![Types of dirty data](https://github.com/x-square/visual-resources/blob/main/data-dirty.png?raw=true "Types of dirty data")
+![Types of dirty data](https://github.com/x-square/visual-resources/blob/main/data-dirty.png?raw=true 'Types of dirty data')
 
 | **Description** | **Possible causes** | **Potential harm to businesses** |
 |-----------------|---------------------|----------------------------------|
@@ -872,15 +872,15 @@ Here are a few impacts cited for certain industries from a previous search:
 - [Banking](https://sloanreview.mit.edu/article/seizing-opportunity-in-data-quality "Seizing opportunity in data quality"): Inaccuracies cost companies between 15% and 25% of revenue
 - [Digital commerce](https://www.demandgen.com/dirty-data-what-is-it-costing-you "Dirty data: What is it costing you?"): Up to 25% of B2B database contacts contain inaccuracies
 - [Marketing and sales](https://www.dqglobal.com/blog/why-bad-data-is-wasting-your-marketing-efforts "Why bad data is a waste of your marketing efforts"): 99% of companies are actively tackling data quality in some way
-- [Healthcare](https://www.techtarget.com/searchdatamanagement/tip/How-data-duplication-in-healthcare-is-diagnosed "How data duplication in healthcare is diagnosed"): Duplicate records can be 10% and even up to 20% of a hospital's electronic health records
+- [Healthcare](https://www.techtarget.com/searchdatamanagement/tip/How-data-duplication-in-healthcare-is-diagnosed 'How data duplication in healthcare is diagnosed'): Duplicate records can be 10% and even up to 20% of a hospital's electronic health records
 
 ## Common data-cleaning pitfalls
 
-![Errors you might come across while cleaning your data](https://github.com/x-square/images/blob/main/data-cleaning-errors.png?raw=true "Errors you might come across while cleaning your data")
+![Errors you might come across while cleaning your data](https://github.com/x-square/images/blob/main/data-cleaning-errors.png?raw=true 'Errors you might come across while cleaning your data')
 
 Top ten lists for data cleaning:
 
-- [Microsoft Excel](https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19 "Top ten ways to clean your data")
+- [Microsoft Excel](https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data-2844b620-677c-47a7-ac3e-c2e157d1db19 'Top ten ways to clean your data')
 - [Google Sheets](https://support.google.com/a/users/answer/9604139?hl=en#zippy= "Tips to format and clean up data")
 
 ## Data-cleaning verification checklist
@@ -922,7 +922,7 @@ Top ten lists for data cleaning:
 
 Engineers use **engineering change orders** to keep track of new product design details and proposed changes to existing products. Writers use document revision histories to keep track of changes to document flow and edits. And data analysts use changelogs to keep track of data transformation and cleaning.
 
-![Example of changelogs](https://github.com/x-square/visual-resources/blob/main/changelogs.png?raw=true "Example of changelogs")
+![Example of changelogs](https://github.com/x-square/visual-resources/blob/main/changelogs.png?raw=true 'Example of changelogs')
 
 Typically, a changelog records this type of information:  
 
@@ -978,7 +978,7 @@ STAR method can be confusing as it may ask for repetitive information in both si
 
 ## Advanced functions for speedy data cleaning
 
-![Speed up the data cleaning process](https://github.com/x-square/visual-resources/blob/main/data-cleaning-speed.png?raw=true "Speed up the data cleaning process")
+![Speed up the data cleaning process](https://github.com/x-square/visual-resources/blob/main/data-cleaning-speed.png?raw=true 'Speed up the data cleaning process')
 
 ### Adding professional skills to your resume
 
@@ -997,7 +997,7 @@ Common professional skills for entry-level data analysts:
 - Call attention to your problem-solving, presentation, research, and communication skills in previous projects or relevant coursework.
 - Add a mix of soft and professional skills in the skills or summary section of your resume.
 
-![Common soft skills you will find in an entry-level data analyst resume](https://github.com/x-square/visual-resources/blob/main/data-analyst-soft-skills.png?raw=true "Common soft skills you will find in an entry-level data analyst resume")
+![Common soft skills you will find in an entry-level data analyst resume](https://github.com/x-square/visual-resources/blob/main/data-analyst-soft-skills.png?raw=true 'Common soft skills you will find in an entry-level data analyst resume')
 
 # Analyze data to answer questions
 
@@ -1023,7 +1023,7 @@ Filtering is used when you are only interested in seeing data that meets a speci
 As a data analyst, there are lots of scenarios when you might need to convert data in a spreadsheet:
 
 - [String to date](https://www.ablebits.com/office-addins-blog/excel-convert-text-date/#:~:text=Excel%20DATEVALUE%20function%20%2D%20change%20text,Excel%20recognizes%20as%20a%20date.&text=So%2C%20the%20formula%20to%20convert,stored%20as%20a%20text%20string.)
-- [String to numbers](https://www.ablebits.com/office-addins-blog/excel-convert-text-to-number/)
+- [String to numbers](https://www.ablebits.com/office-addins-blog/excel-convert-text-to-number)
 - [Combining columns](https://support.microsoft.com/en-us/office/combine-text-from-two-or-more-cells-into-one-cell-81ba0946-ce78-42ed-b3c3-21340eb164a6)
 - [Number to percentage](https://support.microsoft.com/en-us/office/format-numbers-as-percentages-de49167b-d603-4450-bcaa-31fba6c7b6b4)
 
@@ -1033,17 +1033,17 @@ Keep in mind that you may have lots of columns of data that require different fo
 
 Google Sheets
 
-- [Keyboard shortcuts for Google Sheets](https://support.google.com/docs/answer/181110 "Keyboard shortcuts for Google Sheets")
-- [Google Sheets function list](https://support.google.com/docs/table/25273?hl=en "Google Sheets function list")
-- [23 must-know Google Sheets formulas](https://blog.golayer.io/google-sheets/google-sheets-formulas "23 must-know Google Sheets formulas")
-- [18 Google Sheets formulas tips and techniques](https://www.benlcollins.com/spreadsheets/google-sheets-formulas-techniques "18 Google Sheets formulas tips and techniques")
+- [Keyboard shortcuts for Google Sheets](https://support.google.com/docs/answer/181110 'Keyboard shortcuts for Google Sheets')
+- [Google Sheets function list](https://support.google.com/docs/table/25273?hl=en 'Google Sheets function list')
+- [23 must-know Google Sheets formulas](https://blog.golayer.io/google-sheets/google-sheets-formulas '23 must-know Google Sheets formulas')
+- [18 Google Sheets formulas tips and techniques](https://www.benlcollins.com/spreadsheets/google-sheets-formulas-techniques '18 Google Sheets formulas tips and techniques')
 
 Excel
 
-- [Keyboard shortcuts in Excel](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f?ui=en-US&rs=en-US&ad=US "Keyboard shortcuts in Excel")
-- [222 Excel shortcuts for Windows and Mac](https://exceljet.net/shortcuts "222 Excel shortcuts for Windows and Mac")
-- [350 Excel Functions](https://exceljet.net/functions "350 Excel Functions")
-- [500 Excel Formulas](https://exceljet.net/formulas "500 Excel Formulas")
+- [Keyboard shortcuts in Excel](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f?ui=en-US&rs=en-US&ad=US 'Keyboard shortcuts in Excel')
+- [222 Excel shortcuts for Windows and Mac](https://exceljet.net/shortcuts '222 Excel shortcuts for Windows and Mac')
+- [350 Excel Functions](https://exceljet.net/functions '350 Excel Functions')
+- [500 Excel Formulas](https://exceljet.net/formulas '500 Excel Formulas')
 
 ### VLOOKUP core concepts
 
@@ -1102,7 +1102,7 @@ Correlation in statistics is the measure of the degree to which two variables mo
 
 Causation refers to the idea that an event leads to a specific outcome. For example, `when lightning strikes, we hear the thunder`. The sound wave is caused by the air heating and cooling from the lightning strike. Lightning causes thunder.
 
-![Examples of correlation and causation](https://github.com/x-square/visual-resources/blob/main/correlation-causation.png?raw=true "Examples of correlation and causation")
+![Examples of correlation and causation](https://github.com/x-square/visual-resources/blob/main/correlation-causation.png?raw=true 'Examples of correlation and causation')
 
 When you make conclusions from data analysis, you need to make sure that you don't assume a causal relationship between elements of your data when there is only a correlation. When your data shows that outdoor temperature and ice cream consumption both go up at the same time, it might be tempting to conclude that hot weather causes people to eat ice cream. But, a closer examination of the data would reveal that every change in temperature doesn't lead to a change in ice cream purchases. In addition, there might have been a sale on ice cream at the same time that the data was collected, which might not have been considered in your analysis.
 
@@ -1129,7 +1129,7 @@ Meaningful patterns can take many forms, such as:
 
 A decision tree is a decision-making tool that allows you, the data analyst, to make decisions based on key questions that you can ask yourself. Each question in the visualization decision tree will help you make a decision about critical features for your visualization. Below is an example of a basic decision tree to guide you towards making a data-driven decision about which visualization is the best way to tell your story. Please note that there are many different types of decision trees that vary in complexity, and can provide more in-depth decisions.
 
-![Best way to represent data](https://github.com/x-square/visual-resources/blob/main/data-dicision-tree.png?raw=true "Best way to represent data")
+![Best way to represent data](https://github.com/x-square/visual-resources/blob/main/data-dicision-tree.png?raw=true 'Best way to represent data')
 
 Start off by evaluating the type of data you have and go through a series of questions to determine the best visual source:
 
@@ -1142,7 +1142,7 @@ Start off by evaluating the type of data you have and go through a series of que
 
 There are nine basic principles of design that data analysts should think about when building their visualizations.
 
-![Nine principles of design](https://github.com/x-square/visual-resources/blob/main/design-principles-nine.png?raw=true "Nine principles of design")
+![Nine principles of design](https://github.com/x-square/visual-resources/blob/main/design-principles-nine.png?raw=true 'Nine principles of design')
 
 `Any questions, please reach out`
 
