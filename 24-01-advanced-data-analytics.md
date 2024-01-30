@@ -1,12 +1,12 @@
 ---
-title: "Notes on advanced data analytics"
-author: "Chiawei Wang"
-date: "December 2023"
+title: 'Notes on advanced data analytics'
+author: 'Chiawei Wang'
+date: 'December 2023'
 ---
 
 `This document compiles information from Google Advanced Data Analytics for academic purposes`[^1]
 
-[^1]: This part of notes is compiled from [Google Advanced Data Analytics](https://www.coursera.org/professional-certificates/google-advanced-data-analytics "Google professional certificate"). This program includes over 200 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world advanced data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in advanced data analytics and data science. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to advanced data analytics tools and platforms and key technical skills required for an advanced role.
+[^1]: This part of notes is compiled from [Google Advanced Data Analytics](https://www.coursera.org/professional-certificates/google-advanced-data-analytics 'Google professional certificate'). This program includes over 200 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world advanced data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in advanced data analytics and data science. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to advanced data analytics tools and platforms and key technical skills required for an advanced role.
 
 # Foundations of data science
 
@@ -21,11 +21,11 @@ date: "December 2023"
 
 [^2]: Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
 
-![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true "What is Data Science?")
+![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true 'What is Data Science?')
 
 Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
 
-[^3]: Hey, T.; Tansley, S.; Tolle, K. & Grey, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
+[^3]: Hey, T.; Tansley, S.; Tolle, K. & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
 
 ## Profiles of data professionals
 
@@ -443,7 +443,7 @@ Data professionals at Google developed PACE as a flexible model. Through PACE, y
 > - Data constructing takes 30% or 3 weeks
 > - Data executing takes 30% or 3 weeks
 
-![PACE model](https://github.com/x-square/visual-resources/blob/main/pace-model.png?raw=true "PACE model")
+![PACE model](https://github.com/x-square/visual-resources/blob/main/pace-model.png?raw=true 'PACE model')
 
 Let's take a closer look at each stage of the PACE model.
 
@@ -722,7 +722,7 @@ The sample project proposal, linked below, deals with a fictional visitation pre
 
 This project proposal's audience is the NPS data team. The purpose is to gather a comprehensive list of project tasks and divide them into smaller actionable groupings or milestones. Project proposals assist project managers in setting up task tracking, scheduling, and allocating resources. Furthermore, they serve as a reference for the team and as a valuable tool when new members are added to the project.
 
-![Visitation prediction project proposal](https://github.com/x-square/visual-resources/blob/main/project-proposal-visitation.png?raw=true "Visitation prediction project proposal")
+![Visitation prediction project proposal](https://github.com/x-square/visual-resources/blob/main/project-proposal-visitation.png?raw=true 'Visitation prediction project proposal')
 
 ## Connect PACE with executive summaries
 
@@ -742,11 +742,11 @@ Executive summaries are used across a wide variety of businesses and typically i
 
 The following linked sample executive summary deals with a fictional visitation prediction project undertaken by the U.S. National Park Service (NPS). The intended audience of this summary is a group of decision makers from NPS leadership. The purpose of this summary is to share the insights gained through data analysis of recreational park visits. Each section delivers a short statement without embellishment. This allows decision makers to quickly grasp the most relevant points about a project. Reference this document as you review each of the following sections.
 
-![Visitation prediction executive summary](https://github.com/x-square/visual-resources/blob/main/executive-summary-visitation.png?raw=true "Visitation prediction executive summary")
+![Visitation prediction executive summary](https://github.com/x-square/visual-resources/blob/main/executive-summary-visitation.png?raw=true 'Visitation prediction executive summary')
 
 ## End-of-course portfolio project introduction
 
-![Choose the workplace scenario](https://github.com/x-square/visual-resources/blob/main/project-portfolio.png?raw=true "Choose the workplace scenario")
+![Choose the workplace scenario](https://github.com/x-square/visual-resources/blob/main/project-portfolio.png?raw=true 'Choose the workplace scenario')
 
 ### Importance of communication in the data career space
 
@@ -764,7 +764,7 @@ End-of-course projects emphasize technical and professional workplace skills, as
 2. TikTok, created in partnership with the short-form video hosting company
 3. Waze, created in partnership with the realtime driving directions app  
 
-![Stage 1 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-1.png?raw=true "Stage 1 of end-of-course project")
+![Stage 1 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-1.png?raw=true 'Stage 1 of end-of-course project')
 
 ### Automatidata
 
@@ -841,7 +841,7 @@ In Course 1, Foundations of Data Science, you explored the world of data profess
 
 ## Automatidata scenario
 
-Congrats on your new job as a data analyst at a data consulting firm called Automatidata. Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client’s business needs and utilizing their data to meet those business needs. 
+Congrats on your new job as a data analyst at a data consulting firm called Automatidata. Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client's business needs and utilizing their data to meet those business needs. 
 
 Automatidata is consulting for the New York City Taxi and Limousine Commission (TLC). New York City TLC is an agency responsible for licensing and regulating New York City's taxi cabs and for-hire vehicles. The agency has partnered with Automatidata to develop a regression model that helps estimate taxi fares before the ride, based on data that TLC has gathered. 
 
@@ -883,19 +883,19 @@ The TLC team members are program managers who oversee operations at the organiza
 
 ### Meeting notes
 
-Now that you are working as Automatidata’s latest data analytics professional, you are given access to the company network and set up with a company email account (your first initial and last name, followed by @automatidata.org).
+Now that you are working as Automatidata's latest data analytics professional, you are given access to the company network and set up with a company email account (your first initial and last name, followed by @automatidata.org).
 
 Opening your inbox, you notice an email from your supervisor, Deshawn.
 
 **From**: Deshawn Washington\
 **Subject**: Review meeting notes
 
-If you are able to read this, then your company accounts have been created! Now is the perfect time to get started. Last week, I attended an internal meeting with our leadership team about a new project we are about to begin. You’ll receive more information in the next few days, but I would like you to be aware of some needs that were identified by our leadership team. Here is an excerpt from the notes I took during the Automatidata leadership team meeting. I’ve organized the points by the person who made them.
+If you are able to read this, then your company accounts have been created! Now is the perfect time to get started. Last week, I attended an internal meeting with our leadership team about a new project we are about to begin. You'll receive more information in the next few days, but I would like you to be aware of some needs that were identified by our leadership team. Here is an excerpt from the notes I took during the Automatidata leadership team meeting. I've organized the points by the person who made them.
 
 Uli King  (Senior Project Manager)
 
 - The data team will need a global-level project document to outline the goals and milestones.
-- I am working closely with Titus Nelson over at the New York City Taxi and Limo Commission. He has requested some visuals to share with TLC’s executives.
+- I am working closely with Titus Nelson over at the New York City Taxi and Limo Commission. He has requested some visuals to share with TLC's executives.
 
 Luana Rodriquez (Senior Data Analyst)
 
@@ -913,7 +913,7 @@ My thoughts and concerns
 - I think it's best to use Python for the TLC project. I'll have someone on my team set that up as soon as we have the plan in place.
 - It will be important to establish the relationship between any variables within the TLC data. I'd suggest the data team consider A/B testing, since that will analyze the relationship between the two most useful variables and subsequently provide data-driven support for future business decisions.
 
-Review the meeting notes above to become familiar with the project’s context. I’ll ask you to identify project tasks and come up with a structure to guide the data team through this project. After our discussion about your experience in the certificate program offered by Google, I know that your efficient communication style and problem-solving will enhance the abilities of the data team. 
+Review the meeting notes above to become familiar with the project's context. I'll ask you to identify project tasks and come up with a structure to guide the data team through this project. After our discussion about your experience in the certificate program offered by Google, I know that your efficient communication style and problem-solving will enhance the abilities of the data team. 
 
 There will be more details sent to you very soon.
 
@@ -933,7 +933,7 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 ## TikTok scenario
 
-Welcome to your new role at TikTok! We’re thrilled to have you on the data team! 
+Welcome to your new role at TikTok! We're thrilled to have you on the data team! 
 
 At TikTok, our mission is to inspire creativity and bring joy. Our employees lead with curiosity and move at the speed of culture. Combined with our company's flat structure, you'll be given dynamic opportunities to make a real impact on a rapidly expanding company and grow your career.
 
@@ -943,7 +943,7 @@ TikTok is working on the development of a predictive model that can determine wh
 
 ### Project background
 
-TikTok’s data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
+TikTok's data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
 
 - Organize project tasks into milestones
 - Classify tasks using the PACE workflow
@@ -955,7 +955,7 @@ For your first assignment, TikTok is asking for a project proposal that will cre
 
 ### Team members at TikTok
 
-As a new data analyst, you’ll work closely with a talented team of experienced data professionals. You’ll also collaborate with TikTok co-workers outside the data team as your project requires. 
+As a new data analyst, you'll work closely with a talented team of experienced data professionals. You'll also collaborate with TikTok co-workers outside the data team as your project requires. 
 
 #### Data team roles
 
@@ -982,7 +982,7 @@ You notice an email from your supervisor at the top of your inbox.
 **From**: Rosie Mae Bradshaw\
 **Subject**: Your first task: Review meeting notes
 
-If you are able to read this, then your company accounts have been created! It’s the perfect time to get started with your first task. Last week, I attended an internal meeting with our leadership team about a new project we are about to begin. You’ll receive more information in the next few days, but I would like you to be aware of some needs that were identified by our leadership. Here is an excerpt from the notes I took during the leadership team meeting. I’ve organized the points by the individual who made the comment:
+If you are able to read this, then your company accounts have been created! It's the perfect time to get started with your first task. Last week, I attended an internal meeting with our leadership team about a new project we are about to begin. You'll receive more information in the next few days, but I would like you to be aware of some needs that were identified by our leadership. Here is an excerpt from the notes I took during the leadership team meeting. I've organized the points by the individual who made the comment:
 
 Mary Joanna Rodgers- Project Management Officer
 
@@ -993,7 +993,7 @@ Orion Rainier-Data Scientist
 
 - We will need to have an understanding of the data we will be working with on this project. 
 - It will require someone on the team to inspect the dataset for missing data.
-- The data team needs to determine what information will be the most useful in TikTok’s data through exploratory data analysis (EDA).
+- The data team needs to determine what information will be the most useful in TikTok's data through exploratory data analysis (EDA).
 - Eventually, our team will need to run some method of statistical testing.
 
 Willow Jaffey- Data Science Lead
@@ -1007,7 +1007,7 @@ My thoughts and concerns
 
 - I think it's best to use Python for this project. I'll have someone on my team set that up as soon as we have the project proposal in place.
 - I'd suggest the data team will need to check the assumptions made by any regression modeling developed for this project.
-- The data team will identify and set up the project’s workflow.
+- The data team will identify and set up the project's workflow.
 
 There will be more details sent to you very soon.
 
@@ -1017,7 +1017,7 @@ Rosie Mae Bradshaw\
 Data Science Manager\
 TikTok
 
-(P.S. Don’t forget about the company-sponsored lunch on Friday. The food is always fantastic. It’s a great opportunity to meet more of our wonderful co-workers. Our team meets in the lobby around noon. Please join us!)
+(P.S. Don't forget about the company-sponsored lunch on Friday. The food is always fantastic. It's a great opportunity to meet more of our wonderful co-workers. Our team meets in the lobby around noon. Please join us!)
 
 ### Specific project deliverables
 
@@ -1028,13 +1028,13 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 ## Waze scenario
 
-Welcome to your new role at Waze! We’re thrilled to have you on the data team! 
+Welcome to your new role at Waze! We're thrilled to have you on the data team! 
 
-Waze’s free navigation app makes it easier for drivers around the world to get to where they want to go. Waze’s community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
+Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
 
-You’ll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. In your role, you will analyze user data and develop a machine learning model that predicts user churn. 
+You'll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. In your role, you will analyze user data and develop a machine learning model that predicts user churn. 
 
-This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze’s business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
+This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze's business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
 
 - Who are the users most likely to churn?
 - Why do users churn? 
@@ -1042,10 +1042,10 @@ This project is part of a larger effort at Waze to increase growth. Typically, h
 
 For example, if Waze can identify a segment of users who are at high risk of churning, Waze can proactively engage these users with special offers to try and retain them. Otherwise, Waze may simply lose these users without knowing why. 
 
-Your insights will help Waze leadership optimize the company’s retention strategy, enhance user experience, and make data-driven decisions about product development.  
+Your insights will help Waze leadership optimize the company's retention strategy, enhance user experience, and make data-driven decisions about product development.  
 
 ### Project background
-Waze’s data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
+Waze's data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
 
 - Organize project tasks into milestones
 - Classify tasks using the PACE workflow
@@ -1055,11 +1055,11 @@ Waze’s data team is in the earliest stages of the churn project. The following
 
 For your first assignment, Waze is asking for a project proposal that will create milestones for the tasks within this project. Remember to take into account your audience, team, project goal, and PACE stages of each task in planning your project deliverable.
 
-Note that this project's dataset was created for pedagogical purposes and does not represent Waze’s actual data.
+Note that this project's dataset was created for pedagogical purposes and does not represent Waze's actual data.
 
 ### Team members at Waze
 
-As a new data analyst, you’ll work closely with a talented team of experienced data professionals. You’ll also collaborate with Waze co-workers outside the data team as your project requires. 
+As a new data analyst, you'll work closely with a talented team of experienced data professionals. You'll also collaborate with Waze co-workers outside the data team as your project requires. 
 
 #### Data team roles
 
@@ -1088,7 +1088,7 @@ Opening your inbox, you notice an email from your supervisor, May Santner.
 **From**:  May Santner, `may@waze.com`\
 **Subject**: Your first task: Review meeting notes
 
-If you are reading this message, then your company accounts have been created! Now is the perfect time to get started. Last week, I attended an internal meeting with our leadership team about a new project. You’ll receive more information in the next few days, but I’d like you to be aware of some key points made by leadership. Here is an excerpt from my meeting notes. I’ve organized the points by the person who made them.
+If you are reading this message, then your company accounts have been created! Now is the perfect time to get started. Last week, I attended an internal meeting with our leadership team about a new project. You'll receive more information in the next few days, but I'd like you to be aware of some key points made by leadership. Here is an excerpt from my meeting notes. I've organized the points by the person who made them.
 
 Sylvester Esperanza, Senior Project Manager
 
@@ -1111,7 +1111,7 @@ My thoughts and concerns
 - I think it's best to use Python for this project. I'll have someone on my team set that up as soon as we have the project proposal in place.
 - It will be important to establish the relationship between key variables in the dataset. I'd suggest the data team consider hypothesis testing.
 
-Review the meeting notes and proposed tasks from each team member to become familiar with the project’s context. I’ll ask you to identify project tasks and come up with a structure to guide the data team through this project. After our discussion about your experience in the Google certificate program, I know that your efficient communication style and strong problem-solving skills will help the data team achieve its goals. 
+Review the meeting notes and proposed tasks from each team member to become familiar with the project's context. I'll ask you to identify project tasks and come up with a structure to guide the data team through this project. After our discussion about your experience in the Google certificate program, I know that your efficient communication style and strong problem-solving skills will help the data team achieve its goals. 
 
 There will be more details sent to you soon.
 
@@ -1121,7 +1121,7 @@ May Santner\
 Data Analysis Manager\
 Waze
 
-(P.S. Don’t forget about our Data Superstars discussion group. Our next session is this Friday at 3pm. Each month, the team gets together to discuss the work of an innovative and inspiring historical figure. This month, it’s Ada Lovelace, often considered the world’s first computer programmer. This event is also a great opportunity to get to know your new teammates - and, if you want, try the outstanding coffee in the Waze cafe! Please join us!)
+(P.S. Don't forget about our Data Superstars discussion group. Our next session is this Friday at 3pm. Each month, the team gets together to discuss the work of an innovative and inspiring historical figure. This month, it's Ada Lovelace, often considered the world's first computer programmer. This event is also a great opportunity to get to know your new teammates - and, if you want, try the outstanding coffee in the Waze cafe! Please join us!)
 
 ### Specific project deliverables
 
@@ -1146,7 +1146,7 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 ## More about object-oriented programming
 
-Previously, we identified object-oriented programming as a programming paradigm that is based around objects, which can contain both data and code that manipulates that data. You may recall that a class is an object’s data type that bundles data and functionality together, and you’ve encountered some examples of this class-specific functionality in the form of methods and attributes.
+Previously, we identified object-oriented programming as a programming paradigm that is based around objects, which can contain both data and code that manipulates that data. You may recall that a class is an object's data type that bundles data and functionality together, and you've encountered some examples of this class-specific functionality in the form of methods and attributes.
 
 Classes comprise the core objects of Python, which is why Python is known as an object-oriented language. Class objects are powerful because they contain unique tools designed specifically for that class packaged within them. Methods are functions that belong to a class; they perform actions or operations, and they use parentheses. Attributes are values or characteristics associated with a class or class instance; they do not use parentheses. And, while there are many classes, attributes, and methods pre-built into Python, there is a high level of customization offered in the object-oriented programming paradigm.
 
@@ -1179,7 +1179,7 @@ These methods could be used by typing:
 
 `Spaceship.warp()`, `Spaceship.tractor()`
 
-Notice that methods are followed by parentheses, and it’s possible for them to take arguments. For example, `Spaceship.warp(7)` could change the speed of the ship to warp seven.
+Notice that methods are followed by parentheses, and it's possible for them to take arguments. For example, `Spaceship.warp(7)` could change the speed of the ship to warp seven.
 
 ### Defining classes with unique attributes and methods
 
@@ -1210,7 +1210,7 @@ class Spaceship:
            print('Tractor beam off')
 ```
 
-A class is like a blueprint for all things that share characteristics and behaviors. In this case, the class is Spaceship. There can be all different kinds of spaceships. They can have different names and different purposes. Whenever you create an object of a given class, you’re creating an instance of that class. This is also known as instantiating the class. In the code above, every time you instantiate an object of the Spaceship class it will start with its tractor beam set to off. The tractor beam is a class attribute. All instances of the Spaceship class have one. There are also instance attributes. These are attributes that you can assign when you instantiate the object. 
+A class is like a blueprint for all things that share characteristics and behaviors. In this case, the class is Spaceship. There can be all different kinds of spaceships. They can have different names and different purposes. Whenever you create an object of a given class, you're creating an instance of that class. This is also known as instantiating the class. In the code above, every time you instantiate an object of the Spaceship class it will start with its tractor beam set to off. The tractor beam is a class attribute. All instances of the Spaceship class have one. There are also instance attributes. These are attributes that you can assign when you instantiate the object. 
 
 ```python
 # Create an instance of the Spaceship class (i.e. "instantiate")
@@ -1259,8 +1259,93 @@ Tractor beam on.
 on
 ```
 
-`Any questions, please reach out`
+## Explore Python syntax
 
-Chiawei Wang, PhD\
-Data Scientist\
-<chw.wng@outlook.com>
+### The Language of Python
+
+Python syntax includes words that represent objects and commands, as well as punctuation that gives the words structure, hierarchy, and context. Together, the words and punctuation communicate ideas and processes. This is known as semantics. Semantics is the meaning conveyed by the syntax. The best way to learn syntax and semantics is through exposure. Practice coding and become familiar and comfortable with reading other people's code. In addition, there are some general conventions that practitioners use to help maintain stylistic uniformity within the language. 
+
+Coding languages are similar to spoken languages in that they have a way to classify words according to their function. For example, English sentences are composed of nouns, verbs, and prepositions to name a few.
+
+- **Variables** represent data stored as strings, tuples, dictionaries, lists, and objects.
+    - student_name
+- **Keywords** are special words that are reserved for specific purposes and that can only be used for those purposes.
+    - in
+    - not
+    - or
+    - for 
+    - while
+    - return
+- **Operators** are symbols that perform operations on objects and values.
+    - \+ Addition
+    - \- Subtraction
+    - \* Multiplication
+    - / Division
+    - ** Exponentiation 
+    - % Modulo returns the remainder after a division e.g. 10 % 3 = 1
+    - // Floor division divides the first operand by the second operand and rounds the result down to the nearest integer e.g. 5 // 2 = 2
+    - \> Greater than returns a Boolean of whether the left operand is greater than the right operand
+    - < Less than returns a Boolean of whether the left operand is less than the right operand
+    - == Equality returns a Boolean of whether the left operand is equal to the right operand
+- **Expressions** are a combination of numbers, symbols, and variables to compute and return a result upon evaluation.
+    - [1, 2, 3] + [2, 4, 6]
+- **Functions** are a group of related statements to perform a task and return a value.
+
+```python
+def to_celsius(x):
+   '''Convert Fahrenheit to Celsius'''
+   return (x-32) * 5/9
+
+to_celsius(75)
+
+# Output
+23.88888888888889
+```
+- **Conditional statements** are sections of code that direct program execution based on specified conditions.
+
+```python
+number = -4
+
+if number > 0:
+   print('Number is positive.')
+elif number == 0:
+   print('Number is zero.')
+else:
+   print('Number is negative.')
+
+# Output
+Number is negative.
+```
+
+- Python generates **syntax errors** for incorrectly used keywords and syntax.
+
+```python
+print(This will throw an error because I didn't make it a string.)
+
+# Output
+Error on line 1:
+    print(This will throw an error because I didn't make it a string.)
+                  ^
+SyntaxError: invalid syntax
+```
+
+### Naming rules and conventions
+
+When assigning names to objects, programmers adhere to a set of rules and conventions which help to standardize code and make it more accessible to everyone. Here are some naming rules and conventions that you should know:
+
+- Names cannot contain spaces.
+- Names may be a mixture of upper and lower case characters.
+- Names can’t start with a number but may contain numbers after the first character.
+- Variable names and function names should be written in `snake_case`, which means that all letters are lowercase and words are separated using an underscore. 
+- Descriptive names are better than cryptic abbreviations because they help other programmersand you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you’ll find it much easier to understand.
+
+[PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^4] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It’s a useful and trusted resource. 
+
+[^4]: PEP stand for Python Enhancement Proposal
+
+#### Resources for more information
+
+- [Python standard library](https://docs.python.org/3/library 'Reference library')
+- [Built-in types](https://docs.python.org/3/library/stdtypes.html 'Built-in data types')
+- [Built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions 'Built-in functions')
+- [Operators](https://python-reference.readthedocs.io/en/latest/docs/operators/index.html 'Python operators')
