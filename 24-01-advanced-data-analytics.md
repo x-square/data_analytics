@@ -1335,11 +1335,11 @@ title: Python data types
 ---
 flowchart TD
     A1[(Immutable)] --- B1{Number}
+    A1 --- B2(String: 'apple')
+    A1 --- B3("Tuple: ('apple')")
     B1 --- C1(Interger: 1, 2, 3)
     B1 --- C2(Float: 1.23)
     B1 --- C3(Complex: 2x + 3y)
-    A1 --- B2(String: 'apple')
-    A1 --- B3("Tuple: ('apple')")
     A2[(Mutable)] --- D1("List: ['apple', 'apple']")
     A2 --- D2("Set: {'apple', 'banana'}")
     A2 --- D3("Dictionary: {'fruit' : 'apple'}")
@@ -1590,10 +1590,9 @@ Condition is a Boolean expression that is evaluated at the beginning of each ite
 
 ```python
 x = 1
-
 while x < 100:
    print(x)
-   x = x*2
+   x = x * 2
 
 # Output
 1
@@ -1701,6 +1700,7 @@ Sometimes you'll need to extract information from nested structures, for example
 
 ```python
 students = [['Igor', 'Sokolov'], ['Riko', 'Miyazaki'], ['Tuva', 'Johansen']]
+
 for student in students:
    for name in student:
        print(name)
@@ -1723,6 +1723,7 @@ Note that after printing each student's name, a second `print()` statement is us
 
 ```python
 students = [['Igor', 'Sokolov'], ['Riko', 'Miyazaki'], ['Tuva', 'Johansen']]
+
 for student in students:
     print(f'{student[0]} {student[1]}')
 
@@ -1750,7 +1751,6 @@ It is possible to end either a `while loop` or a `for loop` even if the conditio
 ```python
 x = 1
 i = 0
-
 while x < 100:
    if i == 5:
        break
@@ -1779,7 +1779,6 @@ It's also possible to skip an iteration of either a `while loop` or a `for loop`
 
 ```python
 i = 0
-
 while i < 10:
     if i % 3 != 0:
         print(i)
@@ -1811,7 +1810,6 @@ This example is a loop that prints all the numbers from zero through 9 that are 
 
 ```python
 count = 0
-
 while count < 5:
     if count == 2:
         pass  # Do nothing when count is 2
