@@ -13,9 +13,9 @@ date: 'December 2023'
 > [!TIP]
 > **What is Data Science?**[^2]
 > 
-> Data science combines **statistics**, **computer science** and **domain knowledge** like business. Each of these disciplines presents its own complexity, and when fused, they pose even greater challenges.
+> Data science intersects **statistics**, **computer science** and **domain knowledge** like business. Each of these disciplines presents its own complexity, and when fused, they pose even greater challenges.
 > 
-> Data scientists forge **insights** from **extensive unstructured data** by harnessing the power of **statistical learning** through crafting **algorithms**, ultimately driving **business objectives**.
+> Data scientists forge **insights** from **extensive unstructured data** by harnessing the power of **statistical learning** through **algorithms**, ultimately driving **business objectives**.
 > 
 > The application of data science extends beyond a single industry or academic discipline, finding value in healthcare, economy and criminal justice to name a few.
 
@@ -426,7 +426,7 @@ As a general rule, data professionals rely on workflow structures to guide them 
 
 Data professionals at Google developed PACE as a flexible model. Through PACE, you will identify areas of action and contexts for when they will need to be considered. All in all, PACE offers professionals a customizable scaffold that can support their efforts while working through every stage of a data project.
 
-> [!TIP]
+> [!NOTE]
 > **Data science projects typically take anywhere from 1 to 6 months**
 >
 > Plan A
@@ -1213,7 +1213,7 @@ class Spaceship:
 A class is like a blueprint for all things that share characteristics and behaviors. In this case, the class is Spaceship. There can be all different kinds of spaceships. They can have different names and different purposes. Whenever you create an object of a given class, you're creating an instance of that class. This is also known as instantiating the class. In the code above, every time you instantiate an object of the Spaceship class it will start with its tractor beam set to off. The tractor beam is a class attribute. All instances of the Spaceship class have one. There are also instance attributes. These are attributes that you can assign when you instantiate the object. 
 
 ```python
-# Create an instance of the Spaceship class (i.e. "instantiate")
+# Create an instance of the Spaceship class (i.e. 'instantiate')
 ship = Spaceship('Mockingbird','rescue frigate')
 
 # Check ship's name
@@ -1268,27 +1268,27 @@ Python syntax includes words that represent objects and commands, as well as pun
 Coding languages are similar to spoken languages in that they have a way to classify words according to their function. For example, English sentences are composed of nouns, verbs, and prepositions to name a few.
 
 - **Variables** represent data stored as strings, tuples, dictionaries, lists, and objects.
-    - student_name
+    - `student_name`
 - **Keywords** are special words that are reserved for specific purposes and that can only be used for those purposes.
-    - in
-    - not
-    - or
-    - for 
-    - while
-    - return
+    - `in`
+    - `not`
+    - `or`
+    - `for` 
+    - `while`
+    - `return`
 - **Operators** are symbols that perform operations on objects and values.
-    - \+ Addition
-    - \- Subtraction
-    - \* Multiplication
-    - / Division
-    - ** Exponentiation 
-    - % Modulo returns the remainder after a division e.g. 10 % 3 = 1
-    - // Floor division divides the first operand by the second operand and rounds the result down to the nearest integer e.g. 5 // 2 = 2
-    - \> Greater than returns a Boolean of whether the left operand is greater than the right operand
-    - < Less than returns a Boolean of whether the left operand is less than the right operand
-    - == Equality returns a Boolean of whether the left operand is equal to the right operand
+    - `+` Addition
+    - `-` Subtraction
+    - `*` Multiplication
+    - `/` Division
+    - `**` Exponentiation e.g `2 ** 3 - 8`
+    - `%` Modulo returns the remainder after a division e.g. `10 % 3 = 1`
+    - `//` Floor division divides the first operand by the second operand and rounds the result down to the nearest integer e.g. `5 // 2 = 2`
+    - `>` Greater than returns a Boolean of whether the left operand is greater than the right operand
+    - `<` Less than returns a Boolean of whether the left operand is less than the right operand
+    - `==` Equality returns a Boolean of whether the left operand is equal to the right operand
 - **Expressions** are a combination of numbers, symbols, and variables to compute and return a result upon evaluation.
-    - [1, 2, 3] + [2, 4, 6]
+    - `[1, 2, 3] + [2, 4, 6]`
 - **Functions** are a group of related statements to perform a task and return a value.
 
 ```python
@@ -1304,11 +1304,11 @@ to_celsius(75)
 - **Conditional statements** are sections of code that direct program execution based on specified conditions.
 
 ```python
-number = -4
+num = -4 # It's necessary to put this line before the condition when there is no 'def'.
 
-if number > 0:
+if num > 0:
    print('Number is positive.')
-elif number == 0:
+elif num == 0:
    print('Number is zero.')
 else:
    print('Number is negative.')
@@ -1329,19 +1329,37 @@ Error on line 1:
 SyntaxError: invalid syntax
 ```
 
+```mermaid
+---
+title: Python data types
+---
+flowchart TD
+    A1[(Immutable)] --- B1{Number}
+    B1 --- C1(Interger: 1, 2, 3)
+    B1 --- C2(Float: 1.23)
+    B1 --- C3(Complex: 2x + 3y)
+    A1 --- B2(String: 'apple')
+    A1 --- B3("Tuple: ('apple')")
+    A2[(Mutable)] --- D1("List: ['apple', 'apple']")
+    A2 --- D2("Set: {'apple', 'banana'}")
+    A2 --- D3("Dictionary: {'fruit' : 'apple'}")
+```
+
+[Mermaind diagramming and charting tool](https://mermaid.js.org 'Mermaind diagramming and charting tool') is JavaScript based that renders Markdown inspired text definitions to create and modify diagrams dynamically.
+
 ### Naming rules and conventions
 
 When assigning names to objects, programmers adhere to a set of rules and conventions which help to standardize code and make it more accessible to everyone. Here are some naming rules and conventions that you should know:
 
 - Names cannot contain spaces.
 - Names may be a mixture of upper and lower case characters.
-- Names can’t start with a number but may contain numbers after the first character.
+- Names can't start with a number but may contain numbers after the first character.
 - Variable names and function names should be written in `snake_case`, which means that all letters are lowercase and words are separated using an underscore. 
-- Descriptive names are better than cryptic abbreviations because they help other programmersand you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you’ll find it much easier to understand.
+- Descriptive names are better than cryptic abbreviations because they help other programmersand you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you'll find it much easier to understand.
 
-[PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^4] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It’s a useful and trusted resource. 
+[PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^4] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It's a useful and trusted resource. 
 
-[^4]: PEP stand for Python Enhancement Proposal
+[^4]: PEP stands for Python Enhancement Proposal, a document that shares information with the Python community. It outlines either a new feature for Python or describes changes to its processes or environment.
 
 #### Resources for more information
 
@@ -1349,3 +1367,786 @@ When assigning names to objects, programmers adhere to a set of rules and conven
 - [Built-in types](https://docs.python.org/3/library/stdtypes.html 'Built-in data types')
 - [Built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions 'Built-in functions')
 - [Operators](https://python-reference.readthedocs.io/en/latest/docs/operators/index.html 'Python operators')
+
+## Reference guide: Functions
+
+Functions are bodies of reusable code for performing specific processes or tasks, which only runs when they are called. You can pass data into a function. They help you do more work with less code. Function examples include:
+
+- A specific calculation or measurement, such as converting Fahrenheit to Celsius
+- An inventory utility to iterate quantities and calculate the total cost of goods in stock
+- Building a DataFrame from a series or dictionary data
+- An application utility such as a spell checker
+
+In this reading, you will learn how to **define**, **build**, and **call functions**. 
+
+### Function syntax
+
+The keyword `def` introduces a definition function. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented.
+
+```python
+def my_function(arguments):
+    '''
+    Summarize the function's behavior and explain its arguments with parameters and return values.
+    '''
+    code block
+    return value
+```
+
+- Begin with the `def` keyword followed by the name of `function`, then put its `arguments` in parentheses, ending with a colon.
+    - Python convention is to use `snake_case` (lowercase words separated by underscores) for function names.
+- For important functions or functions whose purposes or operations are not very obvious, include a `docstring`. Write the docstring between three opening and closing quotation marks. 
+    - The docstring should be in the form of a command (e.g. `add` two numbers as opposed to `adds` two numbers).
+    - The docstring should summarize the function's behavior and explain its `arguments with parameters` and return values.
+    - The docstring should be indented four spaces from the definition statement.
+- Write the body of the function.
+    - All code should be indented at least four spaces from the definition statement, but there can be many levels of indentation depending on the complexity of the code. 
+- Finally, use a `return` statement to return a value or a `print` statement to print something to the console and complete the function. This line should also be indented four spaces.
+
+### Return versus print statements
+
+Sometimes the difference between `return` statement and `print` statement isn't clear to new learners of Python. It's important to understand what each action is and when to use it.
+
+`Return` statement gives you a result that you can use for something else. It doesn't have to be something that prints when the function is run. `Print` statements printw something to the console and nothing more.
+
+Think of it like this: a `return` statement is like your brother going to the market and bringing you back a bag of potatoes. A `print` statement is like your brother going to the market, coming home, and telling you what kind of potatoes were for sale. With the `return` statement, you have some potatoes to cook. With the `print` statement, you just know what potatoes are available, but you don't have any potatoes.
+
+### Functions versus methods
+
+Functions and methods are very similar, but there are a few key differences. Methods are a specific type of function. They are functions that belong to a class. This means that you can use them or call them by using dot notation.
+
+#### Method example
+
+The split method is a function that belongs to the string class. It splits strings on their white spaces.
+
+```python
+my_string = 'The eagles filled the sky.'
+my_string.split()
+
+# Output
+['The', 'eagles', 'filled', 'the', 'sky.']
+```
+### Function example
+
+Standalone functions do not belong to a particular class and can often be used on multiple classes.
+
+```python
+ sum([6, 3])
+
+# Output
+9
+```
+
+#### Resources for more information
+
+- [Python standard library](https://docs.python.org/3/library 'Reference library') *vide supra* [*see above*]
+- [Built-in types](https://docs.python.org/3/library/stdtypes.html 'Built-in data types') *vide supra* [*see above*]
+- [Built-in functions](https://docs.python.org/3/library/functions.html#built-in-functions 'Built-in functions') *vide supra* [*see above*]
+- [Operators](https://python-reference.readthedocs.io/en/latest/docs/operators/index.html 'Python operators') *vide supra* [*see above*]
+- [Syntax symbol uses](https://wiki.python.org/moin/PythonGlossary?action=AttachFile&do=view&target=PySymbols.html 'Syntax symbol uses')
+- [Docstring conventions](https://peps.python.org/pep-0257 'PEP 257 Docstring conventions')
+
+## Reference guide: Python operators
+
+### Comparators
+
+You can use comparison operators to compare values. When a comparison is made, Python returns a Boolean result: `True` or `False`.
+
+- `>` greater than
+- `>=` greater than or equal to
+- `<` less than
+- `<=` less than or equal to
+- `!=` not qqual to
+- `==` equal to
+
+> [!TIP]
+> The single equals sign `=` is reserved for assignment statements. If you use a single equal sign to make a comparison, the computer will return a **SyntaxError**.
+>
+> If you try to compare data types that aren't compatible, like checking if a string is greater than an integer, Python will throw a **TypeError**.
+
+### Logical operators
+
+Python has three logical operators that can be combined with comparators to create more complex statements.
+
+- `and` evaluates `True` only if both statements are `True`
+- `or` evaluates to `True` if one or both of the statements are `True`
+- `not` reverses the evaluation
+    - If *p* `True` then *q* `False`, if *p* `False` then *q* `True`
+
+```python
+x = 3
+my_list = [3, 4, 6, 10]
+
+print(x < 3 and x != 0)
+print(x >= len(my_list) or x == min(my_list))
+print(x not in my_list)
+
+# Output
+False
+True
+False
+```
+
+### Arithmetic operators
+
+*vide supra* [*see above*]
+
+- `+` Addition
+- `-` Subtraction
+- `*` Multiplication
+- `/` Division
+- `**` Exponentiation 
+- `%` Modulo
+- `//` Floor division
+
+## Conditional (or selection) statements
+
+> [!NOTE]
+> Statements are program elements used in the **control flow** that control how and in what order objects are manipulated, including conditional, iterative and jump statements to name a few.
+
+### If statements
+
+Conditional statements are an essential part of programming. They allow you to control the flow of information based on certain conditions. In Python, `if`, `elif`, and `else` statements are used to implement conditional statements. Using conditional statements to branch program execution is a core part of coding for most data professionals, so it's important to understand how they work.
+
+```python
+if condition1:
+   # block of code to execute if the condition evaluates to True
+
+elif condition2:
+   # block of code to execute if condition1 evaluates to False
+   # and condition2 evaluates to True
+
+else:
+   # block of code to execute if BOTH condition1 and condition2
+   # evaluate to False
+```
+
+`condition1` and `condition2` are expressions that evaluate to either `True` or `False`. If the condition in the if statement is true, then the block of code that follows is executed. Otherwise, it is skipped.
+
+`elif` statement stands for `else if`, and it is used to specify an alternative condition to check if the first condition is `False`. You can have any number of `elif` statements in your code. If the preceding condition is `False` and the `elif` condition is `True`, then the block of code that follows the `elif` statement is executed.
+
+The `else` statement is used to specify what code to execute if both the if statement and any subsequent `elif` statements are false.
+
+```python
+def hint_username(username):
+    if len(username) < 6:
+        print('Invalid username! Must be at least 6 characters!')
+    elif 5 < len(username) < 11:
+        print('Please enter Room A!')
+    elif 10 < len(username) < 16:
+        print('Please enter Room B!')
+    else:
+        print('Invalid username! Must be at most 15 characters!')
+
+hint_username('Pomelo')
+
+# Output
+'Please enter Room A!
+```
+
+> [!TIP]
+> - `elif` and `else` statements are optional. You can have an `if` statement by itself.
+> - You can have multiple `elif` statements.
+> - You can only have one `else` statement, and only at the end of your logic block.
+> - The conditions must be an expression that evaluates to a Boolean value `True` or `False`.
+> - **Indentation matters!** The code associated with each conditional statement must be indented below it. The typical convention for data professionals is to indent four spaces. Indentation mistakes are one of the most common causes of unexpected code behavior.
+
+###  Match (or switch) statements
+
+`match` statement takes an expression and compares its value to successive patterns given as one or more case blocks.
+
+`case guard` is an additional condition that must be satisfied together with a matched pattern. Note that a case guard must be a Boolean expression.
+
+```python
+def http_error(status):
+    match status:
+        case 400:
+            return 'Bad request'
+        case 404:
+            return 'Not found'
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return 'Something is wrong with the internet'
+
+print(http_error(500))
+
+# Output
+Something is wrong with the internet
+```
+
+## Iterative statment: While loop
+
+`While loop` is useful because they allow you to perform an action or evaluation repeatedly until a given condition or requirement is met, and then they stop. This is an important process in computer programming, not just in Python, but in most other languages too.
+
+### While loop syntax
+
+`while loop` is a control structure that allows you to repeatedly execute a block of code for as long as a certain condition is true. 
+
+```python
+while condition:
+   # Code block to execute
+```
+Condition is a Boolean expression that is evaluated at the beginning of each iteration of the loop. If the condition is true, the code block executes. After the code block executes, the condition is evaluated again. This process continues until the condition is false, at which point the loop terminates and the program continues with the next statement after the loop. 
+
+```python
+x = 1
+
+while x < 100:
+   print(x)
+   x = x*2
+
+# Output
+1
+2
+4
+8
+16
+32
+64
+```
+
+In this example, `x` equals one when the loop begins. Because `x` is less than 100, the program prints the value of `x`, then multiplies `x` by two. Then the condition is checked again, and because it is still `True`, the code inside the loop executes again. This process continues until x becomes 128, at which point the condition becomes `False` and the loop terminates.
+
+### Infinite loop
+
+Be careful with `while loop` because if you make a mistake with your logic or syntax, it could result in an infinite loop that never terminates. In the previous example, if `x = x * 2` were accidentally not indented to be in the body of the while loop, the loop would reach the print statement and cycle back to check the conditional statement, which of course would still be true because the value of `x` would never change from one.
+
+If you get stuck in an infinite loop, don't worry. You can break out of it by interrupting the kernel. There are several ways to do this.
+
+> [!CAUTION]
+> **Break out of an infinite loop by interrupting the kernel in Visual Studio Code**
+> 
+> - For Jupyter Notebook, turn to Command Palette (⇧⌘P) and execute `Jupyter: Restart Kernal`.
+> - For Python file, turn to terminal and execute `⌃C` (Control-C).
+
+## Iterative statment: For loop
+
+`for loops` is like `while loop`, but instead of looping continuously until a condition is met, for loops iterate over each element of an iterable sequence, allowing you to perform an action or evaluation with each iteration. This is an important process in computer programming, not just in Python, but in most other languages too.
+
+`for loop` allows you to execute a block of code the same number of times as there are elements in an iterable sequence. The `range()` function is useful for creating a defined iterable sequence. And nested loops are loops within loops that give you even greater power and control over how your code may execute.
+
+### For loop syntax
+
+`for loop` is a control structure that allows you to execute a block of code the same number of times as there are elements in an iterable sequence.
+
+```python
+for item in iterable_sequence:
+   # Code block to be executed for each value in iterable_sequence
+```
+`iterable_sequence` variable can be any iterable data type, and item is a variable whose name is arbitrary. You decide it. However, there are some conventions that you'll encounter when naming this variable. For example, if you're iterating over characters in a string, you'll frequently encounter the variable `char`. If you're iterating over a list of numbers, you'll find `n`. It's helpful to give this variable a `name` so readers of your code understand what kind of information is being looped over. So, for a variable called `names` that contains a list of people's names, you might write: `for name in names`.
+
+```python
+n = 5
+y = [1, 2, 3]
+
+for num in y:
+   print(num)
+
+print(num)
+
+# Output
+1
+2
+3
+3
+```
+
+Notice that `n` exists as a variable before the for loop begins. The for loop's first iteration reassigns [overwirtes] its value with that of the first element in the sequence. This reassignment occurs with each iteration of the loop. When the loop terminates, the variable persists, and it contains the value it had after the final iteration of the loop.
+
+### The range() function
+
+`for loop` allows you to create a loop that performs exactly the number of iterations needed for the data structure you're looping over. In other words, whether your iterable sequence contains two, 1,000, or a million elements, you can use the same syntax and don't have to specify the number of iterations you want. However, sometimes you need to perform a task a set number of times, but you don't already have an iterable object to loop over. Or, sometimes you need to generate a known, regular sequence of numbers. This is where the `range()` function is useful.
+
+ `range()` function is a function that takes three arguments: `start, stop, step`. Its output is an object belonging to the range class. If you only include one argument, it will be interpreted as the stop value. The start and step values by default will be zero and one, respectively. If you include two arguments, they will be interpreted as the start and stop values with step being one by default. Note that the stop value is not included in the range that is returned.
+
+```python
+# One argument: Stop
+
+for i in range(3):
+   print(i)
+
+# Output
+0
+1
+2
+```
+
+```python
+# Two arguments: Start, stop
+
+for num in range(2, 5):
+   print(num)
+
+# Output
+2
+3
+4
+```
+
+```python
+# Three arguments: Start, stop, step
+
+for num_plus_3 in range(2, 11,3):
+   print(num_plus_3)
+
+# Output
+2
+5
+8
+```
+
+### Nested loops
+
+Sometimes you'll need to extract information from nested structures, for example, from a list of lists. One way of doing this is by using nested loops. A `nested loop` is a loop inside of another loop. You can have an infinite number of nested loops, but it becomes more confusing to read and understand the more nested loops you add.
+
+```python
+students = [['Igor', 'Sokolov'], ['Riko', 'Miyazaki'], ['Tuva', 'Johansen']]
+for student in students:
+   for name in student:
+       print(name)
+   print()
+
+# Output
+Igor
+Sokolov
+
+Riko
+Miyazaki
+
+Tuva
+Johansen
+```
+
+In this example, the students variable contains a list of three lists. Each inner list contains two elements: a given name and a surname. The first `for loop` iterates over the inner lists. The second `nested for loop` iterates over each name in each inner list and prints the name. After each iteration of the outer loop, the program uses an empty print statement to print a new line. 
+
+Note that after printing each student's name, a second `print()` statement is used to add an empty line, creating a separation between each student's names in the output.
+
+```python
+students = [['Igor', 'Sokolov'], ['Riko', 'Miyazaki'], ['Tuva', 'Johansen']]
+for student in students:
+    print(f'{student[0]} {student[1]}')
+
+# Output
+Igor Sokolov
+Riko Miyazaki
+Tuva Johansen
+```
+
+Note that `f-string` (formatted string) is a feature in Python that allows you to embed expressions inside string literals, using curly braces `{}`. These expressions are evaluated at runtime and formatted using the `format()` protocol. F-strings were introduced in Python 3.6 and provide a concise and readable way to create formatted strings.
+
+> [!TIP]
+> The difference between `for loop` and `while loop` is that `for loop` is used when the number of iterations is known, whereas execution is done in a `while loop` until the statement in the program is proved wrong.
+>
+> Use `for loops` when there is a sequence of elemtns that you want to iterate over, whereas use `while loops` when you want to repeat an action until a **boolean** condition changes, that is **True** or **False**.
+
+![Difference between For and While loops](https://github.com/x-square/visual-resources/blob/main/python-loops.png?raw=true 'For and While loops')
+
+## Jump (or transfer) statements
+
+### Break statement
+
+It is possible to end either a `while loop` or a `for loop` even if the conditional statement is still true. To do this, use a `break` statement.
+
+```python
+x = 1
+i = 0
+
+while x < 100:
+   if i == 5:
+       break
+   print(i, x)
+   x = x * 2
+   i += 1
+
+# Output
+0 1
+1 2
+2 4
+3 8
+4 16
+```
+
+In this example, there is a variable `i` that acts as a counter. For each iteration of the loop, the program:
+
+- Checks if `x` is less than **100**.
+- If it is, then the program checks if i equals five.
+- If it does, the loop terminates because of the `break` statement. Otherwise, it prints the values of both `i` and `x`, doubles the value of `x`, and increments the value of `i` by one.
+- Repeats until `x ≥ 100` or `i = 5`. In this case, the loop breaks when `i` becomes **5**. 
+
+### Continue statement
+
+It's also possible to skip an iteration of either a `while loop` or a `for loop` without executing the rest of the code inside the loop for the current iteration. To do this, use a `continue` statement. 
+
+```python
+i = 0
+
+while i < 10:
+    if i % 3 != 0:
+        print(i)
+        i += 1
+        continue
+    i += 1
+
+# Output
+1
+2
+4
+5
+7
+8
+```
+
+This example is a loop that prints all the numbers from zero through 9 that are not divisible by three. For each iteration of the loop, the program:
+
+- Checks if `i` is less than **10**.
+- If it is, then the program uses the modulo operator to check if `i` is evenly divisible by three.
+- If it is not, then the program prints `i`, increments the value of `i` by one, and then **cycles back to the beginning** to check that `i` is less than 10. This happens because of the `continue` statement. The final `i += 1` does not execute, thus avoiding a double incrementation of `i`.
+- But if step 2 evaluates `i` as evenly divisible by three, nothing in the if block executes so there's no print statement and `i` is incremented by one.
+- Repeats until `i` becomes **10**. 
+
+### Pass statement
+
+ `pass` statement serves as a placeholder when you need a statement syntactically but don't want to execute any specific code within that part of either a `while loop` or a `for loop`. 
+
+
+```python
+count = 0
+
+while count < 5:
+    if count == 2:
+        pass  # Do nothing when count is 2
+    else:
+        print(count)
+    count += 1
+
+# Output
+0
+1
+3
+4
+```
+
+## String indexing and slicing
+
+Strings are an important class of data because they represent text.
+
+Indexing and slicing are powerful tools in Python that allow you to access specific elements or parts of a sequence. Both indexing and slicing use square brackets. Remember that in a slice the starting index is inclusive and the stopping index is exclusive, and that negative indices count from the end of the sequence. With these tools, you can manipulate strings and other iterable sequences to perform a wide variety of operations
+
+### Indexing
+
+**Indexing** refers to accessing a single element of a sequence by its position. In Python, the first element of any sequence has an **index of zero**. This means Python uses **zero-based indexing**. Numerous other programming languages also use zero-based indexing, but not all of them do. Some languages use **one-based indexing**, such as R, Julia, and SAS. 
+
+```python
+my_string = 'Mississippi half-step' # String
+print(my_string[0])
+
+my_list = [1, 'unladen', 'swallow'] # List
+print(my_list[1])
+print(my_list[-1])
+
+# Output
+M
+unladen
+swallow
+```
+
+In these examples, there are two sequence variables: a string and a list. Indexing is used to access the character at index zero of the string, which is its first character, `M`. The list is selected at index one, which contains the word `unladen`. The list is also selected at its final position. **Negative indexing.** starts from `-1` for the last, `-2` for the second-to-last and so on.
+
+### Slicing
+
+Slicing refers to accessing a range of elements from a sequence. Use square brackets containing two indices separated by a colon.
+
+```python
+new_string = 'pining for the fjords'
+print(new_string[:3]) # Same as print(new_string[0:3])
+print(new_string[3:]) # Same as print(new_string[3:21])
+print(len(new_string))
+
+# Output
+pin
+ing for the fjords
+21
+```
+
+When the starting index is omitted, it's implied to be zero. When the ending index is omitted, its implied value is the length of the sequence.
+
+Note that slicing in Python is **exclusive on the upper bound**. In this example, you index at 21 to include the last item, which is the 21st character. Intuitively, you might think to index at 22 to cover the 21st character. However, this practice is incorrect because the slicing here is determined by `0 + 21 = 22` for the zero-based indexing rule.
+
+## String formatting and regular expressions
+
+As you've learned, strings are a crucial class of data because they represent textual information. Data professionals encounter strings all the time, so it's important to become familiar with different ways of manipulating and working with them.
+
+String formatting is the process of inserting specific substrings into designated places within a larger string. Often, the inserted substrings get processed and formatted a certain way. There are multiple ways of using string formatting to help you process strings. These include the **format() method**, **literal string interpolations** (or **f-strings**) and **regular expressions**, also known as regex. The methods you use will depend on what your data demands and your own personal preferences, but it's important to be familiar with the most common techniques used by data professionals.
+
+### String formatting
+
+String formatting uses the `format()` method, which belongs to the string class. This method formats and inserts specific substrings into designated places within a larger string. It's useful when you have reusable template text into which you want to insert specific changeable values, for example. The method is also useful when assigning the strings used to label charts and graphs you make.
+
+The `format()` method is a versatile and convenient way to take values that are stored in different variables and insert them into a string.
+
+```python
+x = 'values'
+y = 100
+
+print('''String formatting lets you insert {} into strings.
+They can even be numbers, like {}.'''.format(x, y))
+
+# Output
+String formatting lets you insert values into strings.
+They can even be numbers, like 100.
+```
+
+The `format()` method inserts its arguments into the braces within the string that it's attached to. The order of insertion follows the order of the arguments. Also, this example includes a helpful trick. Sometimes you'll encounter a very long string. Many editors will allow the string to keep extending to the right on a single line. This is impractical unless you have a very wide monitor, but **79 characters** is a conventional maximum length for a single line of Python code. Enclosing your string in triple quotes lets you break the string over multiple lines.
+
+The `format()` method can also insert values into braces using explicitly assigned keyword names, which allow you to mix up the order of the method's arguments without changing the order of their insertion into the final string.
+
+```python
+var_a = 'A'
+var_b = 'B'
+
+print('{a}, {b}'.format(b = var_b, a = var_a))
+
+### Output
+A, B
+```
+
+Note that because the arguments were named, it didn't matter that they were entered with `var_b` first and `var_a` last. They still were inserted into the string in the order specified.
+
+You can also include the arguments' index numbers within the braces to indicate which arguments get inserted in specific spots.
+
+```python
+var_a = 'A'
+var_b = 'B'
+
+print('{1}, {0}'.format(var_a, var_b))
+print('{0}, {1}'.format(var_a, var_b))
+
+### Output
+B, A
+A, B
+```
+
+You can have as many arguments as you want.
+
+```python
+print('{}, {}, {}, {}, {}, {}'.format(1, 2, 3, 4, 5, 6))
+
+# Output
+1, 2, 3, 4, 5, 6
+```
+
+You can repeat arguments' indices.
+
+```python
+print('{0}{1}{0}'.format('abra', 'cad'))
+
+# Output
+abracadabra
+```
+
+### F-strings: Literal string interpolation
+
+Another string formatting technique that you'll often encounter when using Python version 3.6+ is **literal string interpolation**, also known as **f-strings**, which further minimize the syntax required to embed expressions into strings without having to call the `format()` method. They're called **f-strings** because the expressions always begin with `f`.
+
+```python
+# Simplifeid version with f-string
+var_a = 1
+var_b = 2
+
+print(f'{var_a} + {var_b}')
+print(f'{var_a + var_b}')
+print(f'var_a = {var_a} \nvar_b = {var_b}')
+
+# Output
+1 + 2
+3
+var_a = 1 
+var_b = 2
+```
+
+```python
+# Slightly redundant version without f-sting
+var_a = 1
+var_b = 2
+
+print('{} + {}'.format(var_a, var_b))
+print('{}'.format(var_a + var_b))
+print('var_a = {} \nvar_b = {}'.format(var_a, var_b))
+
+# Output
+1 + 2
+3
+var_a = 1 
+var_b = 2
+```
+
+### Float formatting options
+
+In addition to inserting expressions into strings, string formatting can format their appearance. There are too many options to list here, but the [Python string documentation](https://docs.python.org/3/library/string.html 'Common string operations') is a good place to review these techniques.
+
+Here are some of the most useful.
+
+#### To use these options, build your expression within braces
+
+- The float variable is what's being formatted
+- A colon `:` separates what's being formatted from the syntax used to format it
+- `.number` indicates the desired precision
+- A letter indicates the presentation type
+
+![Example of float formatting](https://github.com/x-square/visual-resources/blob/main/python-float.png?raw=true 'Example of float formatting')
+
+```python
+num = 1000.987123
+f'{num:.2f}'
+
+# Output
+1000.99
+```
+
+This example uses the `f` presentation type to specify that the number contained in the num variable should be rounded to two places beyond the decimal.
+
+| Type | Meaning |
+|------|---------|
+| % | Percentage. Multiplies the number by 100 and displays in fixed `f` format, followed by a percent sign. |
+| e | Scientific notation. For a given precision `p`, formats the number in scientific notation with the letter `e` separating the coefficient from the exponent. The coefficient has one digit before and `p` digits after the decimal point, for a total of `p + 1` significant digits. With no precision given, e uses a precision of 6 digits after the decimal point for float, and shows all coefficient digits for decimal. |
+| f | Fixed-point notation. For a given precision `p`, formats the number as a decimal number with exactly `p` digits following the decimal point. |
+
+: Common presentation types
+
+```python
+decimal = 0.2497856
+print(f'{decimal:.4%}')
+
+num = 1000.987123
+print(f'{num:.3e}')
+
+# Output
+24.9786%
+1.001e+03
+```
+
+### String methods
+
+As one of the primary object classes in Python, strings have many built-in methods designed to facilitate working with them.
+
+Reference the full [string methods documentation](https://docs.python.org/2/library/stdtypes.html#string-methods 'String methods') for more information not included here.
+
+#### str.count('sub', start, end)
+
+Return the number of non-overlapping occurrences of substring `sub` in the range `start, end`.
+
+```python
+my_string = 'Happy birthday'
+
+print(my_string.count('y'))
+print(my_string.count('y', 2, 7))
+
+# Output
+2
+1
+```
+
+#### str.find(sub)
+
+Return the lowest index in the string where substring `sub` is found. Return `-1` if sub is not found.
+
+```python
+# Note that Python is case-sensative.
+
+my_string = 'Happy birthday'
+
+print(my_string.find('birth'))
+print(my_string.find('cake'))
+
+6
+-1
+```
+
+#### str.join()
+
+Return a string which is the concatenation of the strings in iterable, an object that can be iterated or looped over. The separator between elements is the string providing this method.
+
+```python
+separator_string = ' '
+iterable_of_strings = ['Happy', 'birthday', 'to', 'you']
+
+separator_string.join(iterable_of_strings)
+
+# Output
+Happy birthday to you
+```
+#### str.partition(sep)
+
+Split the string at the first occurrence of `sep` , and return a 3-tuple containing the part before the separator, the separator itself, and the part after the separator. If the separator is not found, return a 3-tuple containing the string itself, followed by two empty strings.
+
+```python
+my_string = 'https://www.google.com/'
+my_string.partition('.')
+
+# Output
+('https://www', '.', 'google.com/')
+```
+
+#### str.replace(old, new, count)
+
+Return a copy of the string with all occurrences of substring `old` replaced by `new`. If the optional argument `count` is given, only the first occurrence is replaced.
+
+```python
+my_string = 'https://www.google.com'
+my_string.replace('google', 'youtube')
+
+# Output
+https://www.youtube.com
+```
+
+#### str.split(sep)
+
+Return a list of the words in the string, using `sep` as the delimiter string. If no `sep` is given, whitespace characters are used as the delimiter. Any number of consecutive whitespaces would indicate a split point, so `''` (a single whitespace) would split the same way as `' '` (two or more whitespaces).
+
+```python
+my_string = 'Do you know the muffin man?'
+my_string.split()
+
+# Output
+['Do', 'you', 'know', 'the', 'muffin', 'man?']
+```
+
+### Regular expressions
+
+Regular expressions, also known as regex, refer to techniques that advanced data professionals use to modify and process string data. Regex works by matching patterns in Python. It allows you to search for specific patterns of text within a string of text. Regex is used extensively in web scraping, text processing and cleaning, and data analysis.
+
+The first step in working with regular expressions is to import the `re` module.[^5] This module provides the tools necessary for working with regular expressions. Once you have imported the module, you can start working with regular expressions.
+
+[^5]: Module is a file containing Python code, which can include functions, variables and classes. It allows you to organise related code into separate units for better maintainability and readability.
+
+```python
+import re
+
+my_string = 'Three sad tigers swallowed wheat in a wheat field'
+match = re.search('wall', my_string)
+
+# Output
+<_sre.SRE_Match object; span=(18, 22), match='wall'>
+```
+
+Regex is especially useful because it allows you a very high degree of customization when performing your searches.
+
+```python
+import re
+
+my_string = 'Three sad tigers swallowed wheat in a wheat field'
+re.search('[bms]ad', my_string)
+
+# Output
+<_sre.SRE_Match object; span=(6, 9), match='sad'>
+```
+
+This example will search for **bad**, **mad**, and **sad**.
+
+Regex has a large catalogue of special expressions that let you search for substrings that will only match if, for example, they are followed by certain characters, or if they don't contain a certain set of characters. It can get very complex.
+
+`Any questions, please reach out`
+
+Chiawei Wang, PhD\
+Data Scientist\
+<chw.wng@outlook.com>
