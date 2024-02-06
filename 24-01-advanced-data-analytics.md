@@ -11,7 +11,7 @@ date: 'December 2023'
 # Foundations of data science
 
 > [!TIP]
-> **What is Data Science?**[^1]
+> **What is Data Science?**[^2]
 > 
 > Data science intersects **statistics**, **computer science** and **domain knowledge** like business. Each of these disciplines presents its own complexity, and when fused, they pose even greater challenges.
 > 
@@ -19,13 +19,13 @@ date: 'December 2023'
 > 
 > The application of data science extends beyond a single industry or academic discipline, finding value in healthcare, economy and criminal justice to name a few.
 
-[^1]: Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
+[^2]: Mukherjee, S. 2019. How Data Science is taking over mobile marketing. CleverTap. <https://clevertap.com/blog/data-science>
 
 ![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true 'What is Data Science?')
 
-Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, **theoretical**, **empirical**, **computational** and **data-driven**.[^1]
+Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, **theoretical**, **empirical**, **computational** and **data-driven**.[^3]
 
-[^1]: Hey, T.; Tansley, S.; Tolle, K. & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
+[^3]: Hey, T.; Tansley, S.; Tolle, K. & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
 
 ## Profiles of data professionals
 
@@ -1358,9 +1358,9 @@ When assigning names to objects, programmers adhere to a set of rules and conven
 - Variable names and function names should be written in `snake_case`, which means that all letters are lowercase and words are separated using an underscore. 
 - Descriptive names are better than cryptic abbreviations because they help other programmers and you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you'll find it much easier to understand.
 
-[PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^1] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It's a useful and trusted resource. 
+[PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^4] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It's a useful and trusted resource. 
 
-[^1]: PEP stands for Python Enhancement Proposal, a document that shares information with the Python community. It outlines either a new feature for Python or describes changes to its processes or environment.
+[^4]: PEP stands for Python Enhancement Proposal, a document that shares information with the Python community. It outlines either a new feature for Python or describes changes to its processes or environment.
 
 #### Resources for more information
 
@@ -2115,9 +2115,9 @@ my_string.split()
 
 Regular expressions, also known as regex, refer to techniques that advanced data professionals use to modify and process string data. Regex works by matching patterns in Python. It allows you to search for specific patterns of text within a string of text. Regex is used extensively in web scraping, text processing and cleaning, and data analysis.
 
-The first step in working with regular expressions is to import the `re` module.[^1] This module provides the tools necessary for working with regular expressions. Once you have imported the module, you can start working with regular expressions.
+The first step in working with regular expressions is to import the `re` module.[^5] This module provides the tools necessary for working with regular expressions. Once you have imported the module, you can start working with regular expressions.
 
-[^1]: Module is a file containing Python code, which can include functions, variables and classes. It allows you to organise related code into separate units for better maintainability and readability.
+[^5]: Module is a file containing Python code, which can include functions, variables and classes. It allows you to organise related code into separate units for better maintainability and readability.
 
 ```python
 import re
