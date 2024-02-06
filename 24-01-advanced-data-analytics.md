@@ -23,7 +23,7 @@ date: 'December 2023'
 
 ![What is Data Science?](https://github.com/x-square/visual-resources/blob/main/data-science-venn-diagram.png?raw=true 'What is Data Science?')
 
-Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, `theoretical`, `empirical`, `computational` and `data-driven`.[^3]
+Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, **theoretical**, **empirical**, **computational** and **data-driven**.[^3]
 
 [^3]: Hey, T.; Tansley, S.; Tolle, K. & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
 
@@ -1333,19 +1333,20 @@ SyntaxError: invalid syntax
 ---
 title: Python data types
 ---
-flowchart TD
+flowchart LR
     A1[(Immutable)] --- B1{Number}
-    A1 --- B2(String: 'apple')
-    A1 --- B3("Tuple: ('apple')")
-    B1 --- C1(Interger: 1, 2, 3)
+    A1 --- B2("Boolean (bool): True/False")
+    A1 -- Ordered sequence of characters --- B3("String (str): 'apple'")
+    A1 -- Ordered sequence of objects --- B4("Tuple: ('apple')")
+    B1 --- C1("Integer (int): 1, 2, 3")
     B1 --- C2(Float: 1.23)
     B1 --- C3(Complex: 2x + 3y)
-    A2[(Mutable)] --- D1("List: ['apple', 'apple']")
-    A2 --- D2("Set: {'apple', 'banana'}")
-    A2 --- D3("Dictionary: {'fruit' : 'apple'}")
+    A2[(Mutable)] -- Ordered sequence of objects --- D1("List: ['apple', 'apple']")
+    A2 -- Unordered sequence of unique objects --- D2("Set: {'apple', 'orange'}")
+    A2 -- Unordered key-value paris --- D3("Dictionary (dict): {'fruit' : 'apple'}")
 ```
 
-[Mermaind diagramming and charting tool](https://mermaid.js.org 'Mermaind diagramming and charting tool') is JavaScript based that renders Markdown inspired text definitions to create and modify diagrams dynamically.
+[Mermaid diagramming and charting tool](https://mermaid.js.org 'Mermaid diagramming and charting tool') is JavaScript based that renders Markdown inspired text definitions to create and modify diagrams dynamically.
 
 ### Naming rules and conventions
 
@@ -1355,7 +1356,7 @@ When assigning names to objects, programmers adhere to a set of rules and conven
 - Names may be a mixture of upper and lower case characters.
 - Names can't start with a number but may contain numbers after the first character.
 - Variable names and function names should be written in `snake_case`, which means that all letters are lowercase and words are separated using an underscore. 
-- Descriptive names are better than cryptic abbreviations because they help other programmersand you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you'll find it much easier to understand.
+- Descriptive names are better than cryptic abbreviations because they help other programmers and you read and interpret your code. For example, `student_name` is better than `sn`. It may feel excessive when you write it, but when you return to your code you'll find it much easier to understand.
 
 [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008) is a more exhaustive resource for style-related matters.[^4] Because Python is open source, PEP offers a framework to guide developers and build consensus around ideas. It's a useful and trusted resource. 
 
@@ -2073,6 +2074,7 @@ separator_string.join(iterable_of_strings)
 # Output
 Happy birthday to you
 ```
+
 #### str.partition(sep)
 
 Split the string at the first occurrence of `sep` , and return a 3-tuple containing the part before the separator, the separator itself, and the part after the separator. If the separator is not found, return a 3-tuple containing the string itself, followed by two empty strings.
@@ -2142,6 +2144,922 @@ re.search('[bms]ad', my_string)
 This example will search for **bad**, **mad**, and **sad**.
 
 Regex has a large catalogue of special expressions that let you search for substrings that will only match if, for example, they are followed by certain characters, or if they don't contain a certain set of characters. It can get very complex.
+
+## Reference guide: Lists
+
+A list is a data structure that helps store and manipulate an ordered collection of items. These items can be of any data type such as integers, floats, strings, and even other lists. Because they are so versatile, data professionals and all Python programmers use lists every day, so it's important to be familiar with how they work.
+
+### Create a list
+
+There are two main ways to create lists in Python:
+
+- Square brackets: `[]`
+- The list function: `list()`
+
+When instantiating a list using brackets, separate each element with a comma. 
+
+```python
+list_a = ['olive', 'palm', 'coconut']
+print(list_a)
+
+# Output
+['olive', 'palm', 'coconut']
+```
+
+```python
+list_b = [8, 6, 7, 5, 3, 0, 8]
+print(list_b)
+
+# Output
+[8, 6, 7, 5, 3, 0, 8]
+```
+
+```python
+list_c = ['Abidjan', 14.2, [1, 2, None], 'Zagreb']
+print(list_c)
+
+# Output
+['Abidjan', 14.2, [1, 2, None], 'Zagreb']
+```
+```python
+list_d = 'Hello, world!'
+list(list_d)
+
+# Output
+['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd', '!']
+```
+
+### Indexing and slicing
+
+Just as with strings, you can access elements in a list using indexing and slicing. The first element of a list has index zero, the second element has index one, and so on. Use square brackets to index:
+
+```python
+phrase = ['Astra', 'inclinant', 'sed', 'non', 'obligant']
+print(phrase[1])
+
+# Output
+inclinant
+```
+
+You can also use negative indices to access items from the end of a list:
+
+```python
+phrase = ['Astra', 'inclinant', 'sed', 'non', 'obligant']
+print(phrase[-1])
+
+# Output
+obligant
+```
+
+Use slicing to extract a sublist. To slice, use square brackets containing a range of indices separated by a colon. Notice that this code returned a sublist containing the elements at indices one, two, and three of phrase. The ending index of the slice is not included.
+
+```python
+phrase = ['Astra', 'inclinant', 'sed', 'non', 'obligant']
+print(phrase[1:4])
+
+# Output
+['inclinant', 'sed', 'non']
+```
+
+Omitting the starting index in a slice implies an index of zero, and omitting the ending index implies an index of `len(my_list)`:
+
+```python
+phrase = ['Astra', 'inclinant', 'sed', 'non', 'obligant']
+print(phrase[:3])
+print(phrase[3:])
+
+# Output
+['Astra', 'inclinant', 'sed']
+['non', 'obligant']
+```
+
+### List mutability
+
+Lists are mutable, which means that you can change their contents after they are created. You can change an individual item in a list by specifying its index and assigning a new value to it.
+
+```python
+my_list = ['Macduff', 'Malcolm', 'Duncan', 'Banquo']
+my_list[2] = 'Macbeth'
+print(my_list)
+
+# Output
+['Macduff', 'Malcolm', 'Macbeth', 'Banquo']
+```
+
+You can even change a slice of a list using the same logic. The slice can be of any length. The elements in the new list will be inserted in place of the indicated slice:
+
+```python
+my_list = ['Macduff', 'Malcolm', 'Macbeth', 'Banquo']
+my_list[1:3] = [1, 2, 3, 4]
+print(my_list)
+
+# Output
+['Macduff', 1, 2, 3, 4, 'Banquo']
+```
+
+### List operations
+
+Lists can be combined using the addition operator `+`:
+
+```python
+num_list = [1, 2, 3]
+char_list = ['a', 'b', 'c']
+num_list + char_list
+
+# Output
+[1, 2, 3, 'a', 'b', 'c']
+```
+
+They can also be multiplied using the multiplication operator `*`. Note that lists cannot be suvtracted or dvided.
+
+```python
+list_a = ['a', 'b', 'c']
+list_a * 2
+
+# Output
+['a', 'b', 'c', 'a', 'b', 'c']
+```
+
+You can check whether a value is contained in a list by using the `in` operator:
+
+```python
+num_list = [2, 4, 6]
+print(5 in num_list)
+print(5 not in num_list)
+
+# Output
+False
+True
+```
+
+### List methods
+
+Lists are a core Python class. As you've learned, classes package data together with tools to work with it. Methods are functions that belong to a class. Lists have a number of built-in methods that are very useful. 
+
+#### append()
+
+Add an element to the end of a list: 
+
+```python
+my_list = [0, 1, 1, 2, 3]
+variable = 5
+my_list.append(variable)
+print(my_list)
+
+# Output
+[0, 1, 1, 2, 3, 5]
+```
+
+#### insert()
+
+Insert an element at a given position:
+
+```python
+my_list = ['a', 'b', 'd']
+my_list.insert(2, 'c')
+print(my_list)
+
+# Output
+['a', 'b', 'c', 'd']
+```
+
+#### remove()
+
+Remove the first occurrence of an item:
+
+```python
+my_list = ['a', 'b', 'd', 'a']
+my_list.remove('a')
+print(my_list)
+
+# Output
+['b', 'd', 'a']
+```
+
+#### pop()
+
+Remove the item at the given position in the list, and return it. If no index is specified, `pop()` removes and returns the last item in the list:
+
+```python
+my_list = ['a', 'b', 'c']
+print(my_list.pop())
+print(my_list)
+
+# Output
+c
+['a', 'b']
+```
+
+#### clear()
+
+Remove all items:
+
+```python
+my_list = ['a', 'b', 'c']
+my_list.clear()
+print(my_list)
+
+# Output
+[]
+```
+
+#### index()
+
+Return the index of the first occurrence of an item in the list:
+
+```python
+my_list = ['a', 'b', 'c', 'a']
+my_list.index('a')
+
+# Output
+0
+```
+
+#### count()
+
+Return the number of times an item occurs in the list:
+
+```python
+my_list = ['a', 'b', 'c', 'a']
+my_list.count('a')
+
+# Output
+2
+```
+
+#### sort()
+
+Sorts the list ascending by default. You can also make a function to decide the sorting criteria:
+
+```python
+char_list = ['b', 'c', 'a']
+num_list = [2, 3, 1]
+char_list.sort()
+num_list.sort(reverse=True)
+
+print(char_list)
+print(num_list)
+
+# Output
+['a', 'b', 'c']
+[3, 2, 1]
+```
+
+### Additional recources
+
+- [An informal introduction to Python](https://docs.python.org/3/tutorial/introduction.html 'An informal introduction to Python')
+- [Data structures](https://docs.python.org/3/tutorial/datastructures.html 'Data Structures')
+
+## Compare lists, strings, and tuples
+
+You've now learned about some of Python's core iterable sequence data structures, including strings, lists, and tuples. These structures share many similarities, but there are some key differences between them. Data professionals must often decide which data structures work best to solve a particular problem, so understanding the relationship between these classes can help you make informed decisions in your work.
+
+### Strings
+
+#### Syntax (instantiation)
+
+Single, double, or triple quotes
+ 
+```python
+empty_str = ''
+my_string1 = 'minerals'
+my_string2 = "martin"
+my_string3 = '''
+    marathon
+    golfcart
+    '''
+```
+
+The `str()` function can be used for instantiation and conversion.
+
+```python
+empty_str = str()
+my_string = str(125)
+```
+
+#### Content
+
+Strings can contain any character such as letters, numbers, punctuation marks, spaces, but everything between the opening and closing quotation marks is part of the same single string. 
+
+#### Mutability
+
+Strings are **immutable**. This means that once a string is created, it cannot be modified. Any operation that appears to modify a string actually creates a new string object.
+
+#### Usage
+
+Strings are most commonly used to represent text data.
+
+#### Methods
+
+The Python string class comes packed with many useful methods to manipulate the data contained in strings. For more information on these methods, refer to [common string pperations](https://docs.python.org/3/library/string.html 'Common string pperations') in the Python documentation.
+
+### Lists
+
+#### Syntax (instantiation)
+
+Brackets, with each element separated by a comma
+
+```python
+empty_list = []
+my_list = [1, 2, 3, 4, 5]
+```
+
+The `list()` function can be used for instantiation and conversion. Note that this function only works on iterable data types.
+
+```python
+print(list('rocks'))
+print(list(('stones', 'water', 'underground')))
+
+# Output
+['r', 'o', 'c', 'k', 's']
+['stones', 'water', 'underground']
+```
+
+#### Content 
+Lists can contain any data type, and in any combination. So, a single list can contain strings, integers, floats, tuples, dictionaries, and other lists.
+
+```python
+my_list = [1, 2, 1, 2, 'And through', ['and', 'through']]
+```
+
+#### Mutability
+
+Lists are **mutable**. This means that they can be modified after they are created.
+
+```python
+num_list = [1, 2, 3]
+num_list[0] = 5446
+
+print(num_list)
+
+# Output
+[5446, 2, 3]
+```
+
+#### Usage
+
+Lists are very versatile and therefore are used in numerous cases. Some common ones are:
+
+- Storing collections of related items
+- Storing collections of items that you want to iterate over
+    - Because lists are ordered, you can easily iterate over their elements using a for loop or list comprehension.
+- Sorting and searching
+    - Lists can be sorted and searched, making them useful for tasks such as finding the minimum or maximum value in a list or sorting a list of items alphabetically.
+- Modifying existing data
+    - Because lists are mutable, they are useful for situations in which you know you'll need to modify your data.
+- Storing results
+    - Lists can be used to store the results of a computation or a series of operations, making them useful in many different programming tasks.
+
+
+#### Method
+
+You can find methods for the Python list class in [more on lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists 'More on lists') in the Python documentation.
+
+### Tuples
+
+#### Syntax (instantiation)
+
+Parentheses, with each element separated by a comma
+
+```python
+empty_tuple = ()
+my_tuple = (1, 'z')
+```
+
+When using parentheses to declare a tuple with just a single element, you must use a trailing comma. 
+
+```python
+test1 = (1)
+test2 = (2,)
+
+print(type(test1))
+print(type(test2))
+
+# Output
+<class 'int'>
+<class 'tuple'>
+```
+
+No parentheses, but each element followed by a comma even if there's only one element
+
+```python
+tuple1 = 1,
+tuple2 = 2, 3
+
+print(type(tuple1))
+print(type(tuple2))
+
+# Output
+<class 'tuple'>
+<class 'tuple'>
+```
+
+The `tuple()` function can be used for instantiation, and for conversion of iterable data types.
+
+```python
+my_tuple = tuple([1, 'z'])
+```
+
+#### Content
+
+Tuples can contain any data type, and in any combination. So, a single tuple can contain strings, integers, floats, lists, dictionaries, and other tuples.
+
+```python
+my_tuple = (1871, 'all', 'mimsy', ('were', 'the'), ['borogroves'])
+```
+
+#### Mutability
+
+Tuples are **immutable**. This means that once a tuple is created, it cannot be modified.
+
+#### Usage
+
+Common uses of tuples include:
+
+- Returning multiple values from a function
+- Packing and unpacking sequences
+    - You can use tuples to assign multiple values in a single line of code.
+- Dictionary keys
+    - Because tuples are immutable, they can be used as dictionary keys, whereas lists cannot.
+- Data integrity
+    - Due to their immutable nature, tuples are a more secure way of storing data because they safeguard against accidental changes.
+
+#### Methods
+
+Because tuples are built for data security, Python has only two methods that can be used on them:
+
+- `count()` returns the number of times a specified value occurs in the tuple.
+- `index()` searches the tuple for a specified value and returns the index of the first occurrence of the value.
+
+## Zip, enumerate, and list comprehension
+
+**zip()**, **enumerate()**, and **list comprehension** make code more efficient by reducing the need to rely on loops to process data and simplifying working with iterables. Understanding these common tools will save you time and make your process much more dynamic when manipulating data.
+
+### zip()
+
+The `zip()` function is a built-in Python function that does what the name implies. It performs an element-wise combination of sequences. 
+
+The function returns an iterator that produces tuples containing elements from each of the input sequences. An iterator is an object that enables processing of a collection of items one at a time without needing to assemble the entire collection at once. Use an iterator with loops or other iterable functions such as `list()` or `tuple()`.
+
+```python
+cities = ['Paris', 'Lagos', 'Mumbai']
+countries = ['France', 'Nigeria', 'India']
+places = zip(cities, countries)
+
+print(places)
+print(list(places))
+
+# Output
+<zip object at 0x7f95e235d908>
+[('Paris', 'France'), ('Lagos', 'Nigeria'), ('Mumbai', 'India')]
+```
+
+Notice that, in this case, the `list()` function is used to generate a list of tuples from the iterator object. Here are a few things to keep in mind when using the `zip()` function. In this case, **places** are the **iterator**.
+
+- It works with two or more iterable objects. The given example zips two sequences, but the `zip()` function will accept more sequences and apply the same logic. 
+- If the input objects are of unequal length, the resulting iterator will be the same length as the shortest input.
+- If you give it only one iterable object as an argument, the function will return an iterator that produces tuples containing only one element from that iterable at a time.
+
+#### Unzipping
+
+You can also unzip an object with the `*` operator.
+
+```python
+scientists = [('Nikola', 'Tesla'), ('Charles', 'Darwin'), ('Marie', 'Curie')]
+given_names, surnames = zip(*scientists)
+print(given_names)
+print(surnames)
+
+# Output
+('Nikola', 'Charles', 'Marie')
+('Tesla', 'Darwin', 'Curie')
+```
+
+Note that this operation unpacks the tuples in the original list element-wise into two tuples, thus separating the data into different variables that can be manipulated further.
+
+#### enumerate() 
+
+The `enumerate()` function is another built-in Python function that allows you to iterate over a sequence while keeping track of each element's index. Similar to `zip()`, it returns an iterator that produces pairs of indices and elements.
+
+```python
+letters = ['a', 'b', 'c']
+for index, letter in enumerate(letters):
+   print(index, letter)
+
+# Output
+0 a
+1 b
+2 c
+```
+
+The default starting index is zero, but you can assign it to whatever you want when you call the `enumerate()` function. In this case, the number two was passed as an argument to the function, and the first element of the resulting iterator had an index of two.
+
+```python
+letters = ['a', 'b', 'c']
+for index, letter in enumerate(letters, 2):
+   print(index, letter)
+
+# Output
+2 a
+3 b
+4 c
+```
+
+### List comprehension
+
+List comprehension is a concise and efficient way to create a new list based on the values in an existing iterable object. It provides a compact syntax for creating lists by specifying the elements you want to include in the list, along with any conditions or transformations.
+
+#### my_list = [expression for element in iterable if condition]
+
+- **expression** refers to an operation or what you want to do with each element in the iterable sequence.
+- **element** is the variable name that you assign to represent each item in the iterable sequence.
+- **iterable** is the iterable sequence.
+- **condition** is any expression that evaluates to True or False. This element is optional and is used to filter elements of the iterable sequence.
+
+This list comprehension adds 10 to each number in the list. In this example, `x + 10` is the expression, `x` is the element, `numbers` is the iterable sequence, and  `if 1 < x < 5` is the condition.
+
+```python
+numbers = [1, 2, 3, 4, 5]
+new_list = [x + 10 for x in numbers if 1 < x < 5]
+print(new_list)
+
+# Output
+[12, 13, 14]
+```
+
+This list comprehension extracts the first and last letter of each word as a tuple, but only if the word is more than five letters long. Note that multiple operations can be performed in the expression component of the list comprehension to result in a list of tuples. This example also makes use of a condition to filter out words that are not more than five letters long.
+
+```python
+words = ['Emotan', 'Amina', 'Ibeno', 'Sankwala']
+new_list = [(word[0], word[-1]) for word in words if len(word) > 5]
+print(new_list)
+
+# Output
+[('E', 'n'), ('S', 'a')]
+```
+
+## Reference guide: Dictionaries
+
+You've also learned that dictionaries provide a way to store and retrieve data using key-value pairs.
+
+### Create a dictionary
+
+There are two main ways to create dictionaries in Python:
+
+- Braces: `{}`
+- The dict function: `dict()`
+
+When instantiating a dictionary using braces `{}`, separate each element with a colon. For example, the following code creates a dictionary containing continents as keys and their smallest countries as values:
+
+```python
+smallest_countries = {'Africa': 'Seychelles',
+                     'Asia': 'Maldives',
+                     'Europe': 'Vatican City',
+                     'Oceania': 'Nauru',
+                     'North America': 'St. Kitts and Nevis',
+                     'South America': 'Suriname'
+                     }
+```
+
+To create an empty dictionary, use empty braces or the dict() function:
+
+```python
+empty_dict_1 = {}
+empty_dict_2 = dict()
+```
+
+The `dict()` function uses a different syntax, where keys are entered as the function's keyword arguments and values are assigned with an equals operator. Notice that, because the keywords cannot be entered as strings, they cannot contain whitespaces.
+
+```python
+smallest_countries = dict(africa='Seychelles',
+                         asia='Maldives',
+                         europe='Vatican City',
+                         oceania='Nauru',
+                         north_america='St. Kitts and Nevis',
+                         south_america ='Suriname'
+)
+```
+
+> [!NOTE]
+> - Dictionary **keys** can be of any immutable data type, such as strings, numbers, or tuples.
+> - Dictionary **values** can be of any data type, mutable or immutable, including other dictionaries or objects.
+
+Each key can only correspond to a single value.
+
+```python
+invalid_dict = {'numbers': 1, 2, 3}
+
+# Output
+Error on line 1:
+    invalid_dict = {'numbers': 1, 2, 3}
+                                   ^
+SyntaxError: invalid syntax
+```
+
+If you enclose multiple values within another single data structure, you can create a valid dictionary.
+
+```python
+invalid_dict = {'numbers': [1, 2, 3]}
+
+# Output
+{'numbers': [1, 2, 3]}
+```
+
+### Work with dictionaires
+
+#### Access values
+
+To access a specific value in a dictionary, you must refer to its key using brackets:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+print(my_dict['nums'])
+
+# Output
+[1, 2, 3]
+```
+
+To access all values in a dictionary, use the values() method:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+print(my_dict.values())
+
+# Output
+dict_values([[1, 2, 3], ['a', 'b', 'c']])
+```
+
+#### Assign new keys
+
+Dictionaries are mutable data structures in Python. You can add to and modify existing dictionaries. To add a new key to a dictionary, use brackets:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+
+# Add a new 'floats' key
+my_dict['floats'] = [1.0, 2.0, 3.0]
+print(my_dict)
+
+# Output
+{'nums': [1, 2, 3], 'abc': ['a', 'b', 'c'], 'floats': [1.0, 2.0, 3.0]}
+```
+
+#### Check if a key exists in a dictionary
+
+To check if a key exists in a dictionary, use the `in` keyword:
+
+```python
+smallest_countries = {'Africa': 'Seychelles',
+                     'Asia': 'Maldives',
+                     'Europe': 'Vatican City',
+                     'Oceania': 'Nauru',
+                     'North America': 'St. Kitts and Nevis',
+                     'South America': 'Suriname'
+                     }
+
+print('Africa' in smallest_countries)
+print('Asia' not in smallest_countries)
+
+# Output
+True
+False
+```
+
+#### Delete a key-value pair
+
+To delete a key-value pair from a dictionary, use the `del` keyword:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+del my_dict['abc']
+print(my_dict)
+
+# Output
+{'nums': [1, 2, 3]}
+```
+
+### Dictionary methods
+
+Dictionaries are a core Python class. As you've learned, classes package data with tools to work with it. Methods are functions that belong to a class. Dictionaries have a number of built-in methods that are very useful.
+
+#### items()
+
+Return a view of all key-value pairs of the dictionary:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+print(my_dict.items())
+
+# Output
+dict_items([('nums', [1, 2, 3]), ('abc', ['a', 'b', 'c'])])
+```
+
+#### keys()
+
+Return a view of the dictionary's keys:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+print(my_dict.keys())
+
+# Output
+dict_keys(['nums', 'abc'])
+```
+
+#### values() 
+
+Return a view of the dictionary's values:
+
+```python
+my_dict = {'nums': [1, 2, 3],
+          'abc': ['a', 'b', 'c']
+          }
+print(my_dict.values())
+
+# Output
+dict_values([[1, 2, 3], ['a', 'b', 'c']])
+```
+
+Note that the objects returned by these methods are view objects. They provide a dynamic view of the dictionary's entries, which means that, when the dictionary changes, the view reflects these changes. Dictionary views can be iterated over to yield their respective data. They also support membership tests.
+
+### Additional resources
+
+- [Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries 'Dictionaries')
+- [Mapping Types](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict 'Mapping Types')
+- [Dictionary view objects](https://docs.python.org/3/library/stdtypes.html#dict-views 'Dictionary view objects')
+
+## Reference guide: Sets
+
+Data professionals depend on sets for separating data and identifying its unique elements. As you have been discovering, set objects are similar to lists and dictionaries, yet they do not have key-value pairs or positional index[i] capability. Additionally, sets contain unique values but have no item order or index behavior. Data professionals compare sets to understand the range of data they contain, where they intersect, and what items are present in either set but not both. Sets are also helpful when cleaning data for analysis.
+
+### Sets review
+
+A set is a collection of unique data elements, without duplicates. In Python, it is an object class, in fact, two different classes, which you'll learn about in this reading. However, sets are not unique to Python or even to computer programming; they are an important concept in general mathematics. Sets provide a simple means to identify unique data elements.
+
+### Create a set
+
+Create a set using braces: `my_set = {5, 10, 10, 20}`
+
+Note that an empty set cannot be created with braces, as this will be interpreted as an empty dictionary. 
+
+#### Set
+
+- This is a mutable data type.
+- Because it's mutable, this class comes with additional methods to add and remove data from the set.
+- It can be applied to any iterable object and will remove duplicate elements from it.
+- It is unordered and non-indexable. 
+- Elements in a set must be hashable. Generally, this means they must be immutable. Refer to the additional resources for more information on hashing.
+
+Four sets are instantiated using a variety of data types. Notice that in the preceding example, `2` and `2.0` are evaluated as equivalent, even though one is an integer and the other is a float. 
+
+```python
+example_a = [1, 2, 2.0, '2']
+set(example_a)
+
+# Output
+{1, 2, '2'}
+```
+
+In the following example, `(1, 2, 2, 2, 3)` is a tuple, which is hashable (≈ immutable) and thus treated as a distinct single element in the resulting set.
+
+```python
+example_b = ('apple', (1, 2, 2, 2, 3), 2)
+set(example_b)
+
+# Output
+{2, (1, 2, 2, 2, 3), 'apple'}
+```
+
+The following example throws an error because each element of a set must be hashable (≈ immutable), but `{‘a', ‘b', ‘c'}` is a set, which is a mutable (unhashable) object.
+
+```python
+example_c = [1.5, {'a', 'b', 'c'}, 1.5]
+set(example_c)
+
+# Output
+Error on line 2:
+    set(example_c)
+TypeError: unhashable type: 'set'
+```
+
+The following example demonstrates the `add()` method, which is one of the special methods available to sets but not to frozensets. An element was added to the `example_d` set, thus modifying it. This is an example of the mutability of the `set` class.
+
+```python
+example_d = {'mother', 'hamster', 'father'}
+example_d.add('elderberries')
+example_d
+
+# Output
+{'father', 'mother', 'hamster', 'elderberries'}
+```
+
+#### Frozenset
+
+Frozensets are another type of set in Python. They are their own class, and they are very similar to sets, except they are immutable.
+
+- This is an immutable data type.
+- - It can be applied to any iterable object and will remove duplicate elements from it.
+- Because they're immutable, frozensets can be used as dictionary keys and as elements in other sets.
+
+```python
+example_e = [1.5, frozenset(['a', 'b', 'c']), 1.5]
+set(example_e)
+
+# Output
+{1.5, frozenset({'b', 'a', 'c'})}
+```
+
+Unlike `example_c` previously, this set does not throw an error. This is because it contains a frozenset, which is an immutable type and can therefore be used in sets.
+
+### Set methods
+
+Sets are useful to determine which values are contained in a data structure and to eliminate duplicate values. There are numerous set methods such as **union**, **intersection**, **difference**, and **symmetric difference** that add functionality and power to working with sets.
+
+![Venn diagrams of set theory](https://github.com/x-square/visual-resources/blob/main/set-theory.png?raw=true 'Venn diagrams of set theory')
+
+#### union()
+ 
+- Return a new set with elements from the set and all others.
+- The operator for this function is the pipe `(|)`.
+
+```python
+set_1 = {'a', 'b', 'c'}
+set_2 = {'b', 'c', 'd'}
+
+print(set_1.union(set_2))
+print(set_1 | set_2)
+
+# Output
+{'b', 'c', 'd', 'a'}
+{'b', 'c', 'd', 'a'}
+```
+#### intersection()
+
+- Return a new set with elements common to the set and all others.
+- The operator for this function is the ampersand `(&)`.
+
+```python
+set_1 = {'a', 'b', 'c'}
+set_2 = {'b', 'c', 'd'}
+
+print(set_1.intersection(set_2))
+print(set_1 & set_2)
+
+# Output
+{'b', 'c'}
+{'b', 'c'}
+```
+
+#### difference()
+ 
+- Return a new set with elements in the set that are not in the others.
+- The operator for this function is the subtraction operator `(-)`.
+
+```python
+set_1 = {'a', 'b', 'c'}
+set_2 = {'b', 'c', 'd'}
+
+print(set_1.difference(set_2))
+print(set_1 - set_2)
+
+# Output
+{'a'}
+{'a'}
+```
+
+### symmetric_difference()
+ 
+- Return a new set with elements in either the set or other, but not both.
+- The operator for this function is the caret `(^)`.
+
+```python
+set_1 = {'a', 'b', 'c'}
+set_2 = {'b', 'c', 'd'}
+
+print(set_1.symmetric_difference(set_2))
+print(set_1 ^ set_2)
+
+# Output
+{'d', 'a'}
+{'d', 'a'}
+```
+
+### Additional resources
+
+- [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets 'Set')
+- [The birth of the hashing algorithm](https://spectrum.ieee.org/hans-peter-luhn-and-the-birth-of-the-hashing-algorithm 'The birth of the hashing algorithm')
 
 `Any questions, please reach out`
 
