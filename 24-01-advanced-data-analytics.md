@@ -1270,12 +1270,29 @@ Coding languages are similar to spoken languages in that they have a way to clas
 - **Variables** represent data stored as strings, tuples, dictionaries, lists, and objects.
     - `student_name`
 - **Keywords** are special words that are reserved for specific purposes and that can only be used for those purposes.
-    - `in`
-    - `not`
+    - `and`
     - `or`
-    - `for` 
+    - `not`
+    - `if`
+    - `elif`
+    - `else`
+    - `for`
+    - `in` 
     - `while`
+    - `continue`
+    - `break`
+    - `print`
     - `return`
+    - `def`
+    - `class`
+    - `from`
+    - `import`
+    - `as`
+    - `with`
+    - `is`
+    - `True`
+    - `False`
+    - `None`
 - **Operators** are symbols that perform operations on objects and values.
     - `+` Addition
     - `-` Subtraction
@@ -3039,7 +3056,7 @@ print(set_1 - set_2)
 {'a'}
 ```
 
-### symmetric_difference()
+#### symmetric_difference()
  
 - Return a new set with elements in either the set or other, but not both.
 - The operator for this function is the caret `(^)`.
@@ -3060,6 +3077,1631 @@ print(set_1 ^ set_2)
 
 - [Sets](https://docs.python.org/3/tutorial/datastructures.html#sets 'Set')
 - [The birth of the hashing algorithm](https://spectrum.ieee.org/hans-peter-luhn-and-the-birth-of-the-hashing-algorithm 'The birth of the hashing algorithm')
+
+## Understand Python libraries, packages, and modules
+
+Recently, you learned about Python libraries, packages, and modules. As you've discovered, importing these tools saves data professionals time and enhances their programming. Another benefit of commonly used  libraries is that they are constantly scrutinized and updated by talented and knowledgeable programmers. Thus, you can be confident that the underlying code is high quality.
+
+Check out [Python package index](https://pypi.org/ 'A repository of software for the Python programming language') at the repository to search for useful libraries. 
+
+### Libraries, packages, and modules
+
+A **library** is a corpus of reusable code modules and their accompanying documentation.
+
+Libraries are bundled into **packages** that you install, which can then be imported into your coding environment as needed. You'll typically encounter the terms library and package used interchangeably. Generally, this certificate program will refer to both as libraries, but it's important to be acquainted with both terms.
+
+**Modules** are similar to libraries, in that they are groups of related classes and functions, but they are generally subcomponents of libraries. In other words, a library can have many different modules, and you can choose to import the entire library or just the module you need.
+
+**NumPy** is used for **high-performance vector** and **matrix computations**. **Pandas** is a library for manipulating and analyzing **tabular data**. **Seaborn** and **matplotlib** are both libraries used to create **graphs**, **charts**, and other **data visualizations**.
+
+> [!NOTE]
+> When you want to use **external functionality** or **features** that are not part of the core language, you typically **download packages** and **import libraries**, **import modules** or even **functions** to make use of them in your code.
+
+### Import statements
+
+Libraries and modules beyond the Python standard library typically must be imported into your working environment on an as-needed basis. Additional libraries are installed first and then imported into your working environment as needed.
+
+To import a library or module, use an `import` statement. Notice that to access the `array()` function, you must precede it with `np`, because this indicates that the function is coming from the NumPy library. 
+
+```python
+import numpy as np
+np.array([2, 4, 6])
+
+# Output
+array([2, 4, 6])
+```
+
+#### Importing modules
+
+This syntax differs slightly from the other examples. In this case, `matplotlib` is the library and `pyplot` is a module inside. The `pyplot` module is aliased as `plt`, and it's accessed from the `matplotlib` library using the dot. 
+
+```python
+import matplotlib.pyplot as plt
+```
+
+#### Importing functions
+
+Just as you can import libraries and modules, you can also import individual functions from libraries or from modules within libraries using a specific syntax.
+
+```python
+from sklearn.metrics import precision_score, recall_score
+from numpy import array
+```
+
+When a function is imported by name, like in this example, you can use it without any preceding syntax to indicate the library or module that it comes from:
+
+```python
+array([2,4,6])
+
+# Output
+array([2, 4, 6])
+```
+
+#### Discouraged syntax
+
+This imports everything from a particular library or module and allows you to use its functions without any preceding syntax. So, for instance, if you wrote `from numpy import *`,  you'd be able to use all of NumPy's functions without preceding them with `numpy`. **This approach is not recommended because it makes it difficult to track where functions come from.** However, it's helpful to be aware of this because you will likely encounter it in your work as a data professional. In specific instances, it might be useful. 
+
+```python
+from library.module import *
+```
+
+> [!NOTE]
+> The asterisk `*` is a wildcard character that means to import all objects from the specified module in this case into the current namespace, which is generally discouraged in production code as it can lead to naming conflicts and make the code less readable.
+>
+
+#### Aliasing
+
+Another time-saver with Python libraries is aliasing. Aliasing helps you avoid typing a library's full name every time you want to access one of its functions. Instead, you'll assign the library an alias. An alias is an abbreviated name, which is designated using the `as` keyword. You can assign any abbreviation you like as an alias, but commonly used libraries have common aliases. Therefore, straying from those could cause confusion when sharing code with others. 
+
+```python
+# Array operations and mathematical functions
+import numpy as np
+
+# Data manipulation and analysis made easy with DataFrame
+import pandas as pd
+
+# Statistical data visualization with plots and color palettes
+import seaborn as sns
+
+# Comprehensive plotting library for creating diverse visualizations
+import matplotlib.pyplot as plt
+```
+
+### Commonly used built-in modules
+
+The Python standard library comes with a number of built-in modules relevant to data professional work such as [math](https://docs.python.org/3/library/math.html#module-math 'Mathematical functions'), [random](https://docs.python.org/3/library/random.html#module-random 'Generate pseudo-random numbers'), and [datetime](https://docs.python.org/3/library/datetime.html#module-datetime 'Basic date and time types'). These can be imported without additional installation. You can import them directly.
+
+#### math
+```python
+import math  
+print(math.exp(1))          # e ** 2 --> Euler's number
+print(math.log(2))          # Natural logarithm of 2 to the base of e
+print(math.log10(1000))     # Logarithm of 1000 to the base 10
+print(math.factorial(3))    # 3! --> 3 * 2 * 1
+print(math.sqrt(100))       # Square root of 100
+
+# Output
+2.718281828459045
+0.6931471805599453
+6
+10.0
+```
+
+#### random
+
+```python
+import random
+print(random.random())          # 0.0 <= X < 1.0
+print(random.choice([1, 2, 3])) # Choose a random element from a sequence
+print(random.randint(1, 10))    # Random integer a <= X <= b
+
+# Output
+0.5973240772365684
+2
+5
+```
+
+#### datetime
+
+```python
+import datetime  
+date = datetime.date(1977, 5, 8)       # Assign a date to a variable
+print(date)                            # Print date
+print(date.year)                       # Print the year that the date is in
+
+delta = datetime.timedelta(days = 30)  # Assign a timedelta of a duration
+print(date - delta)                    # Print date of 30 days prior 
+
+# Output
+1977-05-08
+1977
+1977-04-08
+```
+
+## Reference guide: Arrays
+
+NumPy is a powerful library capable of performing advanced numerical computing. One of its main benefits is the ability to work with arrays, as an operation applied to a vector executes much faster than the same operation applied to a list. Performance increases become further apparent when working with large volumes of data.
+
+### Create an array
+
+Array functions are useful for various situations:
+
+- To initialize an array of a specific size and shape, then fill it with values derived from a calculation
+- To allocate memory for later use
+- To perform matrix operations
+
+For more information please refer to [array creation routines](https://numpy.org/doc/stable/reference/routines.array-creation.html 'array creation routines').
+
+#### np.array()
+
+This creates an `ndarray` (n-dimensional array). There is no limit to how many dimensions a NumPy array can have, but arrays with many dimensions can be more difficult to work with.
+
+```python
+# 1-D array similar to a list with axis 0 similar to a list
+
+import numpy as np
+array_1d = np.array([1, 2, 3, 4])
+array_1d
+
+# Output --> 1 x 4 (axis 0)
+[1 2, 3, 4]
+```
+
+```python
+# 2-D array similar to a table with axis 0 and axis 1
+
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+array_2d
+
+# Output --> 2 (axis 0) x 3 (axis 1)
+[[1 2 3]
+ [4 5 6]]
+```
+
+```python
+# 2-D array similar to a few tables with axis 0, axis 1 and axis 2
+
+array_3d = np.array([[[1, 2], [3, 4], [5, 6]],
+                     [[7, 8], [9, 10], [11, 12]],
+                     [[13, 14], [15, 16], [17, 18]],
+                     [[19, 20], [21, 22], [23, 24]]])
+
+# Output --> 4 (axis 0) x 3 (axis 1) x 2 (axis 2)
+[[[ 1  2]
+  [ 3  4]
+  [ 5  6]]
+
+ [[ 7  8]
+  [ 9 10]
+  [11 12]]
+
+ [[13 14]
+  [15 16]
+  [17 18]]
+
+ [[19 20]
+  [21 22]
+  [23 24]]]
+```
+
+![N-dimensional array](https://github.com/x-square/visual-resources/blob/main/n-dimensional-array.png?raw=true 'N-dimensional array')
+
+![Explanation for n-dimensional array](https://github.com/x-square/visual-resources/blob/main/n-dimensional-array-explanation.png?raw=true 'Explanation for n-dimensional array')
+
+#### np.zeros()
+
+This creates an array of a designated shape that is pre-filled with zeros:
+
+```python
+np.zeros((2, 3, 4, 5))
+
+# Output
+[[[[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]
+
+  [[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]
+
+  [[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]]
+
+
+ [[[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]
+
+  [[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]
+
+  [[ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]
+   [ 0.  0.  0.  0.  0.]]]]
+```
+
+#### np.full()
+
+This creates an array of a designated shape that is pre-filled with a specified value:
+
+```python
+np.full((5, 3), 8)
+
+# Output
+[[ 8.  8.  8.]
+ [ 8.  8.  8.]
+ [ 8.  8.  8.]
+ [ 8.  8.  8.]
+ [ 8.  8.  8.]]
+ ```
+
+### Array methods
+
+Refer to the [n-dimensional array](https://numpy.org/doc/stable/reference/arrays.ndarray.html 'n-dimensional array') documentation for a full list of array methods.
+
+#### ndarray()
+
+This returns a copy of the array collapsed into one dimension.
+
+```python
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+print(array_2d)
+print()
+array_2d.flatten()
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[1 2 3 4 5 6]
+```
+
+#### ndarray.reshape()
+
+This gives a new shape to an array without changing its data.
+
+```python
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+print(array_2d)
+print()
+array_2d.reshape(3, 2)
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[[1 2]
+ [3 4]
+ [5 6]]
+```
+
+Adding a value of -1 in the designated new shape makes the process more efficient, as it indicates for NumPy to automatically infer the value based on other given values.
+
+```python
+# The unspecified value is inferred to be 2
+
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+print(array_2d)
+print()
+array_2d.reshape(3,-2)
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[[1 2]
+ [3 4]
+ [5 6]]
+ ```
+
+#### ndarray.tolist()
+
+This converts an array to a list object. Multidimensional arrays are converted to nested lists. 
+
+```python
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+print(array_2d)
+print()
+array_2d.tolist()
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[[1, 2, 3], [4, 5, 6]]
+```
+
+#### Mathematical functions
+
+- `ndarray.max()`
+    - Returns the maximum value in the array or along a specified axis.
+- `ndarray.min`
+    - Returns the minimum value in the array or along a specified axis.
+- `ndarray.mean`
+    - Returns the mean of all the values in the array or along a specified axis.
+- `ndarray.std()`
+    - Returns the standard deviation of all the values in the array or along a specified axis.
+
+```python
+a = np.array([(1, 2, 3), (4, 5, 6)])
+print(a)
+print()
+
+print(a.max())
+print(a.min())
+print(a.mean())
+print(a.std())
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+6
+1
+3.5
+1.70782512766
+```
+
+#### Array attributes
+
+- `ndarray.dtype`
+    - Returns the data type of the array's contents.
+- `ndarray.shape`
+    - Returns a tuple of the array's dimensions.
+- `ndarray.size`
+    - Returns the total number of elements in the array.
+- `ndarray.T`
+    - Returns the array transposed that rows become columns, columns become rows.
+
+```python
+array_2d = np.array([(1, 2, 3), (4, 5, 6)])
+print(array_2d)
+print()
+
+print(array_2d.dtype)
+print(array_2d.shape)
+print(array_2d.size)
+print(array_2d.T)
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+int64
+(2, 3)
+6
+[[1 4]
+ [2 5]
+ [3 6]]
+ ```
+
+### Indexing and slicing
+
+Access individual elements of a NumPy array using indexing and slicing. Indexing in NumPy is similar to indexing in Python lists, except multiple indices can be used to access elements in multidimensional arrays.
+
+```python
+a = np.array([(1, 2, 3), (4, 5, 6)])
+print(a)
+print()
+
+# Access the second row of the array, indexing starts from 0
+print(a[1])
+# Access the element at row 0, column 1
+print(a[0, 1])
+# Access the element at row 1, column 2
+print(a[1, 2])
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[4 5 6]
+2
+6
+```
+
+```python
+a = np.array([(1, 2, 3), (4, 5, 6)])
+print(a)
+print()
+
+# Extract all rows and columns starting from the second column 
+a[: , 1: ] 
+
+# Output
+[[1 2 3]
+ [4 5 6]]
+
+[[2 3]
+ [5 6]]
+```
+
+### Array operations
+
+There are nearly 100 other useful [mathematical functions](https://numpy.org/doc/stable/reference/routines.math.html#mathematical-functions 'Mathematical functions') that can be applied to individual or multiple arrays.
+
+```python
+a = np.array([(1, 2, 3), (4, 5, 6)])
+b = np.array([[1, 2, 3], [1, 2, 3]])
+print('a:')
+print(a)
+print()
+print('b:')
+print(b)
+print()
+print('a + b:')
+print(a + b)
+print()
+print('a * b:')
+print(a * b)
+
+# Output
+a:
+[[1 2 3]
+ [4 5 6]]
+
+b:
+[[1 2 3]
+ [1 2 3]]
+
+a + b:
+[[2 4 6]
+ [5 7 9]]
+
+a * b:
+[[ 1  4  9]
+ [ 4 10 18]]
+ ```
+
+### Mutability
+
+NumPy arrays are mutable, but with certain limitations. For instance, an existing element of an array can be changed:
+
+```python
+a = np.array([(1, 2), (3, 4)])
+print(a)
+print()
+
+# Modify the element at row 1, column 1 to 100
+a[1][1] = 100 
+a
+
+# Output
+[[1 2]
+ [3 4]]
+
+[[  1   2]
+ [  3 100]]
+```
+
+The array cannot be lengthened or shortened:
+
+```python
+a = np.array([1, 2, 3])
+print(a)
+print()
+
+# Attempt to modify the element at index 3 to 100
+a[3] = 100
+a
+
+# Output
+Error on line 5:
+    a[3] = 100
+IndexError: index 3 is out of bounds for axis 0 with size 3
+```
+
+### How NumPy arrays store data in memory
+
+NumPy arrays work by allocating a contiguous block of memory at the time of instantiation. Most other structures in Python don't do this. Their data is scattered across the system's memory. This is what makes NumPy arrays so fast. All the data is stored together at a particular address in the system's memory. 
+
+Interestingly, this is also what prevents an array from being lengthened or shortened. The abutting memory is occupied by other information. There's no room for more data at that memory address. However, existing elements of the array can be replaced with new elements.
+
+The only way to lengthen an array is to copy the existing array to a new memory address along with the new data.
+
+![How array is stored in the system memory](https://github.com/x-square/visual-resources/blob/main/array-system-memory.png?raw=true 'How array is stored in the system memory')
+
+## The fundamentals of pandas
+
+Pandas dataframes are a convenient way to work with tabular data. Each row and each column can be represented by a pandas series, which is similar to a one-dimensional array. Both dataframes and series have a large collection of methods and attributes to perform common tasks and retrieve information. Pandas also has its own special notation to select data.
+
+### Primary data structures
+
+Pandas has two primary data structures: **DataFrame** and **Series**. 
+
+- **DataFrame** is a two-dimensional labeled data structure, essentially a table or spreadsheet, where each column and row is represented by a Series.
+- **Series** is a one-dimensional labeled array that can hold any data type. It's similar to a column in a spreadsheet or a one-dimensional NumPy array. Each element in a series has an associated label called an index. The index allows for more efficient and intuitive data manipulation by making it easier to reference specific elements of your data.
+
+### Create a DataFrame
+
+To use pandas in your notebook, first import it. Similar to NumPy, pandas has its own standard alias, `pd`, that's used by data professionals around the world:
+
+```python
+import pandas as pd
+```
+
+#### From a dictionary
+
+Once you've imported pandas into your working environment, create a dataframe.
+
+```python
+d = {'col1': [1, 2], 'col2': [3, 4]}
+df = pd.DataFrame(data = d)
+
+# Output
+  col1  col2
+0     1     3
+1     2     4
+```
+
+#### From a numpy array
+
+```python
+df2 = pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+                  columns=['a', 'b', 'c'])
+df2
+
+# Output
+  a  b  c
+0  1  2  3
+1  4  5  6
+2  7  8  9
+```
+
+### From a csv (comma-separated values) file
+
+```python
+df3 = pd.read_csv('/file_path/file_name.csv')
+```
+
+### Attributes and methods
+
+The DataFrame class is powerful and convenient because it comes with a suite of built-in features that simplify common data analysis tasks. These features are known as attributes and methods. An attribute is a value associated with an object or class that is referenced by name using dotted expressions. A method is a function that is defined inside a class body and typically performs an action. A simpler way of thinking about the distinction between attributes and methods is to remember that attributes are characteristics of the object, while methods are actions or operations.
+
+#### Common DataFrame attributes
+
+- `columns` returns the column labels of the dataframe
+- `dtypes` returns the data types in the dataframe
+- `iloc` accesses a group of rows and columns using integer-based indexing
+- `loc` accesses a group of rows and columns by label(s) or a Boolean array
+- `shape` returns a tuple representing the dimensionality of the dataframe
+- `values` returns a NumPy representation of the dataframe
+
+#### Common DataFrame methods
+
+- `apply()` applies a function over an axis of the dataframe
+- `copy()` makes a copy of the dataframe's indices and data
+- `describe()` returns descriptive statistics of the dataframe, including the minimum, maximum, mean, and percentile values of its numeric columns, the row count, and the data types
+- `drop()` drops specified labels from rows or columns
+- `groupby()` splits the dataframe, applies a function, and combines the results
+- `head()` returns the first n rows of the dataframe (default = 5)
+- z returns a concise summary of the dataframe
+- `isna()` returns a same-sized Boolean dataframe indicating whether each value is null (can also use `isnull()` as an alias)
+- `sort_values()` sorts by the values across a given axis
+- `value_counts()` returns a series containing counts of unique rows in the dataframe
+- `where()` replaces values in the dataframe where a given condition is false
+
+### Selection statements
+
+Once your data is read into a dataframe, you'll want to do things with it by selecting, manipulating, and evaluating the data.
+
+#### Row selection
+
+Rows of a dataframe are selected by their index. The index can be referenced either by name or by numeric position.
+
+`loc[]` lets you select rows by name.
+
+```python
+df = pd.DataFrame({
+   'A': ['alpha', 'apple', 'arsenic', 'angel', 'android'],
+   'B': [1, 2, 3, 4, 5],
+   'C': ['coconut', 'curse', 'cassava', 'cuckoo', 'clarinet'],
+   'D': [6, 7, 8, 9, 10]
+   },
+   index=['row_0', 'row_1', 'row_2', 'row_3', 'row_4'])
+df
+
+# Output
+             A  B         C   D
+row_0    alpha  1   coconut   6
+row_1    apple  2     curse   7
+row_2  arsenic  3   cassava   8
+row_3    angel  4    cuckoo   9
+row_4  android  5  clarinet  10
+```
+
+The row index of the dataframe contains the names of the rows. Use loc[] to select rows by name:
+
+```python
+print(df.loc['row_1'])
+
+# Output
+A    apple
+B        2
+C    curse
+D        7
+Name: row_1, dtype: object
+```
+
+Inserting just the row index name in selector brackets returns a **Series** object. Inserting the row index name as a list returns a **DataFrame** object:
+
+```python
+print(df.loc[['row_1']])
+
+# Outout
+       A  B      C  D
+row_1  apple  2  curse  7
+```
+
+To select multiple rows by name, use a list within selector brackets:
+
+```python
+print(df.loc[['row_2', 'row_4']])
+
+# Output
+             A  B         C   D
+row_2  arsenic  3   cassava   8
+row_4  android  5  clarinet  10
+```
+
+You can even specify a range of rows by named index. Note that because you're using named indices, the returned range includes the specified end index.
+
+```python
+print(df.loc['row_0':'row_3'])
+
+# Output
+      A  B        C  D
+row_0    alpha  1  coconut  6
+row_1    apple  2    curse  7
+row_2  arsenic  3  cassava  8
+row_3    angel  4   cuckoo  9
+```
+
+`iloc[]` lets you select rows by numeric position, similar to how you would access elements of a list or an array. Here's an example.
+
+```python
+print(df)
+print()
+print(df.iloc[1])
+
+# Output
+             A  B         C   D
+row_0    alpha  1   coconut   6
+row_1    apple  2     curse   7
+row_2  arsenic  3   cassava   8
+row_3    angel  4    cuckoo   9
+row_4  android  5  clarinet  10
+
+A    apple
+B        2
+C    curse
+D        7
+Name: row_1, dtype: object
+```
+
+Inserting just the row index number in selector brackets returns a **Series** object. Inserting the row index number as a list returns a **DataFrame** object:
+
+```python
+print(df.iloc[[1]])
+
+# Output
+  A  B      C  D
+row_1  apple  2  curse  7
+```
+
+To select multiple rows by index number, use a list within selector brackets:
+
+```python
+print(df.iloc[[0, 2, 4]])
+
+# Output
+      A  B         C   D
+row_0    alpha  1   coconut   6
+row_2  arsenic  3   cassava   8
+row_4  android  5  clarinet  10
+```
+
+Specify a range of rows by index number. Note that this does not include the row at index three.
+
+```python
+print(df.iloc[0:3])
+
+# Output
+ A  B        C  D
+row_0    alpha  1  coconut  6
+row_1    apple  2    curse  7
+row_2  arsenic  3  cassava  8
+```
+
+#### Column selection
+
+Column selection works the same way as row selection, but there are also some shortcuts to make the process easier. For example, to select an individual column, simply put it in selector brackets, **bracket notation**, after the name of the dataframe:
+
+```python
+print(df['C'])
+
+# Output
+row_0     coconut
+row_1       curse
+row_2     cassava
+row_3      cuckoo
+row_4    clarinet
+Name: C, dtype: object
+```
+
+```python
+print(df[['A', 'C']])
+
+# Output
+       A         C
+row_0    alpha   coconut
+row_1    apple     curse
+row_2  arsenic   cassava
+row_3    angel    cuckoo
+row_4  android  clarinet
+```
+
+It's possible to select columns using **dot notation** instead of bracket notation. Dot notation is often convenient and easier to type. However, it can make your code more difficult to read, especially in longer statements involving method chaining or condition-based selection. For this reason, bracket notation is often preferred.
+
+```ptyon
+print(df.A)
+
+# Output
+row_0      alpha
+row_1      apple
+row_2    arsenic
+row_3      angel
+row_4    android
+Name: A, dtype: object
+```
+
+Note that when using `loc[]` to select columns, you must specify rows as well. In this example, all rows were selected using just a colon `:`.
+
+```python
+print(df.iloc[:, [1,3]])
+
+# Output
+ B   D
+row_0  1   6
+row_1  2   7
+row_2  3   8
+row_3  4   9
+row_4  5  10
+```
+
+#### Select rows and columns
+
+Notice that when using `loc[]` to select a range, the final element in the range is included in the results. 
+
+```python
+print(df.iloc[[2, 4], 0:3])
+
+# Output
+A  B         C
+row_2  arsenic  3   cassava
+row_4  android  5  clarinet
+```
+
+When using rows with named indices, you cannot mix numeric and named notation. For example, the following code will throw an error:
+
+```python
+print(df.loc[0:3, ['D']])
+
+# Output
+Error on line 1:
+    print(df.loc[0:3, ['D']])
+```
+
+To view rows `[0:3]` at column `D` if you don't know the index number of column D, you'd have to use selector brackets after an `iloc[]` statement:
+
+```python
+# This is most convenient for VIEWING: 
+print(df.iloc[0:3][['D']])
+
+# But this is best practice/more stable for assignment/manipulation:
+print(df.loc[df.index[0:3], 'D'])
+
+# Output
+  D
+row_0  6
+row_1  7
+row_2  8
+row_0  6
+row_1  7
+row_2  8
+Name: D, dtype: int64
+```
+
+However, in many (perhaps most) cases your rows will not have named indices, but rather numeric indices. In this case, you can mix numeric and named notation. For example, here's the same dataset, but with numeric indices instead of named indices.
+
+```python
+df = pd.DataFrame({
+   'A': ['alpha', 'apple', 'arsenic', 'angel', 'android'],
+   'B': [1, 2, 3, 4, 5],
+   'C': ['coconut', 'curse', 'cassava', 'cuckoo', 'clarinet'],
+   'D': [6, 7, 8, 9, 10]
+   },
+   )
+df
+
+# Output
+ A  B         C   D
+0    alpha  1   coconut   6
+1    apple  2     curse   7
+2  arsenic  3   cassava   8
+3    angel  4    cuckoo   9
+4  android  5  clarinet  10
+```
+
+Notice that the rows are enumerated now. Now, this code will execute without error:
+
+```python
+print(df.loc[0:3, ['D']])
+
+# Output
+   D
+0  6
+1  7
+2  8
+3  9
+```
+
+### Resources for more information
+
+- [pandas.DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html 'pandas.DataFrame')
+- [Series](https://pandas.pydata.org/docs/reference/series.html 'Series')
+- [Selection](https://pandas.pydata.org/docs/user_guide/10min.html#selection 'Selection')
+
+## Boolean masking in pandas
+
+A Boolean mask is a method of applying a filter to a dataframe. The mask overlays a Boolean grid over your dataframe in order to select only the values in the dataframe that align with the True values of the grid. To create Boolean comparisons, pandas has its own logical operators. These operators are: `&` and, `|` or, `~` not.
+
+Each criterion of a multi-conditional selection statement must be enclosed in its own set of parentheses. With practice, making complex selection statements in pandas is possible and efficient.
+
+### Boolean masks
+
+You know that Boolean is used to describe any binary variable whose possible values are true or false. With pandas, **Boolean masking**, also called **Boolean indexing**, is used to overlay a Boolean grid onto a dataframe's index in order to select only the values in the dataframe that align with the True values of the grid. 
+
+Begin with a **DataFrame** object.
+
+```python
+data = {'planet': ['Mercury', 'Venus', 'Earth', 'Mars',
+                   'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
+       'radius_km': [2440, 6052, 6371, 3390, 69911, 58232,
+                     25362, 24622],
+       'moons': [0, 0, 1, 2, 80, 83, 27, 14]
+        }
+df = pd.DataFrame(data)
+df
+
+# Outout
+moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+4     80  Jupiter      69911
+5     83   Saturn      58232
+6     27   Uranus      25362
+7     14  Neptune      24622
+```
+
+Then, write a logical statement. Remember, the objective is to keep planets that have fewer than 20 moons and filter out the rest. This results in a **Series** object of **dtype: bool** that consists of the row indices, where each index contains a `True` or `False` value depending on whether that row satisfies the given condition. This is the Boolean mask. 
+
+```python
+print(df['moons'] < 20)
+
+# Ouuput
+0     True
+1     True
+2     True
+3     True
+4    False
+5    False
+6    False
+7     True
+Name: moons, dtype: bool
+```
+
+To apply this mask to the dataframe, simply insert this statement into selector brackets and apply it to your dataframe:
+
+```python
+print(df[df['moons'] < 20])
+
+# Output
+moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+7     14  Neptune      24622
+```
+
+You can also assign the Boolean mask to a named variable and then apply that to your dataframe:
+
+```python
+mask = df['moons'] < 20
+df[mask]
+
+# Outout
+ moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+7     14  Neptune      24622
+```
+
+Note that this doesn't permanently modify your dataframe. It only gives a filtered view of it. 
+
+```pythont
+df
+
+# Output
+moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+4     80  Jupiter      69911
+5     83   Saturn      58232
+6     27   Uranus      25362
+7     14  Neptune      24622
+```
+
+However, you can assign the result to a named variable:
+
+```python
+mask = df['moons'] < 20
+df2 = df[mask]
+df2
+
+# Output
+moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+7     14  Neptune      24622
+```
+
+And if you want to select just the planet column as a `Series` object, you can use regular selection tools like `loc[]`:
+
+```python
+mask = df['moons'] < 20
+df.loc[mask, 'planet']
+
+# Output
+0    Mercury
+1      Venus
+2      Earth
+3       Mars
+7    Neptune
+Name: planet, dtype: object
+```
+
+### Complex logical statements
+
+In statements that use multiple conditions, pandas uses logical operators to indicate which data to keep and which to filter out. These operators are: `&` and, `|` or, `~` not.
+
+Each component of a multi-conditional logical statement must be in parentheses. Otherwise, the statement will throw an error or, worse, return something that isn't what you intended.
+
+```python
+mask = (df['moons'] < 10) | (df['moons'] > 50)
+mask
+
+# Output
+0     True
+1     True
+2     True
+3     True
+4     True
+5     True
+6    False
+7    False
+Name: moons, dtype: bool
+```
+
+Notice that each condition is self-contained in a set of parentheses, and the two conditions are separated by the logical operator, `|` or. To apply the mask, call the dataframe and put the statement or the variable it's assigned to in selector brackets:
+
+```python
+mask = (df['moons'] < 10) | (df['moons'] > 50)
+df[mask]
+
+# Output
+moons   planet  radius_km
+0      0  Mercury       2440
+1      0    Venus       6052
+2      1    Earth       6371
+3      2     Mars       3390
+4     80  Jupiter      69911
+5     83   Saturn      58232
+```
+
+Here's an example of how to select all planets that have more than 20 moons, but not planets with 80 moons and not planets with a radius less than 50,000 km:
+
+```python
+mask = (df['moons'] > 20) & ~(df['moons'] == 80) & ~(df['radius_km'] < 50000)
+df[mask]
+
+# Output
+moons  planet  radius_km
+5     83  Saturn      58232
+```
+
+Note that this returns the same result as the following:
+
+```python
+mask = (df['moons'] > 20) & (df['moons'] != 80) & (df['radius_km'] >= 50000)
+df[mask]
+
+# Output
+moons  planet  radius_km
+5     83  Saturn      58232
+```
+
+### Resources for more information
+
+- [pandas Boolean indexing documentation](https://pandas.pydata.org/docs/user_guide/indexing.html#boolean-indexing 'pandas Boolean indexing documentation')
+
+## More on grouping and aggregation
+
+z will be an essential function in your work as a data professional, as it enables efficient combining and analysis of data. Similarly, `agg()` will help you apply multiple functions dynamically across a specified axis of a dataframe. Either on their own or when used together, these tools give data professionals deep access to data and help bring about successful projects.
+
+### groupby()
+
+The [groupby](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html 'pandas.DataFrame.groupby') function is a method that belongs to the `DataFrame` class. It works by splitting data into groups based on specified criteria, applying a function to each group independently, then combining the results into a data structure. When applied to a dataframe, the function returns a groupby object. This groupby object serves as the foundation for different data manipulation operations, including:
+
+- Aggregation: Computing summary statistics for each group
+- Transformation: Applying functions to each group and returning modified data
+- Filtration: Selecting specific groups based on certain conditions
+- Iteration: Iterating over groups or values
+
+In the following example, `groupby()` combined all the items into groups based on their type and returned a `DataFrame` object containing the mean of each group for each numeric column in the dataframe. Note: In future versions of pandas it will be necessary to specify a `numeric_only` parameter when applying certain aggregation functions—like mean—to a groupby object. `numeric_only` refers to the datatype of each column. In earlier versions of pandas (like the version on this platform) it isn't necessary to specify `numeric_only = True`, but in future versions this must be done. Otherwise, it will be necessary to indicate the specific columns to be captured.)
+
+```python
+clothes = pd.DataFrame({'type': ['pants', 'shirt', 'shirt', 'pants', 'shirt', 'pants'],
+                       'color': ['red', 'blue', 'green', 'blue', 'green', 'red'],
+                       'price_usd': [20, 35, 50, 40, 100, 75],
+                       'mass_g': [125, 440, 680, 200, 395, 485]})
+clothes
+
+# Output
+color  mass_g  price_usd   type
+0    red     125         20  pants
+1   blue     440         35  shirt
+2  green     680         50  shirt
+3   blue     200         40  pants
+4  green     395        100  shirt
+5    red     485         75  pants
+```
+
+Grouping the dataframe by type results in a DataFrameGroupBy object:
+
+```python
+grouped = clothes.groupby('type')
+print(grouped)
+print(type(grouped))
+
+# Output
+<pandas.core.groupby.DataFrameGroupBy object at 0x7fab8e137160>
+<class 'pandas.core.groupby.DataFrameGroupBy'>
+```
+
+However, an aggregation function can be applied to the groupby object:
+
+```python
+grouped = clothes.groupby('type')
+grouped.mean()
+
+# Output
+ mass_g  price_usd
+type                    
+pants   270.0  45.000000
+shirt   505.0  61.666667
+```
+
+In the following example, `groupby()` was called directly on the clothes dataframe. The data was grouped first by type, then by color. This resulted in four groups, the number of different existing combinations of values for type and color. Then, the min() function was applied to the result to filter each group by its minimum value.
+
+```python
+clothes.groupby(['type', 'color']).min()
+
+# Output
+   mass_g  price_usd
+type  color                   
+pants blue      200         40
+      red       125         20
+shirt blue      440         35
+      green     395         50
+```
+
+To simply return the number of observations there are in each group, use the `size()` method. This will result in a `Series` object with the relevant information:
+
+```python
+clothes.groupby(['type', 'color']).size()
+
+# Output
+type   color
+pants  blue     1
+       red      2
+shirt  blue     1
+       green    2
+dtype: int64
+```
+
+### agg()
+
+The [agg()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.agg.html 'pandas.DataFrame.agg') function is useful when you want to apply multiple functions to a dataframe at the same time. `agg()` is a method that belongs to the `DataFrame` class. It stands for **aggregate**. Its most important parameters are: 
+
+- `func`: The function to be applied
+- `axis`: The axis over which to apply the function (default = 0). 
+
+#### Built-in aggregation functions
+
+There are many available built-in aggregation functions. Some of the more commonly used include:
+
+- `count()`: The number of non-null values in each group
+- `sum()`: The sum of values in each group
+- `mean()`: The mean of values in each group
+- `median()`: The median of values in each group
+- `min()`: The minimum value in each group
+- `max()`: The maximum value in each group
+- `std()`: The standard deviation of values in each group
+- `var()`: The variance of values in each group
+
+Following are some examples of how `agg()` can be used. Note that they demonstrate how this function can be used by itself without `groupby()`. Note also that, due to platform limitations, some of the following code blocks are not executable. In these cases, output is provided as an image. Here is the original clothes dataframe again as a reminder:
+
+```python
+clothes
+
+# Output
+color  mass_g  price_usd   type
+0    red     125         20  pants
+1   blue     440         35  shirt
+2  green     680         50  shirt
+3   blue     200         40  pants
+4  green     395        100  shirt
+5    red     485         75  pants
+```
+
+The following example applies the `sum()` and `mean()` functions to the **price** and **mass_g** columns of the **clothes** dataframe.
+
+The two columns are subset from the dataframe before applying the `agg()` method. If you don't subset the relevant columns first, `agg()` will attempt to apply `sum()` and `mean()` to all of the columns, which wouldn't work because some columns contain strings. Technically, `sum()` would work, but it would return something useless because it would just combine all the strings into one long string.
+
+The `sum()` and `mean()` functions are entered as strings in a list, without their parentheses. This will work for any built-in aggregation function.
+
+```python
+clothes[['price_usd', 'mass_g']].agg(['sum', 'mean'])
+```
+
+Columns are not subset from the dataframe before applying the z function. This is unnecessary because the columns are specified within the `agg()` function itself.
+
+The argument to the `agg()` function is a dictionary whose keys are columns and whose values are the functions to be applied to those columns. If multiple functions are applied to a column, they are entered as a list. Again, each built-in function is entered as a string without parentheses.
+
+The resulting dataframe contains `NaN` values where a given function was not designated to be used.
+
+```python
+clothes.agg({'price_usd': 'sum',
+            'mass_g': ['mean', 'median']
+            })
+```
+
+The following example applies the `sum()` and `mean()` functions across axis 1. In other words, instead of applying the functions down each column, they're applied over each row.
+
+```python
+clothes[['price_usd', 'mass_g']].agg(['sum', 'mean'], axis = 1)
+```
+
+### groupby() with agg()
+
+In the following example, the items in `clothes` are grouped by `color`, then each of those groups has the `mean()` and `max()` functions applied to them at the `price_usd` and `mass_g`columns.
+
+```python
+clothes.groupby('color').agg({'price_usd': ['mean', 'max'],
+                             'mass_g': ['mean', 'max']})
+
+# Output
+price_usd      mass_g     
+           mean  max   mean  max
+color                           
+blue       37.5   40  320.0  440
+green      75.0  100  537.5  680
+red        47.5   75  305.0  485
+```
+
+### MultiIndex
+
+You might have noticed that, when functions are applied to a groupby object, the resulting dataframe has tiered indices. This is an example of **MultiIndex**. MultiIndex is a hierarchical system of dataframe indexing. It enables you to store and manipulate data with any number of dimensions in lower dimensional data structures such as series and dataframes. This facilitates complex data manipulation.
+
+This course will not require any deep knowledge of hierarchical indexing, but it's helpful to be familiar with it.
+
+Notice that **color** and **type** are positioned lower than the column names in the output. This indicates that **color** and **type** are no longer columns, but named row indices. Similarly, notice that **price_usd** and **mass_g** are positioned above `mean` and `min` in the output of column names, indicating a hierarchical column index.
+
+```python
+grouped = clothes.groupby(['color', 'type']).agg(['mean', 'min'])
+grouped
+
+# Output
+  mass_g      price_usd    
+              mean  min      mean min
+color type                           
+blue  pants  200.0  200      40.0  40
+      shirt  440.0  440      35.0  35
+green shirt  537.5  395      75.0  50
+red   pants  305.0  125      47.5  20
+```
+
+If you inspect the row index, you'll get a **MultiIndex** object containing information about the row indices:
+
+```python
+grouped.index
+
+# Output
+MultiIndex(levels=[['blue', 'green', 'red'], ['pants', 'shirt']],
+           labels=[[0, 0, 1, 2], [0, 1, 1, 0]],
+           names=['color', 'type'])
+```
+
+The column index shows a **MultiIndex** object containing information about the column indices:
+
+```python
+grouped.columns
+
+# Output
+MultiIndex(levels=[['mass_g', 'price_usd'], ['mean', 'min']],
+           labels=[[0, 0, 1, 1], [0, 1, 0, 1]])
+```
+
+To perform selection on a dataframe with a MultiIndex, use `loc[]` selection and put indices in parentheses. Here are some examples on **grouped**, which is a dataframe with a two-level row index and a two-level column index. For reference, here is the **grouped** dataframe:
+
+```python
+grouped
+
+# Output
+mass_g      price_usd    
+              mean  min      mean min
+color type                           
+blue  pants  200.0  200      40.0  40
+      shirt  440.0  440      35.0  35
+green shirt  537.5  395      75.0  50
+red   pants  305.0  125      47.5  20
+```
+
+To select a first-level (top) column:
+
+```python
+grouped.loc[:, 'price_usd']
+
+# Output
+mean  min
+color type            
+blue  pants  40.0   40
+      shirt  35.0   35
+green shirt  75.0   50
+red   pants  47.5   20
+```
+
+To select a second-level (bottom) column:
+
+```python
+grouped.loc[:, ('price_usd', 'min')]
+
+# Output
+color  type 
+blue   pants    40
+       shirt    35
+green  shirt    50
+red    pants    20
+Name: (price_usd, min), dtype: int64
+```
+
+To select first-level (left-most) row:
+
+```python
+grouped.loc['blue', :]
+
+# Output
+mass_g      price_usd    
+        mean  min      mean min
+type                           
+pants  200.0  200      40.0  40
+shirt  440.0  440      35.0  35
+```
+
+To select a bottom-level (right-most) row:
+
+```python
+grouped.loc[('green', 'shirt'), :]
+
+# Output
+mass_g     mean    537.5
+           min     395.0
+price_usd  mean     75.0
+           min      50.0
+Name: (green, shirt), dtype: float64
+```
+
+And you can even select individual values:
+
+```python
+grouped.loc[('blue', 'shirt'), ('mass_g', 'mean')]
+
+# Output
+440.0
+```
+
+If you want to remove the row MultiIndex from a groupby result, include `as_index = False` as a parameter to your `groupby()` statement. Notice how **color** and **type** are no longer row indices, but named columns. The row indices are the standard enumeration beginning from zero.
+
+Again, you will not be expected to do any complex manipulations of hierarchically indexed data in this course, but it's helpful to have a basic understanding of how MultIndex works, especially because `groupby()` manipulations typically result in a **MultiIndex** dataframe by default. 
+
+```python
+clothes.groupby(['color', 'type'], as_index = False).mean()
+
+# Output
+color   type  mass_g  price_usd
+0   blue  pants   200.0       40.0
+1   blue  shirt   440.0       35.0
+2  green  shirt   537.5       75.0
+3    red  pants   305.0       47.5
+```
+
+## Explore your Course 2 workplace scenarios
+
+![Stage 2 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-2.png?raw=true 'Stage 2 of end-of-course project')
+
+### Automatidata
+
+#### Project goal
+
+In this fictional scenario, the New York City Taxi and Limousine Commission (TLC) has approached the data consulting firm Automatidata to develop an app that enables TLC riders to estimate the taxi fares in advance of their ride.
+
+#### Background
+
+Since 1971, TLC has been regulating and overseeing the licensing of New York City's taxi cabs, for-hire vehicles, commuter vans, and paratransit vehicles.
+
+#### Scenario
+
+You have received notice that the recently submitted New York City TLC project proposal has been approved. The Automatidata team now has access to the New York City TLC data to analyze, identify key variables, and prepare for exploratory data analysis.
+
+#### Course 2 tasks
+
+- Load data, explore, and extract the New York City TLC data with Python
+- Use custom functions to organize the information within the New York City TLC dataset
+- Build a dataframe for the New York City TLC project
+- Create an executive summary for Automatidata
+
+### TikTok
+
+#### Project goal
+
+The TikTok data team is developing a machine learning model for classifying claims made in videos submitted to the platform.
+
+#### Background
+
+TikTok is the leading destination for short-form mobile video. The platform is built to help imaginations thrive. TikTok's mission is to create a place for inclusive, joyful, and authentic content–where people can safely discover, create, and connect.
+
+#### Scenario
+
+As a data analyst on TikTok's data team, you'll help by preparing the data needed for the claims classification project. You'll build a dataframe, organize the claims data for the process of exploratory data analysis, and update the team on your progress and insights.
+
+#### Course 2 tasks
+
+- Build a dataframe for the TikTok dataset
+- Read in data from TikTok csv file
+- Display rows within dataframe
+- Examine data type of each column
+- Gather descriptive statistics
+- Visualize the TikTok data in Python
+- Report to TikTok's data team through an executive summary
+
+### Waze
+
+#### Project goal
+
+Waze leadership has asked your data team to develop a machine learning model to predict user churn. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. An accurate model will help prevent churn, improve user retention, and grow Waze's business.
+
+#### Background
+
+Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. 
+
+#### Scenario
+
+Your team is in the early stages of their user churn project. Your project proposal has been approved and your team has been given access to Waze's user data. To get clear insights, the data must first be inspected, organized, and prepared for analysis. 
+
+### Course 2 tasks
+
+- Import data
+- Create a dataframe 
+- Inspect data 
+- Identify outliers
+- Create a data visualization
+- Share an executive summary with the Waze data team
+
+### Key Takeaways
+
+In Course 2, Get Started with Python, you were introduced to some basics of the Python programming language. You explored syntax, loops, strings, lists, dictionaries, object-oriented programming, and explored how data professionals use code on the job. 
+
+#### Course 2 skills
+
+- Code with Python
+- Create data visualization
+- Use comments to enhance code readability
+- Work within a Jupyter Notebook
+- Share insights and ideas with stakeholders
+
+#### Course 2 end-of-course project deliverables
+
+- Build a dataframe
+- Create an executive summary
+
+The end-of-course portfolio projects are designed for you to apply your data analytical skills within a workplace scenario. No matter which scenario you work with, you will practice your ability to discuss data analytic topics with coworkers, internal team members, and external clients.
+
+As a reminder, you are required to complete one project for each course. To gain additional practice, or to add more samples to your portfolio, you may complete as many of the scenarios as you wish.
+
+## Automatidata scenario
+
+Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client’s business needs and utilizing their data to meet those business needs. 
+
+Automatidata is consulting for the New York City Taxi and Limousine Commission (TLC). New York City TLC is an agency responsible for licensing and regulating New York City's taxi cabs and for-hire vehicles. The agency has partnered with Automatidata to develop a regression model that helps estimate taxi fares before the ride, based on data that TLC has gathered. 
+
+The TLC data comes from over 200,000 taxi and limousine licensees, making approximately one million combined trips per day.
+
+### Team members at Automatidata and the New York City TLC
+
+#### Automatidata Team Members
+
+- Udo Bankole, Director of Data Analysis
+- Deshawn Washington, Data Analysis Manager
+- Luana Rodriquez, Senior Data Analyst
+- Uli King, Senior Project Manager
+
+Your teammates at Automatidata have technical experience with data analysis and data science. However, you should always be sure to keep summaries and messages to these team members concise and to the point. 
+
+#### New York City TLC Team Members
+
+- Juliana Soto, Finance and Administration Department Head
+- Titus Nelson, Operations Manager
+
+The TLC team members are program managers who oversee operations at the organization. Their roles are not highly technical, so be sure to adjust your language and explanation accordingly.
+
+### Project background
+
+Automatidata is in the earliest stages of the TLC project. The following tasks are needed before the team can begin the data analysis process:
+
+- Build a dataframe for the TLC dataset
+- Examine data type of each column
+- Gather descriptive statistics
+
+### Your assignment
+
+You will build a dataframe for the TLC data. After the dataframe is complete, you will organize the data for the process of exploratory data analysis, and update the team on your progress and insights.
+
+### Specific project deliverables
+
+With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following:
+
+- Complete the questions in the Course 2 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Complete coding prep work on project’s Jupyter notebook
+- Summarize the column Dtypes
+- Communicate important findings to DeShawn and Luana in the form of an executive summary  
+
+Good luck with this project! Automatidata looks forward to seeing how you communicate your creative work and approach problem-solving! 
+
+## TikTok scenario
+
+At TikTok, our mission is to inspire creativity and bring joy. Our employees lead with curiosity and move at the speed of culture. Combined with our company's flat structure, you'll be given dynamic opportunities to make a real impact on a rapidly expanding company and grow your career.
+
+TikTok users have the ability to submit reports that identify videos and comments that contain user claims. These reports identify content that needs to be reviewed by moderators. The process generates a large number of user reports that are challenging to consider in a timely manner. 
+
+TikTok is working on the development of a predictive model that can determine whether a video contains a claim or offers an opinion. With a successful prediction model, TikTok can reduce the backlog of user reports and prioritize them more efficiently.
+
+### Project background
+
+TikTok’s data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
+
+- Build a dataframe for the TikTok dataset
+- Examine data type of each column
+- Gather descriptive statistics
+
+### Your assignment
+
+You will build a dataframe for the claims classification data. After the dataframe is complete, you will organize the claims data for the process of exploratory data analysis, and update the team on your progress and insights.
+
+### Team members at TikTok
+
+#### Data team roles
+
+- Willow Jaffey, Data Science Lead
+- Rosie Mae Bradshaw, Data Science Manager
+- Orion Rainier, Data Scientist
+
+The members of the data team at TikTok are well versed in data analysis and data science. Messages to these more technical coworkers should be concise and specific.
+
+#### Cross-functional team members
+
+- Mary Joanna Rodgers, Project Management Officer
+- Margery Adebowale, Finance Lead, Americas
+- Maika Abadi, Operations Lead
+
+Your TikTok team includes several managers, who oversee operations. It is important to adjust your general correspondence appropriately to their roles, given that their responsibilities are less technical in nature. 
+
+#### Specific project deliverables
+
+With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following:
+
+- Course 2 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal. 
+- Answer the questions in the Jupyter notebook project file
+- Complete coding prep work on project’s Jupyter notebook
+- Summarize the column Dtypes
+- Communicate important findings in the form of an executive summary  
+
+## Waze scenario
+
+TikTok's data team needs you to problem-solve and communicate your findings. Good luck on your tasks!
+
+Waze’s free navigation app makes it easier for drivers around the world to get to where they want to go. Waze’s community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
+
+You’ll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. 
+
+This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze’s business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
+
+- Who are the users most likely to churn?
+- Why do users churn? 
+- When do users churn? 
+
+For example, if Waze can identify a segment of users who are at high risk of churning, Waze can proactively engage these users with special offers to try and retain them. Otherwise, Waze may lose these users without knowing why. 
+
+Your insights will help Waze leadership optimize the company’s retention strategy, enhance user experience, and make data-driven decisions about product development.
+
+### Project background
+
+Waze’s data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
+
+- Build a dataframe for the churn dataset
+- Examine data type of each column
+- Gather descriptive statistics
+
+### Your assignment
+
+You will build a dataframe for the churn data. After the dataframe is complete, you will organize the data for the process of exploratory data analysis, and update the team on your progress and insights.
+
+### Team members at Waze
+#### Data team roles
+
+- Harriet Hadzic - Director of Data Analysis 
+- May Santner - Data Analysis Manager 
+- Chidi Ga - Senior Data Analyst 
+- Sylvester Esperanza - Senior Project Manager 
+
+Data team members have technical experience with data analysis and data science. However, you should always be sure to keep summaries and messages to these team members concise and to the point. 
+
+#### Cross-functional team members
+
+- Emrick Larson - Finance and Administration Department Head 
+- Ursula Sayo - Operations Manager 
+
+Your Waze team includes several managers overseeing operations. It is important to adapt your communication to their roles since their responsibilities are less technical.
+
+### Specific project deliverables
+
+With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following:
+
+- Complete the questions in the Course 2 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Complete coding prep work on project’s Jupyter notebook
+- Summarize the column Dtypes
+- Communicate important findings in the form of an executive summary  
+
+Good luck with this project! Your Waze team members are looking forward to seeing how you communicate your creative work and approach problem-solving!
 
 `Any questions, please reach out`
 
