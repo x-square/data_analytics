@@ -2,6 +2,7 @@
 title: 'Notes on behavioural data analysis'
 author: 'Chiawei Wang'
 date: 'February 2024'
+date-format: "MMMM YYYY"
 ---
 
 `This document compiles information from Behavioral Data Analysis with R and Python for academic purposes`[^1]
@@ -369,6 +370,6 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 
 Image via Behavioral Data Analysis with R and Python
 
-Chiawei Wang, PhD\
+Chiawei Wang PhD\
 Data Scientist\
 <chw.wng@outlook.com>
