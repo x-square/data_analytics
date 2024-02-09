@@ -4840,6 +4840,6 @@ Because of Deloitte's focus on the client's business problem in both their asses
 
 `Any questions, please reach out`
 
-Chiawei Wang, PhD\
+Chiawei Wang PhD\
 Data Scientist\
 <chw.wng@outlook.com>
