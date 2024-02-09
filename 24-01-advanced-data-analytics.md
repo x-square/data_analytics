@@ -2,11 +2,27 @@
 title: 'Notes on advanced data analytics'
 author: 'Chiawei Wang'
 date: 'December 2023'
+date-format: "MMMM YYYY"
 ---
 
 `This document compiles information from Google Advanced Data Analytics for academic purposes`[^1]
 
 [^1]: This part of notes is compiled from [Google Advanced Data Analytics](https://www.coursera.org/professional-certificates/google-advanced-data-analytics 'Google professional certificate'). This program includes over 200 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world advanced data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in advanced data analytics and data science. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to advanced data analytics tools and platforms and key technical skills required for an advanced role.
+
+Course descriptions:
+
+1. **Foundations of data science**
+   - Learn how data professionals operate in the workplace and how different roles in the field of data science contribute to an organization's vision of the future. Then, explore data science roles, communication skills, and data ethics.
+2. **Get started with Python**
+   - Discover how the programming language Python can power your data analysis. Learn core Python concepts, such as data types, functions, conditional statements, loops, and data structures.
+3. **Go beyond the numbers: Translate data into insights**
+   - Learn the fundamentals of data cleaning and visualizations and how to reveal the important stories that live within data.
+4. **The power of statistics**
+   - Explore descriptive and inferential statistics, basic probability and probability distributions, sampling, confidence intervals, and hypothesis testing.
+5. **Regression analysis: Simplify complex data relationships**
+   - Learn to model variable relationships, focusing on linear and logistic regression.
+6. **The nuts and bolts of machine learning**
+   - Learn unsupervised machine learning techniques and how to apply them to organizational data.
 
 # Foundations of data science
 
@@ -348,7 +364,7 @@ There are a few things to consider along the way:
 
 ## Showcase your skills: How to prepare for the interview
 
-The interview is an opportunity to share how you can add value to an organization. Recognizing your growing skillset and how you might communicate those skills to potential employers is a great way to showcase not just your technical know-how, but your ability to communicate effectively too. This reading is a great resource to keep in mind as you build your skills and your professional narrative in preparation for your job search. 
+The interview is an opportunity to share how you can add value to an organization. Recognizing your growing skill set and how you might communicate those skills to potential employers is a great way to showcase not just your technical know-how, but your ability to communicate effectively too. This reading is a great resource to keep in mind as you build your skills and your professional narrative in preparation for your job search. 
 
 ### Interview question types
 
@@ -758,7 +774,7 @@ End-of-course projects emphasize technical and professional workplace skills, as
 - Give and receive feedback
 - Stay in contact with team members on the project
 
-## Explore your Course 1 workplace scenarios
+## Explore your course 1 workplace scenarios
 
 1. Automatidata, featuring a fictional data consulting firm 
 2. TikTok, created in partnership with the short-form video hosting company
@@ -1636,7 +1652,7 @@ If you get stuck in an infinite loop, don't worry. You can break out of it by in
 > - For Jupyter Notebook, turn to Command Palette (⇧⌘P) and execute `Jupyter: Restart Kernal`.
 > - For Python file, turn to terminal and execute `⌃C` (Control-C).
 
-## Iterative statment: For loop
+## Iterative statement: For loop
 
 `for loops` is like `while loop`, but instead of looping continuously until a condition is met, for loops iterate over each element of an iterable sequence, allowing you to perform an action or evaluation with each iteration. This is an important process in computer programming, not just in Python, but in most other languages too.
 
@@ -1756,7 +1772,7 @@ Note that `f-string` (formatted string) is a feature in Python that allows you t
 > [!TIP]
 > The difference between `for loop` and `while loop` is that `for loop` is used when the number of iterations is known, whereas execution is done in a `while loop` until the statement in the program is proved wrong.
 >
-> Use `for loops` when there is a sequence of elemtns that you want to iterate over, whereas use `while loops` when you want to repeat an action until a **boolean** condition changes, that is **True** or **False**.
+> Use `for loops` when there is a sequence of elements that you want to iterate over, whereas use `while loops` when you want to repeat an action until a **boolean** condition changes, that is **True** or **False**.
 
 ![Difference between For and While loops](https://github.com/x-square/visual-resources/blob/main/python-loops.png?raw=true 'For and While loops')
 
@@ -1965,7 +1981,7 @@ abracadabra
 Another string formatting technique that you'll often encounter when using Python version 3.6+ is **literal string interpolation**, also known as **f-strings**, which further minimize the syntax required to embed expressions into strings without having to call the `format()` method. They're called **f-strings** because the expressions always begin with `f`.
 
 ```python
-# Simplifeid version with f-string
+# Simplified version with f-string
 var_a = 1
 var_b = 2
 
@@ -4453,7 +4469,7 @@ color   type  mass_g  price_usd
 3    red  pants   305.0       47.5
 ```
 
-## Explore your Course 2 workplace scenarios
+## Explore your course 2 workplace scenarios
 
 ![Stage 2 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-2.png?raw=true 'Stage 2 of end-of-course project')
 
@@ -4548,7 +4564,7 @@ As a reminder, you are required to complete one project for each course. To gain
 
 ## Automatidata scenario
 
-Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client’s business needs and utilizing their data to meet those business needs. 
+Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client's business needs and utilizing their data to meet those business needs. 
 
 Automatidata is consulting for the New York City Taxi and Limousine Commission (TLC). New York City TLC is an agency responsible for licensing and regulating New York City's taxi cabs and for-hire vehicles. The agency has partnered with Automatidata to develop a regression model that helps estimate taxi fares before the ride, based on data that TLC has gathered. 
 
@@ -4590,7 +4606,7 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 - Complete the questions in the Course 2 PACE strategy document
 - Answer the questions in the Jupyter notebook project file
-- Complete coding prep work on project’s Jupyter notebook
+- Complete coding prep work on project's Jupyter notebook
 - Summarize the column Dtypes
 - Communicate important findings to DeShawn and Luana in the form of an executive summary  
 
@@ -4606,7 +4622,7 @@ TikTok is working on the development of a predictive model that can determine wh
 
 ### Project background
 
-TikTok’s data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
+TikTok's data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
 
 - Build a dataframe for the TikTok dataset
 - Examine data type of each column
@@ -4640,7 +4656,7 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 - Course 2 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal. 
 - Answer the questions in the Jupyter notebook project file
-- Complete coding prep work on project’s Jupyter notebook
+- Complete coding prep work on project's Jupyter notebook
 - Summarize the column Dtypes
 - Communicate important findings in the form of an executive summary  
 
@@ -4648,11 +4664,11 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 TikTok's data team needs you to problem-solve and communicate your findings. Good luck on your tasks!
 
-Waze’s free navigation app makes it easier for drivers around the world to get to where they want to go. Waze’s community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
+Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
 
-You’ll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. 
+You'll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. 
 
-This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze’s business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
+This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze's business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
 
 - Who are the users most likely to churn?
 - Why do users churn? 
@@ -4660,11 +4676,11 @@ This project is part of a larger effort at Waze to increase growth. Typically, h
 
 For example, if Waze can identify a segment of users who are at high risk of churning, Waze can proactively engage these users with special offers to try and retain them. Otherwise, Waze may lose these users without knowing why. 
 
-Your insights will help Waze leadership optimize the company’s retention strategy, enhance user experience, and make data-driven decisions about product development.
+Your insights will help Waze leadership optimize the company's retention strategy, enhance user experience, and make data-driven decisions about product development.
 
 ### Project background
 
-Waze’s data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
+Waze's data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
 
 - Build a dataframe for the churn dataset
 - Examine data type of each column
@@ -4697,11 +4713,130 @@ With this end-of-course project, you will gain valuable practice and apply your 
 
 - Complete the questions in the Course 2 PACE strategy document
 - Answer the questions in the Jupyter notebook project file
-- Complete coding prep work on project’s Jupyter notebook
+- Complete coding prep work on project's Jupyter notebook
 - Summarize the column Dtypes
 - Communicate important findings in the form of an executive summary  
 
 Good luck with this project! Your Waze team members are looking forward to seeing how you communicate your creative work and approach problem-solving!
+
+# Go beyond the numbers: Translate data into insights
+
+## Case study: Deloitte
+
+Deloitte is an audit, consulting, tax, and advisory service. The company has over 100,000 employees and partners around the globe, and they work with many of the world's biggest companies. Their services range from tax and accounting solutions to artificial intelligence and cyber security risk programs.
+
+The multinational corporation's business to business (B2B) model keeps their focus on working with their customers on a number of strategic and financial fronts, according to their individual needs.
+
+Deloitte provides a range of services for client projects, such as auditing, consulting, financial advisory, risk advisory, taxes, data analysis, and regulation. Since 2008, Deloitte has made it their vision to be the standard of excellence in professional business services. Because of this focus, Deloitte has remained at the forefront of technology advancements, including the deployment of real-time metrics for their clients.
+
+In just one of their many success stories,  Deloitte recently helped a billion-dollar cloud-based analytics and software company streamline the tracking and organization of their marketing leads and strategic analysis of their performance data. In this reading, you will see how Deloitte used EDA to analyze the client's data in order to propose and apply a comprehensive solution they still use today.
+
+### The challenges 
+
+One of Deloitte's most important cloud-based software solution clients was facing a variety of challenges with their marketing and performance data. They asked Deloitte for help on all of them. Here are the specific challenges the client presented to Deloitte:  
+
+- Difficulty in following up on marketing leads 
+- Struggling to promptly track their marketing campaign performance
+- A lack of personalized data dashboards displaying strategic company metrics
+
+#### Following up on marketing leads 
+
+Deloitte's client offers a range of cloud-based analysis services and software products to businesses around the globe, making it a monumental task to follow up on each of the thousands of inquiries and potential sales leads they receive on a monthly basis. As a result, Deloitte's client was seeking a solution to help them more adequately track and act on these leads.   
+
+#### Tracking marketing campaign performance 
+
+Relying on just four data analysts for analysis of marketing campaign performance for a $1B multinational corporation was quickly becoming unsustainable. Before Deloitte stepped in to help, the client's performance tracking system was a series of data tables updated manually and kept in a spreadsheet tab. Each region kept their own performance data, creating issues of consistency and hours of wasted energy for the analysts who had to compile and merge the data to get a corporation-wide performance picture.  
+
+#### Personalizing data dashboards 
+
+Because of differing needs for each level of management and varying marketing regions across the globe, the client needed to be able to easily parse and group data specific to their employees' needs across the corporation. Because they were working off of multiple spreadsheets across several different departments and locales, the client found they could not easily filter the data according to their needs, and therefore were not able to adequately shift strategy to improve performance. 
+
+### The approach  
+
+![PACE model](https://github.com/x-square/visual-resources/blob/main/pace-model.png?raw=true 'PACE model')
+
+As Deloitte began working with their new client, they designed an approach that would meet each of their client's proposed needs. Refer to the PACE entries to review this approach in detail.
+
+#### Plan 
+
+To begin, Deloitte needed to meet with client stakeholders and help develop their vision for the future according to the three areas mentioned above: **marketing leads**, **measuring marketing campaign performance**, and **personalizing data dashboards**. 
+
+They needed to understand the client's business by learning its processes, objectives and key results (OKRs), and how it approached and used its customer and potential customer data. 
+
+Key project milestones were established early on, and adjusted according to any new knowledge acquired. Those milestones were: 
+
+- [X] Alignment with client on the future vision of data architecture and dashboards
+- [X] Establishment of the new data architecture
+- [X] Launch of descriptive and diagnostic tooling
+- [X] Launch of predictive models
+- [X] Training the global sales team on new tooling
+
+Deloitte determined that their project plan would begin with the discovering, structuring, and cleaning practices of EDA on the client's company-wide performance data.  
+
+Deloitte quickly learned what OKRs the client wanted easy access to once the personalized dashboards were complete and set plans to achieve that outcome. Those OKRs came in the form of the following questions: 
+
+- How much revenue was earned from a particular marketing campaign? 
+- What industry, region, sector, and company size did the new customer fall into? 
+- How long did it take to finalize the sale after the initial point of contact? 
+- What was the success rate of different types of campaigns (i.e., in person events vs. online webinars)? 
+- What was the average cost of marketing per customer gained?
+
+#### Analyze
+
+As part of the framing of their initial analysis of the client's data, it became clear the client was unfamiliar with Deloitte's product services offerings, including assets like easy-to-use Tableau dashboard tooling. Because of this, the client's assumptions and requests for what was possible fell far below Deloitte's actual capability. This represented an opportunity to not only meet, but actually exceed the client's expectations of the project. 
+
+The first challenges of analysis were in understanding where the data was coming from and what each data variable meant. The client used non-standard naming conventions and definitions in their data, so Deloitte had to use discovering practices to learn their language to fully understand the client's data and plan for how to help them use it. 
+
+Deloitte found that the client's approach to tracking performance at the time was clunky and overbroad at best. The performance data they gathered consisted of the use of overall averages to determine value of strategic company-wide actions. Without specific performance data per region, the company had no simple way of tracking regional performance.  
+
+As an example of the client's overbroad data tracking at the time, this was the formula they used to derive the average revenue they gained per marketing campaign: 
+
+$$
+\frac{average\ customer\ contract\ value}{average\ cost\ of\ marketing\ campaigns} = average\ revenue\ gained\ per\ campaign
+$$
+
+Deloitte learned that the client's internal marketing and sales teams were organized according to geographic regions, industries, and customer account size. Regional leads had the authority and autonomy to conduct marketing research and campaigns on their own, but did take guidance and occasional instruction from the global team. Deloitte's analysts began structuring the data in a consistent way company wide as part of their EDA of the client's data.
+
+In terms of customer life cycle, Deloitte learned that the client's marketing leads would generate marketing campaigns and then inform sales partners in their regions. Field sales representatives would follow up on all leads generated from the campaigns, and they would also network outside of existing campaigns to find additional customers. This discovering part of EDA informed Deloitte's team on more specific and plausible solutions that could meet the client's needs. 
+
+The Deloitte team used discovering and structuring practices of EDA in spreadsheets to review all of the existing data from the client's Salesforce and marketing campaigns. They began to identify and define every data variable that existed in their client's sales system. Once an inventory of data variables was structured, cleaned, and validated, the Deloitte team brainstormed the type of insights they could glean from the information. 
+
+After the review, Deloitte utilized the presenting practice of EDA to share the information they had gathered with the client. They listened and asked questions to get a better understanding of how the client viewed their own business and what factors were important to them according to the data.  
+
+#### Construct
+
+From their analysis of the client's systems and the discovering, structuring, and cleaning practices of EDA they did on the client's performance data, Deloitte learned that the client needed a total overhaul of their analytical process, one that provided much greater detail and allowed them to identify and address bottlenecks, unprofitable campaigns, and unproductive customer segments.
+
+With the client's approval, Deloitte completely rebuilt the client's data internal infrastructure from the ground up to make analysis more streamlined.  
+
+On top of the infrastructure overhaul, the most hands-on solution for the client was to build customized and dynamic dashboards for specific stakeholders. 
+
+- The Deloitte team worked with each client stakeholder group to understand their needs and their OKRs.
+- They then helped develop tailored solutions for the client by creating supporting collateral resources, such as a data dictionary to define what each variable represents and how it should and should not be used. 
+
+Deloitte used the information they gathered from their client's data to build automations and tools that performed predictive analysis on their OKRs. This allowed the client to establish feasible, but aggressive targets for the future.
+
+#### Execute
+
+Deloitte's overhaul of their client's data infrastructure led to a streamlined, tiered approach to global data gathering. Where before the client was forced to rely on regionally gathered and inconsistently structured spreadsheets to formulate their performance metrics, they could now easily quantify everything from global, company-wide performance down to the performance of a regional team of sales team members on specific products and subset of clients.
+
+After implementation of personalized dashboards, Senior VPs could filter the status and performance of the OKRs to the whole departments and regions for which they were responsible. Additionally, regional leads, marketing leads, and even local sales leads were able to view data filtered down to their applicable area. 
+
+As part of implementation, Deloitte team members created training sessions according to their client's needs across the organization, everything from how to use the personalized dashboards to how to maintain the new data infrastructure.  
+
+The Deloitte-designed dashboards and data infrastructure instantly became valuable assets to multiple stakeholders across the client's global team. 
+
+Note that in their work with the client, Deloitte was not following the PACE workflow as it is listed above. Rather, while documenting the details of their work into this case study, Deloitte's work for the client has been organized according to the PACE workflow to demonstrate the versatility of its application. 
+
+### Summarizing the results
+
+When Deloitte started working with their new client, they were hesitant to trust the accuracy of the company's existing data because of a lack of standardization between the marketing and sales teams. That lack of consistency made it difficult to associate any particular sale to a specific campaign. After a few weeks of studying the client's sales and marketing processes and EDA of their data, Deloitte rebuilt the data infrastructure in a way that directly tied all sales to their applicable marketing campaigns. They tied these sales to marketing campaigns using primary keys aligned across a number of data tables that could be easily sorted. This gave the Deloitte analysts an idea of what was possible with the data and led them to building final products that exceeded what the client thought was initially possible.
+
+Once the infrastructure was overhauled, Deloitte's performance of EDA uncovered that the client was focusing too much effort on earning new clients, to the detriment of existing client relationships. While sales to new clients did increase because of the focus of OKRs, sales to their existing customers plummeted. This result was previously unknown to the client. As a result, the client was able to pivot their strategy by both sales region and product. The dynamic dashboards Deloitte created became the client's most effective tool for measuring and tracking performance as well as setting strategy.  
+
+### Conclusion
+
+Because of Deloitte's focus on the client's business problem in both their assessment of the client's business practices and EDA of their data, they were able to uncover truths previously hidden in unstructured data. Deloitte built interactive, dynamic data dashboards designed to filter down to any sales region or product in the company so that the client could discover these truths on their own in the future. The greatest benefit of these solutions was the client's leadership and marketing leads became a much more agile team. They were better able to make effective business decisions that directly improved revenue. The data infrastructure overhaul and data dashboard solutions also helped improve the work-life balance of their analysts. All of these outcomes were notable for not only the client but also Deloitte because the client was and is a key partner and account for the firm. Because of their focus on the data, Deloitte was able to offer a solution that exceeded the client's expectations and, in turn, helped them better serve their customers around the world.
 
 `Any questions, please reach out`
 
