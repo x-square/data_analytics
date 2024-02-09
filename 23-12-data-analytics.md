@@ -2,6 +2,7 @@
 title: 'Notes on data analytics'
 author: 'Chiawei Wang'
 date: 'December 2023'
+date-format: "MMMM YYYY"
 ---
 
 `This document compiles information from Google Data Analytics for academic purposes`[^1]
@@ -1146,6 +1147,6 @@ There are nine basic principles of design that data analysts should think about 
 
 `Any questions, please reach out`
 
-Chiawei Wang, PhD\
+Chiawei Wang PhD\
 Data Scientist\
 <chw.wng@outlook.com>
