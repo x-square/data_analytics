@@ -41,7 +41,7 @@ Course descriptions:
 
 Computer Scientist Jim Gray, a Turing Award winner, envisions Data Science as a fourth paradigm of science, that is, **theoretical**, **empirical**, **computational** and **data-driven**.[^3]
 
-[^3]: Hey, T.; Tansley, S.; Tolle, K. & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
+[^3]: Hey, T; Tansley, S; Tolle, K & Gray, J. 2009. The fourth paradigm: Data-intensive scientific discovery. Microsoft Research. <https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery>
 
 ## Profiles of data professionals
 
@@ -4723,13 +4723,11 @@ Good luck with this project! Your Waze team members are looking forward to seein
 
 ## Case study: Deloitte
 
-Deloitte is an audit, consulting, tax, and advisory service. The company has over 100,000 employees and partners around the globe, and they work with many of the world's biggest companies. Their services range from tax and accounting solutions to artificial intelligence and cyber security risk programs.
+Deloitte is a global firm offering audit, consulting, tax, and advisory services with over 100,000 employees worldwide. They partner with major companies, providing a range of solutions from tax and accounting to advanced technologies like artificial intelligence and cybersecurity. Their focus is on customizing services to meet individual client needs through a business-to-business (B2B) model.
 
-The multinational corporation's business to business (B2B) model keeps their focus on working with their customers on a number of strategic and financial fronts, according to their individual needs.
+Deloitte offers various services for client projects, including auditing, consulting, financial advisory, risk advisory, tax assistance, data analysis, and regulatory support. Since 2008, their aim has been to set the standard for professional business services. By prioritizing this goal, they have stayed ahead in technology, implementing real-time metrics for clients.
 
-Deloitte provides a range of services for client projects, such as auditing, consulting, financial advisory, risk advisory, taxes, data analysis, and regulation. Since 2008, Deloitte has made it their vision to be the standard of excellence in professional business services. Because of this focus, Deloitte has remained at the forefront of technology advancements, including the deployment of real-time metrics for their clients.
-
-In just one of their many success stories,  Deloitte recently helped a billion-dollar cloud-based analytics and software company streamline the tracking and organization of their marketing leads and strategic analysis of their performance data. In this reading, you will see how Deloitte used EDA to analyze the client's data in order to propose and apply a comprehensive solution they still use today.
+One notable success involves Deloitte aiding a billion-dollar cloud-based analytics and software firm in optimizing their marketing lead tracking and performance analysis. Through exploratory data analysis (EDA), Deloitte analyzed the client's data and developed a lasting solution that continues to benefit them.
 
 ### The challenges 
 
@@ -4783,11 +4781,11 @@ Deloitte quickly learned what OKRs the client wanted easy access to once the per
 
 #### Analyze
 
-As part of the framing of their initial analysis of the client's data, it became clear the client was unfamiliar with Deloitte's product services offerings, including assets like easy-to-use Tableau dashboard tooling. Because of this, the client's assumptions and requests for what was possible fell far below Deloitte's actual capability. This represented an opportunity to not only meet, but actually exceed the client's expectations of the project. 
+During the initial analysis, it became apparent that the client was unfamiliar with Deloitte's product offerings, such as the user-friendly Tableau dashboard tool. This led to the client underestimating what Deloitte could provide, presenting an opportunity to surpass their expectations.
 
-The first challenges of analysis were in understanding where the data was coming from and what each data variable meant. The client used non-standard naming conventions and definitions in their data, so Deloitte had to use discovering practices to learn their language to fully understand the client's data and plan for how to help them use it. 
+The first challenge was understanding the data sources and meanings of each variable, as the client used non-standard naming conventions and definitions. Deloitte had to employ discovery techniques to grasp the client's terminology and fully comprehend their data for effective assistance.
 
-Deloitte found that the client's approach to tracking performance at the time was clunky and overbroad at best. The performance data they gathered consisted of the use of overall averages to determine value of strategic company-wide actions. Without specific performance data per region, the company had no simple way of tracking regional performance.  
+Deloitte discovered that the client's method of tracking performance was cumbersome and lacked specificity. They relied on overall averages to assess company-wide actions, lacking regional performance tracking.
 
 As an example of the client's overbroad data tracking at the time, this was the formula they used to derive the average revenue they gained per marketing campaign: 
 
@@ -4795,21 +4793,19 @@ $$
 \frac{average\ customer\ contract\ value}{average\ cost\ of\ marketing\ campaigns} = average\ revenue\ gained\ per\ campaign
 $$
 
-Deloitte learned that the client's internal marketing and sales teams were organized according to geographic regions, industries, and customer account size. Regional leads had the authority and autonomy to conduct marketing research and campaigns on their own, but did take guidance and occasional instruction from the global team. Deloitte's analysts began structuring the data in a consistent way company wide as part of their EDA of the client's data.
+Deloitte discovered that the client's marketing and sales teams were organized by geographic regions, industries, and customer account sizes. While regional leads had authority to conduct marketing activities, they also received guidance from the global team. Deloitte standardized the data structure across the company during their exploratory data analysis (EDA).
 
-In terms of customer life cycle, Deloitte learned that the client's marketing leads would generate marketing campaigns and then inform sales partners in their regions. Field sales representatives would follow up on all leads generated from the campaigns, and they would also network outside of existing campaigns to find additional customers. This discovering part of EDA informed Deloitte's team on more specific and plausible solutions that could meet the client's needs. 
+Regarding the customer life cycle, Deloitte found that marketing leads initiated campaigns and informed regional sales partners, who then followed up on generated leads and sought additional customers independently. This insight from EDA informed Deloitte's team about potential solutions for the client.
 
-The Deloitte team used discovering and structuring practices of EDA in spreadsheets to review all of the existing data from the client's Salesforce and marketing campaigns. They began to identify and define every data variable that existed in their client's sales system. Once an inventory of data variables was structured, cleaned, and validated, the Deloitte team brainstormed the type of insights they could glean from the information. 
-
-After the review, Deloitte utilized the presenting practice of EDA to share the information they had gathered with the client. They listened and asked questions to get a better understanding of how the client viewed their own business and what factors were important to them according to the data.  
+Using spreadsheets, Deloitte reviewed data from the client's Salesforce and marketing campaigns, defining and validating every data variable. With a structured inventory of variables, they brainstormed insights. Deloitte then presented their findings to the client, engaging in dialogue to better understand the client's business perspective and priorities based on the data.
 
 #### Construct
 
-From their analysis of the client's systems and the discovering, structuring, and cleaning practices of EDA they did on the client's performance data, Deloitte learned that the client needed a total overhaul of their analytical process, one that provided much greater detail and allowed them to identify and address bottlenecks, unprofitable campaigns, and unproductive customer segments.
+Through their analysis and exploratory data practices, Deloitte discovered that the client required a comprehensive restructuring of their analytical process. This involved gaining deeper insights to pinpoint and resolve issues like bottlenecks, unprofitable campaigns, and unproductive customer segments.
 
-With the client's approval, Deloitte completely rebuilt the client's data internal infrastructure from the ground up to make analysis more streamlined.  
+With the client's agreement, Deloitte undertook a complete reconstruction of the client's internal data infrastructure to enhance analysis efficiency.
 
-On top of the infrastructure overhaul, the most hands-on solution for the client was to build customized and dynamic dashboards for specific stakeholders. 
+Additionally, Deloitte developed customized and interactive dashboards tailored to specific stakeholders, providing a more hands-on solution to meet the client's needs.
 
 - The Deloitte team worked with each client stakeholder group to understand their needs and their OKRs.
 - They then helped develop tailored solutions for the client by creating supporting collateral resources, such as a data dictionary to define what each variable represents and how it should and should not be used. 
@@ -4818,25 +4814,66 @@ Deloitte used the information they gathered from their client's data to build au
 
 #### Execute
 
-Deloitte's overhaul of their client's data infrastructure led to a streamlined, tiered approach to global data gathering. Where before the client was forced to rely on regionally gathered and inconsistently structured spreadsheets to formulate their performance metrics, they could now easily quantify everything from global, company-wide performance down to the performance of a regional team of sales team members on specific products and subset of clients.
+Deloitte's restructuring of the client's data setup resulted in a more efficient global data collection system. Previously, the client relied on inconsistent spreadsheets from various regions to assess performance, but now they could easily track everything from overall company performance to regional sales team performance on specific products and client subsets.
 
-After implementation of personalized dashboards, Senior VPs could filter the status and performance of the OKRs to the whole departments and regions for which they were responsible. Additionally, regional leads, marketing leads, and even local sales leads were able to view data filtered down to their applicable area. 
+Following the implementation of personalized dashboards, Senior VPs could monitor department and regional performance based on their objectives and key results (OKRs). Regional leads, marketing leads, and local sales leads could access data relevant to their areas.
 
-As part of implementation, Deloitte team members created training sessions according to their client's needs across the organization, everything from how to use the personalized dashboards to how to maintain the new data infrastructure.  
+Deloitte conducted tailored training sessions across the organization to ensure everyone understood how to use the new dashboards and maintain the updated data infrastructure.
 
-The Deloitte-designed dashboards and data infrastructure instantly became valuable assets to multiple stakeholders across the client's global team. 
+The dashboards and data setup created by Deloitte quickly became valuable tools for multiple stakeholders within the client's global team.
 
-Note that in their work with the client, Deloitte was not following the PACE workflow as it is listed above. Rather, while documenting the details of their work into this case study, Deloitte's work for the client has been organized according to the PACE workflow to demonstrate the versatility of its application. 
+It's worth noting that while Deloitte didn't follow the PACE workflow during their work with the client, this case study organizes their efforts according to PACE to illustrate its adaptable nature.
 
 ### Summarizing the results
 
-When Deloitte started working with their new client, they were hesitant to trust the accuracy of the company's existing data because of a lack of standardization between the marketing and sales teams. That lack of consistency made it difficult to associate any particular sale to a specific campaign. After a few weeks of studying the client's sales and marketing processes and EDA of their data, Deloitte rebuilt the data infrastructure in a way that directly tied all sales to their applicable marketing campaigns. They tied these sales to marketing campaigns using primary keys aligned across a number of data tables that could be easily sorted. This gave the Deloitte analysts an idea of what was possible with the data and led them to building final products that exceeded what the client thought was initially possible.
+When Deloitte began working with the new client, they were cautious about the accuracy of the existing data due to inconsistencies between the marketing and sales teams. After studying the client's processes and data, Deloitte redesigned the data system to link sales directly to marketing campaigns. They achieved this by aligning primary keys across various data tables, making sorting easier. This allowed Deloitte analysts to realize the potential of the data and create solutions beyond the client's expectations.
 
-Once the infrastructure was overhauled, Deloitte's performance of EDA uncovered that the client was focusing too much effort on earning new clients, to the detriment of existing client relationships. While sales to new clients did increase because of the focus of OKRs, sales to their existing customers plummeted. This result was previously unknown to the client. As a result, the client was able to pivot their strategy by both sales region and product. The dynamic dashboards Deloitte created became the client's most effective tool for measuring and tracking performance as well as setting strategy.  
+After the infrastructure overhaul, Deloitte's analysis revealed that the client was overly focused on acquiring new customers, neglecting existing relationships. Although sales to new clients increased as intended, sales to existing customers declined significantly, which was unknown to the client. This insight prompted the client to adjust their strategy by sales region and product. The interactive dashboards developed by Deloitte became the client's primary tool for performance measurement, tracking, and strategy setting.
 
 ### Conclusion
 
-Because of Deloitte's focus on the client's business problem in both their assessment of the client's business practices and EDA of their data, they were able to uncover truths previously hidden in unstructured data. Deloitte built interactive, dynamic data dashboards designed to filter down to any sales region or product in the company so that the client could discover these truths on their own in the future. The greatest benefit of these solutions was the client's leadership and marketing leads became a much more agile team. They were better able to make effective business decisions that directly improved revenue. The data infrastructure overhaul and data dashboard solutions also helped improve the work-life balance of their analysts. All of these outcomes were notable for not only the client but also Deloitte because the client was and is a key partner and account for the firm. Because of their focus on the data, Deloitte was able to offer a solution that exceeded the client's expectations and, in turn, helped them better serve their customers around the world.
+Due to Deloitte's emphasis on addressing the client's business challenges and analyzing their data, they uncovered valuable insights hidden within unstructured data. Deloitte created interactive data dashboards that could filter by sales region or product, empowering the client to uncover insights independently in the future. These solutions made the client's leadership and marketing teams more agile, enabling them to make better business decisions that directly boosted revenue.
+
+Additionally, the data infrastructure overhaul and dashboard solutions improved the work-life balance of analysts. These outcomes were significant for both the client and Deloitte, as the client is a crucial partner for the firm. By prioritizing data analysis, Deloitte provided a solution that surpassed the client's expectations and enabled them to better serve their global customer base.
+
+## Reference guide: The EDA process
+
+### The six practices of EDA are iterative and non-sequential
+
+Exploratory data analysis (EDA) is not like a cake recipe. It is not a step-by-step process you follow. Instead, the six practices of EDA are iterative and non-sequential. 
+
+- **Iterative**: Relating to or involving repetition of a process
+- **Non-sequential**: Not arranged in or following an order or sequence. 
+
+Because of the varying nature of datasets, the approach to exploring that data will be different each time. That means that you will need to use your logic and experience throughout the EDA process to determine which of the six practices to utilize, how many times to apply them, and when in the process you should apply them. 
+
+### Visual example
+
+Imagine you are assigned a dataset that has only 200 rows and five columns of data about trees in a coniferous forest in Norway. You know that to complete your full analysis you’ll need more than 1,000 rows and at least two more columns. Even without much more detail than that, your entire EDA process might look something like this:
+
+![Exploratory data analysis](https://github.com/x-square/visual-resources/blob/main/eda.png?raw=true 'Exploratory data analysis')
+
+Notice you performed the **validating** practice iteratively, or multiple times, to make sure your **changes to the data** did not unwittingly introduce errors. Also, because you recognized the need for more data up front, the practice of **joining** was performed immediately following the practice of **discovering**.
+
+After you **present** your **cleaned dataset** to a peer, there is a good chance you will receive notes or ideas for more exploration or cleaning. Because of that, you will see even more iterations. 
+
+> [!TIP]
+> Data scientists expect to perform the practices of EDA multiple times on a dataset before they feel comfortable declaring it clean and ready for modeling or machine learning algorithms.
+>
+
+### The importance of EDA in ethical machine learning
+
+As algorithms and machine learning networks begin to make more and more decisions on behalf of individuals, companies, and even governments, the discussion of ethics and regulation becomes more and more important. According to the Institute for Ethical AI & Machine Learning, there are eight principles for developing machine learning systems in a responsible way. 
+
+#### Key principles of the EDA process
+
+The following two principles are inherently part of the EDA process:
+
+- **Human augmentation**: This principle ensures humans are inserted throughout the AI or machine learning algorithm systems for oversight. Thorough EDA, performed by data scientists, is perhaps one of the best ways to limit bias, imbalance, and inaccuracies being fed into an algorithm. 
+- **Bias evaluation**: Without human interference, bias is too easily injected and reproduced in machine learning models. Performing methodical EDA processes will lead data scientists to be aware of and act on biases and imbalances in the data. 
+
+> [!TIP]
+> The importance of assuring adherence to ethical standards cannot be overstated in the data career space. Data professionals need to continuously grow their capacities to recognize bias and discrimination by consistently applying an ethical mindset to their EDA work.
 
 `Any questions, please reach out`
 
