@@ -7,7 +7,7 @@ date-format: "MMMM YYYY"
 
 `This document compiles information from Behavioral Data Analysis with R and Python for academic purposes`[^1]
 
-[^1]: Buisson, Florent. 2021. *Behavioral Data Analysis with R and Python: Customer-Driven Data for Real Business Results*. O'Reilly: Sebastopol, California.
+[^1]: Buisson, F. 2021. *Behavioral Data Analysis with R and Python: Customer-Driven Data for Real Business Results*. O'Reilly: Sebastopol, California.
 
 # The causal-behavioral framework for data analysis
 
