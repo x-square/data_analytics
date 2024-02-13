@@ -168,8 +168,8 @@ Data analysts will generally use both types of data in their work. Usually, qual
 
 When thinking about the benefits and challenges of big data, it helps to think about the four Vs:
 
-| Volume | Variety | Velocity | Veracity |
-|--------|---------|----------|----------|
+| **Volume** | **Variety** | **Velocity** | **Veracity** |
+|------------|-------------|--------------|--------------|
 | Amount of data | Different kinds of data | How fast the data can be processed | Quality and reliability of the data |
 
 : Four Vs for big data
@@ -684,8 +684,8 @@ Here are some other things to watch out for:
 
 As you progress in your data journey, you'll come across many types of data constraints (or criteria that determine validity). The table below offers definitions and examples of data constraint terms you might come across.
 
-| **Data constraint** | **Definition** | **Examples**|
-|---------------------|----------------|-------------|
+| **Data constraint** | **Definition** | **Examples** |
+|---------------------|----------------|--------------|
 | Data type | Values must be of a certain type: date, number, percentage, Boolean | If the data type is a date, a single number like 30 would fail the constraint and be invalid |
 | Data range | Values must fall between predefined maximum and minimum values | If the data range is 10-20, a value of 30 would fail the constraint and be invalid |
 | Mandatory | Values can't be left blank or empty | If age is mandatory, that value must be filled in |
@@ -723,8 +723,8 @@ Cloud Gate, a software company, recently hosted a series of public webinars as f
 
 | **Name** | **Research methods** | **Additional information** |
 |----------|----------------------|----------------------------|
-| **Email Address** | `xxxxx@company.com`  | Required information attendees had to submit |
-| **Company** | \<company name\> | Optional information attendees could provide |
+| Email Address | `xxxxx@company.com`  | Required information attendees had to submit |
+| Company | \<company name\> | Optional information attendees could provide |
 
 : Webinar attendance data includes the fields
 
@@ -754,8 +754,8 @@ Consider the following data issues and suggestions on how to work around them:
 
 ### No data
 
-| **Possible Solutions** | **Examples of solutions in real life**|
-|------------------------|---------------------------------------|
+| **Possible Solutions** | **Examples of solutions in real life** |
+|------------------------|----------------------------------------|
 | Gather the data on a small scale to perform a preliminary analysis and then request additional time to complete the analysis after you have collected more data | If you are surveying employees about what they think about a new performance and bonus plan, use a sample for a preliminary analysis. Then, ask for another 3 weeks to collect the data from all employees. |
 | If there isn't time to collect data, perform the analysis using proxy data from other datasets. This is the most common workaround. | If you are analyzing peak travel times for commuters but don't have the data for a particular city, use the data from another city with a similar size and demographic. |
 
@@ -763,8 +763,8 @@ Consider the following data issues and suggestions on how to work around them:
 
 ### Too little data
 
-| **Possible Solutions** | **Examples of solutions in real life**|
-|------------------------|---------------------------------------|
+| **Possible Solutions** | **Examples of solutions in real life** |
+|------------------------|----------------------------------------|
 | Do the analysis using proxy data along with actual data. | If you are analyzing trends for owners of golden retrievers, make your dataset larger by including the data from owners of labradors. |
 | Adjust your analysis to align with the data you already have. | If you are missing data for 18 to 24-year-olds, do the analysis but note the following limitation in your report: this conclusion applies to adults 25 years and older only. |
 
@@ -772,8 +772,8 @@ Consider the following data issues and suggestions on how to work around them:
 
 ### Wrong data, including data with errors
 
-| **Possible Solutions** | **Examples of solutions in real life**|
-|------------------------|---------------------------------------|    
+| **Possible Solutions** | **Examples of solutions in real life** |
+|------------------------|----------------------------------------|    
 | If you have the wrong data because requirements were misunderstood, communicate the requirements again. | If you need the data for female voters and received the data for male voters, restate your needs. |
 | Identify errors in the data and, if possible, correct them at the source by looking for a pattern in the errors. | If your data is in a spreadsheet and there is a conditional statement or boolean causing calculations to be wrong, change the conditional statement instead of just fixing the calculated values. |
 | If you can't correct data errors yourself, you can ignore the wrong data and go ahead with the analysis if your sample size is still large enough and ignoring the data won't cause systematic bias. | If your dataset was translated from a different language and some of the translations don't make sense, ignore the data with bad translation and go ahead with the analysis of the other data. |
