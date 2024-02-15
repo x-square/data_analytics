@@ -1,7 +1,7 @@
 ---
 title: 'Notes on advanced data analytics'
 author: 'Chiawei Wang'
-date: 'January 2024'
+date: 'February 2024'
 date-format: "MMMM YYYY"
 ---
 
@@ -227,8 +227,8 @@ As you have been learning, all data professionals are responsible for ensuring t
 
 RACI matrix is a tool that many organizations use to structure their projects. It also helps to outline, communicate, and understand the responsibilities of data analytics professionals and other cross-functional team members.
 
-| **Task** | **Business Intelligence Engineer** | **Data Scientist** | **Analytic Team Manager** | **Data Engineer** |**Chief Data Officer** |
-|----------------|---|---|---|---|---|
+| **Task** | **Business Intelligence Engineer** | **Data Scientist** | **Analytic Team Manager** | **Data Engineer** | **Chief Data Officer** |
+|---|---|---|---|---|---|
 | **Access to data** | R | C | R | R | A |
 | **Create models to analyze data** | C | R | C | I | A |
 | **Drive insights and recommendations based on data** | C | R | C | I | A |
@@ -4874,6 +4874,685 @@ The following two principles are inherently part of the EDA process:
 
 > [!TIP]
 > The importance of assuring adherence to ethical standards cannot be overstated in the data career space. Data professionals need to continuously grow their capacities to recognize bias and discrimination by consistently applying an ethical mindset to their EDA work.
+
+## Reference guide: Import datasets with Python
+
+Refer to [a list of Pandas dataframe functions](https://pandas.pydata.org/docs/reference/frame.html 'DataFrame') for more information.
+
+### How to import a dataset from a CSV file
+
+Start by using a `with` statement and `open()` function.  Pass the file name (or file path) of the CSV file to the `open()` function along with an argument for the `mode` parameter of the function.
+
+The mode is telling the Python library what to do with the file:
+
+- `r` – read
+- `w` – write
+- `a` – append
+- `+` – create new file
+
+```python
+with open('example_filepath/file', mode='r') as file:
+	data = file.read()
+```
+
+#### Importing a CSV file using pandas
+
+Instead of using Python's standard library to read a file, you can use pandas to import the CSV file into a dataframe. You can also use this same syntax for importing a CSV file that is stored on the internet. In the place of the filename, you would simply copy and paste the `url`.
+
+```python
+import pandas as pd
+df = pd.read_csv('example_filepath/file')
+```
+
+### How to import data by connecting to a database
+
+There are a number of database solutions that you can connect to with Python, such as BigQuery, MySQL, SQLite, and Oracle. Databases are a convenient way for companies and organizations to store huge amounts of data. 
+
+If the dataset is small enough, it can be downloaded and manipulated locally on your computer. However, often the datasets kept in databases are too large to access in their entirety on a personal computer. In this case you have a number of different options, most of which involve querying the database with SQL to obtain specific tables of interest. In other words, you extract select parts, usually specified rows and/or columns, from the whole dataset.
+
+#### Downloading data from BigQuery
+
+1. Click into the search bar in the Explorer on the left side of the page. For example, you can search for **trees**. Initially, this will return zero results. However, click **Search all projects** and it will return applicable datasets from the **bigquery-public-data** project and premade tables from those datasets.
+
+![Download data from BigQuery step 1](https://github.com/x-square/visual-resources/blob/main/sql-step-1.png?raw=true 'Download data from BigQuery step 1')
+
+2. Click the **street_trees** table in the **san_francisco** dataset. The metadata for this table will appear in a panel to the right. Then, click **Query** from the menu at the top of the metadata panel. You can opt to query in a new tab or in a split-pane of the current window.
+
+![Download data from BigQuery step 1](https://github.com/x-square/visual-resources/blob/main/sql-step-2.png?raw=true 'Download data from BigQuery step 2')
+
+3. Now, you can query the table using **SQL**. For example, the query in the following screenshot selects 5,000 rows with columns of **tree_id**, **plant_type**, **species**, **plant_date**, and **dbh** defined as depth, height.
+4. Once you are satisfied with your query, click the **Run** button at the top of the SQL query panel. The results will display below, and there is a button to **Save results**, which allows you to save the resulting table in different locations and formats. From there, you can read the data into your notebook.
+
+![Download data from BigQuery step 3](https://github.com/x-square/visual-resources/blob/main/sql-step-3.png?raw=true 'Download data from BigQuery step 3')
+
+#### Using notebooks within BigQuery
+
+Another way to access data on BigQuery is by using the tools within the BigQuery platform itself. This workflow more closely resembles what data professionals would use when working with very large datasets stored in the cloud.
+
+This process requires you to set up a payment method. However, new users get a $300 credit, and a ML instance is only a few cents per minute, so you’ll get approximately 2,000 hours of free usage before incurring any charges.
+
+## Reference guide: Pandas methods for the discovery of a dataset
+
+### DataFrame.head()
+
+- The `head()` method will display the first `n` rows of the dataframe e.g. `df.head(10)`.
+- In the argument field, input the number of rows you want displayed in a Python notebook. The default is 5 rows.
+
+### DataFrame.info()
+
+- The `info()` method will display a summary of the dataframe, including the range index, dtypes, column headers, and memory usage.
+- Leaving the argument field blank will return a full summary. As an option, in the argument field you can type in `show_counts=False`, which will not return the count of non-null values for each column. 
+
+### DataFrame.describe()
+
+- The `describe()` method will return descriptive statistics of the entire dataset, including total count, mean, minimum, maximum, dispersion, and distribution. 
+- Leaving the argument field blank will default to returning a summary of the data frame’s statistics. As an option, you can use `include=[]` and `exclude=[]` which will limit the results to specific data types, depending on what you input in the brackets.
+
+### DataFrame.sample()
+
+- The `sample()` method randomly selects a specified number of row.
+- You can control the number of rows to sample using the `n` parameter or the fraction of rows using the `frac = 0.x` parameter.
+
+### DataFrame.shape
+- `shape` is an attribute that returns a tuple representing the dimensions of the dataframe by number of rows and columns. Remember that attributes are not followed by parentheses.
+
+## Reference guide: Datetime manipulation
+
+### Manipulating datetime strings in Python
+
+| **Code** | **Format** | **Example** |
+|----------|------------|-------------|
+| **%a** | Abbreviated weekday | Sun |
+| **%A** | Weekday | Sunday |
+| **%b** | Abbreviated month | Jan |
+| **%B** | Month name | January |
+| **%c** | Date and time | Sun Jan 1 00:00:00 2021 |
+| **%d** | Day (leading zeros) | 01 to 31 |
+| **%H** | 24 hours | 00 to 23 |
+| **%I** | 12 hours | 01 to 12 |
+| **%j** | Day of year | 001 to 366 |
+| **%m** | Month | 01 to 12 |
+| **%M** | Minute | 00 to 59 |
+| **%p** | AM or PM | AM/PM |
+| **%S** | Seconds | 00 to 61 |
+| **%U** | Week number (Sun) | 00 to 53 |
+| **%W** | Week number (Mon) | 00 to 53 |
+| **%w** | Weekday | 0 to 6 |
+| **%x** | Locale’s appropriate date representation | 08/16/88 (None) <br> 08/16/1988 (en_US)<br> 16.08.1988 (de_DE) |
+| **%X** | A locale’s appropriate time representation | 21:30:00 (en_US);<br>21:30:00 (de_DE) |
+| **%y** | Year without century | 00 to 99 |
+| **%Y** | Year | 2022 |
+| **%z** | Offset | +0900 |
+| **%Z** | Time zone | EDT/JST/WET etc (GMT) |
+
+: Datetime function
+
+
+| **Code** | **Input Type** | **Input Example** | **Output Type** | **Output Example** |
+|----------|----------------|-------------------|-----------------|--------------------|
+| **datetime.strptime <br> ('25/11/2022', '%d/%m/%Y')** | string | '25/11/2022' | DateTime | '2022-11-25  00:00:00' |
+| **datetime.strftime <br> (dt_object, '%d/%m/%Y')** | DateTime | '2022-11-25  00:00:00' | string | '25/11/2022' |
+| **dt_object = datetime.strptime <br> ('25/11/2022', '%d/%m/%Y')<br>datetime.timestamp(dt_object)** | string | '25/11/2022' | float (UTC timestamp in seconds) | 1617836400.0 |
+| **datetime.strptime <br> ('25/11/2022', '%d/%m/%Y') <br> .strftime('%Y-%m-%d')** | string | '25/11/2022' | string | '2022-11-25' |
+| **datetime.fromtimestamp <br> (1617836400.0)** | float (UTC timestamp in seconds) | 1617836400.0 | DateTime | datetime.datetime <br> (2021, 4, 7, 23, 0) |
+| **datetime.datetime(2021, 4, 7, 23, 0) <br> datetime.fromtimestamp(1617836400.0) <br> .strftime('%d/%m/%Y')** | float (UTC timestamp in seconds) | 1617836400.0 | string | ''07/04/2021'' |
+| **from pytz import timezone**<br>**ny_time = datetime.strptime <br> ('25-11-2022  09:34:00-0700', <br> '%d-%m-%Y  %H:%M:%S%z')** <br> **Tokyo_time = ny_time.astimezone <br> (timezone(‘Asia/Tokyo’))** | string | NewYork timezone '25-11-2022  09:34:00-0700' | DateTime | Tokyo timezone 2022, 11, 26, 1, 34, JST+9:00:00 STD> |
+| **datetime.strptime <br> ('20:00', '%H:%M') <br> .strftime('%I:%M %p')** | string | '20:00' | string | '08:00 PM' |
+| **datetime <br> .strptime('08:00 PM', '%I:%M  %p') <br> .strftime('%H:%M')** | string | '08:00 PM' | string | '20:00' |
+
+: Date string manipulations
+
+### Date string manipulations
+
+```python
+import pandas as pd
+data = ['2023-01-20', '2023-04-27', '2023-06-15']
+my_series = pd.Series(data)
+my_series
+
+# Output
+0    2023-01-20
+1    2023-04-27
+2    2023-06-15
+dtype: object
+```
+
+```python
+my_series = pd.to_datetime(my_series)
+my_series
+
+# Output
+0   2023-01-20
+1   2023-04-27
+2   2023-06-15
+dtype: datetime64[ns]
+```
+
+```python
+print(my_series.dt.year)
+print(my_series.dt.month)
+print(my_series.dt.day)
+
+# Output
+0    2023
+1    2023
+2    2023
+dtype: int64
+0    1
+1    4
+2    6
+dtype: int64
+0    20
+1    27
+2    15
+dtype: int64
+```
+
+## Reference guide: Pandas tools for structuring a dataset
+
+### Combine data
+
+#### df.merge()
+
+Use `df.merge()` to take columns or indices from other dataframes and combine them with the one to which you’re applying the method.
+
+```python
+df1.merge(df2, how=‘inner’, on=[‘month’,’year’])
+```
+
+#### pd.concat()
+
+Use `pd.concat()` to join columns, rows, or dataframes along a particular axis
+
+```python
+df3 = pd.concat([df1.drop(['column_1','column_2'], axis=1), df2])
+```
+
+### df.join()
+
+Use `df.join()` to combine columns with another dataframe either on an index or on a key column. Efficiently join multiple DataFrame objects by index at once by passing a list.
+
+```python
+df1.set_index('key').join(df2.set_index('key'))
+```
+
+### Extract or select data
+
+#### df[[columns]]
+
+Use `df[[columns]]` to extract/select columns from a dataframe.
+
+```python
+print(df)
+print()
+df[['animal', 'legs']]
+
+# Output
+ animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+     animal  legs
+0  cardinal     2
+1     gecko     4
+2     raven     2
+```
+
+#### df.select_dtypes()
+
+Use `df.select_dtypes()` to return a subset of the dataframe’s columns based on the column dtypes e.g. float64, int64, bool, object, etc.
+
+```python
+print(df)
+print()
+df2 = df.select_dtypes(include=['int64'])
+df2
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+   legs
+0     2
+1     4
+2     2
+```
+
+### Filter data
+
+#### df[condition]
+
+Use `df[condition]` to create a Boolean mask, then apply the mask to the dataframe to filter according to selected condition.
+
+```python
+print(df)
+print()
+df[df['class']=='Aves']
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+     animal class  color  legs
+0  cardinal  Aves    red     2
+2     raven  Aves  black     2
+```
+
+### Sort data
+
+#### df.sort_values()
+
+Use `df.sort_values()` to sort data according to selected parameters.
+
+```python
+print(df)
+print()
+df.sort_values(by=['legs'], ascending=False)
+
+# Output
+ animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+     animal     class  color  legs
+1     gecko  Reptilia  green     4
+0  cardinal      Aves    red     2
+2     raven      Aves  black     2
+```
+
+### Slice data 
+
+#### df.iloc[]
+
+Use `df.iloc[]` to slice a dataframe based on an integer index location.
+
+```python
+df.iloc[5:10, 2:]           → selects only rows 5 through 9, at columns 2+ 
+df.iloc[5:10]               → selects only rows 5 through 9, all columns
+df.iloc[1, 2]               → selects value at row 1, column 2
+df.iloc[[0, 2], [2, 4]] 	→ selects only rows 0 and 2, at columns 2 and 4
+```
+
+#### df.loc[]
+
+Use `df.loc[]` to slice a dataframe based on a label or Boolean array.
+
+```python
+print(df)
+print()
+df.loc[:, ['color', 'class']]
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+   color     class
+0    red      Aves
+1  green  Reptilia
+2  black      Aves
+```
+
+### Resources for more information
+
+- [pandas documentation](https://pandas.pydata.org/docs/index.html 'pandas documentation')
+- [W3 schools: Learn to code](https://www.w3schools.com/ 'W3 schools: Learn to code')
+
+## Histograms
+
+Histograms are commonly used to illustrate the shape of a distribution, including the presence of any outliers, the center of the distribution, and the spread of the data. Histograms are typically represented by a series of bars, where each bar represents a range of values. Bar height represents the frequency or count of the data points within that range.
+
+Interpreting histograms involves understanding the **shape**, **center**, and **spread** of the distribution.
+
+A symmetric histogram has a bell-shaped curve with a peak in the middle, indicating that the data is evenly distributed around the mean. This is also known as a normal, or Gaussian, distribution.
+
+A skewed histogram has a longer tail on one side than the other. A right-skewed histogram has a longer tail on the right side, indicating that there are more data points on the left side of the histogram. A left-skewed distribution has a longer tail on the left side, indicating more data points on the right side.
+
+A bimodal histogram has two distinct peaks, indicating that the data has two modes.
+
+A uniform histogram has a flat distribution, indicating that all data points are evenly distributed.
+
+Use the `hist()` function in the pyplot module. Bins refer to the number of bins you want to sort your data into. The default value is 10. In the following, the data being plotted is the seconds column of the dataframe. The bins begin at 40 seconds and go to 100 seconds in steps of five, for a total of 12 bins.
+
+```python
+# Plot histogram with matplotlib pyplot
+plt.hist(df['seconds'], bins=range(40, 101, 5))
+plt.xticks(range(35, 101, 5))
+plt.yticks(range(0, 61, 10))
+plt.xlabel('seconds')
+plt.ylabel('count')
+plt.title('Old Faithful geyser - time between eruptions')
+plt.show()
+```
+
+```python
+# Plot histogram with seaborn
+ax = sns.histplot(df['seconds'], binrange=(40, 100), binwidth=5, color='#4285F4', alpha=1)
+ax.set_xticks(range(35, 101, 5))
+ax.set_yticks(range(0, 61, 10))
+plt.title('Old Faithful geyser - time between eruptions')
+plt.show()
+```
+
+![Example of histogram](https://github.com/x-square/visual-resources/blob/main/histogram.png?raw=true 'Example of histogram')
+
+## Data deduplication with Python
+
+### Identifying duplicates 
+
+Using the `duplicated()` function, the result is that one has been marked `True`, indicating it is a duplicate.
+
+```python
+print(df)
+print() # To leave a space between results for readability
+print(df.duplicated())
+
+
+# Output
+brand    style  rating
+0   Wowyow  cistern     4.0
+1   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+
+0    False
+1     True
+2    False
+3    False
+4    False
+dtype: bool
+```
+
+Below is an example of identifying duplicates in only one column subset of values and labeling the last duplicates as `False`, so that they are kept`.
+
+```python
+print(df)
+print()
+print(df.duplicated(subset=['type'], keep='last'))
+
+# Output
+color  rating     type
+0   olive     9.0    rinds
+1   olive     9.0    rinds
+2    gray     4.5  pellets
+3  salmon    11.0  pellets
+4  salmon     7.0  pellets
+
+0     True
+1    False
+2     True
+3     True
+4    False
+dtype: bool
+```
+
+### Decision time: To drop or not to drop?
+
+#### Deciding to drop
+
+You should drop or eliminate duplicate values if duplicate values are clearly mistakes or will misrepresent the remaining unique values in the dataset e.g. house addresses.
+
+#### Deciding to NOT drop
+
+You should keep duplicated data in your dataset if the duplicate values are clearly not mistakes and should be taken into account when representing the dataset as a whole e.g. distances of an Olympic shot-put athlete in training.
+
+### How to do deduplication 
+
+**Deduplication** is the elimination or removal of matching data values in a dataset that will by default only drop duplicates of exact matches of entire rows of data. 
+
+```python
+df.drop_duplicates()
+
+# Raw data
+brand    style  rating
+0   Wowyow  cistern     4.0
+1   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+
+# Output
+brand    style  rating
+0   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+```
+
+This example drops all rows that have duplicate values in the **style** column except for the first occurrence.
+
+```python
+print(df)
+df = df.drop_duplicates(subset='style')
+print()
+print(df)
+
+# Output
+brand    style  rating
+0   Wowyow  cistern     4.0
+1   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+
+     brand    style  rating
+0   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+```
+
+This example drops all rows except the first occurrence that have duplicate values in both the style and rating columns.
+
+```python
+print(df)
+df = df.drop_duplicates(subset=['style', 'rating'])
+print()
+print(df)
+
+# Output
+brand    style  rating
+0   Wowyow  cistern     4.0
+1   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+
+     brand    style  rating
+0   Wowyow  cistern     4.0
+2  Splaysh      jug     5.5
+3  Splaysh    stock     3.3
+4  Pipplee    stock     3.0
+```
+
+### Additional resources
+
+- [pandas.DataFrame.drop_duplicates](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html 'pandas.DataFrame.drop_duplicates')
+- [W3 Schools: removing duplicates](https://www.w3schools.com/python/pandas/pandas_cleaning_duplicates.asp 'W3 Schools: removing duplicates')
+
+## Reference guide: How to handle outliers
+
+**Global outliers** are data points that are significantly different from the majority of the data across the entire dataset. They are usually identified by statistical methods such as standard deviation or z-scores. Global outliers stand out irrespective of the context of the data.
+
+**Contextual outliers** are data points that may not be considered outliers when examined in isolation but are outliers within a specific subset or context of the data. For example, in a dataset of exam scores, a score of 80 might be typical, but if it's among scores of 90 or above in a particular school, it could be considered a contextual outlier for that school.
+
+**Collective outliers** are not individual data points but rather groups or clusters of data that deviate significantly from the norm. They may indicate a systematic issue or a distinct subgroup within the dataset. Collective outliers are often identified through clustering or anomaly detection techniques.
+
+Whether you keep outliers as they are, delete them, or reassign values is a decision that you make on a dataset-by-dataset basis.
+
+### Delete them
+
+A box plot helps visualize two different outliers.
+
+```python
+box = sns.boxplot(x=df['number_of_strikes'])
+g = plt.gca()
+box.set_xticklabels(np.array([readable_numbers(x) for x in g.get_xticks()]))
+plt.xlabel('Number of strikes')
+plt.title('Yearly number of lightning strikes')
+```
+
+Find the lower limit.
+
+```python
+# Calculate 25th percentile of annual strikes
+percentile25 = df['number_of_strikes'].quantile(0.25)
+
+# Calculate 75th percentile of annual strikes
+percentile75 = df['number_of_strikes'].quantile(0.75)
+
+# Calculate interquartile range
+iqr = percentile75 - percentile25
+
+# Calculate upper and lower thresholds for outliers
+upper_limit = percentile75 + 1.5 * iqr
+lower_limit = percentile25 - 1.5 * iqr
+
+print('Lower limit is: ', lower_limit)
+
+# Output
+Lower limit is:  8585016.625
+```
+
+A Boolean mask was used to filter the dataframe so it only contained rows where the number of strikes was less than the lower limit.
+
+```python
+print(df[df['number_of_strikes'] < lower_limit])
+
+# Output
+number_of_strikes  year
+1              209166  2019
+33            7378836  1987
+```
+
+Once you know the cutoff points for outliers, if you want to delete them, you can use a Boolean mask to select all rows such that: lower limit $\leq$ values $\leq$ upper limit.
+
+```python
+mask = (df['number_of_strikes'] >= lower_limit) & (df['number_of_strikes'] <=
+upper_limit)
+
+df = df[mask].copy()
+print(df)
+
+# Output
+number_of_strikes  year
+0            15620068  2020
+2            44600989  2018
+3            35095195  2017
+4            41582229  2016
+5            37894191  2015
+6            34919173  2014
+7            27600898  2013
+8            28807552  2012
+9            31392058  2011
+10           29068965  2010
+11           30100585  2009
+12           29790934  2008
+13           30529064  2007
+14           33292382  2006
+15           38168699  2005
+16           40023951  2004
+17           39092327  2003
+18           29916767  2002
+19           25470095  2001
+20           26276135  2000
+21           27758681  1999
+22           28802221  1998
+23           26986915  1997
+24           26190094  1996
+25           22763540  1995
+26           25094010  1994
+27           24206929  1993
+28           16371876  1992
+29           16900934  1991
+30           15839052  1990
+31           14245186  1989
+32            9150440  1988
+```
+
+### Reassigning them
+
+#### Create a floor and ceiling at a quantile
+
+For example, you could place walls at the 90th and 10th percentile of the distribution of data values. Any value above the 90% mark or below the 10% mark are changed to fit within the walls you set. 
+
+```python
+# Calculate 10th percentile
+tenth_percentile = np.percentile(df['number_of_strikes'], 10)
+
+# Calculate 90th percentile
+ninetieth_percentile = np.percentile(df['number_of_strikes'], 90)
+
+# Apply lambda function to replace outliers with thresholds defined above
+df['number_of_strikes'] = df['number_of_strikes'].apply(lambda x: (
+    tenth_percentile if x < tenth_percentile 
+    else ninetieth_percentile if x > ninetieth_percentile 
+    else x))
+
+# Output
+0     15620068.0
+1     14657650.6
+2     38815238.6
+3     35095195.0
+4     38815238.6
+5     37894191.0
+6     34919173.0
+7     27600898.0
+8     28807552.0
+9     31392058.0
+10    29068965.0
+11    30100585.0
+12    29790934.0
+13    30529064.0
+14    33292382.0
+15    38168699.0
+16    38815238.6
+17    38815238.6
+18    29916767.0
+19    25470095.0
+20    26276135.0
+21    27758681.0
+22    28802221.0
+23    26986915.0
+24    26190094.0
+25    22763540.0
+26    25094010.0
+27    24206929.0
+28    16371876.0
+29    16900934.0
+30    15839052.0
+31    14657650.6
+32    14657650.6
+33    14657650.6
+Name: number_of_strikes, dtype: float64
+```
+
+#### Reassigning
+
+In some cases, it might be best to reassign all outlier values to match the median or mean value. This will ensure that your median and distribution are based solely on the non-outlier values, leaving the original outliers excluded. The actual imputation or reassigning of values can be pretty simple if you’ve already found the outliers. The following code block calculates the median of the values greater than the lower limit. Then it imputes the median where values are lower than the lower limit.
+
+```python
+# Calculate median of all NON-OUTLIER values
+median = np.median(df['number_of_strikes'][df['number_of_strikes'] >= lower_limit])
+
+# Impute the median for all values < lower_limit
+df['number_of_strikes'] = np.where(df['number_of_strikes'] < lower_limit, median, df['number_of_strikes'] )
+
+# Output
+[ 15620068.   28804886.5  44600989.   35095195.   41582229.   37894191.
+  34919173.   27600898.   28807552.   31392058.   29068965.   30100585.
+  29790934.   30529064.   33292382.   38168699.   40023951.   39092327.
+  29916767.   25470095.   26276135.   27758681.   28802221.   26986915.
+  26190094.   22763540.   25094010.   24206929.   16371876.   16900934.
+  15839052.   14245186.    9150440.   28804886.5]
+```
 
 `Any questions, please reach out`
 
