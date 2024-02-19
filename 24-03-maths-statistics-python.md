@@ -1,5 +1,5 @@
 ---
-title: 'Notes on maths and statistics with Python for data science'
+title: 'Notes on maths and statistics for data science'
 author: 'Chiawei Wang'
 date: 'March 2024'
 date-format: "MMMM YYYY"
