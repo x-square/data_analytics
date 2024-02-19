@@ -1304,12 +1304,12 @@ graph TD
 ## Matrix multiplication
 
 $$
-c_{ij}\sum_{k=1}^{n}a_{ik}*ba_{jk}=a_{i1}*a_{j1}\ldots+a_{in}*a_{jn}
+c_{ij}\sum_{k=1}^{n}a_{ik} \times ba_{jk}=a_{i1} \times a_{j1}\ldots+a_{in} \times a_{jn}
 $$
 
 ![Matrix multiplication](https://github.com/x-square/visual-resources/blob/main/matrix-multiplication.png?raw=true 'Matrix multiplication')
 
-If A is a `4` $\times$ 2 matrix and B a 2 $\times$ `3` matrix, the matrix product C is defined to be a `4` $\times$ `3` matrix.
+If A is a `4` $\times$ $2$ matrix and B a $2$ $\times$ `3` matrix, the matrix product C is defined to be a `4` $\times$ `3` matrix.
 
 $c11=a11 \times b11+a12 \times b21$\
 $c12=a11 \times b12+a12 \times b22$\
