@@ -843,9 +843,7 @@ You are the newest member of Waze's data team. Your team is about to begin their
 - Assign PACE stages to the requested tasks for the user churn project
 - Organize tasks into milestones
 - Create a project proposal for the Waze data team
-
-Note that the story, all names, characters, and incidents portrayed in these projects are fictitious. No identification with actual persons (living or deceased) is intended or should be inferred. And, the data shared in this project has been created for pedagogical purposes. 
-
+ 
 ### Key takeaways
 
 In Course 1, Foundations of Data Science, you explored the world of data professionals and learned how data analysis contributes to an organization's goals.
@@ -854,6 +852,8 @@ In Course 1, Foundations of Data Science, you explored the world of data profess
 - Understand cross-functional team dynamics
 - Project management
 - Share insights and ideas with stakeholders
+
+Note that the story, names, characters, and incidents portrayed in these projects are fictitious. No identification with actual persons (living or deceased) is intended or should be inferred. And, the data shared in this project has been created for pedagogical purposes.
 
 ## Automatidata scenario
 
@@ -1510,7 +1510,7 @@ Python has three logical operators that can be combined with comparators to crea
 x = 3
 my_list = [3, 4, 6, 10]
 
-print(x < 3 and x != 0)
+print(x <3 and x != 0)
 print(x >= len(my_list) or x == min(my_list))
 print(x not in my_list)
 
@@ -2764,12 +2764,12 @@ empty_dict_2 = dict()
 The `dict()` function uses a different syntax, where keys are entered as the function's keyword arguments and values are assigned with an equals operator. Notice that, because the keywords cannot be entered as strings, they cannot contain whitespaces.
 
 ```python
-smallest_countries = dict(africa='Seychelles',
-                         asia='Maldives',
-                         europe='Vatican City',
-                         oceania='Nauru',
-                         north_america='St. Kitts and Nevis',
-                         south_america ='Suriname'
+smallest_countries = dict(africa = 'Seychelles',
+                         asia = 'Maldives',
+                         europe = 'Vatican City',
+                         oceania = 'Nauru',
+                         north_america = 'St. Kitts and Nevis',
+                         south_america  = 'Suriname'
 )
 ```
 
@@ -4361,9 +4361,9 @@ If you inspect the row index, you'll get a **MultiIndex** object containing info
 grouped.index
 
 # Output
-MultiIndex(levels=[['blue', 'green', 'red'], ['pants', 'shirt']],
-           labels=[[0, 0, 1, 2], [0, 1, 1, 0]],
-           names=['color', 'type'])
+MultiIndex(levels = [['blue', 'green', 'red'], ['pants', 'shirt']],
+           labels = [[0, 0, 1, 2], [0, 1, 1, 0]],
+           names = ['color', 'type'])
 ```
 
 The column index shows a **MultiIndex** object containing information about the column indices:
@@ -4372,8 +4372,8 @@ The column index shows a **MultiIndex** object containing information about the 
 grouped.columns
 
 # Output
-MultiIndex(levels=[['mass_g', 'price_usd'], ['mean', 'min']],
-           labels=[[0, 0, 1, 1], [0, 1, 0, 1]])
+MultiIndex(levels = [['mass_g', 'price_usd'], ['mean', 'min']],
+           labels = [[0, 0, 1, 1], [0, 1, 0, 1]])
 ```
 
 To perform selection on a dataframe with a MultiIndex, use `loc[]` selection and put indices in parentheses. Here are some examples on **grouped**, which is a dataframe with a two-level row index and a two-level column index. For reference, here is the **grouped** dataframe:
@@ -4475,14 +4475,6 @@ color   type  mass_g  price_usd
 
 ### Automatidata
 
-#### Project goal
-
-In this fictional scenario, the New York City Taxi and Limousine Commission (TLC) has approached the data consulting firm Automatidata to develop an app that enables TLC riders to estimate the taxi fares in advance of their ride.
-
-#### Background
-
-Since 1971, TLC has been regulating and overseeing the licensing of New York City's taxi cabs, for-hire vehicles, commuter vans, and paratransit vehicles.
-
 #### Scenario
 
 You have received notice that the recently submitted New York City TLC project proposal has been approved. The Automatidata team now has access to the New York City TLC data to analyze, identify key variables, and prepare for exploratory data analysis.
@@ -4495,14 +4487,6 @@ You have received notice that the recently submitted New York City TLC project p
 - Create an executive summary for Automatidata
 
 ### TikTok
-
-#### Project goal
-
-The TikTok data team is developing a machine learning model for classifying claims made in videos submitted to the platform.
-
-#### Background
-
-TikTok is the leading destination for short-form mobile video. The platform is built to help imaginations thrive. TikTok's mission is to create a place for inclusive, joyful, and authentic content–where people can safely discover, create, and connect.
 
 #### Scenario
 
@@ -4519,14 +4503,6 @@ As a data analyst on TikTok's data team, you'll help by preparing the data neede
 - Report to TikTok's data team through an executive summary
 
 ### Waze
-
-#### Project goal
-
-Waze leadership has asked your data team to develop a machine learning model to predict user churn. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. An accurate model will help prevent churn, improve user retention, and grow Waze's business.
-
-#### Background
-
-Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. 
 
 #### Scenario
 
@@ -4558,35 +4534,7 @@ In Course 2, Get Started with Python, you were introduced to some basics of the 
 - Build a dataframe
 - Create an executive summary
 
-The end-of-course portfolio projects are designed for you to apply your data analytical skills within a workplace scenario. No matter which scenario you work with, you will practice your ability to discuss data analytic topics with coworkers, internal team members, and external clients.
-
-As a reminder, you are required to complete one project for each course. To gain additional practice, or to add more samples to your portfolio, you may complete as many of the scenarios as you wish.
-
 ## Automatidata scenario
-
-Automatidata works with its clients to transform their unused and stored data into useful solutions, such as performance dashboards, customer-facing tools, strategic business insights, and more. They specialize in identifying a client's business needs and utilizing their data to meet those business needs. 
-
-Automatidata is consulting for the New York City Taxi and Limousine Commission (TLC). New York City TLC is an agency responsible for licensing and regulating New York City's taxi cabs and for-hire vehicles. The agency has partnered with Automatidata to develop a regression model that helps estimate taxi fares before the ride, based on data that TLC has gathered. 
-
-The TLC data comes from over 200,000 taxi and limousine licensees, making approximately one million combined trips per day.
-
-### Team members at Automatidata and the New York City TLC
-
-#### Automatidata Team Members
-
-- Udo Bankole, Director of Data Analysis
-- Deshawn Washington, Data Analysis Manager
-- Luana Rodriquez, Senior Data Analyst
-- Uli King, Senior Project Manager
-
-Your teammates at Automatidata have technical experience with data analysis and data science. However, you should always be sure to keep summaries and messages to these team members concise and to the point. 
-
-#### New York City TLC Team Members
-
-- Juliana Soto, Finance and Administration Department Head
-- Titus Nelson, Operations Manager
-
-The TLC team members are program managers who oversee operations at the organization. Their roles are not highly technical, so be sure to adjust your language and explanation accordingly.
 
 ### Project background
 
@@ -4614,12 +4562,6 @@ Good luck with this project! Automatidata looks forward to seeing how you commun
 
 ## TikTok scenario
 
-At TikTok, our mission is to inspire creativity and bring joy. Our employees lead with curiosity and move at the speed of culture. Combined with our company's flat structure, you'll be given dynamic opportunities to make a real impact on a rapidly expanding company and grow your career.
-
-TikTok users have the ability to submit reports that identify videos and comments that contain user claims. These reports identify content that needs to be reviewed by moderators. The process generates a large number of user reports that are challenging to consider in a timely manner. 
-
-TikTok is working on the development of a predictive model that can determine whether a video contains a claim or offers an opinion. With a successful prediction model, TikTok can reduce the backlog of user reports and prioritize them more efficiently.
-
 ### Project background
 
 TikTok's data team is in the earliest stages of the claims classification project. The following tasks are needed before the team can begin the data analysis process:
@@ -4632,52 +4574,6 @@ TikTok's data team is in the earliest stages of the claims classification projec
 
 You will build a dataframe for the claims classification data. After the dataframe is complete, you will organize the claims data for the process of exploratory data analysis, and update the team on your progress and insights.
 
-### Team members at TikTok
-
-#### Data team roles
-
-- Willow Jaffey, Data Science Lead
-- Rosie Mae Bradshaw, Data Science Manager
-- Orion Rainier, Data Scientist
-
-The members of the data team at TikTok are well versed in data analysis and data science. Messages to these more technical coworkers should be concise and specific.
-
-#### Cross-functional team members
-
-- Mary Joanna Rodgers, Project Management Officer
-- Margery Adebowale, Finance Lead, Americas
-- Maika Abadi, Operations Lead
-
-Your TikTok team includes several managers, who oversee operations. It is important to adjust your general correspondence appropriately to their roles, given that their responsibilities are less technical in nature. 
-
-#### Specific project deliverables
-
-With this end-of-course project, you will gain valuable practice and apply your new skills as you complete the following:
-
-- Course 2 PACE Strategy Document to plan your project while considering your audience members, teammates, key milestones, and overall project goal. 
-- Answer the questions in the Jupyter notebook project file
-- Complete coding prep work on project's Jupyter notebook
-- Summarize the column Dtypes
-- Communicate important findings in the form of an executive summary  
-
-## Waze scenario
-
-TikTok's data team needs you to problem-solve and communicate your findings. Good luck on your tasks!
-
-Waze's free navigation app makes it easier for drivers around the world to get to where they want to go. Waze's community of map editors, beta testers, translators, partners, and users helps make each drive better and safer. Waze partners with cities, transportation authorities, broadcasters, businesses, and first responders to help as many people as possible travel more efficiently and safely. 
-
-You'll collaborate with your Waze teammates to analyze and interpret data, generate valuable insights, and help leadership make informed business decisions. Your team is about to start a new project to help prevent user churn on the Waze app. Churn quantifies the number of users who have uninstalled the Waze app or stopped using the app. This project focuses on monthly user churn. 
-
-This project is part of a larger effort at Waze to increase growth. Typically, high retention rates indicate satisfied users who repeatedly use the Waze app over time. Developing a churn prediction model will help prevent churn, improve user retention, and grow Waze's business. An accurate model can also help identify specific factors that contribute to churn and answer questions such as: 
-
-- Who are the users most likely to churn?
-- Why do users churn? 
-- When do users churn? 
-
-For example, if Waze can identify a segment of users who are at high risk of churning, Waze can proactively engage these users with special offers to try and retain them. Otherwise, Waze may lose these users without knowing why. 
-
-Your insights will help Waze leadership optimize the company's retention strategy, enhance user experience, and make data-driven decisions about product development.
-
 ### Project background
 
 Waze's data team is in the earliest stages of the churn project. The following tasks are needed before the team can begin the data analysis process:
@@ -4689,23 +4585,6 @@ Waze's data team is in the earliest stages of the churn project. The following t
 ### Your assignment
 
 You will build a dataframe for the churn data. After the dataframe is complete, you will organize the data for the process of exploratory data analysis, and update the team on your progress and insights.
-
-### Team members at Waze
-#### Data team roles
-
-- Harriet Hadzic - Director of Data Analysis 
-- May Santner - Data Analysis Manager 
-- Chidi Ga - Senior Data Analyst 
-- Sylvester Esperanza - Senior Project Manager 
-
-Data team members have technical experience with data analysis and data science. However, you should always be sure to keep summaries and messages to these team members concise and to the point. 
-
-#### Cross-functional team members
-
-- Emrick Larson - Finance and Administration Department Head 
-- Ursula Sayo - Operations Manager 
-
-Your Waze team includes several managers overseeing operations. It is important to adapt your communication to their roles since their responsibilities are less technical.
 
 ### Specific project deliverables
 
@@ -4891,7 +4770,7 @@ The mode is telling the Python library what to do with the file:
 - `+` – create new file
 
 ```python
-with open('example_filepath/file', mode='r') as file:
+with open('example_filepath/file', mode = 'r') as file:
 	data = file.read()
 ```
 
@@ -4941,12 +4820,12 @@ This process requires you to set up a payment method. However, new users get a $
 ### DataFrame.info()
 
 - The `info()` method will display a summary of the dataframe, including the range index, dtypes, column headers, and memory usage.
-- Leaving the argument field blank will return a full summary. As an option, in the argument field you can type in `show_counts=False`, which will not return the count of non-null values for each column. 
+- Leaving the argument field blank will return a full summary. As an option, in the argument field you can type in `show_counts = False`, which will not return the count of non-null values for each column. 
 
 ### DataFrame.describe()
 
 - The `describe()` method will return descriptive statistics of the entire dataset, including total count, mean, minimum, maximum, dispersion, and distribution. 
-- Leaving the argument field blank will default to returning a summary of the data frame’s statistics. As an option, you can use `include=[]` and `exclude=[]` which will limit the results to specific data types, depending on what you input in the brackets.
+- Leaving the argument field blank will default to returning a summary of the data frame’s statistics. As an option, you can use `include = []` and `exclude = []` which will limit the results to specific data types, depending on what you input in the brackets.
 
 ### DataFrame.sample()
 
@@ -5057,7 +4936,7 @@ dtype: int64
 Use `df.merge()` to take columns or indices from other dataframes and combine them with the one to which you’re applying the method.
 
 ```python
-df1.merge(df2, how=‘inner’, on=[‘month’,’year’])
+df1.merge(df2, how = ‘inner’, on = [‘month’,’year’])
 ```
 
 #### pd.concat()
@@ -5065,7 +4944,7 @@ df1.merge(df2, how=‘inner’, on=[‘month’,’year’])
 Use `pd.concat()` to join columns, rows, or dataframes along a particular axis
 
 ```python
-df3 = pd.concat([df1.drop(['column_1','column_2'], axis=1), df2])
+df3 = pd.concat([df1.drop(['column_1','column_2'], axis = 1), df2])
 ```
 
 ### df.join()
@@ -5106,7 +4985,7 @@ Use `df.select_dtypes()` to return a subset of the dataframe’s columns based o
 ```python
 print(df)
 print()
-df2 = df.select_dtypes(include=['int64'])
+df2 = df.select_dtypes(include = ['int64'])
 df2
 
 # Output
@@ -5130,7 +5009,7 @@ Use `df[condition]` to create a Boolean mask, then apply the mask to the datafra
 ```python
 print(df)
 print()
-df[df['class']=='Aves']
+df[df['class'] == 'Aves']
 
 # Output
 animal     class  color  legs
@@ -5152,7 +5031,7 @@ Use `df.sort_values()` to sort data according to selected parameters.
 ```python
 print(df)
 print()
-df.sort_values(by=['legs'], ascending=False)
+df.sort_values(by = ['legs'], ascending = False)
 
 # Output
  animal     class  color  legs
@@ -5223,7 +5102,7 @@ Use the `hist()` function in the pyplot module. Bins refer to the number of bins
 
 ```python
 # Plot histogram with matplotlib pyplot
-plt.hist(df['seconds'], bins=range(40, 101, 5))
+plt.hist(df['seconds'], bins = range(40, 101, 5))
 plt.xticks(range(35, 101, 5))
 plt.yticks(range(0, 61, 10))
 plt.xlabel('seconds')
@@ -5234,7 +5113,7 @@ plt.show()
 
 ```python
 # Plot histogram with seaborn
-ax = sns.histplot(df['seconds'], binrange=(40, 100), binwidth=5, color='#4285F4', alpha=1)
+ax = sns.histplot(df['seconds'], binrange = (40, 100), binwidth = 5, color = '#4285F4', alpha = 1)
 ax.set_xticks(range(35, 101, 5))
 ax.set_yticks(range(0, 61, 10))
 plt.title('Old Faithful geyser - time between eruptions')
@@ -5276,7 +5155,7 @@ Below is an example of identifying duplicates in only one column subset of value
 ```python
 print(df)
 print()
-print(df.duplicated(subset=['type'], keep='last'))
+print(df.duplicated(subset = ['type'], keep = 'last'))
 
 # Output
 color  rating     type
@@ -5331,7 +5210,7 @@ This example drops all rows that have duplicate values in the **style** column e
 
 ```python
 print(df)
-df = df.drop_duplicates(subset='style')
+df = df.drop_duplicates(subset = 'style')
 print()
 print(df)
 
@@ -5353,7 +5232,7 @@ This example drops all rows except the first occurrence that have duplicate valu
 
 ```python
 print(df)
-df = df.drop_duplicates(subset=['style', 'rating'])
+df = df.drop_duplicates(subset = ['style', 'rating'])
 print()
 print(df)
 
@@ -5392,7 +5271,7 @@ Whether you keep outliers as they are, delete them, or reassign values is a deci
 A box plot helps visualize two different outliers.
 
 ```python
-box = sns.boxplot(x=df['number_of_strikes'])
+box = sns.boxplot(x = df['number_of_strikes'])
 g = plt.gca()
 box.set_xticklabels(np.array([readable_numbers(x) for x in g.get_xticks()]))
 plt.xlabel('Number of strikes')
@@ -5553,6 +5432,576 @@ df['number_of_strikes'] = np.where(df['number_of_strikes'] < lower_limit, median
   26190094.   22763540.   25094010.   24206929.   16371876.   16900934.
   15839052.   14245186.    9150440.   28804886.5]
 ```
+
+## Other approaches to data transformation
+
+For categorical or qualitative data types, data professionals often need to transform or encode this type of data into numeric digits to complete their analysis, design their data visualization, or build their machine learning algorithm.
+
+### Label encoding
+
+| **Mushroom Type** | **Code** |
+|-------------------|----------|
+| Black truffle     |  0       |
+| Button            |  1       |
+| Cremini           |  2       |
+| Hedgehog          |  3       |
+| King Trumpet      |  4       |
+| Morel             |  5       |
+| Portobello        |  6       |
+| Shiitake          |  7       |
+| Toadstool         |  8       |
+
+### Some potential problems with label encoding 
+
+With this label encoding, the resulting machine learning model could derive not only a ranking, but also a closer connection between `1` and `2` because of how close they are numerically than, say, `1` and `4`). In addition to these presumed relationships, which you may or may not want in your analysis, you should also notice that each code is equidistant from the other in the numeric sequence, as in `1` to `2` is the same distance as `5` to `6`. The question is, does that equidistant relationship accurately represent the relationships between the music genres in your dataset? To ask another question, after encoding, will the visualization or model you build treat the encoded labels as a ranking?
+
+### One-hot encoding     
+
+Another method for categorical encoding that may help with these potential problems. In machine learning, a one-hot is a group of bits among which the legal combinations of values are only those with a single high or hot `1` bit and all the others low or cold `0`.
+
+With this method, we solve the problem of the unintended and problematic relationships that label encoding presented. But one-hot encoding does present its own set of problems, particularly when it comes to logistic and linear regression.
+
+| **N/A** | **Mild** | **Scattered** | **Heavy** | **Severe** |
+|---------|----------|---------------|-----------|------------|
+|    0    |     1    |       0       |     0     |     0      |
+|    1    |     1    |       0       |     0     |     0      |
+|    2    |     0    |       1       |     0     |     0      |
+|    3    |     0    |       0       |     1     |     0      |
+|    4    |     0    |       0       |     0     |     1      |
+|    5    |     0    |       0       |     0     |     1      |
+|    6    |     0    |       0       |     0     |     1      |
+|    7    |     0    |       0       |     0     |     1      |
+|    8    |     0    |       0       |     1     |     0      |
+|    9    |     0    |       1       |     0     |     0      |
+|    10   |     1    |       0       |     0     |     0      |
+|    11   |     1    |       0       |     0     |     0      |
+|    12   |     0    |       1       |     0     |     0      |
+
+### Label encoding or one-hot encoding: How to decide?
+
+Label encoding is best for large numbers of different categorical variables and for categories that have an inherent order to them. One-hot encoding is best for smaller amounts of categorical variables and for categories that have no order.
+
+#### Use label encoding
+
+- There are a large number of different categorical variables because label encoding uses far less data than one-hot encoding
+- The categorical values have a particular order to them, for example, age groups can be grouped as youngest to oldest or oldest to youngest
+- You plan to use a decision tree or random forest machine learning model
+
+#### Use one-hot encoding
+
+- There is a relatively small amount of categorical variable because one-hot encoding uses much more data than label encoding
+- The categorical variables have no particular order
+- You use a machine learning model in combination with dimensionality reduction like Principal Component Analysis (PCA)
+
+## Reference guide: Data cleaning in Python
+
+### Missing data
+
+#### df.info()
+  
+A DataFrame method that returns a concise summary of the dataframe, including a non-null count, which helps you know the number of missing values.
+
+```python
+print(df)
+print()
+df.info()
+
+# Output
+planet  radius_km  moons
+0  Mercury       2440      0
+1    Venus       6052      0
+2    Earth       6371      1
+3     Mars       3390      2
+4  Jupiter      69911     80
+5   Saturn      58232     83
+6   Uranus      25362     27
+7  Neptune      24622     14
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 8 entries, 0 to 7
+Data columns (total 3 columns):
+planet       8 non-null object
+radius_km    8 non-null int64
+moons        8 non-null int64
+dtypes: int64(2), object(1)
+memory usage: 272.0+ bytes
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 8 entries, 0 to 7
+Data columns (total 3 columns):
+planet       8 non-null object
+radius_km    8 non-null int64
+moons        8 non-null int64
+dtypes: int64(2), object(1)
+memory usage: 272.0+ bytes
+None
+```
+
+#### pd.isna() or pd.isnull()
+
+`pd.isna()` is a pandas function that returns a same-sized Boolean array indicating whether each value is null. You can also use `pd.isnull()` as an alias.
+
+```python
+print(df)
+print('\n After pd.isnull():')
+pd.isnull(df)
+
+# Output
+Planet  radius_km  moons
+0  Mercury       2440    NaN
+1    Venus       6052    NaN
+2    Earth       6371    1.0
+3     Mars       3390    NaN
+4  Jupiter      69911   80.0
+5   Saturn      58232   83.0
+6   Uranus      25362   27.0
+7  Neptune      24622   14.0
+
+ After pd.isnull(): 
+  Planet radius_km  moons
+0  False     False   True
+1  False     False   True
+2  False     False  False
+3  False     False   True
+4  False     False  False
+5  False     False  False
+6  False     False  False
+7  False     False  False
+```
+
+#### pd.notna() or pd.notnull()
+
+A pandas function that returns a same-sized Boolean array indicating whether each value is not null. You can also use `pd.notnull()` as an alias.
+
+
+```python
+print(df)
+print('\n After notnull():')
+pd.notnull(df)
+
+
+# Output
+Planet  radius_km  moons
+0  Mercury       2440    NaN
+1    Venus       6052    NaN
+2    Earth       6371    1.0
+3     Mars       3390    NaN
+4  Jupiter      69911   80.0
+5   Saturn      58232   83.0
+6   Uranus      25362   27.0
+7  Neptune      24622   14.0
+
+ After notnull(): 
+  Planet radius_km  moons
+0   True      True  False
+1   True      True  False
+2   True      True   True
+3   True      True  False
+4   True      True   True
+5   True      True   True
+6   True      True   True
+7   True      True   True
+```
+
+#### df.fillna()
+
+A DataFrame method that fills in missing values using specified method.
+
+```python
+print(df)
+print('\n After fillna():')
+df.fillna(2)
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red   NaN
+1     gecko  Reptilia  green   4.0
+2     raven      Aves  black   NaN
+
+ After fillna(): 
+     animal     class  color  legs
+0  cardinal      Aves    red   2.0
+1     gecko  Reptilia  green   4.0
+2     raven      Aves  black   2.0
+```
+
+#### df.replace()
+
+A DataFrame method that replaces specified values with other specified values. Can also be applied to pandas Series.
+
+```python
+print(df)
+print('\n After replace():')
+df.replace('Aves', 'Bird')
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+ After replace(): 
+     animal     class  color  legs
+0  cardinal      Bird    red     2
+1     gecko  Reptilia  green     4
+2     raven      Bird  black     2
+```
+
+#### df.dropna()
+
+A DataFrame method that removes rows or columns that contain missing values, depending on the axis you specify.
+
+```python
+print('Original df: \n \n', df)
+print('After dropna(axis = 0): \n')
+print(df.dropna(axis = 0))
+print('After dropna(axis = 1): \n')
+print(df.dropna(axis = 1))
+
+# Output
+Original df: 
+   animal     class  color  legs
+0    NaN      Aves    red     2
+1  gecko  Reptilia  green     4
+2  raven      Aves    NaN     2
+
+After dropna(axis = 0): 
+  animal     class  color  legs
+1  gecko  Reptilia  green     4
+
+After dropna(axis = 1): 
+      class  legs
+0      Aves     2
+1  Reptilia     4
+2      Aves     2
+```
+
+### Outliers
+
+#### df.describe()
+
+A DataFrame method that returns general statistics about the dataframe which can help determine outliers.
+
+```python
+print(df)
+print()
+df.describe()
+
+# Output
+planet  radius_km  moons
+0  Mercury       2440      0
+1    Venus       6052      0
+2    Earth       6371      1
+3     Mars       3390      2
+4  Jupiter      69911     80
+5   Saturn      58232     83
+6   Uranus      25362     27
+7  Neptune      24622     14
+
+          radius_km     moons
+count      8.000000   8.00000
+mean   24547.500000  25.87500
+std    26191.633528  35.58265
+min     2440.000000   0.00000
+25%     5386.500000   0.75000
+50%    15496.500000   8.00000
+75%    33579.500000  40.25000
+max    69911.000000  83.00000
+```
+
+#### sns.boxplot()
+
+A seaborn function that generates a box plot. Data points beyond 1.5 times the interquartile range are considered outliers.
+
+### Label encoding
+
+#### df.astype()
+
+A DataFrame method that allows you to encode its data as a specified dtype.
+
+
+```python
+print(df)
+print('Original dtypes of df: \n')
+print(df.dtypes)
+print('Dtypes after casting \'class\' column as categorical: \n')
+df['class'] = df['class'].astype('category')
+print(df.dtypes)
+
+# Output
+animal     class  color  legs
+0  cardinal      Aves    red     2
+1     gecko  Reptilia  green     4
+2     raven      Aves  black     2
+
+Original dtypes of df: 
+animal    object
+class     object
+color     object
+legs       int64
+dtype: object
+
+Dtypes after casting 'class' column as categorical: 
+animal      object
+class     category
+color       object
+legs         int64
+dtype: object
+```
+
+#### Series.cat.codes
+
+A Series attribute that returns the numeric category codes of the series.
+
+```python
+# Cast 'class' column as categorical
+df['class'] = df['class'].astype('category')
+print('\'class\' column: \n')
+print(df['class'])
+print()
+print('Category codes of \'class\' column: \n')
+df['class'].cat.codes
+
+# Output
+'class' column: 
+0        Aves
+1    Reptilia
+2        Aves
+Name: class, dtype: category
+Categories (2, object): [Aves, Reptilia]
+
+Category codes of 'class' column: 
+0    0
+1    1
+2    0
+dtype: int8
+```
+
+#### pd.get_dummies()
+
+A function that converts categorical values into new binary columns, one for each different category.
+
+![Get dummy](https://github.com/x-square/visual-resources/blob/main/get-dummy.png?raw=true 'Get dummy')
+
+#### LabelEncoder()
+
+A transformer from **scikit-learn.preprocessing** that encodes specified categories or labels with numeric codes. Note that when building predictive models it should only be used on target variables i.e. `y` data.
+
+It can be used to normalize labels:
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+# Instantiate LabelEncoder() 
+encoder = LabelEncoder()
+
+data = [1, 2, 2, 6]
+
+# Fit to the data
+encoder.fit(data)
+
+# Transform the data
+transformed = encoder.transform(data)
+
+# Reverse the transformation
+inverse = encoder.inverse_transform(transformed)
+
+print('Data =', data)
+print('\n Classes: \n', encoder.classes_)
+print('\n Encoded (normalized) classes: \n', transformed)
+print('\n Reverse from encoded classes to original: \n', inverse)
+
+# Output
+Data = [1, 2, 2, 6]
+
+Classes: 
+[1 2 6]
+
+Encoded (normalized) classes: 
+[0 1 1 2]
+
+Reverse from encoded classes to original: 
+[1 2 2 6]
+ ```
+
+It can be used to convert categorical labels into numeric:
+
+```python
+from sklearn.preprocessing import LabelEncoder
+
+# Instantiate LabelEncoder()
+encoder = LabelEncoder()
+
+data = ['paris', 'paris', 'tokyo', 'amsterdam']
+
+# Fit to the data
+encoder.fit(data)
+
+# Transform the data
+transformed = encoder.transform(data)
+
+# New data
+new_data = [0, 2, 1, 1, 2]
+
+# Get classes of new data
+inverse = encoder.inverse_transform(new_data)
+
+print('Data =', data)
+print('\n Classes: \n', list(encoder.classes_))
+print('\n Encoded classes: \n', transformed)
+print('\n New data =', new_data)
+print('\n Convert new_data to original classes: \n', list(inverse))
+
+# Output
+Data = ['paris', 'paris', 'tokyo', 'amsterdam']
+
+Classes: 
+['amsterdam', 'paris', 'tokyo']
+
+Encoded classes: 
+[1 1 2 0]
+
+New data = [0, 2, 1, 1, 2]
+
+Convert new_data to original classes: 
+['amsterdam', 'tokyo', 'paris', 'paris', 'tokyo']
+```
+
+## Python graphs
+
+[Python Graph Gallery](https://python-graph-gallery.com 'Python Graph Gallery') is a website brought to you by Yan Holtz. It displays hundreds of charts made with Python, together with their reproducible code. Here are a few things you should know about it! 
+
+[Dataviz Inspiration](https://www.dataviz-inspiration.com 'Dataviz Inspiration') aims at being the biggest list of chart examples available on the website. The collection is a good place to visit when you're designing a new graph, together with from data to viz that shares dataviz best practices.
+
+### Additional resources
+
+- [Tableau](https://www.tableau.com 'Tableau')
+- [Power BI](https://www.microsoft.com/en-us/power-platform/products/power-bi 'Power BI')
+
+## Explore your course 3 workplace scenarios
+
+![Stage 3 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-3.png?raw=true 'Stage 3 of end-of-course project')
+
+### Automatidata
+
+#### Scenario
+
+The New York City TLC data is ready for exploratory data analysis (EDA) in Python. You will need to clean, join, validate, and create a visualization for the taxi commission data. The findings will be shared with internal stakeholders from different departments within Automatidata.
+
+#### Course 3 tasks
+
+- Load data, explore, and extract the New York City TLC data with Python
+- Use custom functions to organize the information within the New York City TLC dataset
+- Build a dataframe for the New York City TLC project
+- Create an executive summary for Automatidata for a general audience of internal professionals
+
+### TikTok
+
+#### Scenario
+
+It is now time to begin the process of exploratory data analysis (EDA). As a data analyst on TikTok's data team, you will complete the EDA process for the claims classification project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+
+#### Course 3 tasks
+
+- Imports of relevant packages and TikTok data into Python
+- EDA and cleaning
+- Assess Tableau measures and dimensions
+- Select and build visualizations type
+    - Create plots to visualize variables and relationships between variables
+- Share your results with the TikTok team
+
+### Waze
+
+#### Scenario
+
+Your team is still in the early stages of their user churn project. So far, you’ve completed a project proposal, and used Python to inspect and organize Waze’s user data. Now, the data is ready for exploratory data analysis (EDA) and further data visualization. 
+
+#### Course 3 tasks
+
+- Clean data
+- Handle outliers 
+- Perform EDA
+- Visualize data
+- Share an executive summary with the Waze data team
+
+### Key takeaways
+
+In Course 3, Go Beyond the Numbers: Translate Data into Insights, you explored the process of exploratory data analysis (EDA). You learned to Identify the core steps, basic methods, and benefits of structuring and cleaning data. Additionally, you investigated raw data using Python, and created data visualizations using Tableau.
+
+#### Course 3 skills
+
+- Conduct exploratory data analysis
+- Create data visualization with Tableau
+- Expand knowledge of Python coding
+- Share insights and ideas with stakeholders
+
+#### Course 3 end-of-course project deliverables
+
+- Complete EDA with workplace scenario dataset using Python 
+- Executive summary including a Tableau visualization
+
+### Automatidata scenario
+
+### Project background
+
+Automatidata is working on the TLC project. The following tasks are needed before the team can begin the data analysis process:
+
+- EDA and cleaning
+- Select and build visualization(s) type
+    - Create plots to visualize relationships between relevant variables
+- Share your results with the Automatidata team
+
+### Your assignment
+You will conduct exploratory data analysis on data for the TLC project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+
+### Specific project deliverables
+
+- Course 3 PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Create a Jupyter notebook of full EDA
+- Create a Tableau visualization showing two important variables
+- Write an executive summary of results and include a visualization
+
+### TikTok scenario
+
+### Project background
+
+- EDA and cleaning
+- Select and build visualization(s) type
+- Create plots to visualize variables and relationships between variables
+- Share your results with the TikTok team
+
+### Your assignment
+
+You will conduct exploratory data analysis on data for the claims classification project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+
+### Specific project deliverables
+
+- Course 3 PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Clean your data, perform exploratory data analysis (EDA)
+- Create data visualizations
+- Create an executive summary to share your results 
+
+## Waze scenario
+
+### Project background
+
+- EDA and cleaning
+- Select and build visualization(s) type
+    - Create plots to visualize variables and relationships between variables
+- Share your results with the data team
+
+### Your assignment
+
+You will conduct exploratory data analysis on data for the churn project. You’ll also use tools to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+
+### Specific project deliverables
+
+- Complete the questions in the Course 3 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Clean your data, perform exploratory data analysis (EDA)
+- Create data visualizations
+- Create an executive summary to share your results 
 
 `Any questions, please reach out`
 
