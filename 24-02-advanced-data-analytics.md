@@ -5939,7 +5939,7 @@ In Course 3, Go Beyond the Numbers: Translate Data into Insights, you explored t
 - Complete EDA with workplace scenario dataset using Python 
 - Executive summary including a Tableau visualization
 
-### Automatidata scenario
+## Automatidata scenario
 
 ### Project background
 
@@ -5961,7 +5961,7 @@ You will conduct exploratory data analysis on data for the TLC project. You’ll
 - Create a Tableau visualization showing two important variables
 - Write an executive summary of results and include a visualization
 
-### TikTok scenario
+## TikTok scenario
 
 ### Project background
 
