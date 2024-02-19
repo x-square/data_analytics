@@ -1170,7 +1170,7 @@ In a **one-tailed** test, you're only interested in one direction of difference 
 
 Typically, we frame null and alternative hypotheses in a one-tailed test using **inequalities**. When expecting the sample mean[^3] of the **experiment group** $\bar{x}_e$ to show improvement or a positive effect compared to the **control group** $\bar{x}_c$, we express this as experiment $>$ control. Otherwise, we can do the other way round to see if the experiment is worse than control as experiment $<$ control.
 
-[^3]: Sample mean $\bar{x}$ is commonly used because it is accessible and cost-effective. We use the population mean $\mu$ when we have data for the entire population rather than just a sample of it.
+[^3]: Sample mean is commonly used because it is accessible and cost-effective. We use the population mean when we have data for the entire population rather than just a sample of it.
 
 $$
 \begin{cases}
@@ -1326,3 +1326,11 @@ $c33=a31 \times b13+a32 \times b23$
 $c41=a41 \times b11+a42 \times b21$\
 $c42=a41 \times b12+a42 \times b22$\
 $c43=a41 \times b13+a42 \times b23$
+
+`Any questions, please reach out`
+
+Image via Behavioral Data Analysis with R and Python
+
+Chiawei Wang PhD\
+Data Scientist\
+<chw.wng@outlook.com>
