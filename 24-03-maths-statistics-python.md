@@ -5,7 +5,7 @@ date: 'February 2024'
 date-format: "MMMM YYYY"
 ---
 
-`Unlock the world of maths and statistics with Python for data science. This document is complied from various resources for academic purposes。`[^1]
+`Unlock the world of maths and statistics with Python for data science. This document is compiled from various resources for academic purposes.`[^1]
 
 [^1]: Nield, T. 2021. *Essential Math for Data Science: Take Control of Your Data with Fundamental Calculus, Linear Algebra, Probability and Statistics*. O'Reilly: Cambridge, England.
 
