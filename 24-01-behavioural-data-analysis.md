@@ -1,7 +1,7 @@
 ---
 title: 'Notes on behavioural data analysis'
 author: 'Chiawei Wang'
-date: 'February 2024'
+date: 'January 2024'
 date-format: "MMMM YYYY"
 ---
 
