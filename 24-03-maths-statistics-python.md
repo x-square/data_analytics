@@ -1,7 +1,7 @@
 ---
 title: 'Notes on maths and statistics for data science'
 author: 'Chiawei Wang'
-date: 'March 2024'
+date: 'February 2024'
 date-format: "MMMM YYYY"
 ---
 
@@ -1326,9 +1326,3 @@ $c33=a31 \times b13+a32 \times b23$
 $c41=a41 \times b11+a42 \times b21$\
 $c42=a41 \times b12+a42 \times b22$\
 $c43=a41 \times b13+a42 \times b23$
-
-`Any questions, please reach out`
-
-Chiawei Wang PhD\
-Data Scientist\
-<chw.wng@outlook.com>
