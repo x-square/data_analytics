@@ -1311,53 +1311,20 @@ $$
 
 If A is a `4` $\times$ 2 matrix and B a 2 $\times$ `3` matrix, the matrix product C is defined to be a `4` $\times$ `3` matrix.
 
-$$
-c11=a11 \times b11+a12 \times b21
-$$
+$c11=a11 \times b11+a12 \times b21$\
+$c12=a11 \times b12+a12 \times b22$\
+$c13=a11 \times b13+a12 \times b23$\
+$c21=a21 \times b11+a22 \times b21$
 
-$$
-c12=a11 \times b12+a12 \times b22
-$$
+$c22=a21 \times b12+a22 \times b22$\
+$c23=a21 \times b13+a22 \times b23$\
+$c31=a31 \times b11+a32 \times b21$\
+$c32=a31 \times b12+a32 \times b22$
 
-$$
-c13=a11 \times b13+a12 \times b23
-$$
-
-$$
-c21=a21 \times b11+a22 \times b21
-$$
-
-$$
-c22=a21 \times b12+a22 \times b22
-$$
-
-$$
-c23=a21 \times b13+a22 \times b23
-$$
-
-$$
-c31=a31 \times b11+a32 \times b21
-$$
-
-$$
-c32=a31 \times b12+a32 \times b22
-$$
-
-$$
-c33=a31 \times b13+a32 \times b23
-$$
-
-$$
-c41=a41 \times b11+a42 \times b21
-$$
-
-$$
-c42=a41 \times b12+a42 \times b22
-$$
-
-$$
-c43=a41 \times b13+a42 \times b23
-$$
+$c33=a31 \times b13+a32 \times b23$\
+$c41=a41 \times b11+a42 \times b21$\
+$c42=a41 \times b12+a42 \times b22$\
+$c43=a41 \times b13+a42 \times b23$
 
 `Any questions, please reach out`
 
