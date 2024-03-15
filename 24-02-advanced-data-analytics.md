@@ -14,7 +14,7 @@ Course descriptions:
 1. **Foundations of data science**
    - Learn how data professionals operate in the workplace and how different roles in the field of data science contribute to an organization's vision of the future. Then, explore data science roles, communication skills, and data ethics.
 2. **Get started with Python**
-   - Discover how the programming language Python can power your data analysis. Learn core Python concepts, such as data types, functions, conditional statements, loops, and data structures.
+   - Discover how the programming language Python can power your data analysis. Learn core Python concepts, such as data types, functions, conditional statements, loops, and data structures.x
 3. **Go beyond the numbers: Translate data into insights**
    - Learn the fundamentals of data cleaning and visualizations and how to reveal the important stories that live within data.
 4. **The power of statistics**
@@ -5951,6 +5951,7 @@ Automatidata is working on the TLC project. The following tasks are needed befor
 - Share your results with the Automatidata team
 
 ### Your assignment
+
 You will conduct exploratory data analysis on data for the TLC project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
 
 ### Specific project deliverables
@@ -6002,6 +6003,189 @@ You will conduct exploratory data analysis on data for the churn project. You’
 - Clean your data, perform exploratory data analysis (EDA)
 - Create data visualizations
 - Create an executive summary to share your results 
+
+# The power of statistics
+
+## Random sampling
+
+```python
+import pandas as pd
+
+# Create a DataFrame with more rows and columns
+data = {
+    'Name': ['John', 'Emma', 'Michael', 'Sophia', 'William'],
+    'Age': [32, 28, 35, 30, 40],
+    'Country': ['USA', 'UK', 'Canada', 'Australia', 'Germany'],
+    'Score': [85, 90, 88, 92, 87]
+}
+df = pd.DataFrame(data)
+
+# Sample a specific number of rows without replacement
+sampled_df = df.sample(n=5, replace=False)
+
+# Display the sampled DataFrame
+print(sampled_df)
+
+# Output
+      Name  Age    Country  Score
+1     Emma   28         UK     90
+4  William   40    Germany     87
+0     John   32        USA     85
+3   Sophia   30  Australia     92
+2  Michael   35     Canada     88
+```
+
+## Type I and type II errors
+
+![Type I and type II errors](https://github.com/x-square/visual-resources/blob/main/type-error.png?raw=true 'Type I and type II errors')
+
+
+- Reject the null hypothesis when it’s actually true (Type I error)
+- Reject the null hypothesis when it’s actually false (True positive)
+- Fail to reject the null hypothesis when it’s actually true (True negative) 
+- Fail to reject the null hypothesis when it’s actually false (Type II error)
+
+### Type I error 
+
+A Type 1 error, also known as a false positive, occurs when you reject a null hypothesis that is actually true. In other words, you conclude that your result is statistically significant when in fact it occurred by chance. 
+
+For example, in your clinical trial, if the null hypothesis is true, that means the medicine has no effect. If you make a Type I error and reject the null hypothesis, you incorrectly conclude that the medicine relieves cold symptoms when it’s actually ineffective. 
+
+In general, making a Type I error often leads to implementing changes that are unnecessary and ineffective, and which waste valuable time and resources.
+
+The probability of making a Type I error is called alpha $\alpha$. Your significance level, or alpha $\alpha$, represents the probability of making a Type I error. Typically, the significance level is set at 0.05, or 5%. A significance level of 5% means you are willing to accept a 5% chance you are wrong when you reject the null hypothesis. 
+
+### Type II error
+
+Reducing your risk of making a Type I error means you are more likely to make a Type II error, or false negative. A Type II error occurs when you fail to reject a null hypothesis which is actually false. In other words, you conclude your result occurred by chance, when in fact it didn’t. 
+
+For example, in your clinical study, if the null hypothesis is false, this means that the medicine is effective. If you make a Type II error and fail to reject the null hypothesis, you incorrectly conclude that the medicine is ineffective when it actually relieves cold symptoms. 
+
+In general, making a Type II error may result in missed opportunities for positive change and innovation. A lack of innovation can be costly for people and organizations.
+
+The probability of making a Type II error is called beta $\beta$, and beta is related to the power of a hypothesis test (power = 1 - $\beta$). Power refers to the likelihood that a test can correctly detect a real effect when there is one.
+
+## Explore your course 4 workplace scenarios
+
+![Stage 4 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-4.png?raw=true 'Stage 4 of end-of-course project')
+
+### Automatidata
+
+#### Scenario
+
+Exploratory data analysis is complete for the project. The New York City TLC would like the data team at Automatidata to analyze the relationship between fare amounts and payment type. The team agrees that the next step is to perform a hypothesis test using the data.
+
+#### Course 4 tasks
+
+- Compute descriptive statistics
+- Conduct a hypothesis test using the New York City TLC dataset
+- Create an executive summary for the Automatidata data team before sharing the results with the client
+
+### TikTok
+
+#### Scenario
+
+The TikTok data team has successfully completed exploratory data analysis on the data for the claims classification project. The team is ready to begin the process of hypothesis testing. You’ve been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
+
+#### Course 4 tasks
+
+- Import relevant packages and TikTok data
+- Explore the project data
+- Implement a hypothesis test
+- Communicate insights with stakeholders within TikTok 
+
+### Waze
+
+#### Scenario
+
+our team is nearing the midpoint of their user churn project. So far, you’ve completed a project proposal, and used Python to analyze and visualize Waze’s user data. Now, leadership has a new request for your team: use hypothesis testing to analyze the relationship between mean amount of rides and device type.  
+
+#### Course 4 tasks
+
+- Clean data
+- Handle outliers 
+- Perform EDA
+- Visualize data
+- Share an executive summary with the Waze data team
+
+### Key takeaways
+
+In Course 3, Go Beyond the Numbers: Translate Data into Insights, you explored the process of exploratory data analysis (EDA). You learned to Identify the core steps, basic methods, and benefits of structuring and cleaning data. Additionally, you investigated raw data using Python, and created data visualizations using Tableau.
+
+#### Course 3 skills
+
+- Compute descriptive statistics
+- Conduct a two-sample hypothesis test
+- Share an executive summary with the Waze leadership team
+
+#### Course 3 end-of-course project deliverables
+
+- Hypothesis test prepared with Python 
+- Executive summary
+
+## Automatidata scenario
+
+### Project background
+
+Automatidata is working on the TLC project. The following tasks are needed at this stage of the project:
+
+- Explore the project data
+- Implement a hypothesis test
+- Communicate insights with team members and TLC stakeholders
+
+### Your assignment
+
+You will conduct hypothesis testing on the data for the TLC data. You’ve been asked to investigate TLC’s dataset to determine which hypothesis testing method best serves the data and the TLC project.
+
+### Specific project deliverables
+
+- Complete a PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario.
+- Answer the questions in the Jupyter notebook project file
+- Statistical testing
+- Report results in executive summary
+
+## TikTok scenario
+
+### Project background
+
+TikTok’s data team is working on the claims classification project. The following tasks are needed at this stage of the project:
+
+- Explore the project data
+- Implement a hypothesis test
+- Communicate insights with stakeholders within TikTok
+
+### Your assignment
+
+You will conduct hypothesis testing on the data for the claims classification data. You’ve been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
+
+### Specific project deliverables
+
+- Course 4 PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Consider the different groups of data represented in the dataset
+- Implement a hypothesis test
+- Create an executive summary to share your results 
+
+## Waze scenario
+
+### Project background
+
+Waze’s data team is working on the churn project. The following tasks are needed at this stage of the project:
+
+- Explore the project data
+- Implement a hypothesis test
+- Communicate insights with stakeholders within Waze
+
+### Your assignment
+
+You will conduct hypothesis testing on the data for the churn data. The data team has asked you to investigate Waze's dataset to determine which hypothesis testing method best serves the data and the churn project.
+
+### Specific project deliverables
+
+- Complete the questions in the Course 4 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Conduct a two-sample hypothesis test
+- Create an executive summary to share your results
 
 `Any questions, please reach out`
 
