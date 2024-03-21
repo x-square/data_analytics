@@ -5,11 +5,17 @@ date: 'February 2024'
 date-format: "MMMM YYYY"
 ---
 
-`Unlock the world of maths and statistics with Python for data science. This document is compiled from various resources for academic purposes.`[^1]
+`Unlock the world of maths and statistics with Python for data science. This document is compiled from various resources for academic purposes.`[^1][^2]
 
 [^1]: Nield, T. 2021. *Essential Math for Data Science: Take Control of Your Data with Fundamental Calculus, Linear Algebra, Probability and Statistics*. O'Reilly: Cambridge, England.
 
+[^2]: Howell, E. https://medium.com/@egorhowell
+
 # Basic maths and calculus
+
+Maths is the study of **numbers**, **shapes**, **patterns**, and **relationships**. It provides tools and methods for solving problems, understanding the world around us, and making predictions in various fields.
+
+Calculus deals with how **rates of change** and **accumulate over time**, which involves techniques such as finding slopes of curves and calculating areas under curves, that is, **differentiation** and **integration** respectively.
 
 **Variables** are named placeholders for numbers that aren't specified or known. In Python, we use theta $θ$ to denote angles and beta $β$ for a parameter in a linear regression.
 
@@ -593,19 +599,33 @@ A conditional probability is the likelihood of an event occurring given that ano
 Typically, the problem statement for conditional probability questions assumes that the initial event occurred or indicates that an observer witnesses it. The goal is to calculate the chances of the second event under the condition that the first event occurred.
 
 $$
-P(A|B)=\frac{P(A \cap B)}{P(B)}
+P(B|A)=\frac{P(A \cap B)}{P(A)}
 $$
 
 $$
-Probability\ of\ A\ given\ B=\frac{Probability\ of\ A\ intersects\ B}{Probability\ of\ B}
+Probability\ of\ B\ given\ A=\frac{Probability\ of\ A\ intersects\ B}{Probability\ of\ A}
 $$
 
 $$
-P(umbrella|rain)=\frac{P(umbrella \cap rain)}{P(rain)}
+P(umbrella|rain)=\frac{P(rain \cap umbrella)}{P(rain)}
 $$
 
 $$
 \Rightarrow \frac{0.5}{0.6} \approx 0.8333333333333334 \approx 83\%
+$$
+
+Imagine yourself calculating the probability of drawing a heart twice in a row. For the first draw, the chance of getting a heart is 25%, 13 out of 52 cards. Then, for the second draw, given you got a heart on the first draw, the chance becomes 23.5%, 12 out of 51 remaining cards.
+
+$$
+P(A \cap B)=P(A) \times P(B|A)
+$$
+
+$$
+P(1st\ heart\ and\ 2nd\ heart)=P(1st\ heart) \times P(2nd\ heart|1st\ heart)
+$$
+
+$$
+\Rightarrow \frac{13}{52} \times \frac{12}{51}= \frac{1}{17} \approx 0.058823529411764705 \approx 5.9\%
 $$
 
 ## Bayes' theorem
@@ -652,9 +672,13 @@ print(p_rain_given_cloudy)
 0.07307692307692308
 ```
 
-## Binomial distribution
+## Discrete probability distribution
+
+### Binomial distribution
 
 ![Binomial distribution (n = 6)](https://github.com/x-square/visual-resources/blob/main/binomial-distribution.png?raw=true 'Binomial distribution (n = 6)')
+
+The binomial distribution models the probability of events with only two possible outcomes, success or failure. These outcomes are mutually exclusive and cannot occur at the same time. 
 
 Find 11 probabilities for binomial distribution from 0 to 10 success.
 
@@ -689,31 +713,15 @@ $$
 0.3486784401000001 \approx 35\%
 $$
 
-## Beta distribution
-
-![Probability density function for beta distribution](https://github.com/x-square/visual-resources/blob/main/beta-distribution-pdf.png?raw=true 'Probability density function for beta distribution')
-
-![Cumulative distribution function for beta distribution](https://github.com/x-square/visual-resources/blob/main/beta-distribution-cdf.png?raw=true 'Cumulative distribution function for beta distribution')
-
-The **beta distribution** allows us to see the likelihood of different underlying probabilities for an event to occur given $\alpha$ **successes** and $\beta$ **failures**.
-
-Find the the likelihood of that probability being $90\%$ or less given $8$ successes and $2$ failures.
-
-```python
-from scipy.stats import beta 
-
-a=8 
-b=2 
-p = beta.cdf(0.9, a, b)
-print(p)
-
-# Output
-0.7748409780000002
-```
-
 **Bernoulli trial** (or binomial trial) is a random experiment with exactly two possible outcomes, **success** and **failure**, in which the probability of success is the same every time the experiment is conducted.
 
-## Geometric distribution
+### Poisson distribution
+
+The Poisson distribution models the probability that a certain number of events will occur during a specific time period.
+
+For example, imagine you have an online website where you post content. Your website averages two views per hour. You want to determine the probability that your website will receive a certain number of views in a given hour.
+
+### Geometric distribution
 
 The geometric distribution is often referred to as the discrete version of the exponential distribution.
 
@@ -763,6 +771,38 @@ plt.savefig('plot.png')
 plt.show()
 ```
 
+## Continuous probability distribution
+
+### Normal distribution
+
+**Normal distribution** aka Gaussian distribution is a **symmetrical bell-shaped** curve centred around the mean, with most of its **data clustered near the mean**. **Its spread is determined by the standard deviation.** As you move away from the mean, the tails on both sides of the curve **gradually decrease in height** but never touch zero. 
+
+$$
+f(x)={\frac{1}{\sigma{\sqrt{2\pi }}}}e^{-{\frac{1}{2}}\left({\frac{x-\mu}{\sigma}}\right)^{2}}
+$$
+
+### Beta distribution
+
+![Probability density function for beta distribution](https://github.com/x-square/visual-resources/blob/main/beta-distribution-pdf.png?raw=true 'Probability density function for beta distribution')
+
+![Cumulative distribution function for beta distribution](https://github.com/x-square/visual-resources/blob/main/beta-distribution-cdf.png?raw=true 'Cumulative distribution function for beta distribution')
+
+The **beta distribution** allows us to see the likelihood of different underlying probabilities for an event to occur given $\alpha$ **successes** and $\beta$ **failures**.
+
+Find the the likelihood of that probability being $90\%$ or less given $8$ successes and $2$ failures.
+
+```python
+from scipy.stats import beta 
+
+a=8 
+b=2 
+p = beta.cdf(0.9, a, b)
+print(p)
+
+# Output
+0.7748409780000002
+```
+
 # Descriptive and inferential statistics  
 
 ## Descriptive statistics
@@ -782,6 +822,8 @@ To achieve our goals, we must focus our objectives. While a few well-chosen phot
 **Population** represents the entirety of individuals under scrutiny in a given study. A **sample** is a subset of the population that is ideally random and unbiased, which we use to infer attributes about the population. We often have to study samples because polling the entire population is not always possible. When populations are **theoretical**, scientists resort to **simulations** to generate data.
 
 It's crucial to have a **random** sample to avoid **bias**, which distorts our conclusions by favouring one group over others. Many **confounding variables** can affect the outcome of a study, making it difficult to determine the true relationship between the variables of interest. Refer to [glossary of biases](https://github.com/x-square/behavioural-science/blob/main/23-10-biases-glossary.md 'Glossary of biases') for more information on unfair preference towards one group.
+
+**Measures of central tendency** are values that represent the center of a dataset, that is, mean, median, and mode.
 
 $\mu$ [mu] refers to **population mean**, and $\bar{x}$ [x bar] represents **sample mean** .
 
@@ -848,8 +890,6 @@ print(median_value)
 7
 ```
 
-**Quartiles** divide the dataset into four equal parts. The first quartile `Q1` represents the $25th$ percentile, the second quartile `Q2` represents $50th$ percentile, which is the same as the median, and the third quartile `Q3` represents the $75th$ percentile.
-
 **Mode** is the most frequently occurring set of values. It primarily becomes useful when your data is repetitive, and you want to find which values occur the most frequently e.g. **categorical data**. **Bimodal** describes a distribution with two distinct peaks, suggesting the data has two most frequent values.
 
 ```python
@@ -862,6 +902,8 @@ print(mode_value)
 # Output
 3
 ```
+
+**Measures of dispersion** let you describe the spread of your dataset or the amount of variation in your data values, that is, range, variance, and standard deviation.
 
 **Variance** measures the average squared deviation of data points from the mean, indicating the **spread of the data**. When we **square** the differences before adding them together, it has a few benefits. Firstly, it **removes negative values** because squaring a negative number makes it positive. Secondly, it **emphasises larger differences**, making them more noticeable. Finally, from a mathematical perspective, working with squared values is simpler because it **simplifies mathematical operations**, especially when dealing with derivatives.
 
@@ -901,9 +943,9 @@ print(sample_var_value)
 
 The number of variance is larger than any of our observations because we did a lot squaring and summing, putting it on an entirely different metric. The opposite of a square is a square root, so let's take the **square root** of the variance which gives us the **standard deviation**, which makes it a bit more intuitive and meaningful.
 
-By counting values **short of 1** item in our divisor, we increase the variance and therefore capture **greater uncertainty** in our **sample's degrees of freedom**, which represent the number of values in a calculation that are **free to vary** without violating any constraints. For example, the formula to calculate standard deviation is `n - 1`, which is also true in a one-sample *t*-test. It is `(r - 1) x (c - 1)`[^2] in a chi-squared test of independence and `n - 2` in linear regression.
+By counting values **short of 1** item in our divisor, we increase the variance and therefore capture **greater uncertainty** in our **sample's degrees of freedom**, which represent the number of values in a calculation that are **free to vary** without violating any constraints. For example, the formula to calculate standard deviation is `n - 1`, which is also true in a one-sample *t*-test. It is `(r - 1) x (c - 1)`[^3] in a chi-squared test of independence and `n - 2` in linear regression.
 
-[^2]: `r` stands for row and `c` for column.
+[^3]: `r` stands for row and `c` for column.
 
 Population standard deviation:
 
@@ -939,11 +981,23 @@ print(sample_std_value)
 4.99523582550223
 ```
 
-**Normal distribution** aka Gaussian distribution is a **symmetrical bell-shaped** curve centred around the mean, with most of its **data clustered near the mean**. **Its spread is determined by the standard deviation.** As you move away from the mean, the tails on both sides of the curve **gradually decrease in height** but never touch zero. 
+**Measures of position** let you determine the position of a value in relation to other values in a dataset, that is, percentiles, quartiles, and interquartile range.
 
-$$
-f(x)={\frac{1}{\sigma{\sqrt{2\pi }}}}e^{-{\frac{1}{2}}\left({\frac{x-\mu}{\sigma}}\right)^{2}}
-$$
+A **percentile** is the value below which a percentage of data falls. Percentiles divide your data into `100` equal parts. Percentiles give the relative position or rank of a particular value in a dataset. 
+
+**Quartiles** divide the dataset into four equal parts. The first quartile `Q1` represents the `25th` percentile, the second quartile `Q2` represents `50th` percentile, which is the same as the median, and the third quartile `Q3` represents the `75th` percentile.
+
+The `middle 50%` of your data is called the **interquartile range** `IQR`. The interquartile range is the distance between the first quartile `Q1` and the third quartile `Q3`, that is, **IQR = Q3 - Q1**. This is the same as the distance between the 25th and 75th percentiles. 
+
+We often summarise the major divisions in the dataset with the **five number summary**, which can be visualised with a **box plot**.
+
+- Minimum
+- First quartile
+- Second quartile or median
+- Third quartile
+- Maximum 
+
+![Example of box plot](https://github.com/x-square/visual-resources/blob/main/box-plot.png?raw=true 'Example of box plot')
 
 Histograms often depict normal distributions. **Bins** on the **x-axis** represent **continuous intervals**, and each bar's **height** denotes the **frequency** within that interval. In general, the choice of bins can affect the interpretation of the data, including the **shape** and **level of continuity** of the distribution.
 
@@ -1017,6 +1071,18 @@ $$
 **Central limit theorem** states that the distribution of sample means approaches a normal distribution as the sample size increases, regardless of the shape of the population distribution. This theorem is fundamental in statistics as it allows us to make inferences about population parameters based on sample statistics, even when the population distribution is unknown or not normally distributed.
 
 **Uniform distribution** is a probability distribution where all outcomes have equal probability of occurring. Every outcome has the same likelihood of happening, making it a simple and predictable distribution.
+
+**Standard error** is a measure of the variability or spread of sample means around the population mean. It tells us how much the sample mean is likely to differ from the true population mean. Essentially, it quantifies the uncertainty in the sample mean estimation.
+
+For example, we randomly select a sample of 50 students and find that the mean exam score in this sample is 75 out of 100, with a standard deviation of 5. This means that if we were to take multiple random samples of 50 students from the school and calculate the mean exam score for each sample, the standard error tells us that on average, the sample means would deviate from the true population mean by about 0.71 points.
+
+$$
+SE=\frac{\sigma}{\sqrt{n}}
+$$
+
+$$
+\Rightarrow \frac{5}{\sqrt{50}}\approx 0.70710678118
+$$
 
 **Confidence interval** is a range of values that is likely to contain the true unknown parameter of a population, with a certain level of confidence. It provides a measure of the uncertainty or precision associated with estimating population parameters from sample data.
 
@@ -1168,9 +1234,9 @@ Type I errors can result in **unnecessary actions** e.g. over a million patients
 
 In a **one-tailed** test, you're only interested in one direction of difference or effect. For example, you might be testing whether a new drug improves performance because you are only interested in whether it's better, not worse. This type of test is more powerful in detecting effects in a specific direction but can miss effects in the opposite direction.
 
-Typically, we frame null and alternative hypotheses in a one-tailed test using **inequalities**. When expecting the sample mean[^3] of the **experiment group** $\bar{x}_e$ to show improvement or a positive effect compared to the **control group** $\bar{x}_c$, we express this as experiment $>$ control. Otherwise, we can do the other way round to see if the experiment is worse than control as experiment $<$ control.
+Typically, we frame null and alternative hypotheses in a one-tailed test using **inequalities**. When expecting the sample mean[^4] of the **experiment group** $\bar{x}_e$ to show improvement or a positive effect compared to the **control group** $\bar{x}_c$, we express this as experiment $>$ control. Otherwise, we can do the other way round to see if the experiment is worse than control as experiment $<$ control.
 
-[^3]: Sample mean is commonly used because it is accessible and cost-effective. We use the population mean when we have data for the entire population rather than just a sample of it.
+[^4]: Sample mean is commonly used because it is accessible and cost-effective. We use the population mean when we have data for the entire population rather than just a sample of it.
 
 $$
 \begin{cases}
@@ -1271,6 +1337,107 @@ There is a problem getting more awareness in the scientific research community c
 
 Data mining often falls prey to big data fallacy, where it finds patterns in random events. With vast data and quick algorithms, it's easy to spot things that seem meaningful but are actually just **coincidental**. We learnt to form hypotheses before collecting data, but data mining does the opposite. Ironically, starting with a hypothesis often leads to more **objectivity**.
 
+**Sample size calculator** is a used to determine the number of observations or data points needed in a sample to make reliable inferences about a population.
+
+When population is unknown:
+
+$$
+n=\frac{z^2 \times p \times (1-p)}{e^2}
+$$
+
+$$
+\Rightarrow sample\ size=\frac{confidence\ level^2 \times proportion \times (1-proportion)}{margin\ of\ error^2}
+$$
+
+```python
+# Unlimited population size
+import math
+
+def calculate_sample_size(confidence_level, margin_of_error):
+    z_score = get_z_score(confidence_level)
+    p = 0.5  # Use 0.5 for maximum variability as a worst-case scenario
+    q = 1 - p
+    e = margin_of_error
+    
+    sample_size = ((z_score**2) * p * q) / (e**2)
+    
+    return math.ceil(sample_size)
+
+def get_z_score(confidence_level):
+    # Z-scores for common confidence levels
+    z_scores = {
+        0.70: 1.04,
+        0.75: 1.15.
+        0.80: 1.28,
+        0.85: 1.44,
+        0.90: 1.65,
+        0.95: 1.96,
+        0.99: 2.58
+    }
+    return z_scores.get(confidence_level, None)
+
+# Example usage:
+confidence_level = 0.95
+margin_of_error = 0.03
+
+sample_size = calculate_sample_size(confidence_level, margin_of_error)
+print('Sample size needed:', sample_size)
+
+# Output
+Sample size needed: 1850
+```
+
+When population is known:
+
+$$
+n = \frac{{(\mu -1) \times e^2+z^2 \times p \times (1-p)}}{{\mu \times z^2 \times p \times (1-p)}}
+$$
+
+```python
+# The sample size doesn't change much for populations larger than 20,000
+import math
+
+def calculate_sample_size(confidence_level, margin_of_error, population_size):
+    z_score = get_z_score(confidence_level)
+    p = 0.5  # Use 0.5 for maximum variability as a worst-case scenario
+    q = 1 - p
+    e = margin_of_error
+    n = population_size
+    
+    sample_size = ((z_score**2) * p * q) / (e**2)
+    adjusted_sample_size = sample_size / (1 + ((sample_size - 1) / n))
+    
+    return math.ceil(adjusted_sample_size)
+
+def get_z_score(confidence_level):
+    # Z-scores for common confidence levels
+    z_scores = {
+        0.70: 1.04,
+        0.75: 1.15.
+        0.80: 1.28,
+        0.85: 1.44,
+        0.90: 1.65,
+        0.95: 1.96,
+        0.99: 2.58
+    }
+    return z_scores.get(confidence_level, None)
+
+# Example usage:
+confidence_level = 0.95
+margin_of_error = 0.03
+population_size = 10000
+
+sample_size = calculate_sample_size(confidence_level, margin_of_error, population_size)
+print('Sample size needed:', sample_size)
+
+# Output
+Sample size needed: 1516
+```
+
+
+
+![Accuracy and precision](https://github.com/x-square/visual-resources/blob/main/accuracy-precision.png?raw=true 'Accuracy and precision')
+
 ## Statistical tests
 
 ![Choosing a statistical test](https://github.com/x-square/visual-resources/blob/main/statistical-test-choose.png?raw=true 'Choosing a statistical test')
@@ -1301,7 +1468,140 @@ graph TD
 
 # Linear algebra
 
+Linear algebra deals with **vector spaces** and **linear transformations** between them, encapsulating concepts such as matrices, determinants, and eigenvalues. It provides a powerful framework for solving systems of linear equations, understanding geometric transformations, and analysing data in various fields like engineering, physics, and computer science.
+
+A **vector** is a mathematical object that represents both **direction** and **magnitude**, often depicted as an arrow in space. It can be used to describe quantities such as **displacement**, **velocity**, and **force**. In computer science, it is an array of numbers **storing data**.
+
+A **matrix** is a rectangular array of numbers, symbols, or expressions arranged in rows and columns.
+
+For example, if you have data about a house that is 18,000 square feet and valued at $260,000, we can represent it as a vector where each number tells us how much we move in a particular direction.
+
+$$
+\vec{v}=\begin{bmatrix}
+x\\
+y
+\end{bmatrix}=\begin{bmatrix}
+18000\\
+260000
+\end{bmatrix}
+$$
+
+
+```python
+import numpy as np
+
+v = np.array([18000, 260000])
+print(v)
+
+# Output
+[ 18000 260000]
+```
+
+Multiple-dimensional vector:
+
+$$
+\vec{v}=\begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}=\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}
+$$
+
+```python
+import numpy as np
+
+v = np.array([1, 2, 3])
+print(v)
+
+# Output
+[1 2 3]
+```
+
+**Vector addition** is commutative and its order of operation does not matter.
+
+![Vector addition](https://github.com/x-square/visual-resources/blob/main/vector-addition.png?raw=true 'Vector addition')
+
+$$
+\begin{cases}
+\vec{v}=\begin{bmatrix}
+3\\
+2
+\end{bmatrix}\\[1em]
+\vec{w}=\begin{bmatrix}
+2\\
+-1
+\end{bmatrix}
+\end{cases}
+$$
+
+$$
+\Rightarrow \vec{v}+\vec{w}=\begin{bmatrix}
+3+2\\
+2+(-1)
+\end{bmatrix}=\begin{bmatrix}
+5\\
+1
+\end{bmatrix}
+$$
+
+```python
+from numpy import array
+
+v = array([3, 2])
+w = array([2, -1])
+
+# sum the vectors 
+v_plus_w = v + w 
+print(v_plus_w)
+
+# Output
+[5, 1]
+```
+
+**Scaling** is growing or shrinking a vector's length, which does not change its direction but only its magnitude. For example, a vector is scaled by a factor of `2`, which is also called a scalar or coefficient. However, when you multiply a vector by a negative scalar, it flips the direction.
+
+![Scaling](https://github.com/x-square/visual-resources/blob/main/vector-scaling.png?raw=true 'Scaling')
+
+$$
+\vec{v} \times 2=\overrightarrow{2v}=2\begin{bmatrix}
+3\\
+1
+\end{bmatrix}=\begin{bmatrix}
+3 \times 2\\
+1 \times 2
+\end{bmatrix}=\begin{bmatrix}
+6\\
+2
+\end{bmatrix}
+$$
+
+```python
+from numpy import array
+
+v = array([3, 1])
+scaled_v = 2 * v 
+print(scaled_v)
+
+# Output
+[6 2]
+```
+
+All data operations, even basic tasks like finding averages, can be seen as vector operations. To find the average house value and square footage for a neighbourhood, we add up the total values and square footages. Then, we divide this combined total by the number of houses $n$ to get the average, which is the same as multiplying by $\frac{1}{n}$. This gives us a vector with the average house value and square footage.
+
+**Linear span** of a set of vectors is the set of all possible linear combinations of those vectors. It essentially represents all the points that can be reached by scaling and adding the vectors in the set.
+
+**Linear independence** refers to a set of vectors in a vector space where none of the vectors in the set can be expressed as a linear combination of the others. Each vector contributes unique information or direction to the space. On the other hand, **linear dependence** means one vector in a group of vectors can be written as a sum of the others multiplied by scalars, which may complicate problem-solving by causing variables to disappear in a set of equations.
+
+A **linear transformation** is a function between two vector spaces that preserves vector addition and scalar multiplication. It maps lines to lines and the origin to the origin, typically by **scaling**, **rotating**, **shearing**, and **inverting**.
+
+
 ## Matrix multiplication
+
+Matrix multiplication combines two matrices to produce another matrix. It involves **multiplying** the elements of **rows of the first matrix** by the corresponding elements of **columns in the second matrix** and **summing up these products**. The resulting matrix has dimensions determined by the number of rows of the first matrix and the number of columns of the second matrix.
 
 $$
 c_{ij}\sum_{k=1}^{n}a_{ik} \times ba_{jk}=a_{i1} \times a_{j1}\ldots+a_{in} \times a_{jn}
@@ -1327,9 +1627,337 @@ $c41=a41 \times b11+a42 \times b21$\
 $c42=a41 \times b12+a42 \times b22$\
 $c43=a41 \times b13+a42 \times b23$
 
-`Any questions, please reach out`
+```python
+from numpy import array
 
-Image via Behavioral Data Analysis with R and Python
+basis = array([[3, 0], [0, 2]])
+v = array([1, 1])
+
+# create new vector by transforming v with dot product
+new_v = basis.dot(v)
+print(new_v)
+
+# Output
+[3, 2]
+```
+
+```python 
+# Breaking out the vectors with dot approach
+from numpy import array
+
+i_hat = array([3, 0])
+j_hat = array([0, 2])
+
+# Transpose rows into columns
+basis = array([i_hat, j_hat]).transpose()
+v = array([1, 1])
+
+# Create new vector by transforming v with dot product
+new_v = basis.dot(v)
+print(new_v)
+
+# Output
+[3, 2]
+```
+
+```python 
+# Breaking out the vectors @ approach
+from numpy import array
+
+# Transformation 1
+
+i_hat1 = array([0, 1])
+j_hat1 = array([-1, 0])
+transform1 = array([i_hat1, j_hat1]).transpose()
+
+# Transformation 2
+i_hat2 = array([1, 0])
+j_hat2 = array([1, 1])
+transform2 = array([i_hat2, j_hat2]).transpose()
+
+# Note that the order of combining transformations is important from the inner-most to outer-most
+combined = transform2 @ transform1
+
+# Test
+v = array([1, 2])
+print(combined.dot(v))
+
+# Output
+[-1, 1]
+```
+
+## Determinant
+
+A determinant is a scalar value that can be calculated from the elements of a square matrix, which describes how much a sampled area in a vector space changes in scale with linear transformations. This can provide helpful information about the transformation.
+
+Simple shears and rotations should not affect the determinant as the area will not change. When the orientation flips, then the determinant will be negative.
+
+```python
+from numpy.linalg import det
+from numpy import array
+
+i_hat = array([3, 0])
+j_hat = array([0, 2])
+basis = array([i_hat, j_hat]).transpose()
+determinant = det(basis)
+
+print(determinant)
+
+# 6.0
+```
+
+If you have a determinant of 0 that means all of space has been squished into a lesser dimension. Testing for a 0 determinant is highly helpful to determine if a transformation has linear dependence. When you encounter this you will likely find a difficult or unsolvable problem on your hands.
+
+```python
+from sympy import *
+
+basis = Matrix([ [2,1], [6,3] ])
+determinant = det(basis)
+print(determinant)
+
+# Output
+0
+```
+
+## Special types of matrices
+
+The **square matrix** has an equal number of rows and columns, which is primarily used to represent linear transformations.
+
+$$
+\begin{bmatrix}
+4 & 2 & 7\\
+5 & 1 & 9\\
+4 & 0 & 1
+\end{bmatrix}
+$$
+
+The **identity matrix** has a diagonal of 1s while the other values are 0.
+
+$$
+\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+An **inverse matrix** is when multiplied with the original matrix, results in the identity matrix. In other words, if $A$ is a square matrix and $A^{-1}$ is its inverse, then $A \times A^{-1}=A^{-1} \times A=I$, where $I$ is is the identity matrix.
+
+$$
+\begin{cases}
+A=\begin{bmatrix}
+4 & 2 & 7\\
+5 & 1 & 9\\
+4 & 0 & 1
+\end{bmatrix}\\[2em]
+A^{-1}=\begin{bmatrix}
+-\frac{1}{2} & 0 & \frac{1}{3}\\
+5\frac{1}{2} & -2 & \frac{4}{3}\\
+-2 & 1 & \frac{1}{3}
+\end{bmatrix}
+\end{cases}
+$$
+
+$$
+\Rightarrow \begin{bmatrix}
+-\frac{1}{2} & 0 & \frac{1}{3}\\
+5\frac{1}{2} & -2 & \frac{4}{3}\\
+-2 & 1 & \frac{1}{3}
+\end{bmatrix} \times \begin{bmatrix}
+4 & 2 & 7\\
+5 & 1 & 9\\
+4 & 0 & 1
+\end{bmatrix}=\begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+A **diagonal matrix** has zeros everywhere except on its main diagonal. The values on this main diagonal are not 1s.
+
+$$
+\begin{bmatrix}
+4 & 0 & 0\\
+0 & 2 & 0\\
+0 & 0 & 5
+\end{bmatrix}
+$$
+
+A **triangular matrix** has a diagonal of non-zero values in front of a triangle of values, while the rest of the values are 0s.
+
+$$
+\begin{bmatrix}
+4 & 2 & 9\\
+0 & 1 & 6\\
+0 & 0 & 5
+\end{bmatrix}
+$$
+
+A **sparse matrix** has most of its elements are 0s.
+
+$$
+\begin{bmatrix}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{bmatrix}
+$$
+
+## Systems of equations and inverse matrices
+
+One of the basic use cases for linear algebra is solving systems of equations.
+
+$$
+\begin{cases}
+4x+2y +4z =44\\
+5x+3y+7z=56\\
+9x+3y+6z=72
+\end{cases}
+$$
+
+$$
+\Rightarrow \begin{bmatrix}
+4 & 2 & 4\\
+5 & 3 & 7\\
+9 & 3 & 6
+\end{bmatrix} \times \begin{bmatrix}
+x\\
+y\\
+z
+\end{bmatrix}=\begin{bmatrix}
+44\\
+56\\
+72
+\end{bmatrix}
+$$
+
+```python
+from numpy import array
+from numpy.linalg import inv
+
+A = array([ [4, 2, 4], [5, 3, 7], [9, 3, 6] ])
+B = array([ 44, 56, 72 ])
+
+values = inv(A).dot(B)
+print(values)
+
+# Output
+[ 2. 34. -8.]
+```
+
+```python
+# Alternative solution
+import sympy as sp
+
+# Define variables
+x, y, z = sp.symbols('x, y, z')
+
+# Define equations
+eq1 = sp.Eq(4*x + 2*y + 4*z, 44)
+eq2 = sp.Eq(5*x + 3*y + 7*z, 56)
+eq3 = sp.Eq(9*x + 3*y + 6*z, 72)
+
+# Solve the system of equations
+solution = sp.solve((eq1, eq2, eq3), (x, y, z))
+
+print("Solution: x =", solution[x], ", y =", solution[y], ", z =", solution[z])
+
+# Output
+Solution: x = 2 , y = 34 , z = -8
+```
+
+## Eigenvalues and eigenvectors
+
+Eigenvalues denoted by $λ$ are scalars that represent how a linear transformation stretches or compresses space along certain directions.
+
+Eigenvectors denoted by $v$ are non-zero vectors that remain in the same direction or opposite direction after being transformed by a matrix, possibly scaled.
+
+The eigenvalue equation is $Av=λv$, where $A$ is the matrix, $v$ is the eigenvector, and $λ$ is the eigenvalue.
+
+```python
+from numpy import array, diag
+from numpy.linalg import eig, inv
+
+A = array([ [1, 2], [4, 5] ])
+eigenvals, eigenvecs = eig(A)
+
+print('Eigenvalues')
+print(eigenvals)
+print()
+print('Eigenvectors')
+print(eigenvecs)
+
+# Output
+Eigenvalues
+[-0.46410162  6.46410162]
+
+Eigenvectors
+[[-0.80689822 -0.34372377]
+ [ 0.59069049 -0.9390708 ]]
+```
+
+# Linear regression
+
+One useful method in data analysis is drawing a line through data points to see how variables are related. **Regression** tries to fit a function to data to predict future results. **Linear regression** specifically fits a straight line to data, showing a linear relationship between variables and predicting future outcomes.
+
+$$
+y=mx+b
+$$
+
+Closed form equation:
+
+$$
+m = \frac{n \sum xy - \sum x \sum y}{{n \sum x^2 - (\sum x)^2}}
+$$
+
+$$
+b = \frac{\sum y}{{n}} - m \frac{\sum x}{{n}}
+$$
+
+Pearson correlation coefficient:
+
+$$
+r = {\frac {n\sum xy - (\sum x) (\sum y)}{{\sqrt{n \sum x^2 - \left(\sum x\right)^{2}}}~{\sqrt {n\sum y^2 - \left(\sum y \right)^{2}}}}}
+$$
+
+Sum of squared error:
+
+$$
+SSE = \sum (y-\^{y})^2
+$$
+
+Sum of squared error of the estimate:
+
+$$
+S_e = \frac{\sum (y-\^{y})^2}{n-2}
+$$
+
+Coefficient of determination:
+
+$$
+r^2 = 1- \frac{\sum (y_i-ŷ_i)^2}{\sum (y_i-\bar{y}_i)^2}
+$$
+
+# Logistic regression and classification
+
+Logistic regression is for binary classification tasks, where the outcome variable is categorical with two possible classes. It predicts the probability of an observation belonging to one of the classes based on input features. Unlike linear regression, which predicts continuous outcomes, logistic regression models the relationship between the dependent variable and independent variables using the logistic function, also known as the sigmoid function. This function maps any real-valued number into a range between 0 and 1, representing probabilities. The model calculates the odds of the event occurring and then converts these odds into a probability score. It's widely used in various fields such as medicine, finance, and marketing for predicting outcomes like disease diagnosis, loan default, or customer churn.
+
+The logistic function, commonly known as a sigmoid curve, is adept at producing outputs ranging between 0 and 1, thereby rendering it well-suited for representing probabilities.
+
+$$
+y=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
+$$
+
+# Neural networks
+
+Neural networks are a type of machine learning model inspired by the structure and function of the human brain. They consist of interconnected nodes, called neurons, organised into layers. These layers typically include an input layer, one or more hidden layers, and an output layer. Each neuron receives input, processes it through an activation function, and passes the result to the neurons in the next layer.
+
+During training, the network adjusts the weights associated with each connection between neurons to minimise the difference between the predicted output and the actual output. This process, known as backpropagation, uses algorithms like gradient descent to update the weights iteratively.
+
+Neural networks are capable of learning complex patterns and relationships in data, making them useful for tasks such as image recognition, natural language processing, and predictive modelling. They have become increasingly popular due to their ability to tackle a wide range of problems and their effectiveness in handling large datasets.
+
+`Any questions, please reach out`
 
 Chiawei Wang PhD\
 Data Scientist\
