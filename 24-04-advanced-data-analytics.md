@@ -23,6 +23,8 @@ Course descriptions:
    - Learn to model variable relationships, focusing on linear and logistic regression.
 6. **The nuts and bolts of machine learning**
    - Learn unsupervised machine learning techniques and how to apply them to organizational data.
+7. **Google advanced data analytics capstone**
+   - Complete a hands-on project designed to demonstrate the skills and competencies you acquire in the program.
 
 # Foundations of data science
 
@@ -6098,7 +6100,7 @@ The TikTok data team has successfully completed exploratory data analysis on the
 
 #### Scenario
 
-our team is nearing the midpoint of their user churn project. So far, you’ve completed a project proposal, and used Python to analyze and visualize Waze’s user data. Now, leadership has a new request for your team: use hypothesis testing to analyze the relationship between mean amount of rides and device type.  
+Your team is nearing the midpoint of their user churn project. So far, you’ve completed a project proposal, and used Python to analyze and visualize Waze’s user data. Now, leadership has a new request for your team: use hypothesis testing to analyze the relationship between mean amount of rides and device type.  
 
 #### Course 4 tasks
 
@@ -6110,15 +6112,15 @@ our team is nearing the midpoint of their user churn project. So far, you’ve c
 
 ### Key takeaways
 
-In Course 3, Go Beyond the Numbers: Translate Data into Insights, you explored the process of exploratory data analysis (EDA). You learned to Identify the core steps, basic methods, and benefits of structuring and cleaning data. Additionally, you investigated raw data using Python, and created data visualizations using Tableau.
+In Course 4, Go Beyond the Numbers: Translate Data into Insights, you explored the process of exploratory data analysis (EDA). You learned to Identify the core steps, basic methods, and benefits of structuring and cleaning data. Additionally, you investigated raw data using Python, and created data visualizations using Tableau.
 
-#### Course 3 skills
+#### Course 4 skills
 
 - Compute descriptive statistics
 - Conduct a two-sample hypothesis test
 - Share an executive summary with the Waze leadership team
 
-#### Course 3 end-of-course project deliverables
+#### Course 4 end-of-course project deliverables
 
 - Hypothesis test prepared with Python 
 - Executive summary
@@ -6186,6 +6188,303 @@ You will conduct hypothesis testing on the data for the churn data. The data tea
 - Answer the questions in the Jupyter notebook project file
 - Conduct a two-sample hypothesis test
 - Create an executive summary to share your results
+
+# Regression analysis: Simplify complex data relationships
+
+```python
+# Line of best fit and Pearson’s correlation coefficient
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from scipy.stats import pearsonr
+
+# Load the Iris dataset
+iris = load_iris()
+data = iris.data[:, :2]  # Considering only the first two features (sepal length and sepal width)
+target = iris.data[:, 1]  # Sepal width is our target variable
+
+# Separate the features and target variable
+x = data[:, 0]  # Sepal length
+y = target
+
+# Calculate means
+x_mean = np.mean(x)
+y_mean = np.mean(y)
+
+# Calculate slope (m)
+m = np.sum((x - x_mean) * (y - y_mean)) / np.sum((x - x_mean)**2)
+
+# Calculate intercept (c)
+c = y_mean - m * x_mean
+
+# Equation of the line
+line = m * x + c
+
+# Plot the original data and the line of best fit
+plt.scatter(x, y, label='Data points')
+plt.plot(x, line, color='red', label='Line of best fit')
+plt.xlabel('Sepal Length')
+plt.ylabel('Sepal Width')
+plt.title('Line of Best Fit for Sepal Width Prediction')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Equation of the line
+print(f'Equation of the line: y = {m:.2f}x + {c:.2f}')
+
+# Calculate Pearson's correlation coefficient
+corr_coef, _ = pearsonr(x, y)
+print(f"Pearson's correlation coefficient: {corr_coef:.2f}")
+```
+
+```python
+# Multiple linear regression
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Sample data: suppose we're predicting a student's exam score based on their study hours and previous exam scores
+study_hours = np.array([5, 7, 3, 2, 6, 8]).reshape(-1, 1)  # Independent variable 1
+previous_scores = np.array([75, 80, 65, 60, 70, 85]).reshape(-1, 1)  # Independent variable 2
+exam_scores = np.array([85, 88, 75, 60, 80, 92])  # Dependent variable
+
+# Creating a multiple linear regression model
+model = LinearRegression()
+
+# Training the model with the data
+model.fit(np.hstack((study_hours, previous_scores)), exam_scores)
+
+# Printing the coefficients (recipe) of the model
+print("Coefficients (recipe):", model.coef_)
+
+# Making predictions for new data
+new_study_hours = np.array([[4], [9]])  # New study hours
+new_previous_scores = np.array([[70], [82]])  # New previous scores
+predicted_exam_scores = model.predict(np.hstack((new_study_hours, new_previous_scores)))
+
+# Printing the predicted exam scores
+for i in range(len(predicted_exam_scores)):
+    print("Predicted exam score for", new_study_hours[i][0], "study hours and", new_previous_scores[i][0], "previous score:", predicted_exam_scores[i])
+
+# Outcome
+Coefficients (recipe): [0.89189189 0.95675676]
+Predicted exam score for 4 study hours and 70 previous score: 76.56756756756758
+Predicted exam score for 9 study hours and 82 previous score: 92.5081081081081
+```
+
+```python
+# The Chi-squared goodness of fit test
+# H0: The week you observed follows your boss’s expectations that the number of website visitors is equal on any given day
+import scipy.stats as stats
+observations = [650, 570, 420, 480, 510, 380, 490]
+expectations = [500, 500, 500, 500, 500, 500, 500]
+result = stats.chisquare(f_obs=observations, f_exp=expectations)
+result
+
+# Outcome
+Power_divergenceResult(statistic=97.599999999999994, pvalue=7.9438869233438347e-19)
+
+# Since the p-value is far less than 0.05, there is sufficient evidence to suggest that the number of visitors is not equal per day.
+```
+
+```python
+# The Chi-squared test for independence
+# H0: The type of device a website visitor uses to visit the website is independent of the visitor’s membership status.
+import numpy as np
+import scipy.stats as stats
+observations = np.array([[850, 450],[1300, 900]])
+result = stats.contingency.chi2_contingency(observations, correction=False)
+result
+
+# Outcome
+(13.660757846804358, 0.00021898310129108426, 1, array([[  798.57142857,   501.42857143],
+       [ 1351.42857143,   848.57142857]]))
+
+# Because the p-value is 0.00022, you can reject the null hypothesis in favor of the alternative. You conclude that the type of device a website user uses is not independent of his or her membership status.
+```
+
+## ANOVA
+
+ANOVA, analysis of variance, testing is useful when you want to test a hypothesis about group differences based on categorical independent variables that test the difference of means between groups. For example, you wanted to determine whether changes in people’s weight when following different diets are statistically significant or due to chance.
+
+The intuition behind ANOVA is to compare the variability between different groups with the variability within the groups. If they are comparable, then the differences between groups are more likely to be due to sampling variability. On the other hand, if the variability between groups is much larger than the variability expected from the samples within their respective groups, then those groups are probably drawn from significantly different subpopulations.
+
+The variation between groups and within groups is calculated as sums of squares, which are then expressed as a ratio. This ratio is known as the F-statistic.
+
+- One-way ANOVA: Compares the means of one continuous dependent variable based on three or more groups of one categorical variable
+- Two-way ANOVA: Compares the means of one continuous dependent variable based on three or more groups of two categorical variables
+
+First, state your hypotheses:
+
+- $H_0$: The mean score of group A = the mean score of group B = the mean score of group C
+- $H_1$: The means of each group are not all equal
+
+Remember, even if only one mean differs, that is sufficient evidence to reject the null hypothesis.
+
+Next, determine your confidence level, the threshold above which you will reject the null hypothesis. This value is dependent on your situation and usually requires some domain knowledge. A common threshold is 95%.
+
+There are five steps in performing a one-way ANOVA test:
+
+1. Calculate group means and grand (overall) mean
+2. Calculate the sum of squares between groups (SSB) and the sum of squares within groups (SSW)
+3. Calculate mean squares for both SSB and SSW
+4. Compute the f-statistic
+5. Use the f-distribution and the f-statistic to get a p-value, which you use to decide whether to reject the null hypothesis
+
+![F-distribution](https://github.com/x-square/visual-resources/blob/main/f-distribution.png?raw=true 'Example of f-distribution')
+
+### Assumptions of ANOVA
+
+ANOVA will only work if the following assumptions are true:
+
+1. The dependent values for each group come from normal distributions
+      - Note that this assumption does NOT mean that all of the dependent values, taken together, must be normally distributed. Instead, it means that within each group, the dependent values should be normally distributed. 
+      - ANOVA is generally robust to violations of normality, especially when sample sizes are large or similar across groups, due to the central limit theorem. However, significant violations can lead to incorrect conclusions.
+2. The variances across groups are equal
+      - ANOVA compares means across groups and assumes that the variance around these means is the same for all groups. If the variances are unequal (i.e., heteroscedastic), it could lead to incorrect conclusions
+3. Observations are independent of each other
+      - ANOVA assumes that one observation does not influence or predict any other observation. If there is autocorrelation among the observations, the results of the ANOVA test could be biased.
+
+## Explore your course 5 workplace scenarios
+
+![Stage 5 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-5.png?raw=true 'Stage 5 of end-of-course project')
+
+### Automatidata
+
+#### Scenario
+
+The relationship between fare amounts and payment type has been analyzed. The operations manager with New York City TLC is seeking more insight through regression modeling. The team’s next milestone is to run a regression model for taxi fares based on variables in the dataset.
+
+#### Course 5 tasks
+
+- Compute descriptive statistics
+- Create a regression model from the New York City TLC dataset
+- Create an executive summary for the Automatidata data team before sharing the results with the client
+
+### TikTok
+
+#### Scenario
+
+The data team at TikTok is close to their goal of building a model to assist in the classification of claims in videos. The next step is to use the project data to create a regression model. As a member of TikTok’s data team, you'll determine the type of regression model that is needed and develop one using TikTok's claim classification data.
+
+#### Course 5 tasks
+
+- Import relevant packages and TikTok data
+- Exploratory data analysis and check model assumptions
+- Determine the correct modeling approach
+- Build the regression model
+- Finish checking model assumptions
+- Evaluate the model
+- Interpret model results and summarize findings for cross-departmental stakeholders within TikTok
+
+### Waze
+
+#### Scenario
+
+Your team is more than halfway through their user churn project. Earlier you completed a project proposal, used Python to analyze and visualize Waze’s user data, and conducted a hypothesis test. As a next step, leadership asks your team to build a regression model to predict user churn based on a variety of variables. 
+
+#### Course 5 tasks
+
+- Check model assumptions 
+- Build a binomial logistic regression model 
+- Evaluate the model 
+
+### Key takeaways
+
+In Course 5, Regression Analysis: Simplify Complex Data Relationships, you practiced modeling variable relationships, and investigated linear and logistic regression to better understand data modeling. Additionally, you reviewed model assumptions and evaluation techniques that will help you interpret and articulate relationships in datasets.
+
+#### Course 5 skills
+
+- Conduct statistical analysis
+- Conduct regression modeling
+- Create predictive models
+- Expand Python coding
+- Share Insights and Ideas with stakeholders
+
+#### Course 5 end-of-course project deliverables
+
+- Regression model within a Python notebook
+- Executive summary with results of model and insights
+
+## Automatidata scenario
+
+### Project background
+
+Automatidata is near the end of the TLC project. The following tasks are needed at this stage of the project:
+
+- Determine the correct modeling approach
+- Build a regression model
+- Finish checking model assumptions
+- Evaluate the model
+- Interpret model results and summarize findings for stakeholders within TLC
+
+### Your assignment
+
+You will create a regression model. Determine the type of regression model that is needed and develop one using the TLC data.
+
+### Specific project deliverables
+
+- Complete a PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario.
+- Answer the questions in the Jupyter notebook project file
+- Statistical testing
+- Report results in executive summary
+
+## TikTok scenario
+
+### Project background
+
+TikTok’s data team is working on the claims classification project. The following tasks are needed at this stage of the project:
+
+- Determine the correct modeling approach
+- Build a regression model
+- Finish checking model assumptions
+- Evaluate the model
+- Interpret model results and summarize findings for cross-departmental stakeholders within TikTok
+
+### Your assignment
+
+You will create a regression model for the claims classification data. You'll determine the type of regression model that is needed and develop one using TikTok's claim classification data.
+
+### Specific project deliverables
+
+- Course 5 PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Create a regression model
+- Evaluate the model
+- Create an executive summary to share your results 
+
+## Waze scenario
+
+### Project background
+
+Waze’s data team is working on the churn project. The following tasks are needed at this stage of the project:
+
+- Determine the correct modeling approach
+- Build a regression model
+- Finish checking model assumptions
+- Evaluate the model
+- Interpret model results and summarize findings for cross-departmental stakeholders within Waze
+
+### Your assignment
+
+You will create a regression model for the churn project. You'll determine the type of regression model that is needed and develop one using Waze's churn project data.
+
+### Specific project deliverables
+
+- Complete the questions in the Course 5 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Build a binomial logistic regression model 
+- Create an executive summary to share your results
+
+# The nuts and bolts of machine learning
+
+## Automated recommendations on product pages
+
+**Content-based filtering** suggests items based on their attributes and features. It analyses the characteristics of items you've liked or interacted with before and recommends similar items. For instance, if you enjoy action movies, it might suggest other action films based on their genre, actors, directors, or plot keywords, rather than considering the preferences of other users.
+
+**Collaborative  filtering** suggests items based on the preferences of users with similar tastes. Instead of focusing on item attributes, it looks at patterns of user behaviour. If you like similar items to another user, the system may recommend items they've enjoyed that you haven't seen yet, and vice versa. This method leverages the collective wisdom of many users to provide personalised recommendations.
+
+**Chatbots** are computer programs designed to simulate conversation with human users, typically through text-based or voice-based interactions. They use natural language processing and machine learning algorithms to understand and respond to user queries or prompts. Chatbots can range from simple rule-based systems that follow predefined scripts to more advanced models like those based on deep learning, which can learn from and adapt to user interactions over time. They are used in various applications, including customer service, virtual assistants, and information retrieval systems.
 
 `Any questions, please reach out`
 
