@@ -368,8 +368,6 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 
 `Any questions, please reach out`
 
-Image via Behavioral Data Analysis with R and Python
-
 Chiawei Wang PhD\
 Data Scientist\
 <chw.wng@outlook.com>
