@@ -1,7 +1,7 @@
 ---
 title: 'Notes on advanced data analytics'
 author: 'Chiawei Wang'
-date: 'February 2024'
+date: 'April 2024'
 date-format: "MMMM YYYY"
 ---
 
@@ -4724,13 +4724,13 @@ Additionally, the data infrastructure overhaul and dashboard solutions improved 
 Exploratory data analysis (EDA) is not like a cake recipe. It is not a step-by-step process you follow. Instead, the six practices of EDA are iterative and non-sequential. 
 
 - **Iterative**: Relating to or involving repetition of a process
-- **Non-sequential**: Not arranged in or following an order or sequence. 
+- **Non-sequential**: Not arranged in or following an order or sequence
 
 Because of the varying nature of datasets, the approach to exploring that data will be different each time. That means that you will need to use your logic and experience throughout the EDA process to determine which of the six practices to utilize, how many times to apply them, and when in the process you should apply them. 
 
 ### Visual example
 
-Imagine you are assigned a dataset that has only 200 rows and five columns of data about trees in a coniferous forest in Norway. You know that to complete your full analysis you’ll need more than 1,000 rows and at least two more columns. Even without much more detail than that, your entire EDA process might look something like this:
+Imagine you are assigned a dataset that has only 200 rows and five columns of data about trees in a coniferous forest in Norway. You know that to complete your full analysis you'll need more than 1,000 rows and at least two more columns. Even without much more detail than that, your entire EDA process might look something like this:
 
 ![Exploratory data analysis](https://github.com/x-square/visual-resources/blob/main/eda.png?raw=true 'Exploratory data analysis')
 
@@ -4810,7 +4810,7 @@ If the dataset is small enough, it can be downloaded and manipulated locally on 
 
 Another way to access data on BigQuery is by using the tools within the BigQuery platform itself. This workflow more closely resembles what data professionals would use when working with very large datasets stored in the cloud.
 
-This process requires you to set up a payment method. However, new users get a $300 credit, and a ML instance is only a few cents per minute, so you’ll get approximately 2,000 hours of free usage before incurring any charges.
+This process requires you to set up a payment method. However, new users get a $300 credit, and a ML instance is only a few cents per minute, so you'll get approximately 2,000 hours of free usage before incurring any charges.
 
 ## Reference guide: Pandas methods for the discovery of a dataset
 
@@ -4827,7 +4827,7 @@ This process requires you to set up a payment method. However, new users get a $
 ### DataFrame.describe()
 
 - The `describe()` method will return descriptive statistics of the entire dataset, including total count, mean, minimum, maximum, dispersion, and distribution. 
-- Leaving the argument field blank will default to returning a summary of the data frame’s statistics. As an option, you can use `include = []` and `exclude = []` which will limit the results to specific data types, depending on what you input in the brackets.
+- Leaving the argument field blank will default to returning a summary of the data frame's statistics. As an option, you can use `include = []` and `exclude = []` which will limit the results to specific data types, depending on what you input in the brackets.
 
 ### DataFrame.sample()
 
@@ -4859,8 +4859,8 @@ This process requires you to set up a payment method. However, new users get a $
 | **%U** | Week number (Sun) | 00 to 53 |
 | **%W** | Week number (Mon) | 00 to 53 |
 | **%w** | Weekday | 0 to 6 |
-| **%x** | Locale’s appropriate date representation | 08/16/88 (None) <br> 08/16/1988 (en_US)<br> 16.08.1988 (de_DE) |
-| **%X** | A locale’s appropriate time representation | 21:30:00 (en_US);<br>21:30:00 (de_DE) |
+| **%x** | Locale's appropriate date representation | 08/16/88 (None) <br> 08/16/1988 (en_US)<br> 16.08.1988 (de_DE) |
+| **%X** | A locale's appropriate time representation | 21:30:00 (en_US);<br>21:30:00 (de_DE) |
 | **%y** | Year without century | 00 to 99 |
 | **%Y** | Year | 2022 |
 | **%z** | Offset | +0900 |
@@ -4877,7 +4877,7 @@ This process requires you to set up a payment method. However, new users get a $
 | **datetime.strptime <br> ('25/11/2022', '%d/%m/%Y') <br> .strftime('%Y-%m-%d')** | string | '25/11/2022' | string | '2022-11-25' |
 | **datetime.fromtimestamp <br> (1617836400.0)** | float (UTC timestamp in seconds) | 1617836400.0 | DateTime | datetime.datetime <br> (2021, 4, 7, 23, 0) |
 | **datetime.datetime(2021, 4, 7, 23, 0) <br> datetime.fromtimestamp(1617836400.0) <br> .strftime('%d/%m/%Y')** | float (UTC timestamp in seconds) | 1617836400.0 | string | ''07/04/2021'' |
-| **from pytz import timezone**<br>**ny_time = datetime.strptime <br> ('25-11-2022  09:34:00-0700', <br> '%d-%m-%Y  %H:%M:%S%z')** <br> **Tokyo_time = ny_time.astimezone <br> (timezone(‘Asia/Tokyo’))** | string | NewYork timezone '25-11-2022  09:34:00-0700' | DateTime | Tokyo timezone 2022, 11, 26, 1, 34, JST+9:00:00 STD> |
+| **from pytz import timezone**<br>**ny_time = datetime.strptime <br> ('25-11-2022  09:34:00-0700', <br> '%d-%m-%Y  %H:%M:%S%z')** <br> **Tokyo_time = ny_time.astimezone <br> (timezone(‘Asia/Tokyo'))** | string | NewYork timezone '25-11-2022  09:34:00-0700' | DateTime | Tokyo timezone 2022, 11, 26, 1, 34, JST+9:00:00 STD> |
 | **datetime.strptime <br> ('20:00', '%H:%M') <br> .strftime('%I:%M %p')** | string | '20:00' | string | '08:00 PM' |
 | **datetime <br> .strptime('08:00 PM', '%I:%M  %p') <br> .strftime('%H:%M')** | string | '08:00 PM' | string | '20:00' |
 
@@ -4935,10 +4935,10 @@ dtype: int64
 
 #### df.merge()
 
-Use `df.merge()` to take columns or indices from other dataframes and combine them with the one to which you’re applying the method.
+Use `df.merge()` to take columns or indices from other dataframes and combine them with the one to which you're applying the method.
 
 ```python
-df1.merge(df2, how = ‘inner’, on = [‘month’,’year’])
+df1.merge(df2, how = ‘inner', on = [‘month','year'])
 ```
 
 #### pd.concat()
@@ -4982,7 +4982,7 @@ df[['animal', 'legs']]
 
 #### df.select_dtypes()
 
-Use `df.select_dtypes()` to return a subset of the dataframe’s columns based on the column dtypes e.g. float64, int64, bool, object, etc.
+Use `df.select_dtypes()` to return a subset of the dataframe's columns based on the column dtypes e.g. float64, int64, bool, object, etc.
 
 ```python
 print(df)
@@ -5417,7 +5417,7 @@ Name: number_of_strikes, dtype: float64
 
 #### Reassigning
 
-In some cases, it might be best to reassign all outlier values to match the median or mean value. This will ensure that your median and distribution are based solely on the non-outlier values, leaving the original outliers excluded. The actual imputation or reassigning of values can be pretty simple if you’ve already found the outliers. The following code block calculates the median of the values greater than the lower limit. Then it imputes the median where values are lower than the lower limit.
+In some cases, it might be best to reassign all outlier values to match the median or mean value. This will ensure that your median and distribution are based solely on the non-outlier values, leaving the original outliers excluded. The actual imputation or reassigning of values can be pretty simple if you've already found the outliers. The following code block calculates the median of the values greater than the lower limit. Then it imputes the median where values are lower than the lower limit.
 
 ```python
 # Calculate median of all NON-OUTLIER values
@@ -5453,6 +5453,8 @@ For categorical or qualitative data types, data professionals often need to tran
 | Shiitake          |  7       |
 | Toadstool         |  8       |
 
+: Label encoding
+
 ### Some potential problems with label encoding 
 
 With this label encoding, the resulting machine learning model could derive not only a ranking, but also a closer connection between `1` and `2` because of how close they are numerically than, say, `1` and `4`). In addition to these presumed relationships, which you may or may not want in your analysis, you should also notice that each code is equidistant from the other in the numeric sequence, as in `1` to `2` is the same distance as `5` to `6`. The question is, does that equidistant relationship accurately represent the relationships between the music genres in your dataset? To ask another question, after encoding, will the visualization or model you build treat the encoded labels as a ranking?
@@ -5478,6 +5480,8 @@ With this method, we solve the problem of the unintended and problematic relatio
 |    10   |     1    |       0       |     0     |     0      |
 |    11   |     1    |       0       |     0     |     0      |
 |    12   |     0    |       1       |     0     |     0      |
+
+: One-hot encoding 
 
 ### Label encoding or one-hot encoding: How to decide?
 
@@ -5900,7 +5904,7 @@ The New York City TLC data is ready for exploratory data analysis (EDA) in Pytho
 
 #### Scenario
 
-It is now time to begin the process of exploratory data analysis (EDA). As a data analyst on TikTok's data team, you will complete the EDA process for the claims classification project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+It is now time to begin the process of exploratory data analysis (EDA). As a data analyst on TikTok's data team, you will complete the EDA process for the claims classification project. You'll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
 
 #### Course 3 tasks
 
@@ -5915,7 +5919,7 @@ It is now time to begin the process of exploratory data analysis (EDA). As a dat
 
 #### Scenario
 
-Your team is still in the early stages of their user churn project. So far, you’ve completed a project proposal, and used Python to inspect and organize Waze’s user data. Now, the data is ready for exploratory data analysis (EDA) and further data visualization. 
+Your team is still in the early stages of their user churn project. So far, you've completed a project proposal, and used Python to inspect and organize Waze's user data. Now, the data is ready for exploratory data analysis (EDA) and further data visualization. 
 
 #### Course 3 tasks
 
@@ -5954,7 +5958,7 @@ Automatidata is working on the TLC project. The following tasks are needed befor
 
 ### Your assignment
 
-You will conduct exploratory data analysis on data for the TLC project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+You will conduct exploratory data analysis on data for the TLC project. You'll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
 
 ### Specific project deliverables
 
@@ -5975,7 +5979,7 @@ You will conduct exploratory data analysis on data for the TLC project. You’ll
 
 ### Your assignment
 
-You will conduct exploratory data analysis on data for the claims classification project. You’ll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+You will conduct exploratory data analysis on data for the claims classification project. You'll also use Tableau to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
 
 ### Specific project deliverables
 
@@ -5996,7 +6000,7 @@ You will conduct exploratory data analysis on data for the claims classification
 
 ### Your assignment
 
-You will conduct exploratory data analysis on data for the churn project. You’ll also use tools to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
+You will conduct exploratory data analysis on data for the churn project. You'll also use tools to create visuals for an executive summary to help non-technical stakeholders engage and interact with the data.
 
 ### Specific project deliverables
 
@@ -6042,16 +6046,16 @@ print(sampled_df)
 ![Type I and type II errors](https://github.com/x-square/visual-resources/blob/main/type-error.png?raw=true 'Type I and type II errors')
 
 
-- Reject the null hypothesis when it’s actually true (Type I error)
-- Reject the null hypothesis when it’s actually false (True positive)
-- Fail to reject the null hypothesis when it’s actually true (True negative) 
-- Fail to reject the null hypothesis when it’s actually false (Type II error)
+- Reject the null hypothesis when it's actually true (Type I error)
+- Reject the null hypothesis when it's actually false (True positive)
+- Fail to reject the null hypothesis when it's actually true (True negative) 
+- Fail to reject the null hypothesis when it's actually false (Type II error)
 
 ### Type I error 
 
 A Type 1 error, also known as a false positive, occurs when you reject a null hypothesis that is actually true. In other words, you conclude that your result is statistically significant when in fact it occurred by chance. 
 
-For example, in your clinical trial, if the null hypothesis is true, that means the medicine has no effect. If you make a Type I error and reject the null hypothesis, you incorrectly conclude that the medicine relieves cold symptoms when it’s actually ineffective. 
+For example, in your clinical trial, if the null hypothesis is true, that means the medicine has no effect. If you make a Type I error and reject the null hypothesis, you incorrectly conclude that the medicine relieves cold symptoms when it's actually ineffective. 
 
 In general, making a Type I error often leads to implementing changes that are unnecessary and ineffective, and which waste valuable time and resources.
 
@@ -6059,7 +6063,7 @@ The probability of making a Type I error is called alpha $\alpha$. Your signific
 
 ### Type II error
 
-Reducing your risk of making a Type I error means you are more likely to make a Type II error, or false negative. A Type II error occurs when you fail to reject a null hypothesis which is actually false. In other words, you conclude your result occurred by chance, when in fact it didn’t. 
+Reducing your risk of making a Type I error means you are more likely to make a Type II error, or false negative. A Type II error occurs when you fail to reject a null hypothesis which is actually false. In other words, you conclude your result occurred by chance, when in fact it didn't. 
 
 For example, in your clinical study, if the null hypothesis is false, this means that the medicine is effective. If you make a Type II error and fail to reject the null hypothesis, you incorrectly conclude that the medicine is ineffective when it actually relieves cold symptoms. 
 
@@ -6087,7 +6091,7 @@ Exploratory data analysis is complete for the project. The New York City TLC wou
 
 #### Scenario
 
-The TikTok data team has successfully completed exploratory data analysis on the data for the claims classification project. The team is ready to begin the process of hypothesis testing. You’ve been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
+The TikTok data team has successfully completed exploratory data analysis on the data for the claims classification project. The team is ready to begin the process of hypothesis testing. You've been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
 
 #### Course 4 tasks
 
@@ -6100,7 +6104,7 @@ The TikTok data team has successfully completed exploratory data analysis on the
 
 #### Scenario
 
-Your team is nearing the midpoint of their user churn project. So far, you’ve completed a project proposal, and used Python to analyze and visualize Waze’s user data. Now, leadership has a new request for your team: use hypothesis testing to analyze the relationship between mean amount of rides and device type.  
+Your team is nearing the midpoint of their user churn project. So far, you've completed a project proposal, and used Python to analyze and visualize Waze's user data. Now, leadership has a new request for your team: use hypothesis testing to analyze the relationship between mean amount of rides and device type.  
 
 #### Course 4 tasks
 
@@ -6137,7 +6141,7 @@ Automatidata is working on the TLC project. The following tasks are needed at th
 
 ### Your assignment
 
-You will conduct hypothesis testing on the data for the TLC data. You’ve been asked to investigate TLC’s dataset to determine which hypothesis testing method best serves the data and the TLC project.
+You will conduct hypothesis testing on the data for the TLC data. You've been asked to investigate TLC's dataset to determine which hypothesis testing method best serves the data and the TLC project.
 
 ### Specific project deliverables
 
@@ -6150,7 +6154,7 @@ You will conduct hypothesis testing on the data for the TLC data. You’ve been 
 
 ### Project background
 
-TikTok’s data team is working on the claims classification project. The following tasks are needed at this stage of the project:
+TikTok's data team is working on the claims classification project. The following tasks are needed at this stage of the project:
 
 - Explore the project data
 - Implement a hypothesis test
@@ -6158,7 +6162,7 @@ TikTok’s data team is working on the claims classification project. The follow
 
 ### Your assignment
 
-You will conduct hypothesis testing on the data for the claims classification data. You’ve been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
+You will conduct hypothesis testing on the data for the claims classification data. You've been asked to investigate TikTok's user claim dataset to determine which hypothesis testing method best serves the data and the claims classification project.
 
 ### Specific project deliverables
 
@@ -6172,7 +6176,7 @@ You will conduct hypothesis testing on the data for the claims classification da
 
 ### Project background
 
-Waze’s data team is working on the churn project. The following tasks are needed at this stage of the project:
+Waze's data team is working on the churn project. The following tasks are needed at this stage of the project:
 
 - Explore the project data
 - Implement a hypothesis test
@@ -6192,7 +6196,7 @@ You will conduct hypothesis testing on the data for the churn data. The data tea
 # Regression analysis: Simplify complex data relationships
 
 ```python
-# Line of best fit and Pearson’s correlation coefficient
+# Line of best fit and Pearson's correlation coefficient
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
@@ -6274,7 +6278,7 @@ Predicted exam score for 9 study hours and 82 previous score: 92.5081081081081
 
 ```python
 # The Chi-squared goodness of fit test
-# H0: The week you observed follows your boss’s expectations that the number of website visitors is equal on any given day
+# H0: The week you observed follows your boss's expectations that the number of website visitors is equal on any given day
 import scipy.stats as stats
 observations = [650, 570, 420, 480, 510, 380, 490]
 expectations = [500, 500, 500, 500, 500, 500, 500]
@@ -6289,7 +6293,7 @@ Power_divergenceResult(statistic=97.599999999999994, pvalue=7.9438869233438347e-
 
 ```python
 # The Chi-squared test for independence
-# H0: The type of device a website visitor uses to visit the website is independent of the visitor’s membership status.
+# H0: The type of device a website visitor uses to visit the website is independent of the visitor's membership status.
 import numpy as np
 import scipy.stats as stats
 observations = np.array([[850, 450],[1300, 900]])
@@ -6305,7 +6309,7 @@ result
 
 ## ANOVA
 
-ANOVA, analysis of variance, testing is useful when you want to test a hypothesis about group differences based on categorical independent variables that test the difference of means between groups. For example, you wanted to determine whether changes in people’s weight when following different diets are statistically significant or due to chance.
+ANOVA, analysis of variance, testing is useful when you want to test a hypothesis about group differences based on categorical independent variables that test the difference of means between groups. For example, you wanted to determine whether changes in people's weight when following different diets are statistically significant or due to chance.
 
 The intuition behind ANOVA is to compare the variability between different groups with the variability within the groups. If they are comparable, then the differences between groups are more likely to be due to sampling variability. On the other hand, if the variability between groups is much larger than the variability expected from the samples within their respective groups, then those groups are probably drawn from significantly different subpopulations.
 
@@ -6353,7 +6357,7 @@ ANOVA will only work if the following assumptions are true:
 
 #### Scenario
 
-The relationship between fare amounts and payment type has been analyzed. The operations manager with New York City TLC is seeking more insight through regression modeling. The team’s next milestone is to run a regression model for taxi fares based on variables in the dataset.
+The relationship between fare amounts and payment type has been analyzed. The operations manager with New York City TLC is seeking more insight through regression modeling. The team's next milestone is to run a regression model for taxi fares based on variables in the dataset.
 
 #### Course 5 tasks
 
@@ -6365,7 +6369,7 @@ The relationship between fare amounts and payment type has been analyzed. The op
 
 #### Scenario
 
-The data team at TikTok is close to their goal of building a model to assist in the classification of claims in videos. The next step is to use the project data to create a regression model. As a member of TikTok’s data team, you'll determine the type of regression model that is needed and develop one using TikTok's claim classification data.
+The data team at TikTok is close to their goal of building a model to assist in the classification of claims in videos. The next step is to use the project data to create a regression model. As a member of TikTok's data team, you'll determine the type of regression model that is needed and develop one using TikTok's claim classification data.
 
 #### Course 5 tasks
 
@@ -6381,7 +6385,7 @@ The data team at TikTok is close to their goal of building a model to assist in 
 
 #### Scenario
 
-Your team is more than halfway through their user churn project. Earlier you completed a project proposal, used Python to analyze and visualize Waze’s user data, and conducted a hypothesis test. As a next step, leadership asks your team to build a regression model to predict user churn based on a variety of variables. 
+Your team is more than halfway through their user churn project. Earlier you completed a project proposal, used Python to analyze and visualize Waze's user data, and conducted a hypothesis test. As a next step, leadership asks your team to build a regression model to predict user churn based on a variety of variables. 
 
 #### Course 5 tasks
 
@@ -6433,7 +6437,7 @@ You will create a regression model. Determine the type of regression model that 
 
 ### Project background
 
-TikTok’s data team is working on the claims classification project. The following tasks are needed at this stage of the project:
+TikTok's data team is working on the claims classification project. The following tasks are needed at this stage of the project:
 
 - Determine the correct modeling approach
 - Build a regression model
@@ -6457,7 +6461,7 @@ You will create a regression model for the claims classification data. You'll de
 
 ### Project background
 
-Waze’s data team is working on the churn project. The following tasks are needed at this stage of the project:
+Waze's data team is working on the churn project. The following tasks are needed at this stage of the project:
 
 - Determine the correct modeling approach
 - Build a regression model
@@ -6485,6 +6489,665 @@ You will create a regression model for the churn project. You'll determine the t
 **Collaborative  filtering** suggests items based on the preferences of users with similar tastes. Instead of focusing on item attributes, it looks at patterns of user behaviour. If you like similar items to another user, the system may recommend items they've enjoyed that you haven't seen yet, and vice versa. This method leverages the collective wisdom of many users to provide personalised recommendations.
 
 **Chatbots** are computer programs designed to simulate conversation with human users, typically through text-based or voice-based interactions. They use natural language processing and machine learning algorithms to understand and respond to user queries or prompts. Chatbots can range from simple rule-based systems that follow predefined scripts to more advanced models like those based on deep learning, which can learn from and adapt to user interactions over time. They are used in various applications, including customer service, virtual assistants, and information retrieval systems.
+
+## Python libraries and packages
+
+### Operational packages
+
+- NumPy allows for more mathematical operations and provides functions for array-like objects.
+- Pandas provides high-performance data manipulation and analytical tools e.g. creation of data frames, analyzing data, cleaning data, manipulating data, performing efficient operations on large data sets.
+  
+### Visualization packages
+
+- MatPlotlib provides various tools and functions to visualize data.
+- Seaborn, an extension of Matplotlib, creates beautiful visualizations.
+- Plotly is yet another open-source library that is used to create data visualizations, commonly used in many different industries such as finance, geography, and statistics. 
+
+### Machine learning packages
+
+- Scikit-learn, sometimes referred to as Sklearn, contains a host of tools that can be used for classification and regression problems, statistical modeling, clustering, and dimensionality reduction.
+
+## Find solutions online
+
+- There are many free resources available to data professionals, and every data professional uses them.
+- The documentation is a good place to start when troubleshooting something code-related. Scroll down to check the examples given in the documentation. They're very helpful! You can also copy/paste an error message directly into your search engine and often find an answer just from that.
+- [Stack Overflow](https://stackoverflow.com/questions) and other Stack Exchange sites like [Cross Validated](https://stats.stackexchange.com), [Data Science](https://datascience.stackexchange.com), and [Mathematics](https://math.stackexchange.com) are great places to find answers to questions, and also to ask your own and get help from the data science community worldwide.
+- [Kaggle](https://www.kaggle.com) is a valuable resource for answers to questions, educational material, datasets, and community-submitted notebooks. It also hosts modeling competitions and posts the solutions of all the winners and runners up. 
+
+## More about planning a machine learning project
+
+### Knowing what you need for a problem
+
+**Supervised models** are used to make predictions about unseen events. These types of models use labeled data, and the model will use these labels and the predictor variables present to learn from the dataset. And when given new data points, they're able to make a prediction of the label. So, for example, if you're tasked with predicting rainfall amounts, you already know that you will need a supervised learning model.
+
+**Unsupervised models**, on the other hand, don't really make predictions but recommendations. They are used to discover the natural structure of the data, finding relationships within unlabeled data. So, for example, if you're tasked with discovering relationships between customer habits and segment users, you know you'll need an unsupervised model.
+
+Now, let's go back to the rainfall example. Just from that problem statement alone, we know we need a supervised learning model. However, not all supervised learning models are the same. The two main types of supervised learning are regression and classification. There are different types of regression models that you have practiced, with different models able to perform regression or classification tasks.
+
+**Linear regression models** are used when the result must be a continuous variable. As you have learned, continuous variables are numerical values that can have an unlimited number of values between the highest and lowest points of measurement. So if you need rainfall amounts in inches or centimeters, you know a linear regression model is needed.
+
+However, what if we don't need exact rainfall amount predictions, but just whether or not it will rain that day? This is where a **classification model**, such as a **logistic regression model**, would be more appropriate. Classification models will deliver results as a categorical variable, where there is a finite set of values that the variable can be. In this example, the model would only ever predict two results: will rain or won't rain. 
+
+## Explore feature engineering
+
+Feature engineering is the process of using practical, statistical, and data science knowledge to select, transform, or extract characteristics (accuracy, completeness, reliability, relevance and timeliness), properties (volume, value, variety, velocity, veracity), and attributes (qualitative, quantitative) from raw data.
+
+Feature Selection is the process of dropping any and all unnecessary or unwanted features from the dataset. Feature Transformation is the process of editing features into a form where they're better for training the model. Feature Extraction is the process of creating brand new features from other features that already exist in the dataset.
+
+### Feature selection
+
+Feature selection is the process of picking variables from a dataset that will be used as predictor variables for your model. With very large datasets, there are dozens if not hundreds of features for each observation in the data. Using all of the features in a dataset often doesn't give any performance boost. In fact, it may actually hurt performance by adding complexity and noise to the model. Therefore, choosing the features to use for the model is an important part of the model development process. 
+
+Generally, there are three types of features:
+
+- Predictive: Features that by themselves contain information useful to predict the target                       
+- Interactive: Features that are not useful by themselves to predict the target variable, but become predictive in conjunction with other features
+- Irrelevant: Features that don't contain any useful information to predict the target
+
+You want predictive features, but a predictive feature can also be a redundant feature. Redundant features are highly correlated with other features and therefore do not provide the model with any new information—for example, the steps you took in a day, may be highly correlated with the calories you burned. The goal of feature selection is to find the predictive and interactive features and exclude redundant and irrelevant features.
+
+### Feature transformation
+
+Feature transformation is a process where you take features that already exist in the dataset, and alter them so that they're better suited to be used for training the model. Data professionals usually perform feature transformation during the Construct phase, after they've analyzed the data and made decisions about how to transform it based on what they've learned.
+
+#### Log normalization
+
+There are various types of transformations that might be required for any given model. For example, some models do not handle continuous variables with skewed distributions very well. As a solution, you can take the log of a skewed feature, reducing the skew and making the data better for modeling. This is known as log normalization.
+
+#### Scaling
+
+Another kind of feature transformation is scaling. Scaling is when you adjust the range of a feature's values by applying a normalization function to them. Scaling helps prevent features with very large values from having undue influence over a model compared to features with smaller values, but which may be equally important as predictors.
+
+There are many scaling methodologies available. Some of the most common include:
+
+#### Normalization
+
+Normalization (e.g., MinMaxScaler in scikit-learn) transforms data to reassign each value to fall within the range [0, 1]. When applied to a feature, the feature's minimum value becomes zero and its maximum value becomes one. All other values scale to somewhere between them.
+
+#### Standardization
+
+Another type of scaling is called standardization (e.g., StandardScaler in scikit-learn). Standardization transforms each value within a feature so they collectively have a mean of zero and a standard deviation of one.
+
+#### Encoding
+
+Another form of feature transformation is known as encoding. Variable encoding is the process of converting categorical data to numerical data. Consider the bank churn dataset. The original data has a feature called geography, whose values represent each customer's country of residence-France, Germany, or Spain. Most machine learning methodologies cannot extract meaning from strings. Encoding transforms the strings to numbers that can be interpreted mathematically.
+
+### Feature extraction
+
+Feature extraction involves producing new features from existing ones, with the goal of having features that deliver more predictive power to your model. While there is some overlap between extraction and transformation colloquially, the main difference is that a new feature is created from one or more other features rather than simply changing one that already exists.
+
+## More about imbalanced datasets
+
+Class imbalance is like having a toy box with lots of red cars and only a few blue trucks. It makes it tricky for a computer to learn about both types equally well.
+
+Class balancing refers to the process of changing the data by altering the number of samples in order to make the ratios of classes in the target variable less asymmetrical.
+
+### Downsampling
+
+Downsampling is the process of making the minority class represent a larger share of the whole dataset simply by removing observations from the majority class. It is mostly used with datasets that are large. But how large is large enough to consider downsampling? Tens of thousands is a good rule of thumb, but ultimately this needs to be validated by checking that model performance doesn't deteriorate as you train with less data. 
+
+One way to downsample data is by selecting some observations randomly from the majority class and removing them from the dataset. There are some more technical, mathematically based methods, but random removal works very well in most cases.
+
+### Upsampling
+
+Upsampling is basically the opposite of downsampling, and is done when the dataset doesn't have a very large number of observations in the first place. Instead of removing observations from the majority class, you increase the number of observations in the minority class. 
+
+There are a couple of ways to go about this. The first and easiest method is to duplicate samples of the minority class. Depending on how many such observations you have compared to the majority class, you might have to duplicate each sample several times over.
+
+Another way is to create synthetic, unique observations of the minority class. On the surface, there seems to be something wrong about editing the dataset like this, but if the goal is simply to train a better-performing model, it can be a valid and useful technique. You can generate these synthetic observations from the observations that currently exist. For example, you can average two points of the minority class and add the result to the dataset as a sample of the minority class. This can even be done algorithmically using publicly available Python packages.
+
+### Consequences
+
+Manipulating the class distribution of your data doesn't come without consequences. The first consequence is the risk of your model predicting the minority class more than it should. By class rebalancing to get your model to recognize the minority class, you might build a model that over-recognizes that class. That happens because, in training, it learned a data distribution that is not what it will be in the real world.
+
+Changing the class distribution affects the underlying class probabilities learned by the model. Consider, for example, how the Naive Bayes algorithm works. To calculate the probability of a class, given the features, it uses the background probability of a class in the data. 
+
+### When to do it
+
+Class rebalancing should be reserved for situations where other alternatives have been exhausted and you still are not achieving satisfactory model results. Some guiding questions include:
+
+- How severe is the imbalance? A moderate (< 20%) imbalance may not require any rebalancing. An extreme imbalance (< 1%) would be a more likely candidate.
+- Have you already tried training a model using the true distribution? If the model doesn't fit well due to very few samples in the minority class, then it could be worth rebalancing, but you won't know unless you first try without rebalancing.
+- Do you need to use the model's predicted class probabilities in a downstream process? If all you need is a class assignment, class rebalancing can be a very useful tool, but if you need to use your model's output class probabilities in another downstream model or decision, then rebalancing can be a problem because it changes the underlying probabilities in the source data.
+
+## More about evaluation metrics for classification models
+
+Classification tasks are among the most common applications of machine learning. Knowing these techniques will empower you to take on data challenges from fraud detection to predicting stock market events and World Cup winners.
+
+### Evaluation metrics for classification models
+
+![Confusion matrix](https://github.com/x-square/visual-resources/blob/main/confusion-matrix.png?raw=true 'Confusion matrix')
+
+#### Accuracy
+
+$$
+accuracy = \frac{true\ positives + true\ negatives}{total\ results\ (true\ positives + true\ negatives + false\ positives + false\ negatives)}
+$$
+
+Accuracy is the proportion of data points that are correctly classified. It is an overall representation of model performance.
+
+Accuracy is often unsuitable to use when there is a class imbalance in the data, because it's possible for a model to have high accuracy by predicting the majority class every time. In such a case, the model would score well, but it may not be a useful model. 
+
+#### Precision
+
+$$
+precision = \frac{true\ positives}{actual\ results\ (true\ positives + false\ positives)}
+$$
+
+Precision measures the proportion of positive predictions that are true positives.
+
+Precision is a good metric to use when it's important to avoid false positives. For example, if your model is designed to initially screen out ineligible loan applicants before a human review, then it's best to err on the side of caution and not automatically disqualify people before a person can review the case more carefully.
+
+#### Recall
+
+$$
+recall = \frac{true\ positives}{predicted\ results\ (true\ positives + false\ negatives)}
+$$
+
+Recall measures the proportion of actual positives that are correctly classified.
+
+Recall is a good metric to use when it's important that you identify as many true responders as possible. For example, if your model is identifying poisonous mushrooms, it's better to identify all of the true occurrences of poisonous mushrooms, even if that means making a few more false positive predictions.
+
+#### ROC curves
+
+![ROC curve](https://github.com/x-square/visual-resources/blob/main/roc-curve.png?raw=true 'Receiver operating characteristic curve')
+
+True Positive Rate: Equivalent or synonymous to recall
+
+$$
+true\ positive\ rate = \frac{true\ positives}{predicted\ results\ (true\ positives + false\ negatives)}
+$$
+
+False Positive Rate: The ratio between the false positives and the total count of observations that should be predicted as false
+
+$$
+false\ positive\ rate = \frac{false\ positives}{false \ positives + true\ negatives}
+$$
+
+Receiver operating characteristic (ROC) curves show how well a classifier performs across various decision thresholds. In binary classification, these thresholds determine whether a prediction falls into the positive or negative category. The default threshold in many libraries is 0.5, but it's not always optimal.
+
+Using an ROC curve helps capture the classifier's performance across different thresholds, as you may not know beforehand the best threshold for your specific application. It plots the true positive rate against the false positive rate.
+
+In an ideal scenario, the curve represents a model that perfectly separates positives from negatives. Starting from a threshold just above zero, say 0.001, this model would correctly identify nearly all positives with minimal false negatives, resulting in a true positive rate close to 1 and a false positive rate near 0. The closer the ROC curve hugs the top left corner of the plot, the better the model is at classification.
+
+#### AUC
+
+![AUC](https://github.com/x-square/visual-resources/blob/main/auc.png?raw=true 'Area under the curve')
+
+Area under the curve (AUC) is a measure of the two-dimensional area underneath an ROC curve. AUC provides an aggregate measure of performance across all possible classification thresholds. One way to interpret AUC is to consider it as the probability that the model ranks a random positive sample more highly than a random negative sample. AUC ranges in value from 0 to 1. The AUC is the shaded region below the dotted curve. The bigger this shaded part, the better the model.
+
+#### F$_1$ socre
+
+![F1 score](https://github.com/x-square/visual-resources/blob/main/f1-score.png?raw=true 'F1 score')
+
+$$
+F{_1} = 2 \times \frac{precision \times recall}{precision + recall}
+$$
+
+F$_1$ score is a measurement that combines both precision and recall into a single expression, giving each equal importance.
+
+This combination is known as the harmonic mean. F$_1$ score can range [0, 1], with zero being the worst and one being the best. The idea behind this metric is that it penalizes low values of either metric, which prevents one very strong factor, precision or recall, from carrying the other, when it is weaker.
+
+The F$_1$ score never exceeds the mean. In fact, it is only equal to the mean in a single case: when precision equals recall. The more one score diverges from the other, the more F$_1$ score penalizes. Note that you could swap precision and recall values in this experiment and the scores would be the same.
+
+![Plotting F1 score](https://github.com/x-square/visual-resources/blob/main/plot-f1-score.png?raw=true 'Plotting F1 score')
+
+Plotting the means and F$_1$ scores for all values of precision against all values of recall results in two planes.
+
+While the coordinate plane of the mean is flat, the plane of the F$_1$ score is pulled further downward the more one score diverges from the other. This penalizing effect makes F$_1$ score a useful measurement of model performance.
+
+#### F$_\beta$ socre
+
+$$
+F{_\beta} = (1+\beta^2) \times \frac{precision \times recall}{ (\beta^2 \times precision) + recall}
+$$
+
+What if you still want to capture both precision and recall in a single metric, but you consider one more important than the other? There's a metric for that, F$_\beta$ score. In an F$_\beta$ score, $_\beta$ is a factor that represents how many times more important recall is compared to precision. In the case of F$_1$ score, $\beta$ = 1, and recall is therefore 1 times as important as precision (i.e. they are equally important). However, an F$_2$ score has $\beta$ = 2, which means recall is twice as important as precision; and if precision is twice as important as recall, then $\beta$ = 0.5. 
+
+You can assign whatever value you want to $\beta$. However, in scikit-learn, while most modules have built-in F$_1$ and F$_\beta$ scorers, some modules may only have an F$_1$ score and require you to define your own scoring function if you want to set a custom $\beta$ value.
+
+## More about k-means
+
+K-means is handy for partitioning a dataset into a set number of clusters. The k represents the number of clusters you want to find. The algorithm iteratively assigns data points to clusters and calculates centroids (the mean of the points in each cluster). Then, it recalculates the centroids based on the assigned points until convergence, usually when the centroids no longer change significantly or a predefined number of iterations is reached. K-means is efficient and works well for many datasets, but it's sensitive to initial centroid placement and may converge to local optima.
+
+The steps of the k-means algorithm:
+
+1. Randomly place centroids in the data space
+2. Assign each point to its nearest centroid
+3. Update the location of each centroid to the mean position of all the points assigned to it
+4. Repeat steps 2 and 3 until the model converges (i.e. all centroid locations remain unchanged with successive iterations)
+
+Generally, you do not always know how many clusters you should have, and you probably won't be able to visualize your data so easily because it will likely have more than three features (i.e. dimensions).
+
+### A note on k-means++
+
+In scikit-learn, this implementation is called k-means++. K-means++ still randomly initializes centroids in the data, but it does so based on a probability calibration. Basically, it randomly chooses one point within the data to be the first centroid, then it uses other data points as centroids, selecting them pseudo-randomly. The probability that a point will be selected as a centroid increases the farther it is from other centroids. This helps to ensure that centroids aren't initially placed very close together, which is when convergence in local minima is most likely to occur.
+
+K-means++ is the default implementation when you instantiate K-means in scikit-learn. If you don't want to use this implementation and would prefer to start with truly random centroids, you can change this by setting the `init` parameter to `random`, but rarely would you want to do this.
+
+## Clustering beyond k-means
+
+So why were the k-means clusters so boxy? Well, this is because k-means works by minimizing intercluster variance. In other words, it aims to minimize the distance between points and their centroids. This means that k-means works best when the clusters are round. If you aren't satisfied with the way k-means is clustering your data, don't worry, there are many other clustering methods available to choose from.
+
+### DBSCAN
+
+DBSCAN stands for density-based spatial clustering of applications with noise. Instead of trying to minimize variance between points in each cluster, DBSCAN searches your data space for continuous regions of high density. Here's how it works.
+
+Notice that the clusters aren't as block-like as they were for k-means, and they correspond with the vertices of the pyramid a lot more closely than k-means. Also, of course, different clustering arrangements result in different colors for each of the three centroids.
+
+### Agglomerative clustering
+
+Agglomerative clustering works by first assigning every point to its own cluster, then progressively combining clusters based on intercluster distance.
+
+Agglomerative clustering requires that you specify a desired number of clusters or a distance threshold, which is the linkage distance above which clusters will not be merged. If you do not specify a desired number of clusters, then the distance threshold is an important parameter, because without it the model would converge into a single cluster every time.
+
+The agglomerative clustering algorithm will stop when one of the following conditions is met:
+
+- You reach a specified number of clusters.
+- You reach an intercluster distance threshold (clusters that are separated by more than this distance are too far from each other and will not be merged). 
+
+Agglomerative clustering gives even more definition to the data clustered along the vertices of the pyramid, which most closely represents the clusters that appear to the eye.
+
+### Other clustering algorithms
+
+There are many other ways to cluster data than what is covered here. Scikit-learns documentation provides a helpful reference that illustrates some of the strengths and weaknesses of each methodology by running them on a series of toy datasets.
+
+![Clustering algorithms](https://github.com/x-square/visual-resources/blob/main/clustering-algorithms.png?raw=true 'Clustering algorithms')
+
+## More about inertia and silhouette coefficient metrics
+
+Evaluation metrics for supervised learning models don't work for unsupervised learning models because unsupervised results can't be labelled as correct or incorrect. Supervised models predict a target variable using predictor variables, while unsupervised methods aim to find underlying data structures.
+
+Clustering, an unsupervised technique, groups observations based on similarity. Professionals often use inertia and silhouette scores to assess clustering models and identify meaningful groupings. This review explores these concepts further.
+
+Inertia and silhouette score are useful metrics to help determine how meaningful your models cluster assignments are. Both are especially helpful when your data has too many dimensions (features) to visualize in 2-D or 3-D space. Use these metrics together to help inform your decision on which model to select.
+
+### Inertia
+
+Inertia is a measurement of intracluster distance. It indicates how compact the clusters are in a model. Specifically, inertia is the sum of the squared distance between each point and the centroid of the cluster that its assigned to. It can be represented by this formula, where:
+
+$$
+inertia = \sum_{i=1}^{n}(x_{i}-c_{k})^2
+$$
+
+- $n$ = the number of observations in the data
+- $𝑥_𝑖$ v= the location of a particular observation
+- $c_𝑘$ = the location of the centroid of cluster $k$, which is the cluster to which point $𝑥_𝑖$ is assigned
+
+The greater the inertia, the greater the distances between points and their centroids, which means the points within each cluster are farther apart from each other.
+
+For the same dataset and the same number of clusters, lower inertia values are typically better than higher values, because low values indicate that points are closer together within their clusters.
+
+The three clusters on the left have higher inertia than the three on the right.
+
+![Higher inertia and lower inertia](https://github.com/x-square/visual-resources/blob/main/inertia-1.png?raw=true 'Higher inertia and lower inertia')
+
+Note, however, that inertia only measures intracluster distance. Therefore, both of the clusterings in the figure below have the same inertia.
+
+The three clusters on the left have the same inertia as the three on the right.
+
+![Inertia and its intra-cluster distance](https://github.com/x-square/visual-resources/blob/main/inertia-2.png?raw=true 'Inertia and its intra-cluster distance')
+
+Why do close proximity between points matter within clusters? Clustering models group related observations by their similarity, often based on distance between points or between points and a cluster center. In both cases, closer observations are considered more similar, suggesting tighter clusters represent greater real-world similarity between observations.
+
+#### Evaluating inertia
+
+Inertia is valuable for assessing clustering model performance, but it's not informative on its own. An inertia of 53.25 might seem good, but its significance depends on comparison with other models' inertia and k values. Increasing k reduces inertia, but there's a threshold where further clusters yield minimal inertia changes, marking a crucial transition point.
+
+#### The elbow method
+
+The elbow method is ideal for pinpointing this transition point, aiding in selecting the most meaningful clustering model for your data. It employs a line plot to visually compare inertias across various models, particularly with k-means, where different k values are compared. Heres an example:
+
+![Obvious inertia elbow](https://github.com/x-square/visual-resources/blob/main/inertia-obvious-elbow.png?raw=true 'Obvious inertia elbow')
+
+This plot compares inertias from nine K-means models, ranging from two to ten clusters. Initially, inertia is high with two clusters, but significantly drops with three clusters, creating a steep decline. Beyond three clusters, the rate of inertia decrease slows notably, shown by a flatter curve.
+
+To apply the elbow method, identify the sharpest bend in the curve, resembling an elbow. This typically indicates the most meaningful clustering. A significant drop in inertia suggests shorter distances between points and centroids, implying denser clusters and greater similarity. However, if adding clusters yields minimal inertia improvement, it adds complexity without capturing real data structure. For instance, a model with k = 1,000 might have low inertia, but lacks meaningful interpretation.
+
+In the last example, the elbow was very clear. Often it wont be so obvious. Consider this, for example:
+
+![Ambiguous inertia elbow](https://github.com/x-square/visual-resources/blob/main/inertia-ambiguous-elbow.png?raw=true 'Ambiguous inertia elbow')
+
+Here, the elbow appears at the three-cluster model, though inertia still declines notably from three to four clusters. There's no definitive answer, so analysing cluster assignments for both models may help determine which is more meaningful. Other tools can also aid your decision.
+
+### Silhouette analysis
+
+One of these tools is a silhouette analysis. A silhouette analysis is the comparison of different models silhouette scores. To calculate a models silhouette score, first, a silhouette coefficient is calculated for each instance in the data. An instances silhouette coefficient is defined by the following formula, where:
+
+$$
+silhouette\ coefficient = \frac{(b-a)}{max(a,b)}
+$$
+
+- $a$ = the mean distance between the instance and each other instance in the same cluster 
+- $b$ = the mean distance from the instance to each instance in the nearest other cluster (i.e. excluding the cluster that the instance is assigned to)
+- $max(a,b)$ = whichever value is greater, $a$ or $b$
+
+A silhouette coefficient can range between -1 and +1. A value closer to +1 means that a point is close to other points in its own cluster and well separated from points in other clusters.
+
+The silhouette score is the average silhouette coefficient for all observations in a model. A higher score indicates better-defined clusters, with points closer within clusters and clusters more separated. Unlike inertia, silhouette coefficients reflect both intracluster distance $a$ and intercluster distance $b$.
+
+Points in the three clusters on the left have lower silhouette coefficients than those on the right. You can plot silhouette scores for different models to compare them.
+
+A line graph shows the number of clusters (x-axis) versus silhouette score (y-axis), peaking at 0.54 for three clusters. This suggests the three-cluster model has the tightest and most separated clusters, making it the best option for this data.
+
+![Silhouette score](https://github.com/x-square/visual-resources/blob/main/silhouette-plot.png?raw=true 'Silhouette score')
+
+## Explore decision trees
+
+### What is a decision tree?
+
+A decision tree is a flowchart-like structure used to predict outcomes or make decisions. It can handle classification problems (e.g. predicting if a team will win) and regression problems (e.g. predicting a car's price). This reading focuses on classification trees, but both types rely on the same decision process.
+
+### The structure of a classification tree
+
+Decision trees resemble upside-down trees, with the root at the top and leaves at the bottom. They consist of nodes, which are groups of samples. The root node is the first node, from which the initial split occurs, dividing samples based on a feature's values.
+
+The resulting nodes are child nodes, and the original node is the parent. Each child node can further split the data, continuing until nodes no longer split. The final nodes are leaf nodes, while all preceding nodes are decision nodes, as they direct data left or right.
+
+
+### Decisions and splits
+
+In a decision tree, data is split at decision nodes until it reaches a leaf node. Each decision node is split to minimise the impurity of the classes in the resulting child nodes. Impurity measures how mixed the classes are. Nodes with low impurity have a clear majority of one class. A perfect split results in child nodes containing only a single class, while the worst split results in child nodes having equal numbers of each class.
+
+When building a tree and creating a new node, potential split points are generated for each predictor variable in the dataset. An algorithm calculates the purity of the child nodes for each split point. The feature and split point that produce the purest child nodes are chosen to partition the data.
+
+To find the potential split points, the algorithm first identifies the type of variable, categorical or continuous, and its range of values.
+
+### Choosing splits: Gini impurity
+
+$$
+Gini\ impurity = 1-\sum_{i=1}^{n}p(i)^2
+$$
+
+where $i$ = class,
+
+$p(i)$ = the probability of samples belonging to class i in a given node.
+
+![Gini impurities](https://github.com/x-square/visual-resources/blob/main/decision-tree-gini-impurities.png?raw=true 'Gini impurities')
+
+$$
+Gini\ impurity\ case\ a = 1-p(apple)^2-p(grape)^2
+$$
+
+
+$$
+\Rightarrow 1- \left(\frac{number\ of\ apples\ in\ node}{total\ number\ of\ samples\ in\ node} \right)^2- \left(\frac{number\ of\ grapes\ in\ node}{total\ number\ of\ samples\ in\ node} \right)^2
+$$
+
+$$
+\Rightarrow
+\begin{cases}
+yes=1-\left(\frac{1}{3}\right)^2-\left(\frac{2}{3}\right)^2=1-0.111-0.444=0.445\\
+no=1-\left(\frac{3}{4}\right)^2-\left(\frac{1}{4}\right)^2=1-0.5625-0.0625=0.375
+\end{cases}
+$$
+
+Calculate weighted average of Gini impurities:
+
+$$
+\left(\frac{number\ of\ apples\ in\ left\ child}{total\ number\ of\ both\ children} \times GI_{left\ child} \right)+ \left(\frac{number\ of\ grapes\ in\ right\ child}{total\ number\ of\ both\ children} \times GI_{right\ child} \right)
+$$
+
+$$
+\Rightarrow \left(\frac{3}{7} \times 0.445 \right)+\left(\frac{4}{7} \times 0.375 \right)=0.405
+$$
+
+There are now nine Gini impurity scores ranging from 0.229 to 0.486. Since lower scores indicate better splits, option E is the best. Option C is the worst because it doesn't separate the classes well. The worst possible Gini impurity score is 0.5, occurring when each child node has an equal number of each class.
+
+Now that the algorithm has identified the potential split points and calculated the Gini impurity of the child nodes that result from them, it will grow the tree by selecting the split point with the lowest Gini impurity.
+
+## Hyperparameter tuning
+
+Throughout this program, you've learned about modeling techniques for making predictions and understanding data. While some models work well with default settings, most require customization for each dataset.
+
+Models can overfit or underfit depending on the data and algorithm. The goal is to identify patterns that apply broadly and use these to predict new data.
+
+Overfitting occurs when a model learns the training data too well, capturing noise and idiosyncrasies, leading to poor generalization to new data. Underfitting happens when a model fails to learn the training data's patterns, resulting in poor performance on both training and test data.
+
+The best models balance between overfitting and underfitting, capturing intrinsic patterns without noise. Hyperparameters, which are set before training and affect how the model fits the data, help achieve this balance. Hyperparameter tuning adjusts these settings to improve model performance.
+
+### Hyperparameters for decision trees
+
+There are various hyperparameters that control how a decision tree grows, each affecting specific growth conditions. Some determine when a node should split, others limit the tree's depth, and some change how node purity is calculated. This reading introduces three key hyperparameters: `max_depth`, `min_samples_split`, and `min_samples_leaf`.
+
+#### max_depth
+
+The hyperparameter `max_depth` defines how deep the tree is allowed to grow. The depth of the tree is the distance, measured in number of levels, from the root node to the furthest leaf node. The root node would have a depth of zero, the child of the root node would have a depth of one, and so on.
+
+An unrestricted decision tree will keep splitting until each leaf contains only one class. Increasing the max depth parameter improves training performance but can lead to overfitting, making the model perform poorly on test data. If a tree grows too deep, it memorizes the training data, which doesn't generalize well to new data. Conversely, a shallow tree has high bias and makes inaccurate predictions. The best decision tree models balance between being too shallow and too deep.
+
+#### min_samples_split
+
+The hyperparameter `min_samples_split` is the minimum number of samples a node must have to split into more nodes. For instance, if set to 10, any node with nine or fewer samples becomes a leaf node and won't split further. Nodes with 10 or more samples can continue splitting. A higher `min_samples_split` value stops the tree from growing too much. The minimum value is two, as this is the smallest number that can be divided into two child nodes.
+
+In an example, a tree with `min_samples_split` = 5 keeps splitting until all leaves are pure, while a tree with `min_samples_split` = 10 stops splitting when a node has only eight samples, below the threshold.
+
+#### min_samples_leaf
+
+The hyperparameter `min_samples_leaf` sets the minimum number of samples required in each child node after a split, unlike `min_samples_split`, which sets the minimum for the parent node before splitting. For example, with `min_samples_leaf` set to three, a tree's right branch might become a leaf at depth = 1, while the left branch continues to split until the leaf nodes are pure at depth = 2. The right branch stops splitting because it would result in a child node with only one sample, below the threshold of three.
+
+### Finding the optimal set of hyperparameters
+
+A **grid search** is a technique that will train a model for every combination of preset ranges of hyperparameter values. The aim is to find the combination of values that results in a model that both fits the training data well and generalizes well enough to predict accurately on unseen data.  After all these models have been trained, you then compare them to find this ideal model if it exists.
+
+## More about validation and cross-validation
+
+### Model validation
+
+Choosing the best model by just seeing which one performs best on a single test set isn't fair, because the model might just be lucky with that specific data. This would give an overly optimistic idea of its future performance. Instead, we should use a process called validation, where we test the models multiple times with different data sets to get a more accurate and fair comparison. This helps us find the model that will actually perform best in the future, not just the one that seemed best by chance.
+
+#### Validation sets
+
+To choose the best model fairly, split your data into three parts: 60% for training, 20% for validation, and 20% for testing. Use the training data to build models and the validation data to compare them. Only use the test data at the end to check how well the final model works. This way, you ensure a fair and accurate evaluation of your models.
+
+#### Cross validation
+
+Cross-validation is a another technique to assess the performance of a model on unseen data. It involves splitting the dataset into subsets, or folds, and iteratively training the model on some folds while validating it on others. This process helps to estimate how well the model will generalize to new data. Common methods include k-fold cross-validation, leave-one-out cross-validation, and stratified cross-validation. Each method has its own advantages and is chosen based on factors like dataset size and class distribution.
+
+### Model selection
+
+Once you've trained and validated your candidate models, selecting a champion involves considering various factors beyond just validation scores. These factors include the model's explainability, complexity, resilience to input fluctuations, generalization to unseen data, computational cost, and latency in production systems. Sometimes, a model with a slightly lower validation score might be preferred due to its simplicity, lower computational expense, or greater stability.
+
+After selecting a champion model, it's crucial to evaluate it using the test data, which is reserved solely for this purpose. The model's performance on this data reflects its expected performance on entirely new data. Making changes to the model based on its performance on the test data risks compromising the objectivity of the score. However, you can still make changes to the model, such as retraining it on the entire dataset, before deployment. Just be aware that without new data, meaningful evaluation becomes challenging at this stage.
+
+## Bagging: How it works and why to use it
+
+Bootstrapping and aggregating together are known collectively as bagging. A simple way to understand bagging is to think of it as making a copy of your data to train each base learner, but each base learner’s copy is slightly different. Bagging models reduce variance, are fast to train, and are good to use with very large datasets.
+
+### Bootstrapping
+
+Recall that bootstrapping refers to sampling with replacement. In ensemble modeling architectures, this means that for each base learner, the same observation can and will be sampled multiple times. Suppose you have a dataset of 1,000 observations, and you bootstrap sample it to generate a new dataset of 1,000 observations, on average, you should find about 632 of those observations in your sampled dataset (63.2%).
+
+### Aggregating
+
+When we create a single model using bootstrapped data, we risk losing valuable information because some observations might not be included in the sampled dataset. For example, if we start with 1000 unique observations and create a sampled dataset of 1000 observations using bootstrapping, we might only have around 632 unique observations on average in the new dataset. This means we miss out on the information from the remaining 368 observations.
+
+To overcome this limitation, we use ensemble learning, also known as ensembling. Ensemble learning involves building multiple models and combining their predictions. Although each individual model might miss some observations, by repeating the bootstrapping process for each base learner, eventually, the overall ensemble of models will cover all the observations, ensuring we don't miss any important information.
+
+### Why to use it
+
+**Reduces variance:** Using standalone models alone can lead to a lot of variation in predictions. But when we combine the predictions of many models in an ensemble, it helps to smooth out these ups and downs.
+
+**Fast:** Ensemble models are quick to train because we can train many models at the same time, using different parts of the data. This means we can use all the computer's power and speed things up.
+
+**Good for big data:** With bagging, we don't need to keep the whole dataset in the computer's memory when training. We can just use smaller chunks of the data to train each model, and then bring all the models together later. This is handy when dealing with really big datasets because it saves memory and speeds up the process.
+
+## More about random forests
+
+Bagging, short for bootstrap aggregating, is a method for making predictions that involves building lots of base learners, like decision trees, trained on different versions of the data and then combining their results. Taking this idea further, a random forest adds another layer of randomness by also shuffling the features used to train each base learner. This helps create a more diverse set of decision trees, making the predictions even more accurate and robust.
+
+### Why randomize?
+
+Random forest models employ randomness to decrease the chances of individual base learners repeating the same errors. When errors are uncorrelated among learners, it mitigates both bias and variance. In bagging, this randomness is introduced by training each base learner on a subset of the data, with some observations possibly being repeated due to replacement.
+
+For instance, imagine a dataset with five observations: 1, 2, 3, 4, and 5. When creating a bootstrapped dataset with five observations, it could resemble: 1, 1, 3, 5, 5. Although the new dataset retains five observations, some are missing while others are duplicated. Consequently, base learners are trained on data randomized by observation.
+
+However, random forest takes it a step further by randomizing the data across features. If there are five features available, A, B, C, D, and E, the model can be configured to sample from only a subset of them. In essence, each base learner is restricted to a limited number of features, but the selection varies across learners.
+
+### How does all this sampling affect predictions?
+
+The effect of all this sampling is that the base learners each see only a fraction of the possible data that’s available to them. Surely this would result in a model that’s not as good as one that was trained on the full dataset, right? 
+
+No! In fact, not only is it possible for model scores to improve with sampling, but they also require significantly less time to run, since each tree is built from less data.
+
+| | **Bootstrap sample size** | **Features sampled** | **Accuracy score** | **Runtime** |
+|-|---------------------------|----------------------|--------------------|-------------|
+| **Bagging** | 100% | 10 | 0.8596 | 15m 49s |
+| **Bagging** | 30% | 10 | 0.8692 |7m 41s |
+| **Random forest** | 100% | 4 | 0.8704 | 8m 19s |
+| **Random forest** | 30% | 4 | 0.8736 | 4m 53s |
+| **Random forest** | 5% | 4 | 0.8652 | 3m 41s |
+
+: Comparison between bagging and random forest
+
+The bagging model with only 30% bootstrapped samples performed better than the one that used 100% samples, and the random forest model that used 30% bootstrapped samples and just 4 features performed better than all the others. Not only that, but runtime was cut by nearly 70% using the random forest model with 30% bootstrap samples. 
+
+It may seem counterintuitive, but you can often build a well-performing model with even lower bootstrapping samples. Take for example the above random forest model whose base learners were each built from just 5% samples of the training data. It still was able to achieve a 0.8652 accuracy score, not much worse than the champion model!
+
+## Random forest tuning
+
+[Reference guide](https://docs.google.com/document/d/1fqKtmagL0gPT0mpBgkLZD-RrLfvyn50EEsSe9g7oC5s/template/preview?resourcekey=0-xj3Vgi1fOaQqOTgPs90fdA 'Random forest tuning')
+
+## Validation and cross-validation
+
+[Reference guide](https://docs.google.com/document/d/14BVhVuNouhiUXzRNE8VhVPVorh-iQtX6noRTXIHf-Pg/template/preview 'Validation and cross-validation')
+
+## More about gradient boosting
+
+Gradient Boosting is a potent machine learning method used for both regression and classification tasks. It improves predictions by adding simple models, like decision trees, one by one. Each new model focuses on fixing mistakes from previous ones. By adjusting to the errors and fitting to a specific loss function, Gradient Boosting creates a strong and precise model that can handle complex data well. Despite needing lots of computing power and being prone to overfitting if not regulated, Gradient Boosting is valued for its accuracy and is widely used in finance, search engines, and biology.
+
+## XGBoost tuning
+
+[Reference guide](https://docs.google.com/document/d/1KYcw3sArgdMxU_X3urvhgQxifO7If6_Ox43vBflVwvY/template/preview?resourcekey=0-ACWAwz30ugEZgEU-5Jqwcw 'XGBoost tuning')
+
+ ## Explore your course 6 workplace scenarios
+
+![Stage 6 of end-of-course project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-6.png?raw=true 'Stage 6 of end-of-course project')
+
+### Automatidata
+
+#### Scenario
+
+New York City TLC stakeholders have been impressed with the data analytical work completed by the Automatidata team in this project. As a result, they have reached out once again for assistance in creating a machine learning model that can help predict whether or not a rider will be a generous tipper.
+
+#### Course 6 tasks
+
+- Build a random forest model from the New York City TLC dataset
+- Create an executive summary for the Automatidata data team before sharing the results with the client
+
+### TikTok
+
+#### Scenario
+
+The data team at TikTok is nearing the end of the claims classification project. The final milestone left for the team: creating the machine learning model. You will be responsible for leading these final tasks, which include feature engineering, model development, and evaluation.
+
+#### Course 6 tasks
+
+- Import relevant packages and TikTok data
+- Exploratory data analysis
+- Feature engineering
+- Check model assumptions
+- Model building
+- Model evaluation
+- Summarize findings for cross-departmental stakeholders within TikTok
+
+### Waze
+
+#### Scenario
+
+Your team is close to completing their user churn project. Previously, you completed a project proposal, used Python to analyze and visualize Waze’s user data, conducted a hypothesis test, and built a binomial logistic regression model. The final step is to build and test different machine learning models for predicting user churn. 
+
+#### Course 6 tasks
+
+- Perform feature engineering 
+- Build the following machine learning models: random forest and XGBoost 
+- Evaluate the models 
+- Share an executive summary with the Waze leadership team
+
+### Key takeaways
+
+In Course 6, The Nuts and Bolts of Machine Learning you were introduced to supervised and unsupervised machine learning techniques. Additionally, you developed a working familiarity with Naive Bayes, decision trees, random forests, gradient boosting machines, and K-means clustering.
+
+#### Course 6 skills
+
+- Apply feature engineering techniques using Python
+- Construct a Naive Bayes model
+- Articulate how unsupervised learning differs from supervised learning
+- Code a K-means algorithm in Python
+- Explore decision tree and forest models
+- Understand bagging and boosting
+- Identify tuning model parameters and how they affect performance and evaluation metrics
+- Share Insights and Ideas with Stakeholders
+
+#### Course 5 end-of-course project deliverables
+
+- Machine learning  model with Python
+- Executive summary with recommendations and insights based on results
+
+## Automatidata scenario
+
+### Project background
+
+Automatidata is ready to create a machine learning model for TLC. The following tasks are needed to complete the project:
+
+- Model building
+- Model evaluation
+- Summarize findings for Automatidata and the stakeholders at TLC
+
+### Your assignment
+
+You will create a machine learning model for the TLC data. You will be responsible for leading these tasks, which include feature engineering, model development, and evaluation. 
+
+### Specific project deliverables
+
+- Complete a PACE planner mapping questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Design and implement a machine learning model
+- Draft an executive summary of your results
+
+## TikTok scenario
+
+### Project background
+
+TikTok’s data team is near the end of the claims classification project. The following tasks are needed to complete the project:
+
+- Model building
+- Model evaluation
+- Summarize findings for cross-departmental stakeholders within TikTok
+
+### Your assignment
+
+You will create the final machine learning model for the claims classification data. You will be responsible for leading these final tasks, which include feature engineering, model development, and evaluation. 
+
+### Specific project deliverables
+
+- Course 6 PACE Strategy Document to consider questions, details, and action items for each stage of the project scenario
+- Answer the questions in the Jupyter notebook project file
+- Build a machine learning model
+- Evaluate the model
+- Interpret the results
+- Create an executive summary to share your results with cross-departmental stakeholders within TikTok
+
+## Waze scenario
+
+### Project background
+
+Waze’s data team is near the end of the churn project. The following tasks are needed to complete the project:
+
+- Model building
+- Model evaluation
+- Summarize findings for cross-departmental stakeholders within Waze
+
+### Your assignment
+
+You will create the final machine learning model for the churn project. You will be responsible for leading these final tasks, which include feature engineering, model development, and evaluation.
+
+### Specific project deliverables
+
+- Complete the questions in the Course 6 PACE strategy document
+- Answer the questions in the Jupyter notebook project file
+- Design and implement the following machine learning models: random forest and XGBoost 
+- Create an executive summary to share your results with cross-departmental stakeholders within Waze
 
 `Any questions, please reach out`
 
