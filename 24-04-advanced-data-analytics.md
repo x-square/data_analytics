@@ -6676,7 +6676,7 @@ In an ideal scenario, the curve represents a model that perfectly separates posi
 
 Area under the curve (AUC) is a measure of the two-dimensional area underneath an ROC curve. AUC provides an aggregate measure of performance across all possible classification thresholds. One way to interpret AUC is to consider it as the probability that the model ranks a random positive sample more highly than a random negative sample. AUC ranges in value from 0 to 1. The AUC is the shaded region below the dotted curve. The bigger this shaded part, the better the model.
 
-#### F$_1$ socre
+#### F1 socre
 
 ![F1 score](https://github.com/x-square/visual-resources/blob/main/f1-score.png?raw=true 'F1 score')
 
@@ -6684,25 +6684,25 @@ $$
 F{_1} = 2 \times \frac{precision \times recall}{precision + recall}
 $$
 
-F$_1$ score is a measurement that combines both precision and recall into a single expression, giving each equal importance.
+F${_1}$ score is a measurement that combines both precision and recall into a single expression, giving each equal importance.
 
-This combination is known as the harmonic mean. F$_1$ score can range [0, 1], with zero being the worst and one being the best. The idea behind this metric is that it penalizes low values of either metric, which prevents one very strong factor, precision or recall, from carrying the other, when it is weaker.
+This combination is known as the harmonic mean. F${_1}$ score can range [0, 1], with zero being the worst and one being the best. The idea behind this metric is that it penalizes low values of either metric, which prevents one very strong factor, precision or recall, from carrying the other, when it is weaker.
 
-The F$_1$ score never exceeds the mean. In fact, it is only equal to the mean in a single case: when precision equals recall. The more one score diverges from the other, the more F$_1$ score penalizes. Note that you could swap precision and recall values in this experiment and the scores would be the same.
+The F${_1}$ score never exceeds the mean. In fact, it is only equal to the mean in a single case: when precision equals recall. The more one score diverges from the other, the more F${_1}$ score penalizes. Note that you could swap precision and recall values in this experiment and the scores would be the same.
 
 ![Plotting F1 score](https://github.com/x-square/visual-resources/blob/main/plot-f1-score.png?raw=true 'Plotting F1 score')
 
 Plotting the means and F$_1$ scores for all values of precision against all values of recall results in two planes.
 
-While the coordinate plane of the mean is flat, the plane of the F$_1$ score is pulled further downward the more one score diverges from the other. This penalizing effect makes F$_1$ score a useful measurement of model performance.
+While the coordinate plane of the mean is flat, the plane of the F\_{1} score is pulled further downward the more one score diverges from the other. This penalizing effect makes F$_1$ score a useful measurement of model performance.
 
-#### F$_\beta$ socre
+#### Fβ socre
 
 $$
 F{_\beta} = (1+\beta^2) \times \frac{precision \times recall}{ (\beta^2 \times precision) + recall}
 $$
 
-What if you still want to capture both precision and recall in a single metric, but you consider one more important than the other? There's a metric for that, F$_\beta$ score. In an F$_\beta$ score, $_\beta$ is a factor that represents how many times more important recall is compared to precision. In the case of F$_1$ score, $\beta$ = 1, and recall is therefore 1 times as important as precision (i.e. they are equally important). However, an F$_2$ score has $\beta$ = 2, which means recall is twice as important as precision; and if precision is twice as important as recall, then $\beta$ = 0.5. 
+What if you still want to capture both precision and recall in a single metric, but you consider one more important than the other? There's a metric for that, F$_\beta$ score. In an F$_{\beta}$ score, $\beta$ is a factor that represents how many times more important recall is compared to precision. In the case of F$_1$ score, $\beta$ = 1, and recall is therefore 1 times as important as precision (i.e. they are equally important). However, an F$_2$ score has $\beta$ = 2, which means recall is twice as important as precision; and if precision is twice as important as recall, then $\beta$ = 0.5. 
 
 You can assign whatever value you want to $\beta$. However, in scikit-learn, while most modules have built-in F$_1$ and F$_\beta$ scorers, some modules may only have an F$_1$ score and require you to define your own scoring function if you want to set a custom $\beta$ value.
 
