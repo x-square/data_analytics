@@ -6681,10 +6681,10 @@ Area under the curve (AUC) is a measure of the two-dimensional area underneath a
 ![F1 score](https://github.com/x-square/visual-resources/blob/main/f1-score.png?raw=true 'F1 score')
 
 $$
-F{_1} = 2 \times \frac{precision \times recall}{precision + recall}
+F_1 = 2 \times \frac{precision \times recall}{precision + recall}
 $$
 
-F${_1}$ score is a measurement that combines both precision and recall into a single expression, giving each equal importance.
+F<sub>1</sub> score is a measurement that combines both precision and recall into a single expression, giving each equal importance.
 
 This combination is known as the harmonic mean. F${_1}$ score can range [0, 1], with zero being the worst and one being the best. The idea behind this metric is that it penalizes low values of either metric, which prevents one very strong factor, precision or recall, from carrying the other, when it is weaker.
 
