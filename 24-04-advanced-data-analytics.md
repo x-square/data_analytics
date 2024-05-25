@@ -6952,7 +6952,7 @@ After selecting a champion model, it's crucial to evaluate it using the test dat
 
 ## Bagging: How it works and why to use it
 
-Bootstrapping and aggregating together are known collectively as bagging. A simple way to understand bagging is to think of it as making a copy of your data to train each base learner, but each base learner’s copy is slightly different. Bagging models reduce variance, are fast to train, and are good to use with very large datasets.
+Bootstrapping and aggregating together are known collectively as bagging. A simple way to understand bagging is to think of it as making a copy of your data to train each base learner, but each base learner's copy is slightly different. Bagging models reduce variance, are fast to train, and are good to use with very large datasets.
 
 ### Bootstrapping
 
@@ -6986,7 +6986,7 @@ However, random forest takes it a step further by randomizing the data across fe
 
 ### How does all this sampling affect predictions?
 
-The effect of all this sampling is that the base learners each see only a fraction of the possible data that’s available to them. Surely this would result in a model that’s not as good as one that was trained on the full dataset, right? 
+The effect of all this sampling is that the base learners each see only a fraction of the possible data that's available to them. Surely this would result in a model that's not as good as one that was trained on the full dataset, right? 
 
 No! In fact, not only is it possible for model scores to improve with sampling, but they also require significantly less time to run, since each tree is built from less data.
 
@@ -7055,7 +7055,7 @@ The data team at TikTok is nearing the end of the claims classification project.
 
 #### Scenario
 
-Your team is close to completing their user churn project. Previously, you completed a project proposal, used Python to analyze and visualize Waze’s user data, conducted a hypothesis test, and built a binomial logistic regression model. The final step is to build and test different machine learning models for predicting user churn. 
+Your team is close to completing their user churn project. Previously, you completed a project proposal, used Python to analyze and visualize Waze's user data, conducted a hypothesis test, and built a binomial logistic regression model. The final step is to build and test different machine learning models for predicting user churn. 
 
 #### Course 6 tasks
 
@@ -7109,7 +7109,7 @@ You will create a machine learning model for the TLC data. You will be responsib
 
 ### Project background
 
-TikTok’s data team is near the end of the claims classification project. The following tasks are needed to complete the project:
+TikTok's data team is near the end of the claims classification project. The following tasks are needed to complete the project:
 
 - Model building
 - Model evaluation
@@ -7132,7 +7132,7 @@ You will create the final machine learning model for the claims classification d
 
 ### Project background
 
-Waze’s data team is near the end of the churn project. The following tasks are needed to complete the project:
+Waze's data team is near the end of the churn project. The following tasks are needed to complete the project:
 
 - Model building
 - Model evaluation
@@ -7148,6 +7148,43 @@ You will create the final machine learning model for the churn project. You will
 - Answer the questions in the Jupyter notebook project file
 - Design and implement the following machine learning models: random forest and XGBoost 
 - Create an executive summary to share your results with cross-departmental stakeholders within Waze
+
+# Google Advanced Data Analytics Capstone
+
+## Helpful resources and tips
+
+[Data analytics glossary](https://docs.google.com/document/d/1tySTtMyvb_Dz34Rv1Wv5AfeA9UYSGD7Tf-tZG5WJDJc/template/preview 'Advanced data analytics glossary')
+
+[Advanced data analytics glossary](https://docs.google.com/document/d/193-AtS7MlB2w4buwiCyPjBoOhIbbByKgHWPpYnSR9VI/template/preview 'Data analytics glossary')
+
+## Course 7 overview
+
+![Stage 7 of capstone project](https://github.com/x-square/visual-resources/blob/main/project-portfolio-7.png?raw=true 'Stage 7 of capstone project')
+
+### What to expect 
+
+In the capstone project, the entire data analysis process is covered by a single project scenario with one project deliverable that showcases the skills you’ve learned across the certificate. To complete this project, you will begin by familiarizing yourself with the capstone project scenario. Next you’ll determine the necessary tasks, and decide the order in which they need to be carried out.
+
+Throughout the capstone project, you will use the skills and experience that you acquired in each course and the accompanying end-of-course projects. The capstone project scenario will offer opportunities to:
+
+- Gather information pertaining to a business problem or an organizational inquiry 
+- Answer questions relevant to coding with Python 
+- Conduct exploratory data analysis
+- Build statistical data models and machine learning models
+- Consider ethical issues related to the task
+- Present your findings for a general audience of stakeholders
+
+### About the company
+
+Salifort Motors is a fictional French-based alternative energy vehicle manufacturer. Its global workforce of over 100,000 employees research, design, construct, validate, and distribute electric, solar, algae, and hydrogen-based vehicles. Salifort’s end-to-end vertical integration model has made it a global leader at the intersection of alternative energy and automobiles.        
+
+### Your business case
+
+As a data specialist working for Salifort Motors, you have received the results of a recent employee survey. The senior leadership team has tasked you with analyzing the data to come up with ideas for how to increase employee retention. To help with this, they would like you to design a model that predicts whether an employee will leave the company based on their  department, number of projects, average monthly hours, and any other data points you deem helpful. 
+
+### The value of your deliverable
+
+For this deliverable, you are asked to choose a method to approach this data challenge based on your prior course work. Select either a regression model or a tree-based machine learning model to predict whether an employee will leave the company. Both approaches are shown in the project exemplar, but only one is needed to complete your project.
 
 `Any questions, please reach out`
 
