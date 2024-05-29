@@ -3701,7 +3701,7 @@ The DataFrame class is powerful and convenient because it comes with a suite of 
 - `drop()` drops specified labels from rows or columns
 - `groupby()` splits the dataframe, applies a function, and combines the results
 - `head()` returns the first n rows of the dataframe (default = 5)
-- z returns a concise summary of the dataframe
+- `info()` returns a concise summary of the dataframe
 - `isna()` returns a same-sized Boolean dataframe indicating whether each value is null (can also use `isnull()` as an alias)
 - `sort_values()` sorts by the values across a given axis
 - `value_counts()` returns a series containing counts of unique rows in the dataframe
