@@ -1749,7 +1749,7 @@ A=\begin{bmatrix}
 4 & 2 & 7\\
 5 & 1 & 9\\
 4 & 0 & 1
-\end{bmatrix}\\[2em]
+\end{bmatrix}\\
 A^{-1}=\begin{bmatrix}
 -\frac{1}{2} & 0 & \frac{1}{3}\\
 5\frac{1}{2} & -2 & \frac{4}{3}\\
