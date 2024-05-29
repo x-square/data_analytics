@@ -2134,7 +2134,7 @@ my_string.replace('google', 'youtube')
 https://www.youtube.com
 ```
 
-#### str.split(sep)
+#### str.split(sep)
 
 Return a list of the words in the string, using `sep` as the delimiter string. If no `sep` is given, whitespace characters are used as the delimiter. Any number of consecutive whitespaces would indicate a split point, so `''` (a single whitespace) would split the same way as `' '` (two or more whitespaces).
 
