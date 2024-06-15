@@ -14,7 +14,7 @@ Course descriptions:
 1. **Foundations of data science**
    - Learn how data professionals operate in the workplace and how different roles in the field of data science contribute to an organization's vision of the future. Then, explore data science roles, communication skills, and data ethics.
 2. **Get started with Python**
-   - Discover how the programming language Python can power your data analysis. Learn core Python concepts, such as data types, functions, conditional statements, loops, and data structures.x
+   - Discover how the programming language Python can power your data analysis. Learn core Python concepts, such as data types, functions, conditional statements, loops, and data structures.
 3. **Go beyond the numbers: Translate data into insights**
    - Learn the fundamentals of data cleaning and visualizations and how to reveal the important stories that live within data.
 4. **The power of statistics**
@@ -22,7 +22,7 @@ Course descriptions:
 5. **Regression analysis: Simplify complex data relationships**
    - Learn to model variable relationships, focusing on linear and logistic regression.
 6. **The nuts and bolts of machine learning**
-   - Learn unsupervised machine learning techniques and how to apply them to organizational data.
+   - Learn supervised and unsupervised machine learning techniques and how to apply them to organizational data.
 7. **Google advanced data analytics capstone**
    - Complete a hands-on project designed to demonstrate the skills and competencies you acquire in the program.
 
@@ -570,7 +570,7 @@ Effective communication is important for data professionals. Regardless of where
        - Does this data contain personally identifiable information? What steps will I take to protect this information?
    - In addition to identifying and communicating about data limitations before analysis, you will also need to     
 
-### Share Findings
+### Share findings
 
 One of the most important communications you will have with stakeholders will be sharing your findings, often through presentations. This will mean translating the results, concepts, and terms of your analysis for wider audiences. When sharing the results of your analysis with stakeholders, there are some best practices that you should apply:
 
