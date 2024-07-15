@@ -1436,6 +1436,8 @@ Sample size needed: 1516
 
 ## Statistical tests
 
+### Selecting the right test
+
 ![Choosing a statistical test](https://github.com/x-square/visual-resources/blob/main/statistical-test-choose.png?raw=true 'Choosing a statistical test')
 
 ```mermaid
@@ -1462,18 +1464,38 @@ graph TD
     B6 --> C10(Paired) --> D8(Friedman)
 ```
 
+### Accuracy and precision
+
 ![Accuracy and precision](https://github.com/x-square/visual-resources/blob/main/accuracy-precision.png?raw=true 'Accuracy and precision')
 
+Accuracy measures how close a measured value is to the true value, while precision measures how close the measured values are to each other. In other words, accuracy is the **closeness of a measured value to a standard or known value**, while precision is the **closeness of two or more measurements to each other**.
+
+### Confusion matrix
+
 ![Confusion matrix](https://github.com/x-square/visual-resources/blob/main/confusion-matrix-advanced.png?raw=true 'Confusion matrix')
+
+![Example of confusion matrix](https://github.com/x-square/visual-resources/blob/main/confusion-matrix-example.png?raw=true 'Example of confusion matrix')
 
 **Confusion matrix** is a table that visualises the performance of a classification model. It shows the number of **true positives**, **true negatives**, **false positives**, and **false negatives**. These values are used to calculate metrics as follows:
 
 - **Accuracy** verifies you how often your model is correct overall, namely the proportion of correct predictions among all predictions made.
+    - $\frac{TP+TN}{TP+TN+FP+FN} \Rightarrow \frac{45+30}{45+30+5+20}=\frac{75}{100}=0.75$
+    - 75% of emails are correctly identified as spam or non-spam by the classifier.
 - **Precision** tells you how many of the predicted positive instances are actually positive, namely the proportion of true positive predictions among all positive predictions made.
+    - $\frac{TP}{TP+FP} \Rightarrow \frac{45}{45+5}=\frac{45}{50}=0.9$
+    - 90% of spam emails are correctly identified as spam from all emails identified as spam.
 - **Negative predictive value** tells how many of the predicted negative instances are actually negative, namely the proportion of true negative predictions among all negative predictions made.
+    - $\frac{TN}{TN+FN} \Rightarrow \frac{30}{30+20}=\frac{30}{50}=0.6$
+    - 60% of non-spam emails are correctly identified as non-spam from all emails identified as non-spam.
 - **Sensitivity or recall** tells you how well your model identifies positive instances, namely the proportion of true positive predictions among all actual positive instances.
+    - $\frac{TP}{TP+FN} \Rightarrow \frac{45}{45+20}=\frac{45}{65}=0.69$
+    - 69% of spam emails are correctly identified as spam from all non-spam emails.
 - **Specificity** tells you how well your model identifies negative instances, namely the proportion of true negative predictions among all actual negative instances.
+    - $\frac{TN}{TN+FP} \Rightarrow \frac{30}{30+5}=\frac{30}{35}=0.86$
+    - 86% of non-spam emails are correctly identified as non-spam from all spam emails.
 - **F1-score** is the harmonic mean of precision and recall, providing a balance between the two metrics, which is useful when you want to consider both false positives and false negatives. It is a better measure when the class distribution is imbalanced.
+    - $2 \times \frac{precision \times recall}{precision + recall} \Rightarrow 2 \times \frac{0.9 \times 0.69}{0.9 + 0.69}=2 \times \frac{0.621}{1.59}=2 \times 0.39=0.78$
+    - 0.78 is the f1-score for the model. It is the weighted average of precision and recall, where an f1-score reaches its best value at 1 and worst at 0.
 
 # Linear algebra
 
