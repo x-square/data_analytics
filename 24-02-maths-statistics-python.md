@@ -1468,18 +1468,12 @@ graph TD
 
 **Confusion matrix** is a table that visualises the performance of a classification model. It shows the number of **true positives**, **true negatives**, **false positives**, and **false negatives**. These values are used to calculate metrics as follows:
 
-- Accuracy = $\frac{TP+TN}{TP+TN+FP+FN}$
-    - The proportion of correct predictions among all predictions made, which tells you how often your model is correct overall.
-- Precision = $\frac{TP}{TP+FP}$
-    - The proportion of true positive predictions among all positive predictions made, tells you how many of the predicted positive instances are actually positive.
-- Negative predictive value = $\frac{TN}{TN+FN}$
-    - The proportion of true negative predictions among all negative predictions made, which tells you how many of the predicted negative instances are actually negative.
-- Sensitivity (aka recall) = $\frac{TP}{TP+FN}$
-    - The proportion of true positive predictions among all actual positive instances, tells you how well your model identifies positive instances.
-- Specificity = $\frac{TN}{TN+FP}$
-    - The proportion of true negative predictions among all actual negative instances, tells you how well your model identifies negative instances.
-- F1-score = $\frac{2 \times Precision \times Recall}{Precision + Recall}$
-    - The harmonic mean of precision and recall provides a balance between the two metrics, which is useful when you want to consider both false positives and false negatives. It is a better measure when the class distribution is imbalanced.
+- **Accuracy** verifies you how often your model is correct overall, namely the proportion of correct predictions among all predictions made.
+- **Precision** tells you how many of the predicted positive instances are actually positive, namely the proportion of true positive predictions among all positive predictions made.
+- **Negative predictive value** tells how many of the predicted negative instances are actually negative, namely the proportion of true negative predictions among all negative predictions made.
+- **Sensitivity or recall** tells you how well your model identifies positive instances, namely the proportion of true positive predictions among all actual positive instances.
+- **Specificity** tells you how well your model identifies negative instances, namely the proportion of true negative predictions among all actual negative instances.
+- **F1-score** is the harmonic mean of precision and recall, providing a balance between the two metrics, which is useful when you want to consider both false positives and false negatives. It is a better measure when the class distribution is imbalanced.
 
 # Linear algebra
 
