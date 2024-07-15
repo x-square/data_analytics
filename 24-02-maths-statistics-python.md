@@ -1489,10 +1489,10 @@ Accuracy measures how close a measured value is to the true value, while precisi
     - 60% of non-spam emails are correctly identified as non-spam from all emails identified as non-spam.
 - **Sensitivity or recall** tells you how well your model identifies positive instances, namely the proportion of true positive predictions among all actual positive instances.
     - $\frac{TP}{TP+FN} \Rightarrow \frac{45}{45+20}=\frac{45}{65}=0.69$
-    - 69% of spam emails are correctly identified as spam from all non-spam emails.
+    - 69% of spam emails are correctly identified as spam from all spam emails.
 - **Specificity** tells you how well your model identifies negative instances, namely the proportion of true negative predictions among all actual negative instances.
     - $\frac{TN}{TN+FP} \Rightarrow \frac{30}{30+5}=\frac{30}{35}=0.86$
-    - 86% of non-spam emails are correctly identified as non-spam from all spam emails.
+    - 86% of non-spam emails are correctly identified as non-spam from all non-spam emails.
 - **F1-score** is the harmonic mean of precision and recall, providing a balance between the two metrics, which is useful when you want to consider both false positives and false negatives. It is a better measure when the class distribution is imbalanced.
     - $2 \times \frac{precision \times recall}{precision + recall} \Rightarrow 2 \times \frac{0.9 \times 0.69}{0.9 + 0.69}=2 \times \frac{0.621}{1.59}=2 \times 0.39=0.78$
     - 0.78 is the f1-score for the model. It is the weighted average of precision and recall, where an f1-score reaches its best value at 1 and worst at 0.
