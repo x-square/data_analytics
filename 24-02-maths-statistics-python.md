@@ -734,7 +734,7 @@ P(X=n)=(1-p)^{n-1}*p
 $$
 
 $$
-\Rightarrow P(5)=(1-\frac{1}{6})^{5-1}*\frac{1}{6}=0.08036
+\Rightarrow P(5)=\left(1-\frac{1}{6}\right)^{5-1}*\frac{1}{6}=0.08036
 $$
 
 Expected value (mean):
@@ -1434,10 +1434,6 @@ print('Sample size needed:', sample_size)
 Sample size needed: 1516
 ```
 
-
-
-![Accuracy and precision](https://github.com/x-square/visual-resources/blob/main/accuracy-precision.png?raw=true 'Accuracy and precision')
-
 ## Statistical tests
 
 ![Choosing a statistical test](https://github.com/x-square/visual-resources/blob/main/statistical-test-choose.png?raw=true 'Choosing a statistical test')
@@ -1465,6 +1461,19 @@ graph TD
     A2 --- B6(K samples) --- C9(Independent) --> D7(Kruskal-Wallis)
     B6 --> C10(Paired) --> D8(Friedman)
 ```
+
+![Accuracy and precision](https://github.com/x-square/visual-resources/blob/main/accuracy-precision.png?raw=true 'Accuracy and precision')
+
+![Confusion matrix](https://github.com/x-square/visual-resources/blob/main/confusion-matrix-advanced.png?raw=true 'Confusion matrix')
+
+**Confusion matrix** is a table that visualises the performance of a classification model. It shows the number of **true positives**, **true negatives**, **false positives**, and **false negatives**. These values are used to calculate metrics as follows:
+
+- **Accuracy** tells you how often your model is correct overall.
+- **Precision** tells you how many of the predicted positive instances are actually positive.
+- **Negative predictive value** tells you how many of the predicted negative instances are actually negative.
+- **Sensitivity or recall** tells you how well your model identifies positive instances.
+- **Specificity** tells you how well your model identifies negative instances.
+- **F1-score** provides a balance between precision and recall, particularly useful when you have uneven class distribution.
 
 # Linear algebra
 
