@@ -1195,8 +1195,6 @@ $$
 
 **Discrete probability distribution** provides a way to calculate and understand the probabilities of various outcomes for a discrete random variable, using the **probability mass function** (PMF) to describe individual probabilities and the **cumulative distribution function** (CDF) to describe cumulative probabilities.
 
-Probability mass function (PMF) provides the probability of each discrete outcome. It describes how probabilities are distributed across the possible values of the random variable. On the other hand, the cumulative distribution function (CDF) gives the cumulative probability up to and including a certain value. It aggregates the probabilities of all values less than or equal to a given value, giving a complete picture of the distribution's cumulative behavior.
-
 ### Binomial distribution
 
 ![Binomial distribution (n = 6)](https://github.com/x-square/visual-resources/blob/main/binomial-distribution.png?raw=true 'Binomial distribution (n = 6)')
