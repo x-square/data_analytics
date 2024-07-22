@@ -1,7 +1,7 @@
 ---
 title: 'Notes on data analytics'
 author: 'Chiawei Wang'
-date: 'December 2023'
+date: 'January 2024'
 date-format: "MMMM YYYY"
 ---
 
