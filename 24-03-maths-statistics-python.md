@@ -1,7 +1,7 @@
 ---
 title: 'Notes on maths and statistics for data science'
 author: 'Chiawei Wang'
-date: 'February 2024'
+date: 'March 2024'
 date-format: "MMMM YYYY"
 ---
 
@@ -1352,7 +1352,13 @@ print(p)
 
 # Statistics
 
+Variables are the characteristics of a dataset that can be measured or categorised. **Quantitative variables** are numerical and can be ordered or ranked, while **qualitative variables** are categorical and can be classified or grouped.
+
 **Statistical interaction** occurs when the effect of one variable on an outcome is different depending on the level of another variable. In other words, the impact of one predictor variable on the dependent variable changes based on the value of another predictor variable. For example, the effect of a drug on a patient's health may depend on the patient's age.
+
+**Independent variables** are the factors that researchers **manipulate** in an experiment. They are the variables that are changed deliberately to observe their effect on the dependent variable. **Dependent variables**, on the other hand, are the **outcomes** that researchers **measure**. They depend on the independent variable. Their changes are assumed to be caused by manipulations of the independent variable. **Controlled variables** are the factors that are kept **constant** during an experiment to ensure that they do not influence the results. By controlling these variables, researchers can isolate the effects of the independent variable on the dependent variable.
+
+**Confounding variables** are the factors that can influence the results of an experiment, leading to **incorrect conclusions**. They are the variables that are not the focus of the study but can affect the relationship between the independent and dependent variables. For example, if a study finds a correlation between ice cream sales and drowning deaths, the confounding variable could be the temperature. Both ice cream sales and drowning deaths increase in hot weather, but they are not directly related to each other.
 
 ## Descriptive statistics
 
@@ -1781,8 +1787,6 @@ Type I errors can result in **unnecessary actions** e.g. over a million patients
 
 ![Probability of making type I and type II errors](https://github.com/x-square/visual-resources/blob/main/types-i-ii-errors.png?raw=true 'Probability of making type I and type II errors')
 
-**Independent variables** are the factors that researchers **manipulate** in an experiment. They are the variables that are changed deliberately to observe their effect on the dependent variable. **Dependent variables**, on the other hand, are the **outcomes** that researchers **measure**. They depend on the independent variable. Their changes are assumed to be caused by manipulations of the independent variable. **Controlled variables** are the factors that are kept **constant** during an experiment to ensure that they do not influence the results. By controlling these variables, researchers can isolate the effects of the independent variable on the dependent variable.
-
 In a **one-tailed** test, you're only interested in one direction of difference or effect. For example, you might be testing whether a new drug improves performance because you are only interested in whether it's better, not worse. This type of test is more powerful in detecting effects in a specific direction but can miss effects in the opposite direction.
 
 Typically, we frame null and alternative hypotheses in a one-tailed test using **inequalities**. When expecting the sample mean[^4] of the **experiment group** $\bar{x}_e$ to show improvement or a positive effect compared to the **control group** $\bar{x}_c$, we express this as experiment $>$ control. Otherwise, we can do the other way round to see if the experiment is worse than control as experiment $<$ control.
@@ -1884,7 +1888,7 @@ print(p_value2)
 
 There is a problem getting more awareness in the scientific research community called **p-hacking**, where scientists shop for statistically significant p-values of 0.05 or less.
 
-**Texas Sharpshooter Fallacy** is a cognitive bias where someone cherry-picks data or focuses on specific patterns within a dataset while ignoring the broader context or random variations. The name comes from the analogy of a marksman who shoots at a barn and then paints a target around the area where the most bullet holes cluster, making it appear as though they had aimed precisely at that spot.
+**Texas sharpshooter fallacy** is a cognitive bias where someone cherry-picks data or focuses on specific patterns within a dataset while ignoring the broader context or random variations. The name comes from the analogy of a marksman who shoots at a barn and then paints a target around the area where the most bullet holes cluster, making it appear as though they had aimed precisely at that spot.
 
 Data mining often falls prey to big data fallacy, where it finds patterns in random events. With vast data and quick algorithms, it's easy to spot things that seem meaningful but are actually just **coincidental**. We learnt to form hypotheses before collecting data, but data mining does the opposite. Ironically, starting with a hypothesis often leads to more **objectivity**.
 
@@ -1985,6 +1989,8 @@ print('Sample size needed:', sample_size)
 Sample size needed: 1516
 ```
 
+**Law of large numbers** says that as we collect more data, the average of our results gets closer to the true average of the whole population. This means that with a large enough sample size, our average will be very close to the expected value.
+
 ## Statistical tests
 
 ### Selecting the right test
@@ -2019,7 +2025,19 @@ graph TD
 
 ![Accuracy and precision](https://github.com/x-square/visual-resources/blob/main/accuracy-precision.png?raw=true 'Accuracy and precision')
 
-Accuracy measures how close a measured value is to the true value, while precision measures how close the measured values are to each other. In other words, accuracy is the **closeness of a measured value to a standard or known value**, while precision is the **closeness of two or more measurements to each other**.
+**Accuracy** is the closeness of a measured value to a standard or known value. It tells you how close your measurements are to the true value. **Precision** is the closeness of two or more measurements to each other. It tells you how consistent your measurements are. In other words, accuracy is about **correctness**, while precision is about **consistency**.
+
+**Resampling** is like taking many smaller samples from a larger set to understand its characteristics better. It’s used to check if your results are **valid** and **reliable** by repeatedly drawing new samples and seeing how your answers change. 
+
+**Bootstrapping** is a common resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It's useful when you don't have access to more data or when you want to assess the variability of your results. **Cross-validation** is another resampling technique that involves splitting your data into training and testing sets to evaluate the performance of a model. It helps to assess how well your model generalises to new data and can be used to tune hyperparameters and prevent overfitting. **Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results. **Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions. **Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
+
+**Underfitting** occurs when a model is too simple to capture the underlying patterns in the data, leading to poor performance on both the training and test data. It's like guessing the answers to a test without studying the material. On the other hand, **overfitting** occurs when a model learns the noise in the training data rather than the underlying patterns, leading to poor generalisation to new data. It's like memorising the answers to a test rather than understanding the concepts.
+
+**Bias** is the error introduced by approximating a real-world problem, which can lead to underfitting. **Variance** is the error introduced by the model's sensitivity to fluctuations in the training data, which can lead to overfitting. **Bias-variance trade-off** is the balance between bias and variance in a model, where reducing bias increases variance and vice versa. The goal is to find the optimal trade-off that minimises the total error on new data.
+
+**Regularisation** is a technique used to prevent overfitting by adding a penalty term to the loss function that discourages complex models. It helps to reduce the model's sensitivity to noise in the training data and improve generalisation to new data. **L1 regularisation** or **Lasso** adds the absolute values of the weights to the loss function, encouraging sparsity and feature selection. **L2 regularisation** or **Ridge** adds the squared values of the weights to the loss function, encouraging small weights and reducing the impact of outliers. **Elastic Net** combines L1 and L2 regularisation to balance feature selection and weight shrinkage. **Dropout** is a regularisation technique used in neural networks to randomly drop units during training to prevent overfitting. It helps to reduce the model's reliance on specific features and improve generalisation to new data.
+
+To prevent underfitting in machine learning, make sure your model is complex enough to recognize the patterns in your data. Underfitting occurs when a model is too simple and cannot learn effectively, leading to poor results. To combat this, you can **increase the model's complexity**, **add more features**, **use a more advanced model**, or **extend the training period**. By enhancing the model's complexity and learning capacity, you can improve its performance and mitigate underfitting.
 
 ### Confusion matrix
 
