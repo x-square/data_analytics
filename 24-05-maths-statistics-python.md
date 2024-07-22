@@ -192,7 +192,7 @@ print(x)
 
 ![Natural logarithm](https://github.com/x-square/visual-resources/blob/main/natural-logarithm.png?raw=true 'Natural logarithm')
 
-In data science, the default base for the logarithm, rather than `10` is **Euler's number** `e`, which is a mathematical constant approximately equal to $2.71828$. Its exponential function is a derivative to itself, which is convenient for exponential and logarithmic functions.
+In data science, the default base for the logarithm, rather than `10` is **Euler's number** `e`, which is a mathematical constant approximately equal to `2.71828`. Its exponential function is a derivative to itself, which is convenient for exponential and logarithmic functions.
 
 $$
 e := \lim_{n \to \infty} \left(1 + \frac{1}{n} \right)^n
@@ -740,7 +740,7 @@ print(combined.dot(v))
 
 ## Determinant
 
-A determinant is a scalar value that can be calculated from the elements of a square matrix, which describes how much a sampled area in a vector space changes in scale with linear transformations. This can provide helpful information about the transformation.
+A **determinant** is a number calculated from a square matrix that shows how much an area or volume changes when a shape is transformed. It helps understand transformations like scaling, rotating, and translating objects in 2D and 3D space. For example, determinants can help identify which faces of an object are visible and which are hidden.
 
 Simple shears and rotations should not affect the determinant as the area will not change. When the orientation flips, then the determinant will be negative.
 
