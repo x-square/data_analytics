@@ -919,11 +919,19 @@ print("Solution: x =", solution[x], ", y =", solution[y], ", z =", solution[z])
 Solution: x = 2 , y = 34 , z = -8
 ```
 
-## Eigenvalues and eigenvectors
+## Eigenvectors and eigenvalues 
 
-Eigenvalues denoted by $λ$ are scalars that represent how a linear transformation stretches or compresses space along certain directions.
+**Eigenvectors** denoted by $v$ are non-zero vectors that retain their direction (or reverse it) when transformed by a matrix, though their length may change. They indicate the directions along which a linear transformation stretches, compresses, or flips the data. Essentially, eigenvectors reveal the principal directions of maximum variance in the data.
 
-Eigenvectors denoted by $v$ are non-zero vectors that remain in the same direction or opposite direction after being transformed by a matrix, possibly scaled.
+Eigenvalues denoted by $λ$ are scalars that indicate how much a linear transformation stretches or compresses space along specific directions. They measure the extent of stretching or compression applied to their corresponding eigenvectors during the transformation, reflecting the magnitude of variance in those directions.
+
+Why they are important in data analysis:
+
+- **Dimensionality reduction**: Used in techniques like Principal Component Analysis (PCA) to reduce the number of variables while preserving important data features.
+- **Feature extraction**: Help identify the main patterns and directions of variance in the data.
+- **Data compression**: Enable data simplification by focusing on the most significant components.
+- **Noise reduction**: By ignoring components with small eigenvalues, we can filter out noise.
+- **Understanding transformations**: Provide insights into how data is transformed, aiding in the interpretation of linear transformations.
 
 The eigenvalue equation is $Av=λv$, where $A$ is the matrix, $v$ is the eigenvector, and $λ$ is the eigenvalue.
 
@@ -953,9 +961,9 @@ Eigenvectors
 
 ![Example of set theory](https://github.com/x-square/visual-resources/blob/main/set-theory-comprehensive.png?raw=true 'Example of set theory')
 
-**Probability** is about quantifying predictions of events yet to happen, whereas **likelihood** is measuring the frequency of events that already occurred. In statistics and machine learning, we often use likelihood as **the past** in the form of data to predict probability as **the future**.
+**Probability** is about quantifying predictions of events yet to happen, whereas **likelihood** is measuring the frequency of events that already occurred. In statistics and machine learning, we often use likelihood as **the past** in the form of data to predict probability as **the future**. A probability of an event must be strictly between 0% and 100%. Logically, this means the probability of an event **not** happening is calculated by subtracting the probability of the event from $1$.
 
-A probability of an event must be strictly between 0% and 100%. Logically, this means the probability of an event **not** happening is calculated by subtracting the probability of the event from $1$.
+A **probability distribution** is a mathematical function that describes the likelihood of different outcomes in an experiment or process, assigning a probability to each possible outcome so that the total probability across all outcomes sums to 1. Suppose you have a bag with 3 red candies, 2 blue candies, and 5 green candies. The probability distribution shows the chances of picking each color as 30% for red, 20% for blue, and 50% for green.
 
 **Classical probability** uses theory to apply a likelihood to possible events. On the other hand, **empirical probability** uses repeated trials to use actual observed frequencies to estimate likelihood. For example, what is the probability of randomly picking Monday in a week?
 
@@ -2080,6 +2088,8 @@ Statistical and machine learning are two closely related fields that use data to
 
 **Correlation coefficient** is a standardised measure of the relationship between two variables, ranging from -1 to 1. A correlation coefficient of 1 indicates a perfect positive relationship, while a correlation coefficient of -1 indicates a perfect negative relationship. A correlation coefficient of 0 indicates no relationship between the variables. The correlation coefficient is calculated by dividing the covariance by the product of the standard deviations of the two variables. This standardisation allows you to compare the relationship between variables across datasets. For example, if you have two variables, such as the number of hours studied and the exam score, you can calculate the correlation coefficient to see how they are related. If the correlation coefficient is close to 1, it means that as the number of hours studied increases, the exam score also increases. If the correlation coefficient is close to -1, it means that as the number of hours studied increases, the exam score decreases. If the correlation coefficient is close to 0, it means that there is no relationship between the variables.
 
+In information retrieval, frequency–inverse document frequency (**tf–idf**) is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modelling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general.
+
 ## Linear regression
 
 One useful method in data analysis is drawing a line through data points to see how variables are related. **Regression** tries to fit a function to data to predict future results. **Linear regression** specifically fits a straight line to data, showing a linear relationship between variables and predicting future outcomes.
@@ -2131,6 +2141,14 @@ The logistic function, commonly known as a sigmoid curve, is adept at producing 
 $$
 y=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
 $$
+
+**Softmax function**: $f(x) = \frac{e^{x_i}}{\sum_{j=1}^{k} e^{x_j}}$
+
+Softmax function is a way to turn raw scores from a model into probabilities for multiple classes. It converts these scores into a range between 0 and 1 for each class, and the class with the highest probability is chosen as the prediction. Suppose a model outputs scores of 2.0, 1.0, and 0.5 for the classes cat, dog, and bird. The Softmax function will convert these scores into probabilities of about 0.63 for cat, 0.23 for dog, and 0.14 for bird, so the model will predict cat as the most likely class.
+
+**Sigmoid function**: $f(x) = \frac{1}{1+e^{-x}}$
+
+Sigmoid function is a special case of the Softmax function for binary classification tasks. It converts raw scores into probabilities between 0 and 1, making it suitable for binary outcomes. If a model outputs a score of 2.0 for a positive class and 1.0 for a negative class, the Sigmoid function will convert these scores into probabilities of about 0.88 for the positive class and 0.27 for the negative class, so the model will predict the positive class as the most likely outcome.
 
 ## A/B testing
 
