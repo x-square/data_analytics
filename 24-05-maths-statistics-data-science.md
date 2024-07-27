@@ -1,11 +1,11 @@
 ---
-title: 'Notes on maths and statistics for data science'
+title: 'Notes on maths, statistics and practical practices for data science'
 author: 'Chiawei Wang'
 date: 'May 2024'
 date-format: "MMMM YYYY"
 ---
 
-`Unlock the world of maths and statistics with Python for data science. This document is compiled from various resources for academic purposes.`[^1][^2]
+`This document covers key concepts in maths, statistics and practical practices used in data science, with applications in Python. It is compiled from various resources for academic use.`[^1][^2]
 
 [^1]: Nield, T. 2021. *Essential Math for Data Science: Take Control of Your Data with Fundamental Calculus, Linear Algebra, Probability and Statistics*. O'Reilly: Cambridge, England.
 
@@ -965,6 +965,10 @@ Eigenvectors
 
 A **probability distribution** is a mathematical function that describes the likelihood of different outcomes in an experiment or process, assigning a probability to each possible outcome so that the total probability across all outcomes sums to 1. Suppose you have a bag with 3 red candies, 2 blue candies, and 5 green candies. The probability distribution shows the chances of picking each color as 30% for red, 20% for blue, and 50% for green.
 
+## Basic probability
+
+### Classical probability
+
 **Classical probability** uses theory to apply a likelihood to possible events. On the other hand, **empirical probability** uses repeated trials to use actual observed frequencies to estimate likelihood. For example, what is the probability of randomly picking Monday in a week?
 
 $$
@@ -1046,7 +1050,7 @@ $$
 - $1-(1-P)^n$ is the probability of the event happening at least once in $n$ trials.
     - E.g. probability of seeing a shooting star at least once in the four 15-minute intervals, meaning you could see it once, twice, three times, or all four times
 
-## Joint probability
+### Joint probability
 
 Find the probability of flipping a head on a coin and rolling a six on a dice that happen together.
 
@@ -1060,7 +1064,7 @@ $$
 
 We can use the multiplication as a shortcut to find the joint probability instead of generating all possible combinations and counting the ones of interest to us. This method is known as the **product rule**.
 
-## Union probability
+### Union probability
 
 Find the probability of flipping a head on a coin or rolling a six on a dice that least one of the events happens and not mutually exclusive.
 
@@ -1072,7 +1076,7 @@ $$
 \Rightarrow  \frac{1}{2}+\frac{1}{6}- \left( \frac{1}{2} \times \frac{1}{6} \right)=\frac{8}{12}-\frac{1}{12}=\frac{7}{12} \approx 0.58333333333
 $$
 
-## Conditional probability
+### Conditional probability
 
 A conditional probability is the likelihood of an event occurring given that another event has already happened, which allows you to evaluate how prior information affects probabilities.
 
@@ -1108,7 +1112,7 @@ $$
 \Rightarrow \frac{13}{52} \times \frac{12}{51}= \frac{1}{17} \approx 0.058823529411764705 \approx 5.9\%
 $$
 
-## Bayes' theorem
+### Bayes' theorem
 
 Define the terms in Bayes' theorem:
 
@@ -1999,7 +2003,33 @@ Sample size needed: 1516
 
 **Law of large numbers** says that as we collect more data, the average of our results gets closer to the true average of the whole population. This means that with a large enough sample size, our average will be very close to the expected value.
 
+## Errors and residuals
+
+**Errors** are the differences between the observed values and the expected values in a statistical analysis. They can be used to assess the accuracy of a model and identify patterns in the data that the model fails to capture.
+
+**Residuals** are the differences between the observed values and the predicted values in a regression analysis. They represent the error in the model and can be used to assess the model's performance and identify patterns in the data that the model fails to capture.
+
+### Mean absolute error
+
+Mean absolute error (MAE) measures the average magnitude of errors in a set of predictions, without considering their direction. It calculates the average of the absolute differences between predicted and actual values, giving a straightforward indication of prediction accuracy.
+
+### Mean squared error
+
+Mean squared error (MSE) evaluates the average of the squared differences between predicted and actual values. By squaring the errors, it penalizes larger discrepancies more than smaller ones, making it sensitive to outliers.
+
+### Root mean squared error
+
+Root mean squared error (RMSE) is the square root of the MSE and provides a measure of the average magnitude of errors in the same units as the original data. It offers a more interpretable sense of prediction accuracy compared to MSE.
+
+### R-squared
+
+R-squared (R²) represents the proportion of variance in the dependent variable that is predictable from the independent variables. It ranges from 0 to 1, where a higher R-squared value indicates a better fit of the model to the data.
+
 ## Statistical tests
+
+**Hypothesis testing** is a statistical method used to make inferences about a population based on sample data. It involves formulating a null hypothesis, which states that there is no significant difference or effect, and an alternative hypothesis, which suggests that there is a significant difference or effect. The goal of hypothesis testing is to determine whether the observed data provides enough evidence to reject the null hypothesis in favour of the alternative hypothesis. Hypothesis testing is commonly used in scientific research, quality control, and decision-making to test theories, validate assumptions, and make informed decisions.
+
+**A/B testing** is a method used to compare two versions of a product or service to determine which one performs better. It involves randomly assigning users to two groups, the control group and the experiment group, and exposing each group to a different version of the product or service. By measuring the performance of each group and comparing the results, you can determine which version is more effective. A/B testing is commonly used in marketing, web design, and product development to optimise user experience, increase conversion rates, and improve overall performance.
 
 ### Selecting the right test
 
@@ -2035,17 +2065,37 @@ graph TD
 
 **Accuracy** is the closeness of a measured value to a standard or known value. It tells you how close your measurements are to the true value. **Precision** is the closeness of two or more measurements to each other. It tells you how consistent your measurements are. In other words, accuracy is about **correctness**, while precision is about **consistency**.
 
-**Resampling** is like taking many smaller samples from a larger set to understand its characteristics better. It’s used to check if your results are **valid** and **reliable** by repeatedly drawing new samples and seeing how your answers change. 
-
-**Bootstrapping** is a common resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It's useful when you don't have access to more data or when you want to assess the variability of your results. **Cross-validation** is another resampling technique that involves splitting your data into training and testing sets to evaluate the performance of a model. It helps to assess how well your model generalises to new data and can be used to tune hyperparameters and prevent overfitting. **Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results. **Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions. **Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
-
 **Underfitting** occurs when a model is too simple to capture the underlying patterns in the data, leading to poor performance on both the training and test data. It's like guessing the answers to a test without studying the material. On the other hand, **overfitting** occurs when a model learns the noise in the training data rather than the underlying patterns, leading to poor generalisation to new data. It's like memorising the answers to a test rather than understanding the concepts.
 
 **Bias** is the error introduced by approximating a real-world problem, which can lead to underfitting. **Variance** is the error introduced by the model's sensitivity to fluctuations in the training data, which can lead to overfitting. **Bias-variance trade-off** is the balance between bias and variance in a model, where reducing bias increases variance and vice versa. The goal is to find the optimal trade-off that minimises the total error on new data.
 
-**Regularisation** is a technique used to prevent overfitting by adding a penalty term to the loss function that discourages complex models. It helps to reduce the model's sensitivity to noise in the training data and improve generalisation to new data. **L1 regularisation** or **Lasso** adds the absolute values of the weights to the loss function, encouraging sparsity and feature selection. **L2 regularisation** or **Ridge** adds the squared values of the weights to the loss function, encouraging small weights and reducing the impact of outliers. **Elastic Net** combines L1 and L2 regularisation to balance feature selection and weight shrinkage. **Dropout** is a regularisation technique used in neural networks to randomly drop units during training to prevent overfitting. It helps to reduce the model's reliance on specific features and improve generalisation to new data.
+### Regularisation
+
+**Regularisation** is a technique used to prevent overfitting by adding a penalty term to the loss function that discourages complex models. It helps to reduce the model's sensitivity to noise in the training data and improve generalisation to new data.
+
+**L1 regularisation** or **Lasso** adds the absolute values of the weights to the loss function, encouraging sparsity and feature selection.
+
+**L2 regularisation** or **Ridge** adds the squared values of the weights to the loss function, encouraging small weights and reducing the impact of outliers.
+
+**Elastic Net** combines L1 and L2 regularisation to balance feature selection and weight shrinkage.
+
+**Dropout** is a regularisation technique used in neural networks to randomly drop units during training to prevent overfitting. It helps to reduce the model's reliance on specific features and improve generalisation to new data.
 
 To prevent underfitting in machine learning, make sure your model is complex enough to recognize the patterns in your data. Underfitting occurs when a model is too simple and cannot learn effectively, leading to poor results. To combat this, you can **increase the model's complexity**, **add more features**, **use a more advanced model**, or **extend the training period**. By enhancing the model's complexity and learning capacity, you can improve its performance and mitigate underfitting.
+
+### Resampling
+
+**Resampling** or sampling with replacement involves creating new datasets from the original data by methods like bootstrapping or cross-validation. It helps in evaluating model performance and improving accuracy by repeatedly drawing new samples and seeing how your answers change.
+
+**Bootstrapping** is a common resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It's useful when you don't have access to more data or when you want to assess the variability of your results.
+
+**Cross-validation** is another resampling technique that involves splitting your data into training and testing sets to evaluate the performance of a model. It helps to assess how well your model generalises to new data and can be used to tune hyperparameters and prevent overfitting.
+
+**Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results.
+
+**Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions.
+
+**Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
 
 ### Confusion matrix
 
@@ -2078,19 +2128,43 @@ To prevent underfitting in machine learning, make sure your model is complex eno
 
 Statistical and machine learning are two closely related fields that use data to make predictions and decisions. While both fields aim to extract knowledge from data, they differ in their approaches and methodologies. **Statistical methods** focus on **understanding the underlying patterns and relationships** in data, while **machine learning algorithms** aim to **build predictive models that can make accurate predictions** on new data. Statistical methods are often used to test hypotheses and make inferences about populations, while machine learning algorithms are used to build models that can learn from data and make predictions without being explicitly programmed. Both fields have their strengths and weaknesses, and they are often used together to solve complex problems and make informed decisions.
 
-**Supervised learning** is a type of machine learning where the model is trained on labelled data, meaning that the input data is paired with the correct output. The model learns to map the input data to the output labels, allowing it to make predictions on new, unseen data. Supervised learning is used in a wide range of applications, including image recognition, speech recognition, and natural language processing.
-
-**Unsupervised learning** is a type of machine learning where the model is trained on unlabelled data, meaning that the input data is not paired with the correct output. The model learns to find patterns and relationships in the data without explicit guidance, allowing it to discover hidden structures and insights. Unsupervised learning is used in applications such as clustering, anomaly detection, and dimensionality reduction.
-
-**Reinforcement learning** is a type of machine learning where the model learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. The model learns to take actions that maximise the cumulative reward over time, allowing it to learn complex behaviours and strategies. Reinforcement learning is used in applications such as game playing, robotics, and autonomous systems.
-
 **Covariance** measures how two variables change together. It is calculated by taking the average of the product of the differences between each variable and its mean. A positive covariance indicates that the variables are positively related, while a negative covariance indicates a negative relationship. For example, if you have two variables, such as the number of hours studied and the exam score, you can calculate the covariance to see how they are related. If the covariance is positive, it means that as the number of hours studied increases, the exam score also increases. If the covariance is negative, it means that as the number of hours studied increases, the exam score decreases. However, the covariance does not provide a standardised measure of the relationship between the variables, making it difficult to compare across datasets. This is where the correlation coefficient comes in.
 
 **Correlation coefficient** is a standardised measure of the relationship between two variables, ranging from -1 to 1. A correlation coefficient of 1 indicates a perfect positive relationship, while a correlation coefficient of -1 indicates a perfect negative relationship. A correlation coefficient of 0 indicates no relationship between the variables. The correlation coefficient is calculated by dividing the covariance by the product of the standard deviations of the two variables. This standardisation allows you to compare the relationship between variables across datasets. For example, if you have two variables, such as the number of hours studied and the exam score, you can calculate the correlation coefficient to see how they are related. If the correlation coefficient is close to 1, it means that as the number of hours studied increases, the exam score also increases. If the correlation coefficient is close to -1, it means that as the number of hours studied increases, the exam score decreases. If the correlation coefficient is close to 0, it means that there is no relationship between the variables.
 
 In information retrieval, frequency–inverse document frequency (**tf–idf**) is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It is often used as a weighting factor in searches of information retrieval, text mining, and user modelling. The tf–idf value increases proportionally to the number of times a word appears in the document and is offset by the number of documents in the corpus that contain the word, which helps to adjust for the fact that some words appear more frequently in general.
 
-## Linear regression
+## Supervised learning
+
+**Supervised learning** is a type of machine learning where the model is trained on labelled data, meaning that the input data is paired with the correct output. The model learns to map the input data to the output labels, allowing it to make predictions on new, unseen data. Supervised learning is used in a wide range of applications, including image recognition, speech recognition, and natural language processing.
+
+**Classifiers** are machine learning models that predict the class or category of an input based on its features. They are used in classification tasks, where the goal is to assign a label to an input based on its characteristics. Common classifiers include logistic regression, support vector machines, decision trees, and random forests.
+
+**Regressors** are machine learning models that predict a continuous value or quantity based on input features. They are used in regression tasks, where the goal is to estimate a target variable based on other variables. Common regressors include linear regression, polynomial regression, support vector regression, and neural networks.
+
+### Logistic regression
+
+Logistic regression is for classification tasks, where the outcome variable is categorical with two possible classes. It predicts the probability of an observation belonging to one of the classes based on input features. Unlike linear regression, which predicts continuous outcomes, logistic regression models the relationship between the dependent variable and independent variables using the logistic function, also known as the sigmoid function. This function maps any real-valued number into a range between 0 and 1, representing probabilities. The model calculates the odds of the event occurring and then converts these odds into a probability score. It's widely used in various fields such as medicine, finance, and marketing for predicting outcomes like disease diagnosis, loan default, or customer churn.
+
+The logistic function, commonly known as a sigmoid curve, is adept at producing outputs ranging between 0 and 1, thereby rendering it well-suited for representing probabilities.
+
+$$
+y=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
+$$
+
+**Softmax function**: $f(x) = \frac{e^{x_i}}{\sum_{j=1}^{k} e^{x_j}}$
+
+Softmax function is a way to turn raw scores from a model into probabilities for multiple classes. It converts these scores into a range between 0 and 1 for each class, and the class with the highest probability is chosen as the prediction. Suppose a model outputs scores of 2.0, 1.0, and 0.5 for the classes cat, dog, and bird. The Softmax function will convert these scores into probabilities of about 0.63 for cat, 0.23 for dog, and 0.14 for bird, so the model will predict cat as the most likely class.
+
+**Sigmoid function**: $f(x) = \frac{1}{1+e^{-x}}$
+
+Sigmoid function is a special case of the Softmax function for binary classification tasks. It converts raw scores into probabilities between 0 and 1, making it suitable for binary outcomes. If a model outputs a score of 2.0 for a positive class and 1.0 for a negative class, the Sigmoid function will convert these scores into probabilities of about 0.88 for the positive class and 0.27 for the negative class, so the model will predict the positive class as the most likely outcome.
+
+### Multinomial logistic regression
+
+Multinomial logistic regression is an extension of logistic regression that can handle multiple classes. It models the relationship between multiple input features and multiple output classes using the softmax function, which converts raw scores into probabilities for each class. Multinomial logistic regression is widely used in various domains, including image recognition, text classification, and sentiment analysis, for tasks such as multi-class classification and ranking.
+
+### Linear regression
 
 One useful method in data analysis is drawing a line through data points to see how variables are related. **Regression** tries to fit a function to data to predict future results. **Linear regression** specifically fits a straight line to data, showing a linear relationship between variables and predicting future outcomes.
 
@@ -2132,27 +2206,65 @@ $$
 r^2 = 1- \frac{\sum (y_i-ŷ_i)^2}{\sum (y_i-\bar{y}_i)^2}
 $$
 
-## Logistic regression and classification
+### Multiple linear regression
 
-Logistic regression is for binary classification tasks, where the outcome variable is categorical with two possible classes. It predicts the probability of an observation belonging to one of the classes based on input features. Unlike linear regression, which predicts continuous outcomes, logistic regression models the relationship between the dependent variable and independent variables using the logistic function, also known as the sigmoid function. This function maps any real-valued number into a range between 0 and 1, representing probabilities. The model calculates the odds of the event occurring and then converts these odds into a probability score. It's widely used in various fields such as medicine, finance, and marketing for predicting outcomes like disease diagnosis, loan default, or customer churn.
+**Multiple linear regression** is an extension of linear regression that can model the relationship between multiple input features and a continuous output variable. It fits a linear equation to the data by estimating the coefficients of the input features to predict the output variable. Multiple linear regression is widely used in various domains, including finance, healthcare, and marketing, for tasks such as sales forecasting, risk assessment, and customer segmentation.
 
-The logistic function, commonly known as a sigmoid curve, is adept at producing outputs ranging between 0 and 1, thereby rendering it well-suited for representing probabilities.
+### Decision trees
 
-$$
-y=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
-$$
+Decision trees for both classification and regression are a popular machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences. Each internal node represents a decision based on an input feature, and each leaf node represents the outcome or prediction. Decision trees are easy to interpret and visualise, making them useful for understanding the decision-making process and identifying important features. They are widely used in various domains, including finance, healthcare, and marketing, for tasks such as classification, regression, and feature selection.
 
-**Softmax function**: $f(x) = \frac{e^{x_i}}{\sum_{j=1}^{k} e^{x_j}}$
+### Random forest
 
-Softmax function is a way to turn raw scores from a model into probabilities for multiple classes. It converts these scores into a range between 0 and 1 for each class, and the class with the highest probability is chosen as the prediction. Suppose a model outputs scores of 2.0, 1.0, and 0.5 for the classes cat, dog, and bird. The Softmax function will convert these scores into probabilities of about 0.63 for cat, 0.23 for dog, and 0.14 for bird, so the model will predict cat as the most likely class.
+Random forest for both classification and regression is an ensemble learning method that combines multiple decision trees to create a more accurate and robust model. It works by training a large number of decision trees on random subsets of the data and aggregating their predictions to make the final prediction. Random forest is known for its high accuracy, scalability, and ability to handle large datasets with high dimensionality. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and feature selection.
 
-**Sigmoid function**: $f(x) = \frac{1}{1+e^{-x}}$
+### XGBoost
 
-Sigmoid function is a special case of the Softmax function for binary classification tasks. It converts raw scores into probabilities between 0 and 1, making it suitable for binary outcomes. If a model outputs a score of 2.0 for a positive class and 1.0 for a negative class, the Sigmoid function will convert these scores into probabilities of about 0.88 for the positive class and 0.27 for the negative class, so the model will predict the positive class as the most likely outcome.
+XGBoost for both classification and regression is an advanced implementation of gradient boosting that is highly efficient, scalable, and accurate. It works by building an ensemble of weak learners, such as decision trees, and optimising them to make accurate predictions. XGBoost uses a regularised objective function to prevent overfitting and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
 
-## A/B testing
+### Support vector machines
 
-A/B testing is a method used to compare two versions of a product or service to determine which one performs better. It involves randomly assigning users to two groups, the control group and the experiment group, and exposing each group to a different version of the product or service. By measuring the performance of each group and comparing the results, you can determine which version is more effective. A/B testing is commonly used in marketing, web design, and product development to optimise user experience, increase conversion rates, and improve overall performance. 
+**Support vector machines** (SVM) are a powerful machine learning algorithm used for both classification and regression tasks. They work by finding the optimal hyperplane that separates the data into different classes, maximising the margin between the classes. SVMs are effective in high-dimensional spaces and can handle non-linear relationships by using kernel functions to map the data into a higher-dimensional space. They are widely used in various domains, including image recognition, text classification, and bioinformatics, for tasks such as classification, regression, and outlier detection.
+
+In SVM, **kernels** are functions that transform data into a higher-dimensional space where it might be easier to find a separating hyperplane. They enable SVM to handle non-linearly separable data by implicitly mapping it to a higher-dimensional space without explicitly computing the transformation. Common types of kernels include:
+
+- **Linear kernel**: No transformation, used for linearly separable data
+- **Polynomial kernel**: Maps data into a higher-dimensional space using polynomial functions
+- **Radial basis function kernel** or **Gaussian kernel**: Maps data into an infinite-dimensional space using an exponential function of the distance between data points
+- **Sigmoid kernel**: Uses a sigmoid function to transform data, similar to a neural network activation function
+
+
+### k-nearest neighbors
+
+**k-nearest neighbors** (k-NN) is a simple and intuitive machine learning algorithm used for both classification and regression tasks. It works by finding the k-nearest data points to a given input and using their labels or values to make predictions. k-NN is a non-parametric algorithm that does not make any assumptions about the underlying data distribution, making it versatile and easy to implement. It is widely used in various domains, including image recognition, recommendation systems, and anomaly detection, for tasks such as classification, regression, and clustering.
+
+### Ensemble learning techniques
+
+Ensemble learning techniques combine multiple machine learning models to improve prediction accuracy and robustness. They work by training a group of models on different subsets of the data and combining their predictions to make the final prediction. Ensemble learning techniques are widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking. Common ensemble learning techniques include:
+
+- **Bagging** involves training multiple models independently on different subsets of the training data, which are created by randomly sampling with replacement. The predictions from these models are then aggregated, typically by averaging for regression or voting for classification. This technique reduces variance and helps prevent overfitting. Common models used with bagging include decision trees, random forest, and neural networks.
+- **Boosting** builds a sequence of models where each model is trained to correct the errors of the previous ones. Each subsequent model focuses on the misclassified instances from earlier models, and the final prediction is a weighted combination of all models. This approach helps to reduce both variance and bias. Popular models used with boosting include decision trees, AdaBoost, XGBoost, and linear models e.g. gradient boosted linear model.
+
+### Hyperparameter optimisation
+
+Hyperparameter Optimisation involves selecting the most effective hyperparameters to enhance a machine learning model's performance. These parameters, set before training, are crucial for improving the model's accuracy and efficiency. The process explores various configurations to find the optimal settings that boost predictive capabilities, with effectiveness typically assessed through cross-validation. Methods for this optimization include:
+
+- **Grid search** evaluates all possible combinations of predefined hyperparameter values.
+- **Random search** samples random combinations of hyperparameters within specified ranges.
+- **Bayesian optimisation:** uses probabilistic models to explore the hyperparameter space more efficiently and adjust based on previous results.
+- **Gradient-based optimisation** utilizes gradient information to fine-tune hyperparameters, often for complex models like neural networks.
+
+## Unsupervised learning
+
+**Unsupervised learning** is a type of machine learning where the model is trained on unlabelled data, meaning that the input data is not paired with the correct output. The model learns to find patterns and relationships in the data without explicit guidance, allowing it to discover hidden structures and insights. Unsupervised learning is used in applications such as clustering, anomaly detection, and dimensionality reduction.
+
+### k-means clustering
+
+**k-means clustering** is a popular unsupervised learning algorithm used to group data points into k clusters based on their similarity. It works by iteratively assigning data points to the nearest cluster centroid and updating the centroids to minimise the sum of squared distances between data points and centroids. k-means clustering is widely used in various domains, including customer segmentation, image compression, and anomaly detection, for tasks such as clustering and pattern recognition.
+
+## Reinforcement learning
+
+**Reinforcement learning** is a type of machine learning where the model learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. The model learns to take actions that maximise the cumulative reward over time, allowing it to learn complex behaviours and strategies. Reinforcement learning is used in applications such as game playing, robotics, and autonomous systems.
 
 # Deep learning
 
