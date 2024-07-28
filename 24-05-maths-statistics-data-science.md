@@ -13,9 +13,9 @@ date-format: "MMMM YYYY"
 
 # Basic maths and calculus
 
-Maths is the study of **numbers**, **shapes**, **patterns**, and **relationships**. It provides tools and methods for solving problems, understanding the world around us, and making predictions in various fields.
+**Maths** is the study of **numbers**, **shapes**, **patterns**, and **relationships**. It provides tools and methods for solving problems, understanding the world around us, and making predictions in various fields.
 
-Calculus deals with how **rates of change** and **accumulate over time**, which involves techniques such as finding slopes of curves and calculating areas under curves, that is, **differentiation** and **integration** respectively.
+**Calculus** deals with **continuous change**, focusing on **derivatives** that measure **rates of change** and **integrals** that measure the **accumulation of quantities**, using techniques like finding slopes of curves in differentiation and calculating areas under curves in integration.
 
 **Variables** are named placeholders for numbers that aren't specified or known. In Python, we use theta $θ$ to denote angles and beta $β$ for a parameter in a linear regression.
 
@@ -154,15 +154,15 @@ Irrational numbers like $\pi$ has an infinite number of decimal places can serve
 A **logarithm** is a math function that finds a power for a specific number and base. From measuring earthquakes to managing volume on your stereo, the logarithm is found everywhere. It is also a key part of logistic regression. For example, $2$ raised to the power of $3$ equals to $8$.
 
 $$
-log{_a}b=x \Leftrightarrow a^x=b
+\log{_a}b=x \Leftrightarrow a^x=b
 $$
 
 $$
-log{_{base}}argument=exponent \Leftrightarrow base^{exponent}=argument
+\log_{\text{base}}\text{argument} = \text{exponent} \Leftrightarrow \text{base}^{\text{exponent}} = \text{argument}
 $$
 
 $$
-log{_2}8=3 \Leftrightarrow 2^3=8
+\log{_2}8=3 \Leftrightarrow 2^3=8
 $$
 
 Note that an argument can be either an input or an output provided to a function.
@@ -180,11 +180,11 @@ print(x)
 
 | Operator | Exponent property | Logarithm property |
 |----------|-------------------|--------------------|
-| Multiplication | $x^m \times x^n=x^{m+n}$ | $log(a \times b)=log(a)+log(b)$ |
-| Division | $\frac{x^m}{x^n}=x^{m-n}$ | $log(\frac{a}{b})=log(a)-log(b)$ |
-| Exponentiation | $(x^m)^n=x^{mn}$ | $log(a^n)=n \times log(a)$ |
-| Zero exponent | $x^0=1$ | $log(1)=0$ |
-| Inverse | $x^{-1}=\frac{1}{x}$ | $log(x^{-1})=log(\frac{1}{x})=-log(x)$
+| Multiplication | $x^m \times x^n=x^{m+n}$ | $\log(a \times b)=\log(a)+\log(b)$ |
+| Division | $\frac{x^m}{x^n}=x^{m-n}$ | $\log(\frac{a}{b})=\log(a)-\log(b)$ |
+| Exponentiation | $(x^m)^n=x^{mn}$ | $\log(a^n)=n \times \log(a)$ |
+| Zero exponent | $x^0=1$ | $\log(1)=0$ |
+| Inverse | $x^{-1}=\frac{1}{x}$ | $\log(x^{-1})=\log(\frac{1}{x})=-\log(x)$
 
 : Logarithmic properties
 
@@ -205,7 +205,7 @@ A=P \left(1+\frac{r}{n} \right)^{nt}
 $$
 
 $$
-Balance=starting\ value \left( 1+\frac{interest\ rate}{number\ of\ months} \right)^{number\ of\ months\ \times \ number\ of\ years}
+Balance=starting\ value \left( 1+\frac{\text{interest rate}}{\text{number of months}} \right)^{\text{number of months}\ \times\ \text{number of years}}
 $$
 
 $$
@@ -972,11 +972,11 @@ A **probability distribution** is a mathematical function that describes the lik
 **Classical probability** uses theory to apply a likelihood to possible events. On the other hand, **empirical probability** uses repeated trials to use actual observed frequencies to estimate likelihood. For example, what is the probability of randomly picking Monday in a week?
 
 $$
-Classical\ probability=\frac{Number\ of\ events\ to\ occur}{Number\ of\ possible\ outcomes}
+\text{Classical probability}=\frac{\text{Number of events to occur}}{\text{Number of possible outcomes}}
 $$
 
 $$
-Empirical\ probability=\frac{Number\ of\ events\ occurred}{Number\ of\ observations}
+\text{Empirical probability}=\frac{\text{Number of events occurred}}{\text{Number of observations}}
 $$
 
 $$
@@ -1026,7 +1026,7 @@ Imagine a couple has two children. We know at least one of them is a girl. What 
    - Out of the 3 possible combinations (BG, GB, GG)
 
 $$
-\frac{Number\ of\ favorable\ outcomes}{Total\ number\ of\ possible\ outcomes\ given\ the\ condition}
+\frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes given the condition}}
 $$
 
 $$
@@ -1087,11 +1087,11 @@ P(B|A)=\frac{P(A \cap B)}{P(A)}
 $$
 
 $$
-Probability\ of\ B\ given\ A=\frac{Probability\ of\ A\ intersects\ B}{Probability\ of\ A}
+\text{Probability of B given A}=\frac{\text{Probability of A intersects B}}{\text{Probability of A}}
 $$
 
 $$
-P(umbrella|rain)=\frac{P(rain \cap umbrella)}{P(rain)}
+P(\text{umbrella | rain})=\frac{P(\text{rain} \cap \text{umbrella})}{P(\text{rain})}
 $$
 
 $$
@@ -1105,7 +1105,7 @@ P(A \cap B)=P(A) \times P(B|A)
 $$
 
 $$
-P(1st\ heart\ and\ 2nd\ heart)=P(1st\ heart) \times P(2nd\ heart|1st\ heart)
+P(\text{1st heart and 2nd heart})=P(\text{1st heart} \times P(\text{2nd heart | 1st heart})
 $$
 
 $$
@@ -1126,15 +1126,15 @@ P(A|B)=\frac{P(B|A) \times P(A)}{P(B)}
 $$
 
 $$
-Posterior\ probability=\frac{Likelihood\ \times \ Prior\ probability}{Marginal\ probability}
+\text{Posterior probability}=\frac{\text{Likelihood} \times \text{Prior probability}}{\text{Marginal probability}}
 $$
 
 $$
-P(belief|evidence)=\frac{P(evidence|belief) \times P(belief)}{P(evidence)}
+P(\text{belief | evidence})=\frac{P(\text{evidence | belief}) \times P(\text{belief})}{P(\text{evidence})}
 $$
 
 $$
-P(rain|cloudy)=\frac{P(cloudy|rain) \times P(rain)}{P(cloudy)}
+P(\text{rain | cloudy})=\frac{P(\text{cloudy | rain}) \times P(\text{rain})}{P(\text{cloudy})}
 $$
 
 $$
@@ -1144,7 +1144,7 @@ $$
 Note that the order of events matters in Bayes' theorem. That is, the probability of it being cloudy given that it's raining but uses the probability of it raining given that it's cloudy in the equation, which leads to incorrect results. Theoretically, clouds may go away after it rains. Therefore, the following equation is considered incorrect. Unless, we'd like to claim otherwise.
 
 $$
-P(cloudy|rain)=\frac{P(rain|cloudy) \times P(cloudy)}{P(rain)}
+P(\text{cloudy | rain})=\frac{P(\text{rain | cloudy}) \times P(\text{cloudy})}{P(\text{rain})}
 $$
 
 ```python
@@ -1267,11 +1267,11 @@ What is the probability of rolling a 4 on a regular 6-sided die on the 5th roll?
 Probability mass function:
 
 $$
-P(X=n)=(1-p)^{n-1}*p
+P(X=n)=(1-p)^{n-1} \times p
 $$
 
 $$
-\Rightarrow P(5)=\left(1-\frac{1}{6}\right)^{5-1}*\frac{1}{6}=0.08036
+\Rightarrow P(5)=\left(1-\frac{1}{6}\right)^{5-1} \times \frac{1}{6}=0.08036
 $$
 
 Expected value (mean):
@@ -1399,7 +1399,7 @@ $$
 $$
 
 $$
-\Rightarrow m=\frac{sum\ of\ terms}{number\ of\ terms}
+\Rightarrow m=\frac{\text{sum of terms}}{\text{number of terms}}
 $$
 
 ```python
@@ -1436,13 +1436,13 @@ print(weighted_mean)
 If $n$ is odd:
 
 $$
-Median=\frac{n+1}{2}
+\text{Median}=\frac{n+1}{2}
 $$
 
 If $n$ is even:
 
 $$
-Median=\frac{\frac{n}{2}+ \left(\frac{n}{2}+1 \right)}{2}
+\text{Median}=\frac{\frac{n}{2}+ \left(\frac{n}{2}+1 \right)}{2}
 $$
 
 ```python
@@ -1477,7 +1477,7 @@ print(mode_value)
 Population variance:
 
 $$
-\sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2}=\frac{(x_{1}-mean)^2+\ldots(x_{n}-mean)^2}{n}
+\sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2}=\frac{(x_{1}-\text{mean})^2+\ldots(x_{n}-\text{mean})^2}{n}
 $$
 
 ```python
@@ -1494,7 +1494,7 @@ print(pop_var_value)
 Sample variance:
 
 $$
-s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}=\frac{(x_{1}-mean)^2+\ldots(x_{n}-mean)^2}{n-1}
+s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}=\frac{(x_{1}-\text{mean})^2+\ldots(x_{n}-\text{mean})^2}{n-1}
 $$
 
 ```python
@@ -1517,7 +1517,7 @@ By counting values **short of 1** item in our divisor, we increase the variance 
 Population standard deviation:
 
 $$
-\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2}}=\sqrt{\frac{(x_{1}-mean)^2+\ldots(x_{n}-mean)^2}{n}}
+\sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_{i}-\mu)^{2}}=\sqrt{\frac{(x_{1}-\text{mean})^2+\ldots(x_{n}-\text{mean})^2}{n}}
 $$
 
 ```python
@@ -1534,7 +1534,7 @@ print(pop_std_value)
 Sample standard deviation:
 
 $$
-s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}=\sqrt{\frac{(x_{1}-mean)^2+\ldots(x_{n}-mean)^2}{n-1}}
+s=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}=\sqrt{\frac{(x_{1}-\text{mean})^2+\ldots(x_{n}-\text{mean})^2}{n-1}}
 $$
 
 ```python
@@ -1644,7 +1644,7 @@ $$
 For example, we randomly select a sample of 50 students and find that the mean exam score in this sample is 75 out of 100, with a standard deviation of 5. This means that if we were to take multiple random samples of 50 students from the school and calculate the mean exam score for each sample, the standard error tells us that on average, the sample means would deviate from the true population mean by about 0.71 points.
 
 $$
-SE=\frac{\sigma}{\sqrt{n}}
+\text{SE}=\frac{\sigma}{\sqrt{n}}
 $$
 
 $$
@@ -1665,11 +1665,11 @@ Here's a simplified breakdown of the process:
 - Therefore, with 95% confidence, we conclude that the mean weight lies within 64.41 $\pm$ 0.57, equating to a range of 63.84 kg to 64.98 kg.
 
 $$
-Confidence\ interval = Sample\ mean \pm Margin\ of\ error
+\text{Confidence interval} = \text{Sample mean} \pm \text{Margin of error}
 $$
 
 $$
-\Rightarrow Sample\ mean \pm (Z\ score \times Standard\ error)
+\Rightarrow \text{Sample mean} \pm (\text{Z score} \times \text{Standard error})
 $$
 
 $$
@@ -1727,7 +1727,7 @@ print(lower, upper)
 For smaller samples:
 
 $$
-CI = \bar{x} \pm t \frac{s}{\sqrt{n}}
+\text{CI} = \bar{x} \pm t \frac{s}{\sqrt{n}}
 $$
 
 ```python
@@ -1913,7 +1913,7 @@ n=\frac{z^2 \times p \times (1-p)}{e^2}
 $$
 
 $$
-\Rightarrow sample\ size=\frac{confidence\ level^2 \times proportion \times (1-proportion)}{margin\ of\ error^2}
+\Rightarrow \text{sample size}=\frac{\text{Confidence level}^2 \times \text{Proportion} \times (1-\text{Proportion})}{\text{Margin of error}^2}
 $$
 
 ```python
@@ -2005,9 +2005,11 @@ Sample size needed: 1516
 
 ## Errors and residuals
 
-**Errors** are the differences between the observed values and the expected values in a statistical analysis. They can be used to assess the accuracy of a model and identify patterns in the data that the model fails to capture.
+**Errors** are the differences between **observed values** and the **expected values** in a statistical analysis. They can be used to assess the accuracy of a model and identify patterns in the data that the model fails to capture.
 
-**Residuals** are the differences between the observed values and the predicted values in a regression analysis. They represent the error in the model and can be used to assess the model's performance and identify patterns in the data that the model fails to capture.
+**Residuals** are the differences between **observed values** and **predicted values** in a regression analysis. They represent the error in the model and can be used to assess the model's performance and identify patterns in the data that the model fails to capture.
+
+**Loss** in a model is a measure of the discrepancy between predicted values and actual values, namely residuals. **Loss function** is a mathematical function that quantifies this discrepancy, again residuals. It is to guide the training process by minimising this loss, thereby improving the model's predictions and performance. Types of loss functions are as follows:
 
 ### Mean absolute error
 
@@ -2015,7 +2017,7 @@ Mean absolute error (MAE) measures the average magnitude of errors in a set of p
 
 ### Mean squared error
 
-Mean squared error (MSE) evaluates the average of the squared differences between predicted and actual values. By squaring the errors, it penalizes larger discrepancies more than smaller ones, making it sensitive to outliers.
+Mean squared error (MSE) evaluates the average of the squared differences between predicted and actual values. By squaring the errors, it penalises larger discrepancies more than smaller ones, making it sensitive to outliers.
 
 ### Root mean squared error
 
@@ -2081,7 +2083,7 @@ graph TD
 
 **Dropout** is a regularisation technique used in neural networks to randomly drop units during training to prevent overfitting. It helps to reduce the model's reliance on specific features and improve generalisation to new data.
 
-To prevent underfitting in machine learning, make sure your model is complex enough to recognize the patterns in your data. Underfitting occurs when a model is too simple and cannot learn effectively, leading to poor results. To combat this, you can **increase the model's complexity**, **add more features**, **use a more advanced model**, or **extend the training period**. By enhancing the model's complexity and learning capacity, you can improve its performance and mitigate underfitting.
+To prevent underfitting in machine learning, make sure your model is complex enough to recognise the patterns in your data. Underfitting occurs when a model is too simple and cannot learn effectively, leading to poor results. To combat this, you can **increase the model's complexity**, **add more features**, **use a more advanced model**, or **extend the training period**. By enhancing the model's complexity and learning capacity, you can improve its performance and mitigate underfitting.
 
 ### Resampling
 
@@ -2106,22 +2108,22 @@ To prevent underfitting in machine learning, make sure your model is complex eno
 **Confusion matrix** is a table that visualises the performance of a classification model. It shows the number of **true positives**, **true negatives**, **false positives**, and **false negatives**. These values are used to calculate metrics as follows:
 
 - **Accuracy** verifies you how often your model is correct overall, namely the proportion of correct predictions among all predictions made.
-    - $\frac{TP+TN}{TP+TN+FP+FN} \Rightarrow \frac{45+30}{45+30+5+20}=\frac{75}{100}=0.75$
+    - $\frac{\text{TP+TN}}{\text{TP+TN+FP+FN}} \Rightarrow \frac{45+30}{45+30+5+20}=\frac{75}{100}=0.75$
     - 75% of emails are correctly identified as spam or non-spam by the classifier.
 - **Precision** tells you how many of the predicted positive instances are actually positive, namely the proportion of true positive predictions among all positive predictions made.
-    - $\frac{TP}{TP+FP} \Rightarrow \frac{45}{45+5}=\frac{45}{50}=0.9$
+    - $\frac{\text{TP}}{\text{TP+FP}} \Rightarrow \frac{45}{45+5}=\frac{45}{50}=0.9$
     - 90% of spam emails are correctly identified as spam from all emails identified as spam.
 - **Negative predictive value** tells how many of the predicted negative instances are actually negative, namely the proportion of true negative predictions among all negative predictions made.
-    - $\frac{TN}{TN+FN} \Rightarrow \frac{30}{30+20}=\frac{30}{50}=0.6$
+    - $\frac{\text{TN}}{\text{TN+FN}} \Rightarrow \frac{30}{30+20}=\frac{30}{50}=0.6$
     - 60% of non-spam emails are correctly identified as non-spam from all emails identified as non-spam.
 - **Sensitivity or recall** tells you how well your model identifies positive instances, namely the proportion of true positive predictions among all actual positive instances.
-    - $\frac{TP}{TP+FN} \Rightarrow \frac{45}{45+20}=\frac{45}{65}=0.69$
+    - $\frac{\text{TP}}{\text{TP+FN}} \Rightarrow \frac{45}{45+20}=\frac{45}{65}=0.69$
     - 69% of spam emails are correctly identified as spam from all spam emails.
 - **Specificity** tells you how well your model identifies negative instances, namely the proportion of true negative predictions among all actual negative instances.
-    - $\frac{TN}{TN+FP} \Rightarrow \frac{30}{30+5}=\frac{30}{35}=0.86$
+    - $\frac{\text{TN}}{\text{TN+FP}} \Rightarrow \frac{30}{30+5}=\frac{30}{35}=0.86$
     - 86% of non-spam emails are correctly identified as non-spam from all non-spam emails.
 - **F1-score** is the harmonic mean of precision and recall, providing a balance between the two metrics, which is useful when you want to consider both false positives and false negatives. It is a better measure when the class distribution is imbalanced.
-    - $2 \times \frac{precision \times recall}{precision + recall} \Rightarrow 2 \times \frac{0.9 \times 0.69}{0.9 + 0.69}=2 \times \frac{0.621}{1.59}=2 \times 0.39=0.78$
+    - $2 \times \frac{\text{Precision}\ \times\ \text{Recall}}{\text{Precision + recall}} \Rightarrow 2 \times \frac{0.9 \times 0.69}{0.9 + 0.69}=2 \times \frac{0.621}{1.59}=2 \times 0.39=0.78$
     - 0.78 is the f1-score for the model. It is the weighted average of precision and recall, where an f1-score reaches its best value at 1 and worst at 0.
 
 # Statistical and machine learning
@@ -2191,7 +2193,7 @@ $$
 Sum of squared error:
 
 $$
-SSE = \sum (y-\^{y})^2
+\text{SSE} = \sum (y-\^{y})^2
 $$
 
 Sum of squared error of the estimate:
@@ -2210,9 +2212,41 @@ $$
 
 **Multiple linear regression** is an extension of linear regression that can model the relationship between multiple input features and a continuous output variable. It fits a linear equation to the data by estimating the coefficients of the input features to predict the output variable. Multiple linear regression is widely used in various domains, including finance, healthcare, and marketing, for tasks such as sales forecasting, risk assessment, and customer segmentation.
 
-### Decision trees
+### Decision tree
 
-Decision trees for both classification and regression are a popular machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences. Each internal node represents a decision based on an input feature, and each leaf node represents the outcome or prediction. Decision trees are easy to interpret and visualise, making them useful for understanding the decision-making process and identifying important features. They are widely used in various domains, including finance, healthcare, and marketing, for tasks such as classification, regression, and feature selection.
+Decision tree for both classification and regression  a popular machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences. Each internal node represents a decision based on an input feature, and each leaf node represents the outcome or prediction. Decision trees are easy to interpret and visualise, making them useful for understanding the decision-making process and identifying important features. They are widely used in various domains, including finance, healthcare, and marketing, for tasks such as classification, regression, and feature selection.
+
+**Entropy** is a measure of uncertainty or disorder in a dataset. It tells us how mixed up the data is. In a decision tree, we use entropy to determine how pure or impure a dataset is.
+
+$$
+H(S) = - \sum_{i=1}^n p_i \log_2(p_i) 
+$$
+
+
+where  $p_i$  is the proportion of examples in class  $i$  in dataset $S$.
+
+**Information gain** measures how much a feature (attribute) helps to reduce the uncertainty in a dataset. When we split the dataset using a feature, information gain tells us how much more organised the resulting subsets are compared to the original dataset.
+
+$$ 
+\text{Information gain}(S, A) = H(S) - \sum_{v \in \text{Values}(A)} \frac{|S_v|}{|S|} H(S_v)
+$$
+
+where:
+
+- $H(S)$ is the entropy of the original dataset $S$.
+- $S_v$ is the subset of $S$ where feature $A$ has value $v$.
+- $\frac{|S_v|}{|S|}$ is the proportion of subset $S_v$ relative to the whole dataset  $S$.
+- $H(S_v)$ is the entropy of the subset $S_v$.
+
+A higher information gain means that the feature is better at organizing the data.
+
+The **ID3** algorithm (Iterative Dichotomiser 3) is a method used to create decision trees. It uses information gain to decide which features to split the data on at each step. Here’s how it works:
+
+- **Calculate the entropy** of the current dataset.
+- For each feature, **calculate the information gain** when splitting the data based on that feature.
+- **Choose the feature** with the highest information gain as the splitting feature.
+- **Split the dataset** into subsets based on the chosen feature.
+- For each subset, **repeat** the process until all examples in a subset are of the same class (entropy is 0) or there are no more features to split on.
 
 ### Random forest
 
@@ -2220,7 +2254,7 @@ Random forest for both classification and regression is an ensemble learning met
 
 ### XGBoost
 
-XGBoost for both classification and regression is an advanced implementation of gradient boosting that is highly efficient, scalable, and accurate. It works by building an ensemble of weak learners, such as decision trees, and optimising them to make accurate predictions. XGBoost uses a regularised objective function to prevent overfitting and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
+XGBoost for both classification and regression is an advanced implementation of gradient boosting that is highly efficient, scalable, and accurate. It works by building an ensemble of weak learners, such as decision tree, and optimising them to make accurate predictions. XGBoost uses a regularised objective function to prevent overfitting and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
 
 ### Support vector machines
 
@@ -2232,7 +2266,6 @@ In SVM, **kernels** are functions that transform data into a higher-dimensional 
 - **Polynomial kernel**: Maps data into a higher-dimensional space using polynomial functions
 - **Radial basis function kernel** or **Gaussian kernel**: Maps data into an infinite-dimensional space using an exponential function of the distance between data points
 - **Sigmoid kernel**: Uses a sigmoid function to transform data, similar to a neural network activation function
-
 
 ### k-nearest neighbors
 
@@ -2252,7 +2285,7 @@ Hyperparameter Optimisation involves selecting the most effective hyperparameter
 - **Grid search** evaluates all possible combinations of predefined hyperparameter values.
 - **Random search** samples random combinations of hyperparameters within specified ranges.
 - **Bayesian optimisation:** uses probabilistic models to explore the hyperparameter space more efficiently and adjust based on previous results.
-- **Gradient-based optimisation** utilizes gradient information to fine-tune hyperparameters, often for complex models like neural networks.
+- **Gradient-based optimisation** utilises gradient information to fine-tune hyperparameters, often for complex models like neural networks.
 
 ## Unsupervised learning
 
