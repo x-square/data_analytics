@@ -1220,8 +1220,6 @@ $$
 
 **Poisson disc sampling** is a method for generating points in a 2D plane such that no two points are closer than a specified minimum distance. This technique is useful for creating patterns in computer graphics, data visualization, and other applications where a uniform distribution of points is desired.
 
-```python
-
 ## Discrete probability distribution
 
 **Discrete probability distribution** provides a way to calculate and understand the probabilities of various outcomes for a discrete random variable, using the **probability mass function** (PMF) to describe individual probabilities and the **cumulative distribution function** (CDF) to describe cumulative probabilities.
@@ -2122,17 +2120,13 @@ To prevent underfitting in machine learning, make sure your model is complex eno
 
 ### Resampling
 
-**Resampling** or sampling with replacement involves creating new datasets from the original data by methods like bootstrapping or cross-validation. It helps in evaluating model performance and improving accuracy by repeatedly drawing new samples and seeing how your answers change.
+**Resampling** involves creating new datasets from the original data by methods like bootstrapping or cross-validation. It helps in evaluating model performance and improving accuracy by repeatedly drawing new samples and seeing how your answers change.
 
-**Bootstrapping** is a common resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It's useful when you don't have access to more data or when you want to assess the variability of your results.
-
-**Cross-validation** is another resampling technique that involves splitting your data into training and testing sets to evaluate the performance of a model. It helps to assess how well your model generalises to new data and can be used to tune hyperparameters and prevent overfitting.
-
-**Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results.
-
-**Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions.
-
-**Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
+- **Bootstrapping** is a resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It is commonly used in bagging algorithms like random forests to create diverse training sets and improve model stability.
+- **Cross-validation** is a resampling technique that involves splitting the data into multiple subsets or folds to evaluate and tune the performance of a model. It is widely used across various machine learning models, including those in boosting algorithms like gradient boosting, to assess generalisation and prevent overfitting.
+- **Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results.
+- **Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions.
+- **Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
 
 ### Confusion matrix
 
@@ -2297,7 +2291,7 @@ The **ID3** algorithm (Iterative Dichotomiser 3) is a method used to create deci
 
 ### Random forest
 
-Random forest for both classification and regression is an ensemble learning method that combines multiple decision trees to create a more accurate and robust model. It works by training a large number of decision trees on random subsets of the data and aggregating their predictions to make the final prediction. Random forest is known for its high accuracy, scalability, and ability to handle large datasets with high dimensionality. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and feature selection.
+**Random forest** for both classification and regression is an ensemble learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting. It works by training a group of decision trees on different subsets of the data and aggregating their predictions to make the final prediction. Random forest uses a technique called bagging (bootstrap aggregating) to create diverse and independent trees, which helps to reduce variance and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and feature selection.
 
 ### XGBoost
 
