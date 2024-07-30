@@ -130,7 +130,7 @@ print(up_to_5.doit())
 
 **Exponents** involve multiplying a number by itself a certain number of times e.g. $2^3=2 \times 2 \times 2=8$, that is, $2$ as the base and $3$ as the exponent.
 
-When we multiply exponents together with the same base, we simply add the exponents which is known as the **product rule** e.g. $x^2x^3=x^{2+3}=x^5$ and $\frac{x^2}{x^5}=x^{2-5}=x^{-3}$.
+When we multiply exponents together with the same base, we simply add the exponents which is known as the **product rule** e.g. $x^2x^3=x^{2+3}=x^5$ and $\frac{x^2}{x^5}=x^{2-5}=x^{-3}$. The term **product** refers to the result of multiplying two or more numbers or expressions together.
 
 ```python
 from sympy import *
@@ -142,6 +142,11 @@ print(expr)
 # Output
 x**(-3)
 ```
+
+**Chain of products** is a sequence where you multiply several factors together in a specific order. For instance, $a \times b \times c$ is a chain of products involving three factors.
+
+**Chain of equations** is a sequence where you solve a series of equations step by step. For example, if you solve $x+2=5$ to find $x$, and then use $x$ in another equation 
+$2x-1=5$, you create a chain of equations.
 
 **Fractional exponents** are an alternative way to represent **roots**. For example, exponent $\frac{1}{2}$ in $4^{\frac{1}{2}}=\sqrt{4}=2$ represents the squared root operation and $\frac{1}{3}$ in $8^{\frac{1}{3}}=\sqrt[3]{8}=2$ a cubed root.
 
@@ -517,6 +522,16 @@ print(area)
 # Output
 4/3
 ```
+
+## Logic and set theory
+
+**Logic** is the study of reasoning and argumentation, focusing on the principles of valid inference and the structure of arguments. It helps us understand how to make decisions, solve problems, and evaluate the truth of statements.
+
+**Set theory** is a branch of mathematics that studies collections of objects, called sets, and their relationships. It provides a foundation for other mathematical disciplines like algebra, calculus, and probability theory.
+
+![Example of set theory](https://github.com/x-square/visual-resources/blob/main/set-theory.png?raw=true 'Example of set theory')
+
+![Example of SQL join](https://github.com/x-square/visual-resources/blob/main/sql-join.png?raw=true 'Example of SQL join')
 
 # Linear algebra
 
@@ -959,8 +974,6 @@ Eigenvectors
 
 # Probability
 
-![Example of set theory](https://github.com/x-square/visual-resources/blob/main/set-theory-comprehensive.png?raw=true 'Example of set theory')
-
 **Probability** is about quantifying predictions of events yet to happen, whereas **likelihood** is measuring the frequency of events that already occurred. In statistics and machine learning, we often use likelihood as **the past** in the form of data to predict probability as **the future**. A probability of an event must be strictly between 0% and 100%. Logically, this means the probability of an event **not** happening is calculated by subtracting the probability of the event from $1$.
 
 A **probability distribution** is a mathematical function that describes the likelihood of different outcomes in an experiment or process, assigning a probability to each possible outcome so that the total probability across all outcomes sums to 1. Suppose you have a bag with 3 red candies, 2 blue candies, and 5 green candies. The probability distribution shows the chances of picking each color as 30% for red, 20% for blue, and 50% for green.
@@ -1203,6 +1216,12 @@ $$
 \Rightarrow 1 \times 0.5061 + \frac{1}{2} \times 0.4939 = 0.7531
 $$
 
+### Poisson disc sampling
+
+**Poisson disc sampling** is a method for generating points in a 2D plane such that no two points are closer than a specified minimum distance. This technique is useful for creating patterns in computer graphics, data visualization, and other applications where a uniform distribution of points is desired.
+
+```python
+
 ## Discrete probability distribution
 
 **Discrete probability distribution** provides a way to calculate and understand the probabilities of various outcomes for a discrete random variable, using the **probability mass function** (PMF) to describe individual probabilities and the **cumulative distribution function** (CDF) to describe cumulative probabilities.
@@ -1361,6 +1380,22 @@ print(p)
 ### Chi-squared distribution
 
 **Chi-squared distribution** is a continuous probability distribution that is widely used in statistics. It is often used in hypothesis testing, goodness of fit tests, and confidence interval estimation. For example, the chi-squared distribution is used in the chi-squared test to determine if there is a significant difference between the expected and observed frequencies of categorical data.
+
+### Log-normal distribution
+
+**Log-normal distribution** is a continuous probability distribution of a random variable whose logarithm is normally distributed. It is used to model variables that are positive and skewed to the right, such as the size of income, the price of stocks, and the length of time people spend on a website.
+
+### Weibull distribution
+
+**Weibull distribution** is a continuous probability distribution that is widely used in reliability engineering to model the time until failure of a component or system. It is named after the Swedish engineer Waloddi Weibull. The Weibull distribution can model a wide range of failure patterns, including early-life failures, constant failure rates, and wear-out failures.
+
+### Gumbel distribution
+
+**Gumbel distribution** is a continuous probability distribution that is used to model the distribution of the maximum or minimum of a number of samples of various distributions. It is often used in extreme value theory to model the distribution of extreme events, such as floods, earthquakes, and stock market crashes.
+
+### Triangular distribution
+
+**Triangular distribution** is a continuous probability distribution that is often used in decision analysis to model uncertain variables with a known minimum, maximum, and most likely value. It is shaped like a triangle, with the minimum, maximum, and most likely values forming the vertices of the triangle.
 
 # Statistics
 
@@ -2151,8 +2186,14 @@ Logistic regression is for classification tasks, where the outcome variable is c
 The logistic function, commonly known as a sigmoid curve, is adept at producing outputs ranging between 0 and 1, thereby rendering it well-suited for representing probabilities.
 
 $$
-y=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
+P(y=1|x)=\frac{1}{1+e^{-(\beta_0 + \beta_1x)}}
 $$
+
+$$
+\Rightarrow P(\text{Buy = 1 | Income})=\frac{1}{1+e^{-(\beta_0 + \beta_1 \times \text{Income})}}
+$$
+
+This formula helps us find the chance of $y$ being 1 when we know $x$ . The numbers $\beta_0$ and $\beta_1$ adjust this probability, with $\beta_0$ setting the starting point as intercept and $\beta_1$ showing how $x$ affects the rate of change as slope. The number $e$ about 2.718 models growth or decay. Note that the negative sign in the formula ensures the S-curve direction of the logistic function, keeping the result between 0 and 1.
 
 **Softmax function**: $f(x) = \frac{e^{x_i}}{\sum_{j=1}^{k} e^{x_j}}$
 
@@ -2173,6 +2214,12 @@ One useful method in data analysis is drawing a line through data points to see 
 $$
 y=mx+b
 $$
+
+$$
+\Rightarrow \text{House price}=m \times \text{Size}+b
+$$
+
+For each unit increase in $x$, $y$ changes by $m$ units, where $m$ is the slope. The intercept $b$ provides the baseline value of $y$ when $x$ is zero.
 
 Closed form equation:
 
@@ -2269,14 +2316,23 @@ In SVM, **kernels** are functions that transform data into a higher-dimensional 
 
 ### k-nearest neighbors
 
-**k-nearest neighbors** (k-NN) is a simple and intuitive machine learning algorithm used for both classification and regression tasks. It works by finding the k-nearest data points to a given input and using their labels or values to make predictions. k-NN is a non-parametric algorithm that does not make any assumptions about the underlying data distribution, making it versatile and easy to implement. It is widely used in various domains, including image recognition, recommendation systems, and anomaly detection, for tasks such as classification, regression, and clustering.
+**k-nearest neighbors** or **k-NN** is a simple and intuitive machine learning algorithm used for both classification and regression tasks. It works by finding the k-nearest data points to a given input and using their labels or values to make predictions. k-NN is a non-parametric algorithm that does not make any assumptions about the underlying data distribution, making it versatile and easy to implement. It is widely used in various domains, including image recognition, recommendation systems, and anomaly detection, for tasks such as classification, regression, and clustering.
 
-### Ensemble learning techniques
+### Naive Bayes classifier
 
-Ensemble learning techniques combine multiple machine learning models to improve prediction accuracy and robustness. They work by training a group of models on different subsets of the data and combining their predictions to make the final prediction. Ensemble learning techniques are widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking. Common ensemble learning techniques include:
+**Naive Bayes classifier** is a probabilistic machine learning algorithm based on Bayes' theorem that is widely used for classification tasks. It works by assuming that the features are conditionally independent given the class label, simplifying the calculation of the posterior probability. Naive Bayes is simple, fast, and efficient, making it suitable for large datasets with high dimensionality. It is widely used in various domains, including text classification, spam filtering, and sentiment analysis, for tasks such as classification and ranking.
 
-- **Bagging** involves training multiple models independently on different subsets of the training data, which are created by randomly sampling with replacement. The predictions from these models are then aggregated, typically by averaging for regression or voting for classification. This technique reduces variance and helps prevent overfitting. Common models used with bagging include decision trees, random forest, and neural networks.
-- **Boosting** builds a sequence of models where each model is trained to correct the errors of the previous ones. Each subsequent model focuses on the misclassified instances from earlier models, and the final prediction is a weighted combination of all models. This approach helps to reduce both variance and bias. Popular models used with boosting include decision trees, AdaBoost, XGBoost, and linear models e.g. gradient boosted linear model.
+### Ensemble learning algorithms
+
+Ensemble learning algorithms combine multiple machine learning models to improve prediction accuracy and robustness. They work by training a group of models on different subsets of the data and combining their predictions to make the final prediction. Ensemble learning techniques are widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking. Common ensemble learning techniques include:
+
+![Bagging](https://github.com/x-square/visual-resources/blob/main/bagging.png?raw=true 'Bagging')
+
+ **Bagging** or **bootstrap aggregating** involves training multiple models independently on different subsets of the training data, which are created by randomly sampling with replacement. The predictions from these models are then aggregated, typically by averaging for regression or voting for classification. This technique reduces variance and helps prevent overfitting. Common models used with bagging include decision trees, random forest, and neural networks.
+
+![Boosting](https://github.com/x-square/visual-resources/blob/main/boosting.png?raw=true 'Boosting')
+
+**Boosting** builds a sequence of models where each model is trained to correct the errors of the previous ones. Each subsequent model focuses on the misclassified instances from earlier models, and the final prediction is a weighted combination of all models. This approach helps to reduce both variance and bias. Popular models used with boosting include decision trees, AdaBoost, XGBoost, and linear models e.g. gradient boosted linear model.
 
 ### Hyperparameter optimisation
 
@@ -2295,9 +2351,31 @@ Hyperparameter Optimisation involves selecting the most effective hyperparameter
 
 **k-means clustering** is a popular unsupervised learning algorithm used to group data points into k clusters based on their similarity. It works by iteratively assigning data points to the nearest cluster centroid and updating the centroids to minimise the sum of squared distances between data points and centroids. k-means clustering is widely used in various domains, including customer segmentation, image compression, and anomaly detection, for tasks such as clustering and pattern recognition.
 
+### Dimensionality reduction
+
+**Dimensionality reduction** is a technique used to reduce the number of input features in a dataset while preserving the most important information. It helps to simplify the data and improve the performance of machine learning models by reducing noise and redundancy. Dimensionality reduction is used in various domains, including image processing, text mining, and bioinformatics, for tasks such as feature selection and visualisation.
+
+### Factor analysis
+
+**Factor analysis** is a statistical method used to identify underlying factors or latent variables that explain the observed correlations among variables. It works by reducing the dimensionality of the data and identifying the common factors that influence the observed variables. Factor analysis is widely used in various domains, including psychology, sociology, and marketing, for tasks such as data reduction and variable selection.
+
+### Recommender systems
+
+**Recommender systems** are a type of machine learning model that predicts user preferences and makes personalised recommendations based on historical data. They are widely used in e-commerce, social media, and entertainment platforms to suggest products, content, and services to users. Recommender systems can be based on collaborative filtering, content-based filtering, or hybrid approaches, depending on the data available and the desired outcomes.
+
+**Collaborative filtering** is a type of recommender system that makes predictions based on the preferences of similar users or items. It works by finding users or items that are similar to the target user or item and using their preferences to make recommendations. Collaborative filtering can be user-based or item-based, depending on whether the focus is on users or items.
+
+**Content-based filtering** is a type of recommender system that makes predictions based on the features of the items and the user's preferences. It works by creating a profile of the user's preferences and matching it with the features of the items to make recommendations. Content-based filtering is based on the idea that similar items will be liked by similar users.
+
+**Hybrid recommender systems** combine collaborative filtering and content-based filtering to make more accurate and diverse recommendations. They leverage the strengths of both approaches to improve prediction accuracy and coverage. Hybrid recommender systems are widely used in various domains, including e-commerce, social media, and entertainment platforms, for tasks such as recommendation and personalisation.
+
 ## Reinforcement learning
 
 **Reinforcement learning** is a type of machine learning where the model learns to make decisions by interacting with an environment and receiving feedback in the form of rewards or penalties. The model learns to take actions that maximise the cumulative reward over time, allowing it to learn complex behaviours and strategies. Reinforcement learning is used in applications such as game playing, robotics, and autonomous systems.
+
+### Q-learning
+
+**Q-learning** is a model-free reinforcement learning algorithm that learns to make decisions by estimating the value of taking an action in a given state. It works by updating the Q-values of state-action pairs based on the rewards received and the expected future rewards. Q-learning is widely used in various domains, including game playing, robotics, and finance, for tasks such as decision-making and control.
 
 # Deep learning
 
@@ -2310,6 +2388,18 @@ Neural networks are a type of machine learning model inspired by the structure a
 During training, the network adjusts the weights associated with each connection between neurons to minimise the difference between the predicted output and the actual output. This process, known as backpropagation, uses algorithms like gradient descent to update the weights iteratively.
 
 Neural networks are capable of learning complex patterns and relationships in data, making them useful for tasks such as image recognition, natural language processing, and predictive modelling. They have become increasingly popular due to their ability to tackle a wide range of problems and their effectiveness in handling large datasets.
+
+### Shallow neural networks
+
+Shallow neural networks consist of an input layer, a single hidden layer, and an output layer. They are straightforward models that are less computationally demanding compared to deeper networks.
+
+Example of email spam detection:
+
+- **Input layer** features like number of words, presence of keywords, and email length.
+- **Hidden layer** processes these features to identify patterns indicating spam.
+- **Output layer** classifies the email as spam or not spam.
+
+In this setup, the hidden layer helps recognize patterns that help distinguish spam from non-spam emails.
 
 `Any questions, please reach out`
 
