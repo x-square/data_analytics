@@ -1218,7 +1218,7 @@ $$
 
 ### Poisson disc sampling
 
-**Poisson disc sampling** is a method for generating points in a 2D plane such that no two points are closer than a specified minimum distance. This technique is useful for creating patterns in computer graphics, data visualization, and other applications where a uniform distribution of points is desired.
+**Poisson disc sampling** is a method for generating points in a 2D plane such that no two points are closer than a specified minimum distance. This technique is useful for creating patterns in computer graphics, data visualisation, and other applications where a uniform distribution of points is desired.
 
 ## Discrete probability distribution
 
@@ -2112,7 +2112,7 @@ graph TD
 
 **L2 regularisation** or **Ridge** adds the squared values of the weights to the loss function, encouraging small weights and reducing the impact of outliers.
 
-**Elastic Net** combines L1 and L2 regularisation to balance feature selection and weight shrinkage.
+**Elastic net regularisation** combines L1 and L2 regularisations to leverage the benefits of both methods, providing a balance between sparsity and small weights.
 
 **Dropout** is a regularisation technique used in neural networks to randomly drop units during training to prevent overfitting. It helps to reduce the model's reliance on specific features and improve generalisation to new data.
 
@@ -2122,11 +2122,9 @@ To prevent underfitting in machine learning, make sure your model is complex eno
 
 **Resampling** involves creating new datasets from the original data by methods like bootstrapping or cross-validation. It helps in evaluating model performance and improving accuracy by repeatedly drawing new samples and seeing how your answers change.
 
-- **Bootstrapping** is a resampling technique that involves drawing samples with replacement from the original dataset to estimate the sampling distribution of a statistic. It is commonly used in bagging algorithms like random forests to create diverse training sets and improve model stability.
-- **Cross-validation** is a resampling technique that involves splitting the data into multiple subsets or folds to evaluate and tune the performance of a model. It is widely used across various machine learning models, including those in boosting algorithms like gradient boosting, to assess generalisation and prevent overfitting.
-- **Jackknife** is a resampling technique that involves systematically leaving out one observation at a time to estimate the sampling distribution of a statistic. It's useful when you want to assess the stability and bias of your results.
-- **Monte Carlo simulation** is a resampling technique that involves generating random samples from a probability distribution to estimate the distribution of a statistic. It's useful when you want to simulate complex systems or processes and understand their behaviour under different conditions.
-- **Permutation test** is a resampling technique that involves shuffling the labels of your data to create new samples and estimate the distribution of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups or conditions.
+- **Permutation test** is a resampling technique that involves shuffling the labels of the data to create new samples and assess the significance of a statistic. It's useful when you want to test the null hypothesis that there is no difference between groups.
+- **Bootstrapping** is a resampling technique that involves creating new samples by drawing with replacement from the original data. It's useful when you want to estimate the uncertainty of a statistic or evaluate the stability of a model.
+- **Cross-validation** is a resampling technique that involves splitting the data into multiple subsets, training the model on one subset, and testing it on another. It's useful when you want to evaluate the model's performance and generalisation to new data.
 
 ### Confusion matrix
 
@@ -2255,7 +2253,7 @@ $$
 
 ### Decision tree
 
-Decision tree for both classification and regression  a popular machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences. Each internal node represents a decision based on an input feature, and each leaf node represents the outcome or prediction. Decision trees are easy to interpret and visualise, making them useful for understanding the decision-making process and identifying important features. They are widely used in various domains, including finance, healthcare, and marketing, for tasks such as classification, regression, and feature selection.
+Decision tree for both classification and regression a popular machine learning algorithm that uses a tree-like structure to model decisions and their possible consequences. Each internal node represents a decision based on an input feature, and each leaf node represents the outcome or prediction. Decision trees are easy to interpret and visualise, making them useful for understanding the decision-making process and identifying important features. They are widely used in various domains, including finance, healthcare, and marketing, for tasks such as classification, regression, and feature selection.
 
 **Entropy** is a measure of uncertainty or disorder in a dataset. It tells us how mixed up the data is. In a decision tree, we use entropy to determine how pure or impure a dataset is.
 
@@ -2279,7 +2277,7 @@ where:
 - $\frac{|S_v|}{|S|}$ is the proportion of subset $S_v$ relative to the whole dataset  $S$.
 - $H(S_v)$ is the entropy of the subset $S_v$.
 
-A higher information gain means that the feature is better at organizing the data.
+A higher information gain means that the feature is better at organising the data.
 
 The **ID3** algorithm (Iterative Dichotomiser 3) is a method used to create decision trees. It uses information gain to decide which features to split the data on at each step. Here’s how it works:
 
@@ -2293,9 +2291,21 @@ The **ID3** algorithm (Iterative Dichotomiser 3) is a method used to create deci
 
 **Random forest** for both classification and regression is an ensemble learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting. It works by training a group of decision trees on different subsets of the data and aggregating their predictions to make the final prediction. Random forest uses a technique called bagging (bootstrap aggregating) to create diverse and independent trees, which helps to reduce variance and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and feature selection.
 
-### XGBoost
+### Gradient boosting
 
-XGBoost for both classification and regression is an advanced implementation of gradient boosting that is highly efficient, scalable, and accurate. It works by building an ensemble of weak learners, such as decision tree, and optimising them to make accurate predictions. XGBoost uses a regularised objective function to prevent overfitting and improve generalisation to new data. It is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
+**Gradient boosting** for both classification and regression builds a strong model by training weak learners sequentially, where each model aims to reduce the residual errors from the previous models. It uses gradient descent to minimise a loss function, making iterative improvements to the model. Unlike AdaBoost, which reweights individual instances, Gradient Boosting focuses on optimising the overall model performance by correcting errors across the entire dataset. The final model combines predictions from all trained models, typically by summing them up, to enhance accuracy. The primary difference lies in their approaches: AdaBoost emphasises correcting individual misclassifications by adjusting weights, while Gradient Boosting focuses on minimising errors through gradient-based optimisation.
+
+### AdaBoost: Adaptive boosting
+
+**AdaBoost** for both classification and regression s an ensemble learning method that enhances model performance by sequentially combining weak classifiers. It starts with a base model and iteratively adjusts the weights of incorrectly classified instances to focus more on challenging examples in subsequent models. AdaBoost aggregates the predictions of all models using weighted voting, where the weight of each model reflects its accuracy. This process allows AdaBoost to correct errors from earlier models and improve overall predictive performance, particularly in complex datasets. Its key feature is the reweighting of misclassified instances, which helps to concentrate on difficult cases and adjust the focus of each new model.
+
+### XGBoost: Extreme gradient boosting
+
+**XGBoost** for both classification and regression is an optimised implementation of the gradient boosting algorithm that is designed for speed and performance. It uses a technique called regularisation to prevent overfitting and improve generalisation to new data. XGBoost is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
+
+### LightGBM: Light gradient boosting machine
+
+**LightGBM** for both classification and regression is a gradient boosting framework that uses a tree-based learning algorithm to improve prediction accuracy and efficiency. It is designed to be faster and more memory-efficient than other gradient boosting implementations by using a histogram-based algorithm to split data and reduce the number of splits. LightGBM is widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking.
 
 ### Support vector machines
 
@@ -2312,25 +2322,27 @@ In SVM, **kernels** are functions that transform data into a higher-dimensional 
 
 **k-nearest neighbors** or **k-NN** is a simple and intuitive machine learning algorithm used for both classification and regression tasks. It works by finding the k-nearest data points to a given input and using their labels or values to make predictions. k-NN is a non-parametric algorithm that does not make any assumptions about the underlying data distribution, making it versatile and easy to implement. It is widely used in various domains, including image recognition, recommendation systems, and anomaly detection, for tasks such as classification, regression, and clustering.
 
-### Naive Bayes classifier
-
-**Naive Bayes classifier** is a probabilistic machine learning algorithm based on Bayes' theorem that is widely used for classification tasks. It works by assuming that the features are conditionally independent given the class label, simplifying the calculation of the posterior probability. Naive Bayes is simple, fast, and efficient, making it suitable for large datasets with high dimensionality. It is widely used in various domains, including text classification, spam filtering, and sentiment analysis, for tasks such as classification and ranking.
-
 ### Ensemble learning algorithms
 
 Ensemble learning algorithms combine multiple machine learning models to improve prediction accuracy and robustness. They work by training a group of models on different subsets of the data and combining their predictions to make the final prediction. Ensemble learning techniques are widely used in various domains, including finance, healthcare, and e-commerce, for tasks such as classification, regression, and ranking. Common ensemble learning techniques include:
 
 ![Bagging](https://github.com/x-square/visual-resources/blob/main/bagging.png?raw=true 'Bagging')
 
- **Bagging** or **bootstrap aggregating** involves training multiple models independently on different subsets of the training data, which are created by randomly sampling with replacement. The predictions from these models are then aggregated, typically by averaging for regression or voting for classification. This technique reduces variance and helps prevent overfitting. Common models used with bagging include decision trees, random forest, and neural networks.
+ **Bagging** or **bootstrap aggregating** involves training multiple models independently on different subsets of the training data, which are created by randomly sampling with replacement. The predictions from these models are then aggregated, typically by averaging for regression or voting for classification. This technique reduces variance and helps prevent overfitting. Common models used with bagging include decision trees, random forests, and neural networks.
 
 ![Boosting](https://github.com/x-square/visual-resources/blob/main/boosting.png?raw=true 'Boosting')
 
-**Boosting** builds a sequence of models where each model is trained to correct the errors of the previous ones. Each subsequent model focuses on the misclassified instances from earlier models, and the final prediction is a weighted combination of all models. This approach helps to reduce both variance and bias. Popular models used with boosting include decision trees, AdaBoost, XGBoost, and linear models e.g. gradient boosted linear model.
+**Boosting** builds a sequence of models where each model is trained to correct the errors of the previous ones. Each subsequent model focuses on the misclassified instances from earlier models, and the final prediction is a weighted combination of all models. This approach helps to reduce both variance and bias. Popular models used with boosting include AdaBoost, Gradient Boosting, and XGBoost.
+
+![Stacking](https://github.com/x-square/visual-resources/blob/main/stacking.png?raw=true 'Stacking')
+
+**Stacking** or **stacked generalisation** combines multiple models by training a meta-model on their predictions. The base models make individual predictions, and the meta-model learns to combine these predictions to make the final prediction. Stacking helps to improve prediction accuracy by leveraging the strengths of different models and reducing the impact of individual model weaknesses. Common models used with stacking include decision trees, support vector machines, and neural networks.
+
+**Naive Bayes classifier** is a probabilistic machine learning algorithm based on Bayes' theorem that is widely used for classification tasks. It works by assuming that the features are conditionally independent given the class label, simplifying the calculation of the posterior probability. Naive Bayes is simple, fast, and efficient, making it suitable for large datasets with high dimensionality. It is widely used in various domains, including text classification, spam filtering, and sentiment analysis, for tasks such as classification and ranking.
 
 ### Hyperparameter optimisation
 
-Hyperparameter Optimisation involves selecting the most effective hyperparameters to enhance a machine learning model's performance. These parameters, set before training, are crucial for improving the model's accuracy and efficiency. The process explores various configurations to find the optimal settings that boost predictive capabilities, with effectiveness typically assessed through cross-validation. Methods for this optimization include:
+Hyperparameter Optimisation involves selecting the most effective hyperparameters to enhance a machine learning model's performance. These parameters, set before training, are crucial for improving the model's accuracy and efficiency. The process explores various configurations to find the optimal settings that boost predictive capabilities, with effectiveness typically assessed through cross-validation. Methods for this optimisation include:
 
 - **Grid search** evaluates all possible combinations of predefined hyperparameter values.
 - **Random search** samples random combinations of hyperparameters within specified ranges.
@@ -2347,7 +2359,7 @@ Hyperparameter Optimisation involves selecting the most effective hyperparameter
 
 ### Dimensionality reduction
 
-**Dimensionality reduction** is a technique used to reduce the number of input features in a dataset while preserving the most important information. It helps to simplify the data and improve the performance of machine learning models by reducing noise and redundancy. Dimensionality reduction is used in various domains, including image processing, text mining, and bioinformatics, for tasks such as feature selection and visualisation.
+**Dimensionality reduction** is a technique used to reduce the number of input features in a dataset while preserving the most important information. It helps to simplify the data and improve the performance of machine learning models by reducing noize and redundancy. Dimensionality reduction is used in various domains, including image processing, text mining, and bioinformatics, for tasks such as feature selection and visualisation.
 
 ### Factor analysis
 
@@ -2393,7 +2405,7 @@ Example of email spam detection:
 - **Hidden layer** processes these features to identify patterns indicating spam.
 - **Output layer** classifies the email as spam or not spam.
 
-In this setup, the hidden layer helps recognize patterns that help distinguish spam from non-spam emails.
+In this setup, the hidden layer helps recognise patterns that help distinguish spam from non-spam emails.
 
 `Any questions, please reach out`
 
