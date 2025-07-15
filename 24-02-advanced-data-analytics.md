@@ -6207,5 +6207,5 @@ For this deliverable, you are asked to choose a method to approach this data cha
 `Any questions, please reach out`
 
 Chiawei Wang PhD\
-Data Scientist\
+Senior Product Analyst\
 <chw.wng@outlook.com>
