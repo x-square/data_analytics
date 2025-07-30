@@ -2411,4 +2411,4 @@ In this setup, the hidden layer helps recognise patterns that help distinguish s
 
 Chiawei Wang PhD\
 Senior Product Analyst\
-<chw.wng@outlook.com>
+<chiawei.w@outlook.com>
