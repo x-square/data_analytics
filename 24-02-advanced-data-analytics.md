@@ -6208,4 +6208,4 @@ For this deliverable, you are asked to choose a method to approach this data cha
 
 Chiawei Wang PhD\
 Senior Product Analyst\
-<chw.wng@outlook.com>
+<chiawei.w@outlook.com>
