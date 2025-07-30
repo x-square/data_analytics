@@ -1149,4 +1149,4 @@ There are nine basic principles of design that data analysts should think about 
 
 Chiawei Wang PhD\
 Senior Product Analyst\
-<chw.wng@outlook.com>
+<chiawei.w@outlook.com>
