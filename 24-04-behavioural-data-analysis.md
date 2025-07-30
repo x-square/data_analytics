@@ -370,4 +370,4 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 
 Chiawei Wang PhD\
 Senior Product Analyst\
-<chw.wng@outlook.com>
+<chiawei.w@outlook.com>
