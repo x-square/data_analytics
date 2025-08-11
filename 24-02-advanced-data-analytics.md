@@ -1,11 +1,11 @@
 ---
-title: 'Notes on advanced data analytics'
+title: 'Notes on Advanced Data Analytics'
 author: 'Chiawei Wang'
 date: 'February 2024'
-date-format: "MMMM YYYY"
+date-format: 'MMMM YYYY'
 ---
 
-`This document compiles information from Google Advanced Data Analytics for academic purposes`[^1]
+`This document compiles information from Google Advanced Data Analytics for academic purposes.`[^1]
 
 [^1]: This part of notes is compiled from [Google Advanced Data Analytics](https://www.coursera.org/professional-certificates/google-advanced-data-analytics 'Google professional certificate'). This program includes over 200 hours of instruction and hundreds of practice-based assessments, which will help you simulate real-world advanced data analytics scenarios that are critical for success in the workplace. The content is highly interactive and exclusively developed by Google employees with decades of experience in advanced data analytics and data science. Through a mix of videos, assessments, and hands-on labs, you'll get introduced to advanced data analytics tools and platforms and key technical skills required for an advanced role.
 
@@ -6207,5 +6207,5 @@ For this deliverable, you are asked to choose a method to approach this data cha
 `Any questions, please reach out`
 
 Chiawei Wang PhD\
-Senior Product Analyst\
+Product Analyst\
 <chiawei.w@outlook.com>
