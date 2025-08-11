@@ -1,8 +1,8 @@
 ---
-title: 'Notes on maths and practices for data science'
+title: 'Notes on Maths and Practices for Data Science'
 author: 'Chiawei Wang'
 date: 'May 2024'
-date-format: "MMMM YYYY"
+date-format: 'MMMM YYYY'
 ---
 
 `This document covers key concepts in maths, statistics and practical practices used in data science, with applications in Python. It is compiled from various resources for academic use.`[^1][^2]
@@ -2410,5 +2410,5 @@ In this setup, the hidden layer helps recognise patterns that help distinguish s
 `Any questions, please reach out`
 
 Chiawei Wang PhD\
-Senior Product Analyst\
+Product Analyst\
 <chiawei.w@outlook.com>
