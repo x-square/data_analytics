@@ -1,11 +1,11 @@
 ---
-title: 'Notes on behavioural data analysis'
+title: 'Notes on Behavioural Data Analysis'
 author: 'Chiawei Wang'
 date: 'April 2024'
-date-format: "MMMM YYYY"
+date-format: 'MMMM YYYY'
 ---
 
-`This document compiles information from Behavioral Data Analysis with R and Python for academic purposes`[^1]
+`This document compiles information from Behavioral Data Analysis with R and Python for academic purposes.`[^1]
 
 [^1]: Buisson, F. 2021. *Behavioral Data Analysis with R and Python: Customer-Driven Data for Real Business Results*. O'Reilly: Sebastopol, California.
 
@@ -369,5 +369,5 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 `Any questions, please reach out`
 
 Chiawei Wang PhD\
-Senior Product Analyst\
+Product Analyst\
 <chiawei.w@outlook.com>
