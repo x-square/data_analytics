@@ -1,4 +1,4 @@
-# data-science
+# data-analytics
 
 Terms and conditions:
 
