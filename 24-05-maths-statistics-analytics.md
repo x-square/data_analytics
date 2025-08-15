@@ -1,11 +1,11 @@
 ---
-title: 'Notes on Maths and Practices for Data Science'
+title: 'Notes on Maths and Practices for Analytics'
 author: 'Chiawei Wang'
 date: 'May 2024'
 date-format: 'MMMM YYYY'
 ---
 
-`This document covers key concepts in maths, statistics and practical practices used in data science, with applications in Python. It is compiled from various resources for academic use.`[^1][^2]
+`This document covers key concepts in maths, statistics and practical practices used in analytics, with applications in Python. It is compiled from various resources for academic use.`[^1][^2]
 
 [^1]: Nield, T. 2021. *Essential Math for Data Science: Take Control of Your Data with Fundamental Calculus, Linear Algebra, Probability and Statistics*. O'Reilly: Cambridge, England.
 
