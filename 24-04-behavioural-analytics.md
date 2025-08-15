@@ -1,5 +1,5 @@
 ---
-title: 'Notes on Behavioural Data Analysis'
+title: 'Notes on Behavioural Analytics'
 author: 'Chiawei Wang'
 date: 'April 2024'
 date-format: 'MMMM YYYY'
@@ -316,9 +316,7 @@ In the bottom right corner of the causal diagram, the average age of customers (
 
 ## Backdoor criterion
 
-Definition
-
-: The causal relationship between two variables is confounded if there is at least one unblocked noncausal path between them starting with an arrow to our cause of interest. Conversely, to remove all confounding, we need to block all noncausal paths between them starting with an arrow to our cause of interest.
+Definition: The causal relationship between two variables is confounded if there is at least one unblocked noncausal path between them starting with an arrow to our cause of interest. Conversely, to remove all confounding, we need to block all noncausal paths between them starting with an arrow to our cause of interest.
 
 ![A confounder is a joint cause and can be hidden](https://github.com/x-square/visual-resources/blob/main/confounder.png?raw=true 'A confounder is a joint cause and can be hidden')
 
