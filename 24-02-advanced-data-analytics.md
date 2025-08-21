@@ -2,7 +2,6 @@
 title: 'Notes on Advanced Data Analytics'
 author: 'Chiawei Wang'
 date: 'February 2024'
-date-format: 'MMMM YYYY'
 ---
 
 `This document compiles information from Google Advanced Data Analytics for academic purposes.`[^1]
