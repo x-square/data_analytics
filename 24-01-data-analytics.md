@@ -2,7 +2,6 @@
 title: 'Notes on Data Analytics'
 author: 'Chiawei Wang'
 date: 'January 2024'
-date-format: 'MMMM YYYY'
 ---
 
 `This document compiles information from Google Data Analytics for academic purposes.`[^1]
