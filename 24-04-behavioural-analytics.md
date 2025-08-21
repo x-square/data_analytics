@@ -2,7 +2,6 @@
 title: 'Notes on Behavioural Analytics'
 author: 'Chiawei Wang'
 date: 'April 2024'
-date-format: 'MMMM YYYY'
 ---
 
 `This document compiles information from Behavioral Data Analysis with R and Python for academic purposes.`[^1]
