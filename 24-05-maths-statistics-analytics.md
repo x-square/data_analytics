@@ -2,7 +2,6 @@
 title: 'Notes on Maths and Practices for Analytics'
 author: 'Chiawei Wang'
 date: 'May 2024'
-date-format: 'MMMM YYYY'
 ---
 
 `This document covers key concepts in maths, statistics and practical practices used in analytics, with applications in Python. It is compiled from various resources for academic use.`[^1][^2]
