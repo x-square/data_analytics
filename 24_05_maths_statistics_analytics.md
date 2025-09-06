@@ -2406,8 +2406,8 @@ Example of email spam detection:
 
 In this setup, the hidden layer helps recognise patterns that help distinguish spam from non-spam emails.
 
-`Any questions, please reach out`
+`Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
