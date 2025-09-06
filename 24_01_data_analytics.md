@@ -1147,5 +1147,5 @@ There are nine basic principles of design that data analysts should think about 
 `Any questions, please reach out`
 
 Chiawei Wang PhD\
-Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
