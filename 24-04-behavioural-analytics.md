@@ -363,8 +363,8 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 - **Sharp null hypothesis** is a specific and precise statement about a parameter in a statistical model. It typically posits that the parameter takes on a particular, exact value. For example, a sharp null hypothesis could state that the average score on a test for a certain group is exactly 75.
 - **Composite null hypothesis** is more flexible. It allows for a range of values for the parameter. For instance, a composite null hypothesis might state that the average score on the test is equal to or less than 75, suggesting a broader set of possibilities.
 
-`Any questions, please reach out`
+`Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
