@@ -1144,7 +1144,7 @@ There are nine basic principles of design that data analysts should think about 
 
 ![Nine principles of design](https://github.com/x-square/visual-resources/blob/main/design-principles-nine.png?raw=true 'Nine principles of design')
 
-`Any questions, please reach out`
+`Any questions, please reach out!`
 
 Chiawei Wang PhD\
 Product & Data Analyst\
