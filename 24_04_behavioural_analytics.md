@@ -365,6 +365,6 @@ Normally, we approach the theory of change of our experiment backwards to ensure
 
 `Any questions, please reach out!`
 
-Chiawei Wang PhD\
-Product & Data Analyst\
+Chiawei Wang, PhD\
+Data & Product Analyst\
 <chiawei.w@outlook.com>
