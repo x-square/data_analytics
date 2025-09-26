@@ -2408,6 +2408,6 @@ In this setup, the hidden layer helps recognise patterns that help distinguish s
 
 `Any questions, please reach out!`
 
-Chiawei Wang PhD\
-Product & Data Analyst\
+Chiawei Wang, PhD\
+Data & Product Analyst\
 <chiawei.w@outlook.com>
