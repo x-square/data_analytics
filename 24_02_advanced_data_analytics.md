@@ -6205,6 +6205,6 @@ For this deliverable, you are asked to choose a method to approach this data cha
 
 `Any questions, please reach out!`
 
-Chiawei Wang PhD\
-Product & Data Analyst\
+Chiawei Wang, PhD\
+Data & Product Analyst\
 <chiawei.w@outlook.com>
