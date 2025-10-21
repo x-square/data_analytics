@@ -2119,8 +2119,8 @@ title: Non-parametric tests on nominal scale
 graph TD
     A1(Nominal scale) --- B1(One sample) -- Observed against expected --> C1(Chi-square goodness of fit)
     A1 --- B2(Two samples) --- C2(Independent) -- Relationship --> D1(Chi-square independence)
-    B2 --- C3(Paired)--> D2(McNemar) 
-    A1 --- B3(K samples) --- C4(Independent) --  Distribution --> D3(Chi-square homogeneity)
+    B2 --- C3(Paired) -- Before and after --> D2(McNemar) 
+    A1 --- B3(K samples) --- C4(Independent) -- Distribution --> D3(Chi-square homogeneity)
     B3 --- C5(Paired) -- Binary --> D4(Cochran's Q)
 ```
 
