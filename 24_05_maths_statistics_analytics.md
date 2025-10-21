@@ -2114,7 +2114,7 @@ graph TD
 
 ```mermaid
 ---
-title: Nonparametric tests on nominal scale
+title: Non-parametric tests on nominal scale
 ---
 graph TD
     A1(Nominal scale) --- B1(One sample) -- Observed against expected --> C1(Chi-square goodness of fit)
@@ -2126,7 +2126,7 @@ graph TD
 
 ```mermaid
 ---
-title: Nonparametric tests on ordinal scale
+title: Non-parametric tests on ordinal scale
 ---
 graph TD
     A2(Ordinal scale) --- B4(One sample) --> C6(One-sample Wilcoxon signed-rank)
