@@ -2140,11 +2140,11 @@ graph TD
 
 | **Parametric tests** | **Non-parametric alternatives** | **When to use the non-parametric tests** |
 | - | - | - |
-| **t-test** | **Mann–Whitney U** (independent) or **Wilcoxon signed-rank** (paired) | When comparing two groups and data are not normally distributed or are ordinal |
+| **t-test** | **Sign** (one), **Mann–Whitney U** (independent), or **Wilcoxon signed-rank** (paired) | When comparing two groups and data are not normally distributed or are ordinal |
 | **ANOVA** | **Kruskal–Wallis** | When comparing more than two independent groups and the data are not normal |
 | **MANOVA** | **PERMANOVA** | When analysing multiple dependent variables but assumptions such as multivariate normality and homogeneity of covariances are violated |
 | **Logistic regression** | **Rank-based logistic regression** or **classification trees** | When assumptions about linearity in the logit or large samples are violated |
-| **Linear regression** | **Spearmans rank correlation**, **Theil–Sen estimator**, or **LOESS** | When the relationship isn't linear or residuals aren't normally distributed |
+| **Linear regression** | **Spearman's rank correlation**, **Theil–Sen estimator**, or **LOESS** | When the relationship isn't linear or residuals aren't normally distributed |
 | **Multiple regression** | **Rank-based multiple regression** or **non-parametric bootstrap regression** | When assumptions of normality, linearity, or homoscedasticity are not met |
 
 ### Accuracy and precision
