@@ -1671,7 +1671,7 @@ $$
 
 **Uniform distribution** is a probability distribution where all outcomes have equal probability of occurring. Every outcome has the same likelihood of happening, making it a simple and predictable distribution.
 
-**Standard error** is a measure of the variability or spread of sample means around the population mean. It tells us how much the sample mean is likely to differ from the true population mean. Essentially, it quantifies the uncertainty in the sample mean estimation.
+**Standard error** is a measure of the variability or spread of sample means around the population mean. It tells us how much the sample mean is likely to differ from the true population mean. Essentially, it quantifies the uncertainty in the sample mean estimation. The bigger the standard error, the less precise our estimate of the population mean is likely to be.
 
 For example, we randomly select a sample of 50 students and find that the mean exam score in this sample is 75 out of 100, with a standard deviation of 5. This means that if we were to take multiple random samples of 50 students from the school and calculate the mean exam score for each sample, the standard error tells us that on average, the sample means would deviate from the true population mean by about 0.71 points.
 
@@ -2065,9 +2065,52 @@ R-squared (R²) represents the proportion of variance in the dependent variable 
 
 **A/B testing** is a method used to compare two versions of a product or service to determine which one performs better. It involves randomly assigning users to two groups, the control group and the experiment group, and exposing each group to a different version of the product or service. By measuring the performance of each group and comparing the results, you can determine which version is more effective. A/B testing is commonly used in marketing, web design, and product development to optimise user experience, increase conversion rates, and improve overall performance.
 
-### Selecting the right test
+### Choosing a right parametric test
 
-![Choosing a statistical test](https://github.com/x-square/visual-resources/blob/main/statistical-test-choose.png?raw=true 'Choosing a statistical test')
+```mermaid
+---
+title: Parametric tests
+---
+graph TD
+    %% Start
+    A(Predictor: categorical or numerical?)
+
+    %% Split based on predictor
+    A -->|Categorical| B1(Outcome: categorical or numerical?)
+    A -->|Numerical| B2(Outcome: categorical or numerical?)
+
+    %% Path 1: Categorical predictor
+    B1 -->|Categorical| C1(Non-parametric tests)
+    B1 -->|Numerical| D1(How many groups are being compared?)
+
+    %% Comparison of means test
+    %% D1 is now the point of connection
+    D1 -->|One, independent, or paired| E1(t-test)
+
+    %% More than two groups comparison
+    D1 -->|More than two| E2(How many outcome variables?)
+    E2 -->|One| F1(ANOVA)
+    E2 -->|More than one| F2(MANOVA)
+
+    %% Path 2: Numerical predictor
+    B2 -->|Categorical| C3(Logistic regression)
+    B2 -->|Numerical| C4(How many outcome variables?)
+
+    %% Numerical predictor & outcome
+    C4 -->|One| D2(Linear regression)
+    C4 -->|More than one| D3(Multiple regression)
+
+    %% Style (Optional: Colour-coding the final tests)
+    style C1 fill:#f69
+    style C3 fill:#f99
+    style D2 fill:#f99
+    style D3 fill:#f99
+    style E1 fill:#f99
+    style F1 fill:#f99
+    style F2 fill:#f99
+```
+
+### Choosing a right non-parametric test
 
 ```mermaid
 ---
@@ -2086,12 +2129,23 @@ graph TD
 title: Nonparametric tests on ordinal scale
 ---
 graph TD
-    A2(Ordinal scale) --- B4(One sample) --> C6(Wilcoxon signed-rank)
+    A2(Ordinal scale) --- B4(One sample) --> C6(One-sample Wilcoxon signed-rank)
     A2 --- B5(Two samples) --- C7(Independent) --> D5(Mann-Whitney U)
-    B5 --- C8(Paired) --> D6(Wilcoxon signed-rank)
+    B5 --- C8(Paired) --> D6(Paired Wilcoxon signed-rank)
     A2 --- B6(K samples) --- C9(Independent) --> D7(Kruskal-Wallis)
     B6 --> C10(Paired) --> D8(Friedman)
 ```
+
+### Alternative non-parametric tests when parametric assumptions are not met
+
+| **Parametric tests** | **Non-parametric alternatives** | **When to use the non-parametric tests** |
+| - | - | - |
+| **t-test** | **Mann–Whitney U** (independent) or **Wilcoxon signed-rank** (paired) | When comparing two groups and data are not normally distributed or are ordinal |
+| **ANOVA** | **Kruskal–Wallis** | When comparing more than two independent groups and the data are not normal |
+| **MANOVA** | **PERMANOVA** | When analysing multiple dependent variables but assumptions such as multivariate normality and homogeneity of covariances are violated |
+| **Logistic regression** | **Rank-based logistic regression** or **classification trees** | When assumptions about linearity in the logit or large samples are violated |
+| **Linear regression** | **Spearmans rank correlation**, **Theil–Sen estimator**, or **LOESS** | When the relationship isn't linear or residuals aren't normally distributed |
+| **Multiple regression** | **Rank-based multiple regression** or **non-parametric bootstrap regression** | When assumptions of normality, linearity, or homoscedasticity are not met |
 
 ### Accuracy and precision
 
