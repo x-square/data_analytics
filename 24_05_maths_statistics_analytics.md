@@ -2085,12 +2085,12 @@ graph TD
 
     %% Comparison of means test
     %% D1 is now the point of connection
-    D1 -->|One, independent, or paired| E1(t-test)
+    D1 -->|One, independent, paired| E1(t-test)
 
     %% More than two groups comparison
     D1 -->|More than two| E2(How many outcome variables?)
     E2 -->|One| F1(ANOVA)
-    E2 -->|More than one| F2(MANOVA)
+    E2 -->|More than two| F2(MANOVA)
 
     %% Path 2: Numerical predictor
     B2 -->|Categorical| C3(Logistic regression)
