@@ -2098,7 +2098,7 @@ graph TD
 
     %% Numerical predictor & outcome
     C4 -->|One| D2(Linear regression)
-    C4 -->|More than one| D3(Multiple regression)
+    C4 -->|More than two| D3(Multiple regression)
 
     %% Style (Optional: Colour-coding the final tests)
     style C1 fill:#f69
