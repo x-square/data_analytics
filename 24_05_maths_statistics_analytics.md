@@ -2100,7 +2100,7 @@ graph TD
     C4 -->|One| D2(Linear regression)
     C4 -->|More than two| D3(Multiple regression)
 
-    %% Style (Optional: Colour-coding the final tests)
+    %% Style (Colour-coding)
     style C1 fill:#f69
     style C3 fill:#f99
     style D2 fill:#f99
@@ -2117,11 +2117,20 @@ graph TD
 title: Non-parametric tests on nominal scale
 ---
 graph TD
-    A1(Nominal scale) --- B1(One sample) -- Observed against expected --> C1(Chi-square goodness of fit)
-    A1 --- B2(Two samples) --- C2(Independent) -- Relationship --> D1(Chi-square independence)
-    B2 --- C3(Paired) -- Before and after --> D2(McNemar) 
-    A1 --- B3(K samples) --- C4(Independent) -- Distribution --> D3(Chi-square homogeneity)
-    B3 --- C5(Paired) -- Binary --> D4(Cochran's Q)
+    A1(Nominal scale) --- B1(One sample)
+    B1 -- Observed against expected --> C1(Chi-square goodness of fit)
+    B1 -- Association --> C2(Chi-square independence)
+    A1 --- B3(K samples)
+    B3 ---D1(Independent) -- Distribution --> E1(Chi-square homogeneity)
+    B3 --- D2(Paired) -- Before & after --> E2(McNemar)
+    D2 -- Repeated binary --> E3(Cochran's Q)
+
+    %% Style (Colour-coding)
+    style C1 fill:#f69
+    style C2 fill:#f69
+    style E1 fill:#f69
+    style E2 fill:#f69
+    style E3 fill:#f69
 ```
 
 ```mermaid
@@ -2129,18 +2138,54 @@ graph TD
 title: Non-parametric tests on ordinal scale
 ---
 graph TD
-    A2(Ordinal scale) --- B4(One sample) --> C6(One-sample Wilcoxon signed-rank)
-    A2 --- B5(Two samples) --- C7(Independent) --> D5(Mann-Whitney U)
-    B5 --- C8(Paired) --> D6(Paired Wilcoxon signed-rank)
-    A2 --- B6(K samples) --- C9(Independent) --> D7(Kruskal-Wallis)
-    B6 --> C10(Paired) --> D8(Friedman)
+    A1(Ordinal scale)
+    A1 --- B1(One sample) -- Observed against expected --> C1(One-sample Wilcoxon signed-rank)
+    A1 --- B2(Two samples) --- C2(Independent) -- Difference between two --> D2(Mann-Whitney U)
+    B2 --- C3(Paired) -- Before & after --> D3(Paired Wilcoxon signed-rank)
+    A1 --- B4(K samples) --- C4(Independent) -- Difference between more than two --> D4(Kruskal-Wallis)
+    B4 --- C5(Paired) -- Repeated measures --> D5(Friedman)
+
+    %% Style (Colour-coding)
+    style C1 fill:#f69
+    style D2 fill:#f69
+    style D3 fill:#f69
+    style D4 fill:#f69
+    style D5 fill:#f69
 ```
+
+### Examples of parametric and non-parametric tests
+
+| Parametric test | What it checks | Example |
+| - | - | - |
+| **t-test** | Means between groups | Compare test scores of two classes |
+| **ANOVA** | Means among 3 or more groups | Compare weights of 3 different diets |
+| **MANOVA** | More than one dependent variable | Compare reading and maths scores across schools |
+| **Logistic regression** | Predicts a yes/no outcome | Predict if someone passes or fails an exam |
+| **Linear regression** | Relationship between two continuous variables | Predict height from age |
+| **Multiple regression** | Relationship between one outcome and several predictors | Predict income using education, age, and experience |
+
+
+| Non-parametric test on nominal scale | What it checks | Example |
+| - | - | - |
+| **Chi-square goodness of fit** | If one categorical variable follows an expected pattern | Check if colours of sweets are evenly distributed |
+| **Chi-square independence** | If two categorical variables are related | Check if gender is linked to sport preference |
+| **Chi-square homogeneity** | If different groups have the same distribution | Check if three schools have similar music genre preferences |
+| **McNemar** | Change in paired categorical data (before/after) | Check if opinions changed after a campaign |
+| **Cochran's Q** | Like repeated-measures Chi-square (for 3+ conditions) | Check if people's choices differ across 3 brands they tried |
+
+| Non-parametric test on ordinal scale | What it checks | Example |
+| - | - | - |
+| **One-sample Wilcoxon signed-rank** | Median of one sample vs a known value | Check if median satisfaction = 5 |
+| **Mann–Whitney U** | Two independent groups | Compare pain levels between two treatments |
+| **Paired Wilcoxon signed-rank** | Two related groups (before/after) | Compare stress before and after meditation |
+| **Kruskal–Wallis** | 3+ independent groups | Compare test scores of three different schools |
+| **Friedman** | 3+ related groups (repeated measures) | Compare same students' mood under 3 conditions |
 
 ### Alternative non-parametric tests when parametric assumptions are not met
 
 | **Parametric tests** | **Non-parametric alternatives** | **When to use the non-parametric tests** |
 | - | - | - |
-| **t-test** | **Sign** (one), **Mann–Whitney U** (independent), or **Wilcoxon signed-rank** (paired) | When comparing two groups and data are not normally distributed or are ordinal |
+| **t-test** | **Sign** (one), **Proportion** (independent), or **McNemar** (paired) | When comparing two groups and data are not normally distributed or are ordinal |
 | **ANOVA** | **Kruskal–Wallis** | When comparing more than two independent groups and the data are not normal |
 | **MANOVA** | **PERMANOVA** | When analysing multiple dependent variables but assumptions such as multivariate normality and homogeneity of covariances are violated |
 | **Logistic regression** | **Rank-based logistic regression** or **classification trees** | When assumptions about linearity in the logit or large samples are violated |
