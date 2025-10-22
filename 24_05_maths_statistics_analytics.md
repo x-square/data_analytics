@@ -2123,7 +2123,7 @@ graph TD
     A1 --- B3(K samples)
     B3 ---D1(Independent) -- Distribution --> E1(Chi-square homogeneity)
     B3 --- D2(Paired) -- Before & after --> E2(McNemar)
-    D2 -- Repeated binary --> E3(Cochran's Q)
+    D2 -- Repeated measures --> E3(Cochran's Q)
 
     %% Style (Colour-coding)
     style C1 fill:#f69
